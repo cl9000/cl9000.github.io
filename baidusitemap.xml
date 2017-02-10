@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://cl9000.github.io/2017/02/10/hello-world/</loc>
-    <lastmod>2017-02-10T08:59:18.000Z</lastmod>
+    <loc>http://cl9000.github.io/2017/02/10/%E5%88%A0%E9%99%A4%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2017-02-10T09:32:59.000Z</lastmod>
     <data>
         <display>
-        <title>Hello World</title>
-        <pubTime>2017-02-10T08:59:18.000Z</pubTime>
+        <title>删除测试</title>
+        <pubTime>2017-02-10T09:32:59.000Z</pubTime>
         
          
            
@@ -33,6 +33,21 @@
              
               <breadCrumb title="blog开发" url="http://cl9000.github.io/categories/blog%E5%BC%80%E5%8F%91/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://cl9000.github.io/2017/02/10/hello-world/</loc>
+    <lastmod>2017-02-10T08:59:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-02-10T08:59:18.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
