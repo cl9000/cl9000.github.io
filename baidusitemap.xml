@@ -4,26 +4,11 @@
 
     
   <url>
-    <loc>http://cl9000.github.io/2017/02/10/hello-world/</loc>
-    <lastmod>2017-02-10T07:55:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-02-10T07:55:36.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://cl9000.github.io/2017/02/09/blog%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2017-02-10T07:55:36.000Z</lastmod>
+    <lastmod>2017-02-10T08:25:44.000Z</lastmod>
     <data>
         <display>
-        <title>blog测试</title>
+        <title>blog迁移</title>
         <pubTime>2017-02-09T01:52:22.000Z</pubTime>
         
         <tag>blog</tag>
@@ -31,8 +16,23 @@
          
            
              
-              <breadCrumb title="开发blog" url="http://cl9000.github.io/categories/%E5%BC%80%E5%8F%91blog/"/>
+              <breadCrumb title="blog开发" url="http://cl9000.github.io/categories/blog%E5%BC%80%E5%8F%91/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://cl9000.github.io/2017/02/10/hello-world/</loc>
+    <lastmod>2017-02-10T08:25:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-02-10T08:25:44.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
