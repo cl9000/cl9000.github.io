@@ -4,15 +4,20 @@
 
     
   <url>
-    <loc>http://cl9000.github.io/2017/02/10/%E5%88%A0%E9%99%A4%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2017-02-10T09:32:59.000Z</lastmod>
+    <loc>http://cl9000.github.io/2017/02/10/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2017-02-13T07:46:30.000Z</lastmod>
     <data>
         <display>
-        <title>删除测试</title>
+        <title>HEXO搭建个人博客</title>
         <pubTime>2017-02-10T09:32:59.000Z</pubTime>
         
+        <tag>HEXO</tag>
+         
          
            
+             
+              <breadCrumb title="HEXO" url="http://cl9000.github.io/categories/HEXO/"/>
+          
         </display>
     </data>
     </url>
