@@ -54,11 +54,17 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -92,14 +98,14 @@ why do myself Blog？
 写技术博对自己技术经验的总">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HEXO搭建个人博客">
-<meta property="og:url" content="http://cl9000.github.io/2017/02/10/HEXO搭建个人博客/index.html">
+<meta property="og:url" content="https://cl9000.github.io/2017/02/10/HEXO搭建个人博客/index.html">
 <meta property="og:site_name" content="魏长露の博客">
 <meta property="og:description" content="最近在无意中在网上看见个很不错的网页博客，少见，在网上一查是GitHub Page + HEXO搭建的个人博客。作为一个攻城狮，见到如此，必须自己也搞出来试试。查找一些网上的资料和填坑，不就一个个人的技术博客必须诞生啦。大家或许搭建的时候仅花个几分钟，但在优化上可能就会占用你一天甚至两天的时间，优化好后就快了。只管写MD了.
 why do myself Blog？
 写技术博对自己技术经验的总">
 <meta property="og:image" content="http://ol3jdapgi.bkt.clouddn.com/17-2-13/23625034-file_1486967552108_14482.png">
 <meta property="og:image" content="http://ol3jdapgi.bkt.clouddn.com/17-2-13/61984582-file_1486967649606_5006.png">
-<meta property="og:updated_time" content="2017-02-13T07:46:30.000Z">
+<meta property="og:updated_time" content="2017-02-14T03:25:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HEXO搭建个人博客">
 <meta name="twitter:description" content="最近在无意中在网上看见个很不错的网页博客，少见，在网上一查是GitHub Page + HEXO搭建的个人博客。作为一个攻城狮，见到如此，必须自己也搞出来试试。查找一些网上的资料和填坑，不就一个个人的技术博客必须诞生啦。大家或许搭建的时候仅花个几分钟，但在优化上可能就会占用你一天甚至两天的时间，优化好后就快了。只管写MD了.
@@ -133,7 +139,7 @@ why do myself Blog？
 
 
 
-  <link rel="canonical" href="http://cl9000.github.io/2017/02/10/HEXO搭建个人博客/"/>
+  <link rel="canonical" href="https://cl9000.github.io/2017/02/10/HEXO搭建个人博客/"/>
 
 
 
@@ -286,7 +292,7 @@ why do myself Blog？
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://cl9000.github.io/2017/02/10/HEXO搭建个人博客/">
+  <link itemprop="mainEntityOfPage" href="https://cl9000.github.io/2017/02/10/HEXO搭建个人博客/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="CLWACE">
@@ -489,7 +495,7 @@ why do myself Blog？
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: https://github.com/cl9000/cl9000.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <p>改完后 <strong><code>esc + :wq</code></strong> 保存退出或者用<strong>文本编辑器</strong>更改</p>
 <p>执行如下命令才能使用git部署：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
-<p>网上会有很多说法，有的type是github, 还有repository 最后面的后缀也不一样，是github.com.git，我也踩了很多坑，我现在的版本是hexo: 3.2.2，执行命令hexo -vsersion就出来了,貌似3.0后全部改成我上面这种格式了。 忘了说了，我没用SSH Keys如果你用了SSH Keys的话直接在github里复制SSH的就行了，总共就两种协议，相信你懂的。<br>然后，执行部署命令：<br><code>$ hexo deploy</code><br>　然后再浏览器中输入<a href="http://cl9000.github.io/就行了，我的">http://cl9000.github.io/就行了，我的</a> github 的账户叫 cl9000 ,把这个改成你 github 的账户名就行了，就可以访问了
+<p>网上会有很多说法，有的type是github, 还有repository 最后面的后缀也不一样，是github.com.git，我也踩了很多坑，我现在的版本是hexo: 3.2.2，执行命令hexo -vsersion就出来了,貌似3.0后全部改成我上面这种格式了。 忘了说了，我没用SSH Keys如果你用了SSH Keys的话直接在github里复制SSH的就行了，总共就两种协议，相信你懂的。<br>然后，执行部署命令：<br><code>$ hexo deploy</code><br>　然后再浏览器中输入<a href="http://cl9000.github.io/">http://cl9000.github.io/</a>    就行了，我的 github 的账户叫 cl9000 ,把这个改成你 github 的账户名就行了，就可以访问了
 　</p>
 <h6 id="部署步骤："><a href="#部署步骤：" class="headerlink" title="　部署步骤："></a>　部署步骤：</h6><p>　每次部署的步骤，可按以下三步来进行。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean        清理缓存干掉public</div><div class="line">$ hexo generate     重新生成静态文件</div><div class="line">$ hexo deploy       部署到Github</div></pre></td></tr></table></figure>
@@ -500,7 +506,7 @@ why do myself Blog？
 <li>如果想修改头像可以直接在主题的 _config.yml 文件里面修改，友情链接、分享、评论等的都在这。</li>
 <li>修改站名在 public/index.html 里修改。</li>
 </ul>
-<p>x开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。</p>
+<p>开始打理你的博客吧，有什么问题或者建议，都可以提出来，我会继续完善的。</p>
 
       
     </div>
@@ -589,7 +595,7 @@ why do myself Blog？
         <div class="ds-share flat" data-thread-key="2017/02/10/HEXO搭建个人博客/"
      data-title="HEXO搭建个人博客"
      data-content=""
-     data-url="http://cl9000.github.io/2017/02/10/HEXO搭建个人博客/">
+     data-url="https://cl9000.github.io/2017/02/10/HEXO搭建个人博客/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -619,7 +625,7 @@ why do myself Blog？
 
       <!-- 多说评论框 start -->
       	<div class="ds-thread" data-thread-key="2017/02/10/HEXO搭建个人博客/"
-      	     data-title="HEXO搭建个人博客" data-url="http://cl9000.github.io/2017/02/10/HEXO搭建个人博客/">
+      	     data-title="HEXO搭建个人博客" data-url="https://cl9000.github.io/2017/02/10/HEXO搭建个人博客/">
       	</div>
       <!-- 多说评论框 end -->
       <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
@@ -747,6 +753,10 @@ why do myself Blog？
               
                 <li class="links-of-blogroll-item">
                   <a href="http://www.jianshu.com/users/f167b0dcbdbe/timeline" title="cl9000_简书" target="_blank">cl9000_简书</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/weichanglu123" title="cl9000_CSDN" target="_blank">cl9000_CSDN</a>
                 </li>
               
             </ul>
