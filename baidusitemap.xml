@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://cl9000.github.io/2017/02/10/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-02-14T03:25:40.000Z</lastmod>
+    <lastmod>2017-02-14T03:28:58.000Z</lastmod>
     <data>
         <display>
         <title>HEXO搭建个人博客</title>
@@ -18,21 +18,6 @@
              
               <breadCrumb title="HEXO" url="https://cl9000.github.io/categories/HEXO/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://cl9000.github.io/2017/02/10/hello-world/</loc>
-    <lastmod>2017-02-10T08:59:18.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-02-10T08:59:18.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
@@ -53,6 +38,21 @@
              
               <breadCrumb title="blog开发" url="https://cl9000.github.io/categories/blog%E5%BC%80%E5%8F%91/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://cl9000.github.io/2017/02/10/hello-world/</loc>
+    <lastmod>2017-02-10T08:59:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-02-10T08:59:18.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
