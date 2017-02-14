@@ -5,14 +5,19 @@
     
   <url>
     <loc>https://cl9000.github.io/2017/02/09/hello-world/</loc>
-    <lastmod>2017-02-14T07:35:20.000Z</lastmod>
+    <lastmod>2017-02-14T07:48:40.000Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
         <pubTime>2017-02-09T00:52:22.000Z</pubTime>
         
+        <tag>blog</tag>
+         
          
            
+             
+              <breadCrumb title="blog" url="https://cl9000.github.io/categories/blog/"/>
+          
         </display>
     </data>
     </url>
