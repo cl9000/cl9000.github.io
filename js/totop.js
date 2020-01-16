@@ -1,5 +1,6 @@
 $(window).scroll(function() {
-    $(window).scrollTop() > $(window).height()*0.5 ? $("#rocket").addClass("show") : $("#rocket").removeClass("show");
+    // 回到顶部
+    // $(window).scrollTop() > $(window).height()*0.5 ? $("#rocket").addClass("show") : $("#rocket").removeClass("show");
 });
 
 $("#rocket").click(function() {
