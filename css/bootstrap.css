@@ -4717,6 +4717,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pager .previous > span {
   float: left;
 }
+.pager .previous > a > span,
+.pager .next > a > span  {
+  color: #ccc;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
 .pager .disabled > a,
 .pager .disabled > a:hover,
 .pager .disabled > a:focus,
