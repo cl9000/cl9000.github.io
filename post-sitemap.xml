@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/2020/01/17/Docker/</loc>
+        <lastmod>2020-01-17T06:30:59.339Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2017/02/22/cordova%E7%83%AD%E6%9B%B4%E6%96%B0/</loc>
+        <lastmod>2020-01-17T06:12:59.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/2017/02/09/hello-world/</loc>
         <lastmod>2020-01-16T10:20:54.379Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,14 +33,6 @@
     <url>
         <loc>https://cl9000.github.io/2017/03/22/Xcode%E4%B8%ADBuildSetting%E5%A4%A7%E5%B0%8F%E5%86%99%E8%AE%BE%E7%BD%AE/</loc>
         <lastmod>2020-01-16T06:17:43.196Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2017/02/22/cordova%E7%83%AD%E6%9B%B4%E6%96%B0/</loc>
-        <lastmod>2020-01-15T08:52:56.279Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

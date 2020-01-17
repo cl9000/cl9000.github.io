@@ -9,27 +9,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/ionic/</loc>
-        <lastmod>2020-01-15T08:52:56.279Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E7%83%AD%E6%9B%B4%E6%96%B0/</loc>
-        <lastmod>2020-01-15T08:52:56.279Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/hot-updata/</loc>
-        <lastmod>2020-01-15T08:52:56.279Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/Xcode/</loc>
         <lastmod>2020-01-16T06:17:43.196Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -53,6 +32,34 @@
     <url>
         <loc>https://cl9000.github.io/tags/%F0%9F%87%AC%F0%9F%87%A7/</loc>
         <lastmod>2020-01-16T10:20:54.379Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/ionic/</loc>
+        <lastmod>2020-01-17T06:12:59.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E7%83%AD%E6%9B%B4%E6%96%B0/</loc>
+        <lastmod>2020-01-17T06:12:59.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/hot-updata/</loc>
+        <lastmod>2020-01-17T06:12:59.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Docker/</loc>
+        <lastmod>2020-01-17T06:30:59.339Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
