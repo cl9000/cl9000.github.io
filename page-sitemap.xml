@@ -7,15 +7,36 @@
     </url>
     
     <url>
+        <loc>https://cl9000.github.io/tools/</loc>
+        <lastmod>2020-03-08T13:18:38.979Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://cl9000.github.io/about/</loc>
+        <lastmod>2020-03-08T13:17:36.089Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://cl9000.github.io/archive/</loc>
+        <lastmod>2020-03-06T15:58:04.380Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://cl9000.github.io/tags/</loc>
-        <lastmod>2020-01-17T08:58:51.684Z</lastmod>
+        <lastmod>2020-03-06T05:40:19.333Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
         <loc>https://cl9000.github.io/keynote/</loc>
-        <lastmod>2020-01-17T08:45:08.800Z</lastmod>
+        <lastmod>2020-03-05T08:35:15.240Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -23,20 +44,6 @@
     <url>
         <loc>https://cl9000.github.io/404.html</loc>
         <lastmod>2020-01-17T08:18:26.509Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://cl9000.github.io/about/</loc>
-        <lastmod>2020-01-16T06:35:37.438Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://cl9000.github.io/archive/</loc>
-        <lastmod>2020-01-16T06:35:02.792Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

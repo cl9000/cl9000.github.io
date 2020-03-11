@@ -72,13 +72,19 @@
 	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header{
+    header.intro-header {
+
         
             background-image: url('/img/article_header/article_bg.jpg');
             /*post*/
         
     }
     
+
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
 </style>
 <header class="intro-header">
     <!-- Signature -->
@@ -133,7 +139,14 @@
                     <li>
                         <a href="/">Home</a>
                     </li>
+
                     
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
                         
                     
                         
@@ -148,7 +161,7 @@
                     
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tools/">Tools</a>
                         </li>
                         
                     
@@ -216,9 +229,9 @@
 <a id="more"></a>
 <p>1、 把github上的博客仓库 <strong>clone</strong> 到本地的某个文件夹如:myBlog<br>
 2、cd到该文件夹执行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo </span><br><span class="line">npm install </span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo </span><br><span class="line">npm <span class="keyword">install</span> </span><br><span class="line">npm <span class="keyword">install</span> hexo-deployer-git</span><br></pre></td></tr></table></figure>
 <p>需要重新安装hexo-server，hexo中没有自带,否则不存在次此命令 hexo s</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-<span class="keyword">server</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 
 
                 <hr>
@@ -346,6 +359,10 @@
                     
                         <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
                     
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
                 </ul>
                 
             </div>
@@ -434,7 +451,7 @@
 
 <!-- weichanglu_weather https://cj.weather.com.cn/ -->
 <script type="text/javascript">
-    var _fid = 'aqGL3DR6qj';
+    var _fid = "aqGL3DR6qj";
     WIDGET = {FID: _fid}
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
@@ -531,6 +548,10 @@
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!--  -->
+<script src="/js/snackbar.js "></script>
+<!--  -->
+<script src="/js/sw-registration.js "></script>
 
 <!-- async load function -->
 <script>
@@ -568,13 +589,16 @@
     if($('#tag_cloud').length !== 0){
         async("https://cl9000.github.io/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
-//                size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
             };
             $('#tag_cloud a').tagcloud();
         })
     }
 </script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
 
 <!--fastClick.js -->
 <script>
@@ -605,7 +629,7 @@
 
 <!-- weichanglu_weather https://cj.weather.com.cn/ -->
 <script type="text/javascript">
-var _fid = 'aqGL3DR6qj';
+var _fid = "aqGL3DR6qj";
 WIDGET = {FID: _fid}
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
@@ -617,10 +641,10 @@ WIDGET = {FID: _fid}
 	<a id="rocket" href="#top" class=""></a>
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
-<!-- Image to hack wechat -->
+
+    <!-- Image to hack wechat -->
 <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
 <!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
-
 </html>

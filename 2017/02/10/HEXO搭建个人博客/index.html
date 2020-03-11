@@ -72,13 +72,19 @@
 	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header{
+    header.intro-header {
+
         
             background-image: url('/img/article_header/article_bg.jpg');
             /*post*/
         
     }
     
+
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
 </style>
 <header class="intro-header">
     <!-- Signature -->
@@ -133,7 +139,14 @@
                     <li>
                         <a href="/">Home</a>
                     </li>
+
                     
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
                         
                     
                         
@@ -148,7 +161,7 @@
                     
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/tools/">Tools</a>
                         </li>
                         
                     
@@ -205,7 +218,7 @@
                 post-container">
 
                 <p>最近在无意中在网上看见个很不错的网页博客，少见，在网上一查是GitHub Page + HEXO搭建的个人博客。作为一个攻城狮，见到如此，必须自己也搞出来试试。查找一些网上的资料和填坑，不就一个个人的技术博客必须诞生啦。大家或许搭建的时候仅花个几分钟，但在优化上可能就会占用你一天甚至两天的时间，优化好后就快了。只管写MD了.</p>
-<h4><span id="why-do-myself-blog">why do myself Blog？</span></h4>
+<h4><span id="why-do-myself-blog">Why do myself Blog？</span></h4>
 <ol>
 <li>写技术博对自己技术经验的总结。</li>
 <li>可以提升自己的表述能力，<strong>光会做 ？不会说</strong>怎么可以，那你只有被别人利用的价值了。</li>
@@ -219,50 +232,37 @@
 当然还有其他的实现方式，如：WorkPress、GitHubPage + Jekell等等。</p>
 <p><strong>配置必要环境</strong></p>
 <blockquote>
-<p>安装Node.js</p>
+<ol>
+<li>安装Node.js<br>
+用到nodejs的包管理器<strong>npm</strong></li>
+<li>git（Xcode自带）<br>
+或借助三方软件，如SourceTree，SVN</li>
+<li>GitHub<br>
+用来做博客的远程仓库、调整域名、源码的服务器的，怎么与本地hexo建立连接下面讲。SSH Keys，可以不配，不配的话以后每次对自己的博客有改动部署的时候就要手动输入账号密码，配置了就不需要了，怎么配置网上有很多教程</li>
+</ol>
 </blockquote>
-<p>** ? : 用到nodejs的包管理器 npm **</p>
-<blockquote>
-<p>git（Xcode自带）</p>
-</blockquote>
-<p>** ? : 或借助三方软件，如SourceTree，SVN **</p>
-<blockquote>
-<p>GitHub申请个账号，作为程序员必须的</p>
-</blockquote>
-<p>** ? : 用来做博客的远程仓库、调整域名、源码的服务器的，怎么与本地hexo建立连接下面讲。SSH Keys，可以不配，不配的话以后每次对自己的博客有改动部署的时候就要手动输入账号密码，配置了就不需要了，怎么配置网上有很多教程<br>
-**</p>
 <h4><span id="安装hexo">安装HEXO</span></h4>
 <ol>
 <li>
-<p>打开终端中输入：</p>
-<blockquote>
-<p><code>$ sudo npm install -g hexo</code></p>
-</blockquote>
+<p>打开终端中输入：<br>
+<code>$ sudo npm install -g hexo</code></p>
 </li>
 <li>
 <p>安装完成, 执行Hexo 命令，** 初始化本地博客仓库** 两种创建方式。如下</p>
 <ul>
-<li>
-<p>创建一个文件夹，如：myblog，cd到myblog里执行命令：</p>
-<blockquote>
-<p><code>$hexo init</code></p>
-</blockquote>
-</li>
-<li>
-<p>cd 到 desktop（or 你想去的地方~） 也可以直接</p>
-<p><code>$ hexo init mybolg</code></p>
-</li>
+<li>创建一个文件夹，如：myblog，cd到myblog里执行命令：<br>
+<code>$ hexo init</code></li>
+<li>cd 到 desktop（or 你想去的地方~） 也可以直接<br>
+<code>$ hexo init mybolg</code></li>
 </ul>
 </li>
 <li>
-<p>** 生成静态网页**<br>
+<p>生成静态网页<br>
 <code>$ hexo genrate 或 hexo g</code></p>
 </li>
 <li>
-<p>** 本地预览 ** 在终端中 cd 到你的本地博客仓库（就是myblog文件夹，我怕我看不懂，hahaha~）执行：</p>
-<blockquote>
-<p><code>$ hexo s</code></p>
-</blockquote>
+<p>本地预览 - 在终端中 cd 到你的本地博客仓库（就是myblog文件夹，我怕我看不懂，hahaha~）执行：<br>
+<code>$ hexo s</code></p>
 </li>
 </ol>
 <p>上述步骤完成。 博客的基本框架就基本构建完成，简单吧! hahaha~, 坑不在这。。。<br>
@@ -281,13 +281,13 @@ Hexo 默认的博客主题是landscape主题，后面介绍怎么更换主题及
 <li>themes——是主题存放文件</li>
 </ul>
 <h5><span id="常见的hexo配置错误">常见的HEXO配置错误:</span></h5>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ERROR Plugin load failed: hexo-server</span><br><span class="line"></span><br><span class="line">原因： Besides, utilities are separated into a standalone module.</span><br><span class="line"> hexo.util is not reachable anymore.</span><br><span class="line"></span><br><span class="line">解决方法，执行命令：$ sudo npm install hexo-server</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">执行命令hexo server，提示：Usage: hexo&lt;Command&gt; ....</span><br><span class="line"></span><br><span class="line">原因：我认为是没有生成本地服务</span><br><span class="line"></span><br><span class="line">解决方法，执行命令：$ npm install hexo-server --save</span><br><span class="line"></span><br><span class="line">提示：hexo-server@0.1.2 node_modules/hexo-server</span><br><span class="line">.... </span><br><span class="line"></span><br><span class="line">表示成功了[参考](https://hexo.io/zh-cn/docs/server.html)</span><br></pre></td></tr></table></figure>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ERROR </span>Plugin load failed: hexo-server</span><br><span class="line"></span><br><span class="line">原因： Besides, utilities are separated into a standalone module.</span><br><span class="line"> hexo.util is not reachable anymore.</span><br><span class="line"></span><br><span class="line">解决方法，执行命令：$ sudo npm install hexo-server</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">执行命令hexo server，提示：Usage: hexo<span class="xml"><span class="tag">&lt;<span class="name">Command</span>&gt;</span></span> ....</span><br><span class="line"></span><br><span class="line">原因：我认为是没有生成本地服务</span><br><span class="line"></span><br><span class="line">解决方法，执行命令：$ npm install hexo-server --save</span><br><span class="line"></span><br><span class="line">提示：hexo-server@0.1.2 node_modules/hexo-server</span><br><span class="line">.... </span><br><span class="line"></span><br><span class="line">表示成功了[<span class="string">参考</span>](<span class="link">https://hexo.io/zh-cn/docs/server.html</span>)</span><br></pre></td></tr></table></figure>
 <p>这个时候再执行：<code>$ hexo-server</code></p>
 <p>得到: INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.<br>
 这个时候再点击http://0.0.0.0:4000/， 正常情况下应该是最原始的画面，如果出现是： 白板和Cannot GET /<br>
 原因： 由于2.6以后就更新了，我们需要手动配置些东西，我们需要依次下面三行命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-renderer-ejs --save</span><br><span class="line">$ npm install hexo-renderer-stylus --save</span><br><span class="line">$ npm install hexo-renderer-marked --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-renderer-ejs <span class="comment">--save</span></span><br><span class="line">$ npm <span class="keyword">install</span> hexo-renderer-stylus <span class="comment">--save</span></span><br><span class="line">$ npm <span class="keyword">install</span> hexo-renderer-marked <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 <p>这个时候再重新生成静态文件，命令：<br>
 <code>$ hexo generate （或hexo g）</code></p>
 <p>启动本地服务器：<br>
@@ -318,19 +318,19 @@ Hexo 默认的博客主题是landscape主题，后面介绍怎么更换主题及
 <p>现在我们需要_config.yml文件，来建立与GitHub关联，命令：<br>
 <code>$ vim _config.yml</code><br>
 翻到最下面，改成我这样子的，注意：** <code>: 后面要有空格</code>**</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/cl9000/cl9000.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repository</span>: <span class="attribute">https</span>:<span class="comment">//github.com/cl9000/cl9000.github.io.git</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
 <p>改完后 <strong><code>esc + :wq</code></strong> 保存退出或者用<strong>文本编辑器</strong>更改</p>
 <p>执行如下命令才能使用git部署：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 <p>网上会有很多说法，有的type是github, 还有repository 最后面的后缀也不一样，是github.com.git，我也踩了很多坑，我现在的版本是hexo: 3.2.2，执行命令hexo -vsersion就出来了,貌似3.0后全部改成我上面这种格式了。 忘了说了，我没用SSH Keys如果你用了SSH Keys的话直接在github里复制SSH的就行了，总共就两种协议，相信你懂的。<br>
 然后，执行部署命令：<br>
 <code>$ hexo deploy</code><br>
 　然后再浏览器中输入http://cl9000.github.io/    就行了，我的 github 的账户叫 cl9000 ,把这个改成你 github 的账户名就行了，就可以访问了</p>
 <h6><span id="部署步骤">部署步骤：</span></h6>
 <p>每次部署的步骤，可按以下三步来进行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean        清理缓存干掉public</span><br><span class="line">$ hexo generate     重新生成静态文件</span><br><span class="line">$ hexo deploy       部署到Github</span><br></pre></td></tr></table></figure>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean        清理缓存干掉public</span><br><span class="line">$ hexo <span class="keyword">generate</span>     重新生成静态文件</span><br><span class="line">$ hexo deploy       部署到Github</span><br></pre></td></tr></table></figure>
 <h6><span id="一些常用-hexo-命令">一些常用 hexo 命令：</span></h6>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;postName&quot; #新建文章</span><br><span class="line">$ hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">$ hexo generate #生成静态页面至public目录</span><br><span class="line">$ hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</span><br><span class="line">$ hexo deploy #将.deploy目录部署到GitHub</span><br><span class="line">$ hexo help  #查看帮助</span><br><span class="line">$ hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"postName"</span> #新建文章</span><br><span class="line">$ hexo new<span class="built_in"> page </span><span class="string">"pageName"</span> #新建页面</span><br><span class="line">$ hexo generate #生成静态页面至public目录</span><br><span class="line">$ hexo<span class="built_in"> server </span>#开启预览访问端口（默认端口4000，<span class="string">'ctrl + c'</span>关闭server）</span><br><span class="line">$ hexo deploy #将.deploy目录部署到GitHub</span><br><span class="line">$ hexo help  #查看帮助</span><br><span class="line">$ hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
 <p>这是Github上的，<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">主题列表</a>github上都有详细介绍，自己研究吧</p>
 <h5><span id="一些基本修改路径">一些基本修改路径</span></h5>
 <ul>
@@ -470,6 +470,10 @@ Hexo 默认的博客主题是landscape主题，后面介绍怎么更换主题及
                     
                         <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
                     
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
                 </ul>
                 
             </div>
@@ -558,7 +562,7 @@ Hexo 默认的博客主题是landscape主题，后面介绍怎么更换主题及
 
 <!-- weichanglu_weather https://cj.weather.com.cn/ -->
 <script type="text/javascript">
-    var _fid = 'aqGL3DR6qj';
+    var _fid = "aqGL3DR6qj";
     WIDGET = {FID: _fid}
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
@@ -655,6 +659,10 @@ Hexo 默认的博客主题是landscape主题，后面介绍怎么更换主题及
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!--  -->
+<script src="/js/snackbar.js "></script>
+<!--  -->
+<script src="/js/sw-registration.js "></script>
 
 <!-- async load function -->
 <script>
@@ -692,13 +700,16 @@ Hexo 默认的博客主题是landscape主题，后面介绍怎么更换主题及
     if($('#tag_cloud').length !== 0){
         async("https://cl9000.github.io/js/jquery.tagcloud.js",function(){
             $.fn.tagcloud.defaults = {
-//                size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
             };
             $('#tag_cloud a').tagcloud();
         })
     }
 </script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
 
 <!--fastClick.js -->
 <script>
@@ -729,7 +740,7 @@ Hexo 默认的博客主题是landscape主题，后面介绍怎么更换主题及
 
 <!-- weichanglu_weather https://cj.weather.com.cn/ -->
 <script type="text/javascript">
-var _fid = 'aqGL3DR6qj';
+var _fid = "aqGL3DR6qj";
 WIDGET = {FID: _fid}
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
@@ -741,10 +752,10 @@ WIDGET = {FID: _fid}
 	<a id="rocket" href="#top" class=""></a>
 	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
-<!-- Image to hack wechat -->
+
+    <!-- Image to hack wechat -->
 <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
 <!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
-
 </html>

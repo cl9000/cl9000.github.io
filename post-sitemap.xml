@@ -7,24 +7,32 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/2017/09/11/Extension-Chrome%E6%89%A9%E5%B1%95%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/</loc>
+        <lastmod>2020-03-11T09:56:36.154Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2017/03/27/CSS-Loading/</loc>
+        <lastmod>2020-03-11T06:35:40.047Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/2020/01/17/Docker/</loc>
-        <lastmod>2020-02-24T13:26:44.750Z</lastmod>
+        <lastmod>2020-03-08T15:36:40.703Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/2017/02/22/cordova%E7%83%AD%E6%9B%B4%E6%96%B0/</loc>
-        <lastmod>2020-01-17T06:12:59.235Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2017/02/09/hello-world/</loc>
-        <lastmod>2020-01-16T10:20:54.379Z</lastmod>
+        <loc>https://cl9000.github.io/2017/03/24/BD-text2audio/</loc>
+        <lastmod>2020-03-08T15:30:22.727Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -32,7 +40,7 @@
 
     <url>
         <loc>https://cl9000.github.io/2017/03/22/Xcode%E4%B8%ADBuildSetting%E5%A4%A7%E5%B0%8F%E5%86%99%E8%AE%BE%E7%BD%AE/</loc>
-        <lastmod>2020-01-16T06:17:43.196Z</lastmod>
+        <lastmod>2020-03-08T15:12:35.642Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,7 +48,23 @@
 
     <url>
         <loc>https://cl9000.github.io/2017/02/10/HEXO%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
-        <lastmod>2017-02-14T08:30:13.000Z</lastmod>
+        <lastmod>2020-03-08T14:34:55.508Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2017/02/09/hello-world/</loc>
+        <lastmod>2020-03-06T15:04:29.932Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2017/02/22/cordova%E7%83%AD%E6%9B%B4%E6%96%B0/</loc>
+        <lastmod>2020-03-06T15:01:29.341Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -48,7 +72,7 @@
 
     <url>
         <loc>https://cl9000.github.io/2017/02/09/HEXO%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/</loc>
-        <lastmod>2017-02-14T06:07:38.000Z</lastmod>
+        <lastmod>2020-03-06T14:54:17.661Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
