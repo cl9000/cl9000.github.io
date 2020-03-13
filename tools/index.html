@@ -138,15 +138,13 @@
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
                         
-                    
-                        
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -156,6 +154,8 @@
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
+                        
+                    
                         
                     
                     
@@ -198,13 +198,122 @@
 
     <!-- Main Content -->
     
+<style type="text/css">
+    
+    .tool-bgimg{
+        background-image: url('https://api.berryapi.net/?service=App.Bing.Images');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border-radius: 5px;
+    }
+    .tool-bgimg:before {
+        background: rgba(32, 32, 32, 0.8) !important;
+    }
+    .text-6 {
+        font-style: normal;
+        font-size: 18px;
+        font-family: "Roboto Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+        color: white;
+        display: block;
+        padding: 30px 0 8px 0;
+    }
+    .text-7 {
+        font-size: 14px;
+        font-family: "Roboto Condensed", sans-serif;
+        letter-spacing: 2px;
+        text-align: right;
+        padding-right: 60px;
+        color: white;
+    }
+
+
+    /* 视频 */
+    .module {
+        overflow: hidden;
+        border-radius: 5px;
+        margin: 20px 0;
+        display: block;
+        position: relative;
+        padding: 50px 0;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    .bg-dark-60 {
+        color: #fff;
+    }
+    .bg-dark-60:before {
+        position: absolute;
+        background: rgba(34, 34, 34, 0.8);
+        content: " ";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .video-box {
+        text-align: center;
+        padding: 40px 0;
+    }
+    .video-box-icon > a > i {
+        line-height: 1.8;
+        font-size: 40px;
+        color: #fff;
+    }
+    .video-title {
+        letter-spacing: 4px;
+        font-size: 30px;
+        margin: 10px 0 0;
+    }
+    .font-alt {
+        font-family: "Roboto Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .video-subtitle {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .video-bg {
+        background-image: url('https://cl9000.github.io/video/20190324.gif');
+    }
+</style>
+
+
 <!-- Main Content -->
 <div class="container">
+
+    <div class="tool-bgimg">
+        <div class="text-6">沉思四十年人生与沉思一万年人生没有两样。因为你会看到更多的东西吗？</div>
+        <div class="text-7">—— 马尔库·奥勒留</div>
+    </div>
+    
+    <section class="module bg-dark-60 video-bg" data-background="https://cl9000.github.io/video/20190324.gif">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="video-box">
+              <div class="video-box-icon">
+                <a class="video-pop-up" href="https://cl9000.github.io/video/20190324.mp4">
+                    <i class="fa fa-video-camera fa-3x white" aria-hidden="false"></i></a></div>
+              <div class="video-title font-alt">公益视频</div>
+              <div class="video-subtitle font-alt">你知道中国人有多拼吗？</div>
+            </div>
+          </div>
+        </div>
+    </section>
+
     <div class="row">
         <!-- <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> -->
 
             <!-- 工具数据 -->
-           
             
 
             <!-- 工具标签云 -->
