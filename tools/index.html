@@ -138,13 +138,13 @@
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
@@ -199,17 +199,37 @@
     <!-- Main Content -->
     
 <style type="text/css">
-    
-    .tool-bgimg{
+    /* 名言 */
+    .tool-bgimg {
         background-image: url('https://api.berryapi.net/?service=App.Bing.Images');
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         border-radius: 5px;
+        position: relative;
+        overflow: hidden;
     }
-    .tool-bgimg:before {
-        background: rgba(32, 32, 32, 0.8) !important;
+    .bg-dark-6:hover {
+        transition: all .3s;
+        transform: scale(1.01);
+        box-shadow: 0 0 20px 0 rgba(10,10,10,.45);
+    }
+    .bg-dark-6:before {
+        position: absolute;
+        background: rgba(2, 2, 2, 0.3);
+        content: " ";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .text-5 {
+        text-align: center; 
+        color: #ffffff;
+        position: relative;
+        padding-top: 30px;
+        transform: rotate(-45deg);
     }
     .text-6 {
         font-style: normal;
@@ -217,18 +237,56 @@
         font-family: "Roboto Condensed", sans-serif;
         text-transform: uppercase;
         letter-spacing: 2px;
-        text-align: center;
+        text-align: left;
         color: white;
         display: block;
-        padding: 30px 0 8px 0;
+        padding: 16px 30px 8px 30px;
+    }
+    .text-6-1 {
+        position: relative;
+        padding: 8px 30px;
+        font-size: 14px;
+        text-transform: none;
     }
     .text-7 {
-        font-size: 14px;
+        position: relative;
+        font-size: 16px;
         font-family: "Roboto Condensed", sans-serif;
         letter-spacing: 2px;
         text-align: right;
         padding-right: 60px;
+        padding-bottom: 30px;
         color: white;
+    }
+    /* 字体放大 🔎 */
+    .saying-scale:hover {
+        transform: scale(1.1) rotate(0deg);
+        color: #f1a128;
+        font-weight: 600;
+    }
+
+    /* 动画线 🧶 */
+    .saying-line {
+        position: relative;
+        padding-bottom: 7px;
+    }
+    .saying-line:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        content: "";
+        transition-delay: 0s;
+        transition-timing-function: ease-in-out;
+        transition-duration: .5s;
+        transform: scaleX(0);
+    }
+    .saying-line:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
     }
 
 
@@ -283,7 +341,35 @@
         color: rgba(255, 255, 255, 0.5);
     }
     .video-bg {
-        background-image: url('https://cl9000.github.io/video/20190324.gif');
+        background-image: url('/video/20190324.gif');
+    }
+
+
+    /* 图片缩放 */
+    .post-cover {
+        position: relative;
+        width: 100%;
+        margin-bottom: 14px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 20px 0 rgba(222,222,222,.32);
+        transition: all .3s;
+        transform: scale(1);
+        z-index: 1;
+    }
+    .post-cover:hover {
+        box-shadow: 0 0 30px 0 rgba(179,179,179,.45);
+        transform: scale(1.02);
+    }
+    .post-cover:hover img {
+        transform: scale(1.6);
+    }
+    .post-cover img {
+        width: 100%;
+        border-radius: 5px;
+        vertical-align: middle;
+        transition: all .5s;
+        transform: scale(1);
     }
 </style>
 
@@ -291,22 +377,35 @@
 <!-- Main Content -->
 <div class="container">
 
-    <div class="tool-bgimg">
-        <div class="text-6">沉思四十年人生与沉思一万年人生没有两样。因为你会看到更多的东西吗？</div>
+    <!-- 名言 -->
+    <section class="tool-bgimg bg-dark-6">
+        <div class="text-5"><i class="fa fa-space-shuttle fa-2x" aria-hidden="true"></i></div>
+        <div class="text-6 saying-line saying-scale">沉思四十年人生与沉思一万年人生没有两样。因为你会看到更多的东西吗？</div>
+        <div class="text-6 text-6-1">Meditating on forty years of life is no different from meditating on ten thousand years of life. Because will you see more?</div>
         <div class="text-7">—— 马尔库·奥勒留</div>
-    </div>
+    </section>
     
-    <section class="module bg-dark-60 video-bg" data-background="https://cl9000.github.io/video/20190324.gif">
+    <!-- 公益视频 -->
+    <section class="module bg-dark-60 video-bg" data-background="/video/20190324.gif">
         <div class="row">
           <div class="col-sm-12">
             <div class="video-box">
               <div class="video-box-icon">
-                <a class="video-pop-up" href="https://cl9000.github.io/video/20190324.mp4">
-                    <i class="fa fa-video-camera fa-3x white" aria-hidden="false"></i></a></div>
+                <a class="video-pop-up" href="/video/20190324.mp4">
+                    <i class="fa fa-video-camera fa-3x white" aria-hidden="false"></i>
+                </a>
+              </div>
               <div class="video-title font-alt">公益视频</div>
               <div class="video-subtitle font-alt">你知道中国人有多拼吗？</div>
             </div>
           </div>
+        </div>
+    </section>
+
+    <!-- 文章头部图 尺寸做了调整，删除下面max即可 -->
+    <section style="border-radius: 5px;float: right;">
+        <div class="post-cover" style="max-height: 160px;max-width: 240px;">
+            <img src="https://api.berryapi.net/?service=App.Bing.Images">
         </div>
     </section>
 
