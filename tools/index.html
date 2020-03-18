@@ -151,11 +151,11 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
-                        
-                    
                         
                     
                     
@@ -201,7 +201,7 @@
 <style type="text/css">
     /* 名言 */
     .tool-bgimg {
-        background-image: url('https://api.berryapi.net/?service=App.Bing.Images');
+        background-image: url('https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg');
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
@@ -210,11 +210,13 @@
         position: relative;
         overflow: hidden;
     }
+
     .bg-dark-6:hover {
         transition: all .3s;
         transform: scale(1.01);
-        box-shadow: 0 0 20px 0 rgba(10,10,10,.45);
+        box-shadow: 0 0 20px 0 rgba(10, 10, 10, .45);
     }
+
     .bg-dark-6:before {
         position: absolute;
         background: rgba(2, 2, 2, 0.3);
@@ -224,13 +226,7 @@
         left: 0;
         top: 0;
     }
-    .text-5 {
-        text-align: center; 
-        color: #ffffff;
-        position: relative;
-        padding-top: 30px;
-        transform: rotate(-45deg);
-    }
+
     .text-6 {
         font-style: normal;
         font-size: 18px;
@@ -242,12 +238,14 @@
         display: block;
         padding: 16px 30px 8px 30px;
     }
+
     .text-6-1 {
         position: relative;
         padding: 8px 30px;
         font-size: 14px;
         text-transform: none;
     }
+
     .text-7 {
         position: relative;
         font-size: 16px;
@@ -258,9 +256,10 @@
         padding-bottom: 30px;
         color: white;
     }
+
     /* 字体放大 🔎 */
     .saying-scale:hover {
-        transform: scale(1.1) rotate(0deg);
+        transform: scale(1.02) rotate(0deg);
         color: #f1a128;
         font-weight: 600;
     }
@@ -268,8 +267,9 @@
     /* 动画线 🧶 */
     .saying-line {
         position: relative;
-        padding-bottom: 7px;
+        /* padding-bottom: 7px; */
     }
+
     .saying-line:before {
         position: absolute;
         bottom: 0;
@@ -284,6 +284,7 @@
         transition-duration: .5s;
         transform: scaleX(0);
     }
+
     .saying-line:hover:before {
         visibility: visible;
         transform: scaleX(1);
@@ -302,9 +303,11 @@
         background-position: 50% 50%;
         background-size: cover;
     }
+
     .bg-dark-60 {
         color: #fff;
     }
+
     .bg-dark-60:before {
         position: absolute;
         background: rgba(34, 34, 34, 0.8);
@@ -314,32 +317,34 @@
         left: 0;
         top: 0;
     }
-    .row {
-        margin-right: -15px;
-        margin-left: -15px;
-    }
+
     .video-box {
         text-align: center;
         padding: 40px 0;
     }
-    .video-box-icon > a > i {
+
+    .video-box-icon>a>i {
         line-height: 1.8;
         font-size: 40px;
         color: #fff;
     }
+
     .video-title {
         letter-spacing: 4px;
         font-size: 30px;
         margin: 10px 0 0;
     }
+
     .font-alt {
         font-family: "Roboto Condensed", sans-serif;
         text-transform: uppercase;
         letter-spacing: 2px;
     }
+
     .video-subtitle {
         color: rgba(255, 255, 255, 0.5);
     }
+
     .video-bg {
         background-image: url('/video/20190324.gif');
     }
@@ -352,18 +357,21 @@
         margin-bottom: 14px;
         overflow: hidden;
         border-radius: 5px;
-        box-shadow: 0 0 20px 0 rgba(222,222,222,.32);
+        box-shadow: 0 0 20px 0 rgba(222, 222, 222, .32);
         transition: all .3s;
         transform: scale(1);
         z-index: 1;
     }
+
     .post-cover:hover {
-        box-shadow: 0 0 30px 0 rgba(179,179,179,.45);
+        box-shadow: 0 0 30px 0 rgba(179, 179, 179, .45);
         transform: scale(1.02);
     }
+
     .post-cover:hover img {
         transform: scale(1.6);
     }
+
     .post-cover img {
         width: 100%;
         border-radius: 5px;
@@ -371,6 +379,40 @@
         transition: all .5s;
         transform: scale(1);
     }
+
+    /* 飞机动画 */
+    /* 横向移动 转向 向上（页面上移、图片下移） */
+    .plan-1 {
+        /* text-align: center;  */
+        color: #ffffff;
+        position: relative;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+
+    .plan-anm:hover {
+        animation-name: plan;
+        animation-duration: 3s, .75s;
+        animation-delay: 0s, 1s;
+        animation-timing-function: ease-in, linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        /* animation-play-state: running;  */
+    }
+
+    @keyframes plan {
+        from {
+            transform: translateX(0) scaleX(1.5)
+        }
+
+        to {
+            transform: translateX(70rem) scaleX(1.5) rotate(-90deg) translateY(90px)
+        }
+    }
+
+
+    /* 视频框动画 */
+
 </style>
 
 
@@ -379,170 +421,171 @@
 
     <!-- 名言 -->
     <section class="tool-bgimg bg-dark-6">
-        <div class="text-5"><i class="fa fa-space-shuttle fa-2x" aria-hidden="true"></i></div>
+        <div class="plan-1"><i class="fa fa-space-shuttle fa-2x plan-anm" aria-hidden="true"></i></div>
         <div class="text-6 saying-line saying-scale">沉思四十年人生与沉思一万年人生没有两样。因为你会看到更多的东西吗？</div>
         <div class="text-6 text-6-1">Meditating on forty years of life is no different from meditating on ten thousand years of life. Because will you see more?</div>
         <div class="text-7">—— 马尔库·奥勒留</div>
     </section>
-    
+
     <!-- 公益视频 -->
     <section class="module bg-dark-60 video-bg" data-background="/video/20190324.gif">
         <div class="row">
-          <div class="col-sm-12">
-            <div class="video-box">
-              <div class="video-box-icon">
-                <a class="video-pop-up" href="/video/20190324.mp4">
-                    <i class="fa fa-video-camera fa-3x white" aria-hidden="false"></i>
-                </a>
-              </div>
-              <div class="video-title font-alt">公益视频</div>
-              <div class="video-subtitle font-alt">你知道中国人有多拼吗？</div>
+            <div class="col-sm-12">
+                <div class="video-box">
+                    <div class="video-box-icon">
+                        <a class="video-pop-up" href="/video/20190324.mp4">
+                            <i class="fa fa-video-camera fa-3x white" aria-hidden="false"></i>
+                        </a>
+                    </div>
+                    <div class="video-title font-alt">公益视频</div>
+                    <div class="video-subtitle font-alt">你知道中国人有多拼吗？</div>
+                </div>
             </div>
-          </div>
         </div>
     </section>
 
     <!-- 文章头部图 尺寸做了调整，删除下面max即可 -->
     <section style="border-radius: 5px;float: right;">
         <div class="post-cover" style="max-height: 160px;max-width: 240px;">
-            <img src="https://api.berryapi.net/?service=App.Bing.Images">
+            <img src="https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg">
         </div>
     </section>
+
 
     <div class="row">
         <!-- <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> -->
 
-            <!-- 工具数据 -->
+        <!-- 工具数据 -->
             
 
-            <!-- 工具标签云 -->
-            <div id='tag_cloud' class="tags">
-                
-                <a style="background-color:#3a45f9;color: #fff;" href="#常用推荐" title="常用推荐"
-                    rel="常用推荐">常用推荐</a>
-                
-                <a style="background-color:#3a45f9;color: #fff;" href="#每日开眼" title="每日开眼"
-                    rel="每日开眼">每日开眼</a>
-                
-            </div>
+        <!-- 工具标签云 -->
+        <div id='tag_cloud' class="tags">
             
-            <!-- 工具列表 -->
+            <a style="background-color:#3a45f9;color: #fff;" href="#常用推荐" title="常用推荐"
+                rel="常用推荐">常用推荐</a>
             
-            <div class="panel">
-                <div class="l_title"><i class="fa fa-flag"></i>
-                    <span class="web-title">常用推荐</span>
-                </div>
-                <div class="row2">
-                    
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <a href="http://so.uigreat.com/" target="_blank">
-                            <div class="l_box">
-                                <div class="web-content-top">
-                                    <!-- <if condition="empty($vs.logo) neq true"> -->
-                                    <div class="web-logo">
-                                        <img class="img-responsive" src="https://img.uigreat.com/logo.svg">
-                                    </div> <span class="web-name">UI设计师导航网 - 优阁</span></span>
-                                    <!-- </if> -->
-                                </div>
-                                <div class="web-content-bottom">
-                                    <div class="dot web-content-bottom-content">
-                                        UI - 设计工具导航 &nbsp; Read more »
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <a href="https://tool.lu/" target="_blank">
-                            <div class="l_box">
-                                <div class="web-content-top">
-                                    <!-- <if condition="empty($vs.logo) neq true"> -->
-                                    <div class="web-logo">
-                                        <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
-                                    </div> <span class="web-name">在线工具</span></span>
-                                    <!-- </if> -->
-                                </div>
-                                <div class="web-content-bottom">
-                                    <div class="dot web-content-bottom-content">
-                                        常用工具导航 &nbsp; Read more »
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <a href="http://dh.tianapi.com/Index/index.html" target="_blank">
-                            <div class="l_box">
-                                <div class="web-content-top">
-                                    <!-- <if condition="empty($vs.logo) neq true"> -->
-                                    <div class="web-logo">
-                                        <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
-                                    </div> <span class="web-name">天行导航</span></span>
-                                    <!-- </if> -->
-                                </div>
-                                <div class="web-content-bottom">
-                                    <div class="dot web-content-bottom-content">
-                                        常用工具导航 &nbsp; Read more »
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <a href="https://www.dujin.org/navs/" target="_blank">
-                            <div class="l_box">
-                                <div class="web-content-top">
-                                    <!-- <if condition="empty($vs.logo) neq true"> -->
-                                    <div class="web-logo">
-                                        <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
-                                    </div> <span class="web-name">工具 - 网络地址抓取2</span></span>
-                                    <!-- </if> -->
-                                </div>
-                                <div class="web-content-bottom">
-                                    <div class="dot web-content-bottom-content">
-                                        常用工具导航 &nbsp; Read more »
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                </div>
-            </div>
+            <a style="background-color:#3a45f9;color: #fff;" href="#每日开眼" title="每日开眼"
+                rel="每日开眼">每日开眼</a>
             
-            <div class="panel">
-                <div class="l_title"><i class="fa fa-eye"></i>
-                    <span class="web-title">每日开眼</span>
-                </div>
-                <div class="row2">
-                    
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <a href="https://tools.ccswust.org/" target="_blank">
-                            <div class="l_box">
-                                <div class="web-content-top">
-                                    <!-- <if condition="empty($vs.logo) neq true"> -->
-                                    <div class="web-logo">
-                                        <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
-                                    </div> <span class="web-name">工具 - 网络地址抓取1</span></span>
-                                    <!-- </if> -->
-                                </div>
-                                <div class="web-content-bottom">
-                                    <div class="dot web-content-bottom-content">
-                                        常用工具导航 &nbsp; Read more »
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    
-                </div>
-            </div>
-            
-
         </div>
+
+        <!-- 工具列表 -->
+        
+        <div class="panel">
+            <div class="l_title"><i class="fa fa-flag"></i>
+                <span class="web-title">常用推荐</span>
+            </div>
+            <div class="row2">
+                
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <a href="http://so.uigreat.com/" target="_blank">
+                        <div class="l_box">
+                            <div class="web-content-top">
+                                <!-- <if condition="empty($vs.logo) neq true"> -->
+                                <div class="web-logo">
+                                    <img class="img-responsive" src="https://img.uigreat.com/logo.svg">
+                                </div> <span class="web-name">UI设计师导航网 - 优阁</span></span>
+                                <!-- </if> -->
+                            </div>
+                            <div class="web-content-bottom">
+                                <div class="dot web-content-bottom-content">
+                                    UI - 设计工具导航 &nbsp; Read more »
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <a href="https://tool.lu/" target="_blank">
+                        <div class="l_box">
+                            <div class="web-content-top">
+                                <!-- <if condition="empty($vs.logo) neq true"> -->
+                                <div class="web-logo">
+                                    <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
+                                </div> <span class="web-name">在线工具</span></span>
+                                <!-- </if> -->
+                            </div>
+                            <div class="web-content-bottom">
+                                <div class="dot web-content-bottom-content">
+                                    常用工具导航 &nbsp; Read more »
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <a href="http://dh.tianapi.com/Index/index.html" target="_blank">
+                        <div class="l_box">
+                            <div class="web-content-top">
+                                <!-- <if condition="empty($vs.logo) neq true"> -->
+                                <div class="web-logo">
+                                    <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
+                                </div> <span class="web-name">天行导航</span></span>
+                                <!-- </if> -->
+                            </div>
+                            <div class="web-content-bottom">
+                                <div class="dot web-content-bottom-content">
+                                    常用工具导航 &nbsp; Read more »
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <a href="https://www.dujin.org/navs/" target="_blank">
+                        <div class="l_box">
+                            <div class="web-content-top">
+                                <!-- <if condition="empty($vs.logo) neq true"> -->
+                                <div class="web-logo">
+                                    <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
+                                </div> <span class="web-name">工具 - 网络地址抓取2</span></span>
+                                <!-- </if> -->
+                            </div>
+                            <div class="web-content-bottom">
+                                <div class="dot web-content-bottom-content">
+                                    常用工具导航 &nbsp; Read more »
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="panel">
+            <div class="l_title"><i class="fa fa-eye"></i>
+                <span class="web-title">每日开眼</span>
+            </div>
+            <div class="row2">
+                
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <a href="https://tools.ccswust.org/" target="_blank">
+                        <div class="l_box">
+                            <div class="web-content-top">
+                                <!-- <if condition="empty($vs.logo) neq true"> -->
+                                <div class="web-logo">
+                                    <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
+                                </div> <span class="web-name">工具 - 网络地址抓取1</span></span>
+                                <!-- </if> -->
+                            </div>
+                            <div class="web-content-bottom">
+                                <div class="dot web-content-bottom-content">
+                                    常用工具导航 &nbsp; Read more »
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+
+    </div>
     <!-- </div> -->
 </div>
 
@@ -595,13 +638,14 @@
             float: left;
         }
     }
+
     @media (min-width: 992px) {
         .col-md-4 {
             width: 33.33333333%;
             float: left;
         }
     }
-   
+
     .col-lg-3,
     .col-md-4,
     .col-sm-6 {
