@@ -223,6 +223,7 @@
 
                 <h3><span id="karma-jasmine-构建-web-测试环境">Karma + Jasmine 构建 Web 测试环境</span></h3>
 <h3><span id="jasmine-简介">Jasmine 简介</span></h3>
+<img src="https://cdn.wispx.cn/wallpaper/bing/2019/02/12/d4f42aedc672561334500d26f3f846f5.jpg!blog.thumb" alt>
 <!-- ![](https://jasmine.github.io/images/jasmine-white-horizontal.svg) -->
 <p><img src="https://jasmine.github.io/images/jasmine-horizontal.svg" alt><br>
 <code>Jasmine</code> 是一款 JavaScript BDD（行为驱动开发）测试框架，它不依赖于其他任何 JavaScript 组件。它有干净清晰的语法，让您可以很简单的写出测试代码。<br>
@@ -255,16 +256,16 @@
 </ul>
 </blockquote>
 <h3><span id="karma-安装">Karma 安装</span></h3>
-<p><code>**在项目中建议使用项目独立的</code>node_modules<code>,包括上面的安装其它的依赖，这有利于迁移。**</code><br>
+<p><strong>在项目中建议使用项目独立的 <code>node_modules</code>,包括上面的安装其它的依赖，这有利于迁移。</strong><br>
 Mac安装命令（i 是 install 命令的缩写，-D 是 --save-dev 的缩写。）<br>
 // 局部（单项目）安装。安装 Karma 命令到当前 node_modules 目录下，此时，如果需要执行 karma 命令，就需要这样 <code>$ ./node_modules/.bin/karma</code><br>
 <code>$ npm install karma --save-dev</code><br>
 // 全局安装 - Mac安装路径：<code>/usr/local/bin/node</code><br>
 <code>$ nom install karma -g</code><br>
-测试是否安装成功 <code>$ karma start</code> ，成功会出现提示打开浏览器 <code>http://localhost:9876/</code>访问成功页面。</p>
+测试是否安装成功 <code>$ karma start</code> ，成功会出现提示打开浏览器 <a href="http://localhost:9876/" target="_blank" rel="external">http://localhost:9876/</a> 访问成功页面。</p>
 <h3><span id="karma-初始化配置">Karma 初始化配置</span></h3>
 <p>安装完成之后，切换到目标项目根目录，运行：<br>
-<code>$ karma init</code><br>
+<code>$ karma init</code> or <code>$ karma init **.conf.js</code><br>
 执行命令后，会被问到一系列的问题</p>
 <ul>
 <li>
@@ -282,12 +283,12 @@ Require.js 是异步加载规范（AMD）的实现。常被作为基础代码库
 </li>
 <li>
 <p><code>What is the location of your source and test files?</code><br>
-You can use glob patterns, eg. &quot;js/<em>.js&quot; or &quot;test/</em><em>/<em>Spec.js&quot;.<br>
-选择测试用例所在的目录位置。Karma 支持通配符的方式配置文件或目录，例如 js/</em>.js, test/</em>*/*Spec.js 等。如果目录或文件使用相对位置，要清楚地是，此时的路径是相对于当前运行 karma 命令时所在的目录。</p>
+You can use glob patterns, eg.  <strong>js/*.js&quot; or &quot;test/**/*Spec.js</strong>.<br>
+选择测试用例所在的目录位置。Karma 支持通配符的方式配置文件或目录，例如 <strong>js/*.js&quot; or &quot;test/**/*Spec.js</strong> 等。如果目录或文件使用相对位置，要清楚地是，此时的路径是相对于当前运行 karma 命令时所在的目录。</p>
 </li>
 <li>
 <p><code>Should any of the files included by the previous patterns be excluded?</code><br>
-You can use glob patterns, eg. “*<em>/</em>.swp”.<br>
+You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 目录中不包括的那些文件。</p>
 </li>
 <li>
@@ -339,11 +340,11 @@ You can use glob patterns, eg. “*<em>/</em>.swp”.<br>
 <h3><span id="karma-代码覆盖率">Karma 代码覆盖率</span></h3>
 <ol>
 <li>需要安装依赖 <code>karma-coverage</code> 命令：<code>$ npm install karma-coverage --save-dev</code>，还是建议安装到项目目录中，以便于迁移。</li>
-<li>修改karma.conf.js配置文件</li>
+<li>修改<code>karma.conf.js</code>配置文件</li>
 </ol>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">reporters</span>: [<span class="string">'progress'</span>, <span class="string">'coverage'</span>],</span><br><span class="line"></span><br><span class="line"><span class="attribute">preprocessors</span>: &#123;<span class="string">'test/**/*.js'</span>: <span class="string">'coverage'</span> &#125;,</span><br><span class="line"></span><br><span class="line"><span class="comment">// 覆盖率报告器配置</span></span><br><span class="line"><span class="attribute">coverageReporter</span>: &#123;</span><br><span class="line">  <span class="attribute">type</span>: <span class="string">'html'</span>,</span><br><span class="line">  <span class="attribute">dir</span>: <span class="string">'coverage/'</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <ol start="3">
-<li>启动 <code>karma start karma.conf.js</code> ，会在项目目录下生成 <code>coverage</code> 目录，在其下面找到index.html文件（coverage/chrome/index.html），浏览器打开，便看到代码测试覆盖绿报告。<br>
+<li>启动 <code>karma start karma.conf.js</code> ，会在项目根目录下生成 <code>coverage</code> 目录，在其下面找到index.html文件（coverage/chrome/index.html），浏览器打开，便看到代码测试覆盖绿报告。<br>
 通过修改业务代码（index.js），来观测覆盖率变化。<br>
 为了产品的质量要尽量达到更多的覆盖率，一般对于JAVA项目来说，能达到80%就是相当高的标准了。</li>
 </ol>
