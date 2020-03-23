@@ -81,7 +81,8 @@
 
         
             background-image: url('https://api.berryapi.net/?service=App.Bing.Images');
-            /*page*/
+            /* max-height: 300px; */
+            /*tools*/
         
     }
     
@@ -90,17 +91,32 @@
         padding: 80px 0 !important;
     }
 
+    /* .bg-scale {
+        opacity: 0;
+    }
+    .intro-header:hover, .bg-scale:hover {
+        opacity: 1;
+        -webkit-animation: 2s changeHeight;
+        animation: 2s changeHeight;
+        animation-fill-mode:forwards
+    }
+    @keyframes changeHeight {
+        from { min-height: 0px; }
+        to { min-height: 1180px; }
+    } */
+
 </style>
 <header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
     <!-- Signature -->
     <div id="signature">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
+                    <div class="site-heading tools-site-heading">
                         <h1>Tools</h1>
-                        <!--<hr class="small">-->
+                        <!-- <hr class="small"> -->
                         <span class="subheading">每个人都受两种教育，一种来自别人，另一种更重要的是来自自己。</span>
                     </div>
                 
@@ -454,7 +470,7 @@
 
     <!-- 文章头部图 尺寸做了调整，删除下面max即可 -->
     <section style="border-radius: 5px;float: right;">
-        <div class="post-cover" style="max-height: 160px;max-width: 240px;">
+        <div class="post-cover" style="max-width: 240px;">
             <img src="https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg">
         </div>
     </section>
