@@ -77,7 +77,30 @@
 	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header {
+        /* 滚动条自定义 start */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            /* background-color:transparent; */
+            /* -webkit-border-radius:2em; */
+            -moz-border-radius: 2em;
+            border-radius:2em;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(4, 125, 238);
+            background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+            -webkit-border-radius: 2em;
+            -moz-border-radius: 2em;
+            border-radius: 2em;
+        }
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }   
+        /* 滚动条自定义 end */
+
+        header.intro-header {
 
         
             background-image: url('https://api.berryapi.net/?service=App.Bing.Images');
@@ -158,13 +181,13 @@
                         
                     
                         
+                    
+                        
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
-                        
-                    
-                        
-                    
                         
                     
                         
@@ -417,11 +440,11 @@
             
         
             
-            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
+            <a href="/tags/#HEXO" title="HEXO" rel="2">HEXO</a>
             
         
             
-            <a href="/tags/#HEXO" title="HEXO" rel="2">HEXO</a>
+            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
             
         
             
@@ -434,22 +457,6 @@
         
             
             <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
-            
-        
-            
-            <a href="/tags/#CSS" title="CSS" rel="1">CSS</a>
-            
-        
-            
-            <a href="/tags/#Loading" title="Loading" rel="1">Loading</a>
-            
-        
-            
-            <a href="/tags/#Chrome" title="Chrome" rel="1">Chrome</a>
-            
-        
-            
-            <a href="/tags/#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
             
         
             
@@ -474,6 +481,22 @@
         
             
             <a href="/tags/#hotUpdate" title="hotUpdate" rel="1">hotUpdate</a>
+            
+        
+            
+            <a href="/tags/#Chrome" title="Chrome" rel="1">Chrome</a>
+            
+        
+            
+            <a href="/tags/#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
+            
+        
+            
+            <a href="/tags/#CSS" title="CSS" rel="1">CSS</a>
+            
+        
+            
+            <a href="/tags/#Loading" title="Loading" rel="1">Loading</a>
             
         
     </div>

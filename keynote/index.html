@@ -77,7 +77,30 @@
 	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
-    header.intro-header {
+        /* 滚动条自定义 start */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            /* background-color:transparent; */
+            /* -webkit-border-radius:2em; */
+            -moz-border-radius: 2em;
+            border-radius:2em;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(4, 125, 238);
+            background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+            -webkit-border-radius: 2em;
+            -moz-border-radius: 2em;
+            border-radius: 2em;
+        }
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }   
+        /* 滚动条自定义 end */
+
+        header.intro-header {
 
         
             background-image: url('/img/header_img/404.jpg');
@@ -158,13 +181,13 @@
                         
                     
                         
+                    
+                        
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
-                        
-                    
-                        
-                    
                         
                     
                         
