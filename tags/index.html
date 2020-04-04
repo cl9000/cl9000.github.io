@@ -77,6 +77,13 @@
 	<!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
+        /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+        
+            html {
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+            }
+         
         /* 滚动条自定义 start */
         ::-webkit-scrollbar {
             width: 8px;
@@ -101,7 +108,6 @@
         /* 滚动条自定义 end */
 
         header.intro-header {
-
         
             background-image: url('/img/header_img/tag.png');
             /*page*/
@@ -118,6 +124,10 @@
 </style>
 <header class="intro-header">
     <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    
+    <div style="margin: 55px 45px 0 45px;position: absolute;color: white;text-align: center;font-size: 24px;font-weight: 600;background-color: white;padding: 0 10px;">
+    <p style="color:black">2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。</p></div>
+    
     <!-- Signature -->
     <div id="signature">
         <div class="container">
@@ -240,15 +250,23 @@
                 
                     <a style="background-color:bisque;" href="#文字转语音" title="文字转语音" rel="1">文字转语音</a>
                 
-                    <a style="background-color:bisque;" href="#HEXO" title="HEXO" rel="2">HEXO</a>
-                
                     <a style="background-color:bisque;" href="#Docker" title="Docker" rel="1">Docker</a>
+                
+                    <a style="background-color:bisque;" href="#HEXO" title="HEXO" rel="2">HEXO</a>
                 
                     <a style="background-color:bisque;" href="#Xcode" title="Xcode" rel="1">Xcode</a>
                 
                     <a style="background-color:bisque;" href="#🇨🇳" title="🇨🇳" rel="1">🇨🇳</a>
                 
                     <a style="background-color:bisque;" href="#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
+                
+                    <a style="background-color:bisque;" href="#CSS" title="CSS" rel="1">CSS</a>
+                
+                    <a style="background-color:bisque;" href="#Loading" title="Loading" rel="1">Loading</a>
+                
+                    <a style="background-color:bisque;" href="#Chrome" title="Chrome" rel="1">Chrome</a>
+                
+                    <a style="background-color:bisque;" href="#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
                 
                     <a style="background-color:bisque;" href="#Karma" title="Karma" rel="1">Karma</a>
                 
@@ -261,14 +279,6 @@
                     <a style="background-color:bisque;" href="#热更新" title="热更新" rel="1">热更新</a>
                 
                     <a style="background-color:bisque;" href="#hotUpdate" title="hotUpdate" rel="1">hotUpdate</a>
-                
-                    <a style="background-color:bisque;" href="#Chrome" title="Chrome" rel="1">Chrome</a>
-                
-                    <a style="background-color:bisque;" href="#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
-                
-                    <a style="background-color:bisque;" href="#CSS" title="CSS" rel="1">CSS</a>
-                
-                    <a style="background-color:bisque;" href="#Loading" title="Loading" rel="1">Loading</a>
                 
             </div>
 
@@ -292,6 +302,28 @@
                             <h3 class="post-subtitle">
                                 文字转语音免费接口
                             </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Docker">
+                    <span class="tag-text">Docker</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2020/01/17/Docker/">
+                        <h2 class="post-title">
+                            Docker
+                        </h2>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -328,28 +360,6 @@
                      <a href="/2017/02/09/HEXO个人博客迁移/">
                         <h2 class="post-title">
                             hexo个人博客迁移问题
-                        </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Docker">
-                    <span class="tag-text">Docker</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2020/01/17/Docker/">
-                        <h2 class="post-title">
-                            Docker
                         </h2>
                         
                     </a>
@@ -417,6 +427,110 @@
                         <h2 class="post-title">
                             Hello World
                         </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="CSS">
+                    <span class="tag-text">CSS</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2017/03/27/CSS-Loading/">
+                        <h2 class="post-title">
+                            [CSS] Loading
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                css绘制 loading
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Loading">
+                    <span class="tag-text">Loading</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2017/03/27/CSS-Loading/">
+                        <h2 class="post-title">
+                            [CSS] Loading
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                css绘制 loading
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Chrome">
+                    <span class="tag-text">Chrome</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2017/09/11/Extension-Chrome扩展程序开发/">
+                        <h2 class="post-title">
+                            [Extension] Chrome扩展程序开发
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Chrome 插件
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Chrome Extension">
+                    <span class="tag-text">Chrome Extension</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2017/09/11/Extension-Chrome扩展程序开发/">
+                        <h2 class="post-title">
+                            [Extension] Chrome扩展程序开发
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Chrome 插件
+                            </h3>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -560,110 +674,6 @@
                         
                             <h3 class="post-subtitle">
                                 ionic热更新
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Chrome">
-                    <span class="tag-text">Chrome</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2017/09/11/Extension-Chrome扩展程序开发/">
-                        <h2 class="post-title">
-                            [Extension] Chrome扩展程序开发
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Chrome 插件
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Chrome Extension">
-                    <span class="tag-text">Chrome Extension</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2017/09/11/Extension-Chrome扩展程序开发/">
-                        <h2 class="post-title">
-                            [Extension] Chrome扩展程序开发
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Chrome 插件
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="CSS">
-                    <span class="tag-text">CSS</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2017/03/27/CSS-Loading/">
-                        <h2 class="post-title">
-                            [CSS] Loading
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                css绘制 loading
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Loading">
-                    <span class="tag-text">Loading</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2017/03/27/CSS-Loading/">
-                        <h2 class="post-title">
-                            [CSS] Loading
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                css绘制 loading
                             </h3>
                         
                     </a>
