@@ -28,13 +28,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/CSS/</loc>
-        <lastmod>2020-03-11T06:35:40.047Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/categories/Chrome-Extension/</loc>
         <lastmod>2020-03-12T03:06:22.933Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,6 +51,13 @@
     <url>
         <loc>https://cl9000.github.io/categories/Karma/Jasmine/Web%E6%B5%8B%E8%AF%95/</loc>
         <lastmod>2020-03-19T03:13:28.960Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/CSS/</loc>
+        <lastmod>2020-04-07T07:31:18.498Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
