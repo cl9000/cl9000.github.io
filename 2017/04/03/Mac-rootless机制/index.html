@@ -22,11 +22,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Mac 定时任务 launchctl - 魏长露的博客 | Wei, C.-L. Blog
+          Mac rootless机制 - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
-    <link rel="canonical" href="https://cl9000.github.io/2017/04/09/Mac-定时任务-launchctl/">
+    <link rel="canonical" href="https://cl9000.github.io/2017/04/03/Mac-rootless机制/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -131,16 +131,14 @@
                             
                               <a class="tag" href="/tags/#Mac" title="Mac">Mac</a>
                             
-                              <a class="tag" href="/tags/#定时任务" title="定时任务">定时任务</a>
-                            
-                              <a class="tag" href="/tags/#launchctl" title="launchctl">launchctl</a>
+                              <a class="tag" href="/tags/#rootless" title="rootless">rootless</a>
                             
                         </div>
-                        <h1>Mac 定时任务 launchctl</h1>
-                        <h2 class="subheading">launchctl</h2>
+                        <h1>Mac rootless机制</h1>
+                        <h2 class="subheading">Mac rootless机制 `Operation not permitted`</h2>
                         <span class="meta">
                             Posted by cl9000 on
-                            April 09, 2017
+                            April 03, 2017
                         </span>
                     </div>
                 
@@ -258,79 +256,29 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2><span id="mac-定时任务-launchctl">Mac 定时任务 launchctl</span></h2>
-<h3><span id="launchctl">launchctl</span></h3>
-<p>launchctl: 是一个统一的服务管理框架，可以启动、停止和管理守护进程、应用程序、进程和脚本等。<br>
-launchctl是通过配置文件来指定执行周期和任务的。</p>
-<h3><span id="配置文件plist文件">配置文件（plist文件）</span></h3>
-<p>launchctl 将根据plist文件的信息来启动任务。</p>
-<h5><span id="plist文件位置">plist文件位置：</span></h5>
-<ul>
-<li>~/Library/LaunchAgents 由用户自己定义的任务项（推荐）</li>
-<li>/Library/LaunchAgents 由管理员为用户定义的任务项</li>
-<li>/Library/LaunchDaemons 由管理员定义的守护进程任务项</li>
-<li>/System/Library/LaunchAgents 由Mac OS X为用户定义的任务项</li>
-<li>/System/Library/LaunchDaemons 由Mac OS X定义的守护进程任务项</li>
-</ul>
-<h5><span id="plist部分参数说明">plist部分参数说明：</span></h5>
-<ul>
-<li>Label：全局唯一性；</li>
-<li>ProgramArguments：指定要运行的脚本</li>
-<li>StartCalendarInterval：可以指定脚本在多少分钟、小时、天、星期几、月时间上执行</li>
-<li>StartInterval：指定脚本每间隔多长时间（单位：秒）执行一次；</li>
-<li>StandardInPath、StandardOutPath、StandardErrorPath：标准的输入、输出、错误文件。</li>
-</ul>
-<h3><span id="相关命令">相关命令</span></h3>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 加载任务, -w选项会将plist文件中无效的key覆盖掉，建议加上</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> launchctl load -w com.test.plist</span></span><br><span class="line"><span class="meta"></span><br><span class="line">#</span><span class="bash"> 删除任务</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> launchctl unload -w com.test.plist</span></span><br><span class="line"><span class="meta"></span><br><span class="line">#</span><span class="bash"> 查看任务列表, 使用 grep <span class="string">'任务部分名字'</span> 过滤</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> launchctl list | grep <span class="string">'test.demo'</span></span></span><br><span class="line"><span class="meta"></span><br><span class="line">#</span><span class="bash"> 开始任务 - 立即执行</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> launchctl start com.test.plist</span></span><br><span class="line"><span class="meta"></span><br><span class="line">#</span><span class="bash"> 结束任务</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> launchctl stop com.test.plist</span></span><br></pre></td></tr></table></figure>
-<h3><span id="使用">使用</span></h3>
-<ol>
-<li>
-<p>新建</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">demo</span></span><br><span class="line">    <span class="selector-tag">-</span> <span class="selector-tag">com</span><span class="selector-class">.test</span><span class="selector-class">.plist</span></span><br><span class="line">    <span class="selector-tag">-</span> <span class="selector-tag">testshell</span><span class="selector-class">.sh</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>内容：<br>
-com.test.plist</p>
-</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">plist</span> <span class="meta-keyword">PUBLIC</span> <span class="meta-string">"-//Apple//DTD PLIST 1.0//EN"</span> <span class="meta-string">"http://www.apple.com/DTDs/PropertyList-1.0.dtd"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">plist</span> <span class="attr">version</span>=<span class="string">"1.0"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Label唯一的标识 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>Label<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>com.test<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 要运行的程序， 如果省略这个选项，会把ProgramArguments的第一个</span><br><span class="line">    元素作为要运行的程序 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>Program<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>/Users/weichanglu/Desktop/demo/testShell.sh<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 指定要运行的脚本 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>ProgramArguments<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">string</span>&gt;</span>/Users/weichanglu/Desktop/demo/testShell.sh<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 指定运行的时间 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>StartCalendarInterval<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>Minute<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">integer</span>&gt;</span>30<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>Hour<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">integer</span>&gt;</span>9<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>Day<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">integer</span>&gt;</span>1<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>Month<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">integer</span>&gt;</span>5<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">&lt;!-- 0和7都指星期天 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">key</span>&gt;</span>Weekday<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">integer</span>&gt;</span>0<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 运行间隔，与StartCalenderInterval使用其一，单位为秒 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>StartInterval<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">integer</span>&gt;</span>3<span class="tag">&lt;/<span class="name">integer</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 标准输入文件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>StandardInPath<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>/Users/uniflor/runin.log<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 标准输出文件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>StandardOutPath<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>/Users/weichanglu/Desktop/demo/success.log<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- 标准错误输出文件，错误日志 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">key</span>&gt;</span>StandardErrorPath<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>/Users/weichanglu/Desktop/demo/error.log<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plist</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><a href="http://testshell.sh" target="_blank" rel="external">testshell.sh</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"> <span class="comment">#记录时间 - 自定义脚本或Python脚本</span></span><br><span class="line"><span class="built_in">echo</span> `date` &gt;&gt; ~/Desktop/demo/success.log</span><br><span class="line">time=$(date <span class="string">"+%Y-%m-%d %H：%M：%S"</span>)</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$time</span>"</span> &gt;&gt; ~/Desktop/demo/time.txt</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>
-<p>将 plist 文件复制到 <code>~/Library/LaunchAgents</code> 目录下，需要权限。</p>
-</li>
-<li>
-<p>终端执行 <code>$ cd ~/Library/LaunchAgents</code>，目录下，执行启动服务命令，参考上面命令。</p>
-</li>
-<li>
-<p>查看输出文件。</p>
-</li>
-</ol>
-<h3><span id="路径基础概念">路径基础概念</span></h3>
-<h6><span id="systemlibrary和library和~library目录的区别">/System/Library和/Library和~/Library目录的区别？</span></h6>
-<blockquote>
-<p>/System/Library目录是存放Apple自己开发的软件。<br>
-/Library目录是系统管理员存放的第三方软件。<br>
-~/Library/是用户自己存放的第三方软件。</p>
-</blockquote>
-<h6><span id="launchdaemons和launchagents的区别">LaunchDaemons和LaunchAgents的区别？</span></h6>
-<blockquote>
-<p>LaunchDaemons是用户未登陆前就启动的服务（守护进程）。<br>
-LaunchAgents是用户登陆后启动的服务（守护进程）。</p>
-</blockquote>
-<h3><span id="补充">补充</span></h3>
-<ol>
-<li>运行异常：<code>... operation not permitted ...</code><br>
-解决方案：暂时关闭Mac rootless机制</li>
-<li>权限问题<br>
-注意，脚本要改成可执行的权限：<br>
-<code>chmod 777 *.sh</code></li>
-</ol>
-<h3><span id="launchctl的gui工具">launchctl的GUI工具</span></h3>
-<p><a href="https://www.soma-zone.com/LaunchControl/" target="_blank" rel="external">LaunchControl</a>，用这个工具可以查看到所有的launchctl定时任务。并用GUI的方式进行修改执行等。</p>
-<h3><span id="参考">参考</span></h3>
-<p><a href="http://codingpub.github.io/2016/10/27/OS-X-%E6%B7%BB%E5%8A%A0%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" target="_blank" rel="external">OS X 添加定时任务</a></p>
+                <h2><span id="mac-rootless机制-operation-not-permitted">Mac rootless机制 <code>Operation not permitted</code></span></h2>
+<p>Mac使用 <code>sudo</code> 或切换成 <code>root</code> 权限，还是出现<br>
+<code>Operation not permitted</code></p>
+<p>这是由于 Max OS X El 的<code>rootless</code>机制，即sudo也不能操作部分文件目录， 所以如果需要执行，需要先关闭rootless功能。可以进入恢复模式关闭<code>rootless</code>机制：</p>
+<p>1、重启Mac，按 <code>command+R</code> 进入恢复模式</p>
+<p>2、选择终端，在左上角，输入指令：</p>
+<p><code>$ csrutil disable</code></p>
+<p>3、重启后让机器正常启动，可以在终端查看<code>rootless</code>状态：<br>
+<code>$ csrutil status</code></p>
+<p>正常情况下rootless已经关闭。</p>
+<p>4、要想重新开启<code>rootless</code>机制，参照步骤1，输入指令：<br>
+<code>$ csrutil enable</code></p>
+<p>另外一种方式更简洁， 但是我没有验证过， 自己可以动手试一下：</p>
+<p>不需要进入恢复模式， 在teminal中输入</p>
+<p>sudo nvram boot-args=”kext-dev-mode=1 rootless=0″;sudo reboot</p>
+<p>输入密码后重启。</p>
+<p>打开rootless</p>
+<p>sudo nvram boot-args=”rootless=1″ 重启</p>
+<p>查看rootless<br>
+nvram boot-args</p>
+<p>查看那些目录有rootless限制</p>
+<p>cd /</p>
+<p>ls -lO|grep restricted</p>
 
 
                 <hr>
@@ -338,17 +286,17 @@ LaunchAgents是用户登陆后启动的服务（守护进程）。</p>
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/09/11/Extension-Chrome扩展程序开发/" data-toggle="tooltip" data-placement="top" title="[Extension] Chrome扩展程序开发"> Previous
+                            <a href="/2017/04/09/Mac-定时任务-launchctl/" data-toggle="tooltip" data-placement="top" title="Mac 定时任务 launchctl"> Previous
                             <br>
-                            <span>[Extension] Chrome扩展程序开发</span>
+                            <span>Mac 定时任务 launchctl</span>
                             </a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2017/04/03/Mac-rootless机制/" data-toggle="tooltip" data-placement="top" title="Mac rootless机制">Next
+                            <a href="/2017/03/27/CSS-Loading/" data-toggle="tooltip" data-placement="top" title="[CSS] Loading">Next
                             <br>
-                            <span>Mac rootless机制</span>
+                            <span>[CSS] Loading</span>
                             </a>
                         </li>
                     
@@ -417,7 +365,7 @@ LaunchAgents是用户登陆后启动的服务（守护进程）。</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Mac 定时任务 launchctl</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">launchctl</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">配置文件（plist文件）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.0.1.</span> <span class="toc-nav-text">plist文件位置：</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.0.2.</span> <span class="toc-nav-text">plist部分参数说明：</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">相关命令</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.4.</span> <span class="toc-nav-text">使用</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.5.</span> <span class="toc-nav-text">路径基础概念</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.5.0.0.1.</span> <span class="toc-nav-text">/System/Library和/Library和~/Library目录的区别？</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.5.0.0.2.</span> <span class="toc-nav-text">LaunchDaemons和LaunchAgents的区别？</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.6.</span> <span class="toc-nav-text">补充</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.7.</span> <span class="toc-nav-text">launchctl的GUI工具</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.8.</span> <span class="toc-nav-text">参考</span></a></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Mac rootless机制 Operation not permitted</span></a></li></ol>
         
         </div>
       </aside>
@@ -439,9 +387,7 @@ LaunchAgents是用户登陆后启动的服务（守护进程）。</p>
                        
                           <a class="tag" href="/tags/#Mac" title="Mac">Mac</a>
                         
-                          <a class="tag" href="/tags/#定时任务" title="定时任务">定时任务</a>
-                        
-                          <a class="tag" href="/tags/#launchctl" title="launchctl">launchctl</a>
+                          <a class="tag" href="/tags/#rootless" title="rootless">rootless</a>
                         
                     </div>
                 </section>

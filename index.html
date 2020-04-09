@@ -400,6 +400,36 @@ plist文件位置：
 
 <div class="post-preview">
 
+    <a href="/2017/04/03/Mac-rootless机制/">
+        <h2 class="post-title">
+                                 
+            Mac rootless机制
+        </h2>
+        <h3 class="post-subtitle">
+            Mac rootless机制 `Operation not permitted`
+        </h3>
+        <div class="post-content-preview">
+            Mac rootless机制 Operation not permitted
+Mac使用 sudo 或切换成 root 权限，还是出现
+Operation not permitted
+这是由于 Max OS X El 的rootless机制，即sudo也不能操作部分文件目录， 所以如果需要执行，需要先关闭rootless功能。可以进入恢复模式关闭rootless机制：
+1、重启Mac，按 c......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            April 03, 2017
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
     <a href="/2017/03/27/CSS-Loading/">
         <h2 class="post-title">
                                  
@@ -558,44 +588,6 @@ Why do myself Blog？
 <!-- cl9000 添加样式解决首页列表缺失分割线 -->
 <hr style="height: 1px !important;">
 
-<div class="post-preview">
-
-    <a href="/2017/02/09/HEXO个人博客迁移/">
-        <h2 class="post-title">
-                                 
-            hexo个人博客迁移问题
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            
-关于博客的迁移问题
-
-如果你换电脑、或重装hexo，想把之前的博客迁移到新的电脑。。。或新的文件夹里。
-只需要执行几个简单的命令即可， 首先你的github上要有你的博客托管， 那么继续向下看
-
-
-步骤
-
-
-1、 把github上的博客仓库 clone 到本地的某个文件夹如:myBlog
-2、cd到该文件夹执行以下命令：
-123npm install hexo npm install np......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            February 09, 2017
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
 
 
 <!-- Pager -->
@@ -648,7 +640,15 @@ Why do myself Blog？
             
         
             
-            <a href="/tags/#Mac" title="Mac" rel="1">Mac</a>
+            <a href="/tags/#Mac" title="Mac" rel="2">Mac</a>
+            
+        
+            
+            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
+            
+        
+            
+            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
             
         
             
@@ -657,10 +657,6 @@ Why do myself Blog？
         
             
             <a href="/tags/#launchctl" title="launchctl" rel="1">launchctl</a>
-            
-        
-            
-            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
             
         
             
@@ -809,7 +805,7 @@ Why do myself Blog？
         </li>
       
         <li>
-          <a href="/2017/03/27/CSS-Loading/">[CSS] Loading</a>
+          <a href="/2017/04/03/Mac-rootless机制/">Mac rootless机制</a>
         </li>
       
     </ul>
@@ -863,7 +859,7 @@ Why do myself Blog？
 
     <h5>₰ ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">4</span></li></ul>
     </div>
 
         <hr>
@@ -872,7 +868,7 @@ Why do myself Blog？
 
     <h5>₣ CATEGORIES</h5>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-Extension/">Chrome Extension</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Karma/">Karma</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Karma/Jasmine/">Jasmine</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Karma/Jasmine/Web测试/">Web测试</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Xcode/">Xcode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/🇨🇳🇬🇧/">🇨🇳🇬🇧</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome-Extension/">Chrome Extension</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Karma/">Karma</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Karma/Jasmine/">Jasmine</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Karma/Jasmine/Web测试/">Web测试</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Xcode/">Xcode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/🇨🇳🇬🇧/">🇨🇳🇬🇧</a><span class="category-list-count">1</span></li></ul>
     </div>
 
         <hr>

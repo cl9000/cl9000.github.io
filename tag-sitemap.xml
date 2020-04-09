@@ -114,13 +114,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/Mac/</loc>
-        <lastmod>2020-04-09T11:06:03.480Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
         <lastmod>2020-04-09T11:06:03.480Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -130,6 +123,20 @@
     <url>
         <loc>https://cl9000.github.io/tags/launchctl/</loc>
         <lastmod>2020-04-09T11:06:03.480Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Mac/</loc>
+        <lastmod>2020-04-09T11:11:23.949Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/rootless/</loc>
+        <lastmod>2020-04-09T11:11:23.949Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
