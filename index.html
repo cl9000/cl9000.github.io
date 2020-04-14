@@ -1,5 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- 回到顶部样式 -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
 
 <!-- Head tag -->
 <head>
@@ -31,9 +73,9 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
-    <!-- Custom CSS 这里beantech自定义了样式，但效果和Hux没有太大的差别-->
-    <!--<link rel="stylesheet" href="/css/beantech.min.css">-->
-    <link rel="stylesheet" href="/css/hux-blog.min.css">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
 
     <link rel="stylesheet" href="/css/donate.css">
     
@@ -50,11 +92,11 @@
 
     <!-- Custom Fonts -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <!-- Hux change font-awesome CDN to qiniu -->
+    <!-- change font-awesome CDN to qiniu -->
     <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
-    <!-- Hux Delete, sad but pending in China
+    <!-- Delete, sad but pending in China
     <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
     css'>
@@ -73,8 +115,9 @@
 
 
 <!-- hack iOS CSS :active style -->
+
 <body ontouchstart="">
-	<!-- Modified by Yu-Hsuan Yen -->
+    <!-- Modified by Yu-Hsuan Yen -->
 <!-- Post Header -->
 <style type="text/css">
         /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
@@ -153,7 +196,7 @@
         </div>
     </div>
 </header>
-	
+
     <!-- Navigation -->
 <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
     <div class="container-fluid">
@@ -169,7 +212,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
+        <!-- Known Issue, found by:
             <nav>'s height woule be hold on by its content.
             so, when navbar scale out, the <nav> will cover tags.
             also mask any touch event of tags, unfortunately.
@@ -191,11 +234,11 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/archive/">Archive</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -253,9 +296,12 @@
 <div class="container">
     <div class="row">
         
+    
+        <!-- USE SIDEBAR -->
+
+        <!-- Sidebar Container -->
         
 
-        <!-- USE SIDEBAR -->
         <!-- Post Container -->
         <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
             <!-- Main Content -->
@@ -615,9 +661,8 @@ Xcode–Editor–Show Definitions
 </ul>
 
 
-            
             <br> 
-            
+
             <!-- require APlayer -->
             
     
@@ -626,13 +671,9 @@ Xcode–Editor–Show Definitions
         </div>
 
         <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
+        
+            <!-- Sidebar Container -->
+<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container">
     
         <!-- Featured Tags -->
 
@@ -658,10 +699,6 @@ Xcode–Editor–Show Definitions
             
         
             
-            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
-            
-        
-            
             <a href="/tags/#定时任务" title="定时任务" rel="1">定时任务</a>
             
         
@@ -674,7 +711,7 @@ Xcode–Editor–Show Definitions
             
         
             
-            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
+            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
             
         
             
@@ -683,6 +720,10 @@ Xcode–Editor–Show Definitions
         
             
             <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
+            
+        
+            
+            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
             
         
             
@@ -862,6 +903,7 @@ Xcode–Editor–Show Definitions
     
 </div>
 
+        
 
     
     </div>
@@ -933,16 +975,10 @@ Xcode–Editor–Show Definitions
                         <i class="fa fa-heart"></i>
                     </span>
                     |
-                    <iframe
+                    <!-- <iframe
                         style="margin-left: 2px; margin-bottom:-5px;"
                         frameborder="0" scrolling="0" width="110px" height="22px"
                         src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
-                    </iframe>
-                    <!-- re-Ported by <a href="http://beantech.org/">BeanTech</a> | -->
-                    <!-- <iframe
-                        style="margin-left: 2px; margin-bottom:-5px;"
-                        frameborder="0" scrolling="0" width="100px" height="20px"
-                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
                     </iframe> -->
                 </p>
             </div>
@@ -1048,14 +1084,16 @@ WIDGET = {FID: _fid}
 
 
 
-
-	<a id="rocket" href="#top" class=""></a>
-	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 
     <!-- Image to hack wechat -->
-<img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
 
 </body>
+
 </html>
