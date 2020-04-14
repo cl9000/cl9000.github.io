@@ -100,20 +100,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/CSS/</loc>
-        <lastmod>2020-04-07T08:16:39.468Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Loading/</loc>
-        <lastmod>2020-04-07T08:16:39.468Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/rootless/</loc>
         <lastmod>2020-04-09T11:11:23.949Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -158,6 +144,20 @@
     <url>
         <loc>https://cl9000.github.io/tags/bing-%E5%9B%BE/</loc>
         <lastmod>2020-04-13T11:05:52.084Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/CSS/</loc>
+        <lastmod>2020-04-14T02:02:28.798Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Loading/</loc>
+        <lastmod>2020-04-14T02:02:28.798Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
