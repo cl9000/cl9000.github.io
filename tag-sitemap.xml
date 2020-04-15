@@ -37,13 +37,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/HEXO/</loc>
-        <lastmod>2020-03-08T14:34:55.508Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/Xcode/</loc>
         <lastmod>2020-03-08T15:12:35.642Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -158,6 +151,13 @@
     <url>
         <loc>https://cl9000.github.io/tags/Loading/</loc>
         <lastmod>2020-04-14T02:17:53.523Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/HEXO/</loc>
+        <lastmod>2020-04-15T08:47:17.231Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
