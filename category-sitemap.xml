@@ -14,13 +14,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/HEXO/</loc>
-        <lastmod>2020-03-08T14:34:55.508Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/categories/Xcode/</loc>
         <lastmod>2020-03-08T15:12:35.642Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -72,6 +65,27 @@
     <url>
         <loc>https://cl9000.github.io/categories/CSS/</loc>
         <lastmod>2020-04-14T02:17:53.523Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/HEXO/</loc>
+        <lastmod>2020-04-16T01:52:56.663Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/HEXO/%E7%BB%9F%E8%AE%A1/</loc>
+        <lastmod>2020-04-16T01:52:56.663Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/HEXO/%E7%BB%9F%E8%AE%A1/%E8%AE%BF%E9%97%AE%E9%87%8F/</loc>
+        <lastmod>2020-04-16T01:52:56.663Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

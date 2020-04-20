@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5" />
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword"  content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Hexo博客部署到Coding、Gitee、GitHub - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+        /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+         
+        /* 滚动条自定义 start */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            /* background-color:transparent; */
+            /* -webkit-border-radius:2em; */
+            -moz-border-radius: 2em;
+            border-radius:2em;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(4, 125, 238);
+            background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+            -webkit-border-radius: 2em;
+            -moz-border-radius: 2em;
+            border-radius: 2em;
+        }
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }   
+        /* 滚动条自定义 end */
+
+        header.intro-header {
+        
+            background-image: url('/img/article_header/article_bg.jpg');
+            /*post*/
+        
+    }
+    
+
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" style="color: #fff;background-color: #077bf3;" 
+                              href="/tags/#HEXO" title="HEXO">HEXO</a>
+                            
+                              <a class="tag" style="color: #fff;background-color: #077bf3;" 
+                              href="/tags/#GitHub" title="GitHub">GitHub</a>
+                            
+                              <a class="tag" style="color: #fff;background-color: #077bf3;" 
+                              href="/tags/#Coding" title="Coding">Coding</a>
+                            
+                              <a class="tag" style="color: #fff;background-color: #077bf3;" 
+                              href="/tags/#Gitee" title="Gitee">Gitee</a>
+                            
+                              <a class="tag" style="color: #fff;background-color: #077bf3;" 
+                              href="/tags/#码云" title="码云">码云</a>
+                            
+                        </div>
+                        <h1>Hexo博客部署到Coding、Gitee、GitHub</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            December 20, 2019
+                        </span>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <h2><span id="hexo博客部署到coding-gitee-github">Hexo博客部署到Coding、gitee、GitHub</span></h2>
+<p>由于Coding平台进行了更新，Hexo博客部署到 新版Coding 和 gitee 等平台，GitHub已经前面介绍过，现在更新部署流程，希望能够帮到搭建博客的小伙伴们，如果教程有错，希望大家能够指出来，我会及时修改的，谢谢大家的支持！</p>
+<!-- ![本地图片](/NationalDay70_1920x1080.jpg) -->
+<h2><span id="coding平台">Coding平台</span></h2>
+<ol>
+<li>首先去去<a href="https://coding.net/" target="_blank" rel="external">Coding官网注册</a>账号，进入官网，选择免费注册。</li>
+</ol>
+<!-- ![本地图片](/0.jpg) -->
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/0.jpg" width="400" height="600" alt="图片名称" align="center">
+<ol start="2">
+<li>注册完成之后就会进入主页面，然后点击创建新项目，如下图:<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/1.jpg" alt="本地图片"></li>
+</ol>
+<blockquote>
+<ul>
+<li>代码托管项目：用于托管代码仓库，支持多个仓库，并可选择开启 CI/CD 和制品库功能</li>
+<li>项目管理项目：支持 Scrum 敏捷管理和传统任务管理项目，包含需求、任务和缺陷</li>
+<li>DevOps项目：包含项目管理、代码托管、CI/CD 和制品库等功能，提供完整的研发流程</li>
+</ul>
+</blockquote>
+<p><code>可以点进去看看各个项目模板的用处。</code><br>
+在这里我们选择第三个，DevOps项目，这个含有构建与部署功能。</p>
+<ol start="3">
+<li>
+<p>选择第三个DevOps项目后，会出现下面的页面：<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/2.jpg" alt="本地图片"></p>
+</li>
+<li>
+<p>设置公钥，可以设置全局、针对单个项目的。<br>
+4.1、 单项目的公钥，如下图：<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/3.jpg" alt="本地图片"><br>
+4.2、 全局公钥 - (设置了真多项目的可以跳过这一步)<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/4.jpg" alt="本地图片"><br>
+<strong>公钥可以使用Github，或原来已经生成的。</strong></p>
+</li>
+</ol>
+<blockquote>
+<p>Mac，查看<code>ssh</code></p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh  // 查看是否存在，不存在的话，可使用Mac自带的ssh 新生成一个。</span><br><span class="line">// 存在</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>复制 <code>ssh - 结尾</code>，粘贴到新增的密钥中，名称自定义，选择 <code>永久有效</code>，然后新建。<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/5.jpg" alt="本地图片"><br>
+测试验证：<br>
+<code>$ ssh -T git@git.coding.net</code><br>
+第一次建立连接会要求信任主机，输入相关的用户名或者密码，在控制台输入验证，验证成功即可。</p>
+<ol start="5">
+<li>然后复制你的项目地址，粘贴到配置文件 <code>_config.yml</code>，如图所示：<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/6.jpg" alt="本地图片"><br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/7.jpg" alt="本地图片"></li>
+</ol>
+<p>然后再执行 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> 部署，这是仓库中便有了部署代码。</p>
+<ol start="6">
+<li>打开 coding 的管理页面，找到 静态网站，发布静态网站。<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/8.jpg" alt="本地图片"><br>
+填写基本的信息，点击保存：<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/9.jpg" alt="本地图片"><br>
+点击保存，就会进入下一个页面：<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/10.jpg" alt="本地图片"><br>
+首次点击 <code>立即部署</code> ，之后就会有部署记录，若需要配置自己的域名，点击上图的 <code>设置</code> 进行设置：<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/11.jpg" alt="本地图片"></li>
+<li>Coding 里面还有些其它的扩展功能，项目协调、制品库、测试管理、文档管理等。这也是一些公司的流程，自己可以尝试下。</li>
+</ol>
+<h2><span id="gitee平台码云">Gitee平台（码云）</span></h2>
+<ol>
+<li>流程基本一致，比较简单，<a href="https://gitee.com/" target="_blank" rel="external">码云官网注册</a></li>
+<li>建立仓库，添加公钥，配置本地仓库地址<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/12.jpg" alt="本地图片"></li>
+<li>上传部署博客代码 <code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li>
+<li>点击 <code>服务 - Gitee Pages</code>，进入页面查看相关规则，点击部署即可，<br>
+<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/13.jpg" alt="本地图片"></li>
+</ol>
+<p>Gitee 平台，免费版不会自动部署<br>
+Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHub可直接拉取，部署，更快捷。</p>
+<h2><span id="参考">参考</span></h2>
+<p><a href="https://cloud.tencent.com/developer/article/1580237" target="_blank" rel="external">https://cloud.tencent.com/developer/article/1580237</a></p>
+<br>
+<blockquote style="border-left: 4px solid #3F51B5;padding: 16px 20px;font-size: 14px;border-radius: 0 2px 2px 0;">
+    <p>本文地址：
+    <a href="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/" target="_blank" rel="external">/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/</a></p>
+</blockquote>
+<br>
+
+
+                <hr>
+                <!-- Pager &rarr; 箭头 -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/01/17/Docker/" data-toggle="tooltip" data-placement="top" title="Docker"> Previous
+                            <br>
+                            <span>Docker</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2018/03/18/Karma-Jasmine-构建-Web-测试环境/" data-toggle="tooltip" data-placement="top" title="Karma + Jasmine 构建 Web 测试环境">Next
+                            <br>
+                            <span>Karma + Jasmine 构建 Web 测试环境</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
+                
+
+                <!-- 来必力 start -->
+                
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    <style>
+      span.toc-nav-number{
+        display: none
+      }
+    </style>
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Hexo博客部署到Coding、gitee、GitHub</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Coding平台</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Gitee平台（码云）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">参考</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#HEXO" title="HEXO">HEXO</a>
+                        
+                          <a class="tag" href="/tags/#GitHub" title="GitHub">GitHub</a>
+                        
+                          <a class="tag" href="/tags/#Coding" title="Coding">Coding</a>
+                        
+                          <a class="tag" href="/tags/#Gitee" title="Gitee">Gitee</a>
+                        
+                          <a class="tag" href="/tags/#码云" title="码云">码云</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
+                    
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
+                    
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
+                    
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
+                    
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
+                    
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
+                    
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
+                    
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
+                    
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
+                    
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
+                    
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
+                    
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
+                        <li><a href="" target="_blank">undefined</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<script>
+        $('#toc').on('click','a',function(a){
+            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            // console.log(window.navigator.userAgent,isChrome)
+                // if(isChrome) {
+                    // console.log(a.currentTarget.outerHTML);
+                    // console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                // }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank"  href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                        </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2020 
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    |
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                    <!-- 不蒜子统计 -->
+                    <p class="copyright text-muted" style="margin-top: 5px;">
+                        <span id="busuanzi_container_site_pv">
+                            本站总访问量
+                            <span id="busuanzi_value_site_pv"></span>次
+                        </span>
+                        <span class="post-meta-divider">|</span>
+                        <span id="busuanzi_container_site_uv" style='display:none'>
+                            本站访客数
+                            <span id="busuanzi_value_site_uv"></span>人
+                        </span>
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                    </p>
+              
+              <!-- 不蒜子 end -->     
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://cl9000.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+var _fid = "aqGL3DR6qj";
+WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

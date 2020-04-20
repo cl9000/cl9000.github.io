@@ -222,13 +222,13 @@
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
@@ -308,8 +308,9 @@
 <p><strong><a href="https://github.com/xcodebuild/hexo-asset-image" target="_blank" rel="external">hexo-asset-image 插件</a></strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install https://github.com/CodeFalling/hexo-asset-image --save</span></span><br></pre></td></tr></table></figure>
 <h3><span id="使用">使用</span></h3>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">本地图片</span>](<span class="link">/NationalDay70_1920x1080.jpg</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg" alt="本地图片"></p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">本地图片</span>](<span class="link">/NationalDay70_1920x1080.jpg</span>) </span><br><span class="line">或</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/NationalDay70_1920x1080.jpg.jpg"</span> <span class="attr">width</span> = <span class="string">"300"</span> <span class="attr">height</span> = <span class="string">"200"</span> <span class="attr">alt</span>=<span class="string">"图片名称"</span> <span class="attr">align</span>=<span class="string">center</span> /&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p><img src="/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg" alt="本地图片"><br>
+<img src="/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg.jpg" width="300" height="200" alt="图片名称" align="center"></p>
 <p>生成后的代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg"</span> <span class="attr">alt</span>=<span class="string">"本地图片"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2><span id="参考">参考</span></h2>
@@ -327,9 +328,9 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/02/22/cordova热更新/" data-toggle="tooltip" data-placement="top" title="[Ionic] - ionic热更新"> Previous
+                            <a href="/2017/02/16/HEXO-添加访问量统计/" data-toggle="tooltip" data-placement="top" title="HEXO 添加访问量统计"> Previous
                             <br>
-                            <span>[Ionic] - ionic热更新</span>
+                            <span>HEXO 添加访问量统计</span>
                             </a>
                         </li>
                     
@@ -619,6 +620,7 @@
                     </iframe> -->
                 </p>
 
+                <!-- 不蒜子 start -->
                 
                     <!-- 不蒜子统计 -->
                     <p class="copyright text-muted" style="margin-top: 5px;">
@@ -633,7 +635,8 @@
                         </span>
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                     </p>
-                      
+              
+              <!-- 不蒜子 end -->     
             </div>
         </div>
     </div>
