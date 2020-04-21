@@ -222,29 +222,29 @@
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
-                        </li>
-                        
-                    
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
                     
                         
-                    
-                        
-                    
-                        
                         <li>
-                            <a href="/tools/">Tools</a>
+                            <a href="/archive/">Archive</a>
                         </li>
+                        
+                    
+                        
+                    
                         
                     
                         
                         <li>
                             <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
                         </li>
                         
                     
@@ -298,9 +298,9 @@
             <!-- 标签云 -->
             <div id='tag_cloud' class="tags">
                 
-                    <a style="background-color:bisque;" href="#文字转语音" title="文字转语音" rel="1">文字转语音</a>
-                
                     <a style="background-color:bisque;" href="#Docker" title="Docker" rel="1">Docker</a>
+                
+                    <a style="background-color:bisque;" href="#文字转语音" title="文字转语音" rel="1">文字转语音</a>
                 
                     <a style="background-color:bisque;" href="#HEXO" title="HEXO" rel="5">HEXO</a>
                 
@@ -318,13 +318,13 @@
                 
                     <a style="background-color:bisque;" href="#Mac" title="Mac" rel="2">Mac</a>
                 
+                    <a style="background-color:bisque;" href="#rootless" title="rootless" rel="1">rootless</a>
+                
                     <a style="background-color:bisque;" href="#定时任务" title="定时任务" rel="1">定时任务</a>
                 
                     <a style="background-color:bisque;" href="#launchctl" title="launchctl" rel="1">launchctl</a>
                 
                     <a style="background-color:bisque;" href="#Xcode" title="Xcode" rel="1">Xcode</a>
-                
-                    <a style="background-color:bisque;" href="#rootless" title="rootless" rel="1">rootless</a>
                 
                     <a style="background-color:bisque;" href="#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
                 
@@ -361,6 +361,28 @@
             <!-- 标签列表 -->
             
             <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Docker">
+                    <span class="tag-text">Docker</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2020/01/17/Docker/">
+                        <h2 class="post-title">
+                            Docker
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="文字转语音">
                     <span class="tag-text">文字转语音</span>
                 </span>
@@ -378,28 +400,6 @@
                             <h3 class="post-subtitle">
                                 文字转语音免费接口
                             </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Docker">
-                    <span class="tag-text">Docker</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2020/01/17/Docker/">
-                        <h2 class="post-title">
-                            Docker
-                        </h2>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -680,6 +680,32 @@
             </div>
             
             <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="rootless">
+                    <span class="tag-text">rootless</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2017/04/03/Mac-rootless机制/">
+                        <h2 class="post-title">
+                            Mac rootless机制
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                Mac rootless机制 `Operation not permitted`
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="定时任务">
                     <span class="tag-text">定时任务</span>
                 </span>
@@ -745,32 +771,6 @@
                         <h2 class="post-title">
                             XcodeBuildSetting中大小写设置
                         </h2>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="rootless">
-                    <span class="tag-text">rootless</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/2017/04/03/Mac-rootless机制/">
-                        <h2 class="post-title">
-                            Mac rootless机制
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                Mac rootless机制 `Operation not permitted`
-                            </h3>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
@@ -1212,7 +1212,7 @@
                 #f2f2ee 75%,
                 #f2f2ee);
         background-size: 30px 30px;
-        width: 120%;
+        /* width: 120%; */
         height: 200px;
         margin: 0 -10%;
         -webkit-transform: rotate(7deg);
