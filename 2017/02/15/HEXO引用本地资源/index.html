@@ -223,9 +223,10 @@
         <div id="huxblog_navbar">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-show">
+                    <li id="searchIcon">
                         <a href="#searchModal">
-                            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
                         </a>
                     </li>
                     <li>
@@ -236,13 +237,13 @@
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -784,7 +785,9 @@
 <div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
 <script type="text/javascript">
     $(function () {
-        searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
     });
     $("#searchIcon").click(function () {
         if (!$("#searchModal").hasClass("open")) {
