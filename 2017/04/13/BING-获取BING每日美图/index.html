@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- 回到顶部样式 -->
+    <!-- 回到顶部样式 start -->
     <style>
         .go-top {
             background-color: #ff4820;
@@ -42,9 +42,12 @@
             bottom: 45px
         }
     </style>
+    <!-- 回到顶部样式 end -->
+
+
 
 <!-- Head tag -->
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-CN">
@@ -52,13 +55,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
-    <meta name="baidu-site-verification" content="cTguDliTv5" />
+    <meta name="baidu-site-verification" content="cTguDliTv5">
     <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
-    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao" />
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
     <meta name="description" content="个人博客">
-    <meta name="keyword"  content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <meta name="keyword" content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -111,6 +114,7 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
 </head>
 
 
@@ -153,6 +157,7 @@
     }
     
 
+    /* tools heading */
     .tools-site-heading {
         padding: 80px 0 !important;
     }
@@ -216,10 +221,14 @@
         <div id="huxblog_navbar">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-show">
+                        <a href="#searchModal">
+                            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+                        </a>
+                    </li>
                     <li>
                         <a href="/">Home</a>
                     </li>
-
                     
                         
                     
@@ -291,6 +300,8 @@
 </script>
 
 
+
+
     <!-- Main Content -->
     
 <!-- Post Content -->
@@ -316,14 +327,14 @@
 </ul>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"images"</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"startdate"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"fullstartdate"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"enddate"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"url"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"urlbase"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"copyright"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"copyrightlink"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"title"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"quiz"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"wp"</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">"hsh"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"drk"</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">"top"</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">"bot"</span>: <span class="number">1</span>,</span><br><span class="line">      <span class="attr">"hs"</span>: []</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"tooltips"</span>: &#123;</span><br><span class="line">    <span class="attr">"loading"</span>: <span class="string">"正在加载..."</span>,</span><br><span class="line">    <span class="attr">"previous"</span>: <span class="string">"上一个图像"</span>,</span><br><span class="line">    <span class="attr">"next"</span>: <span class="string">"下一个图像"</span>,</span><br><span class="line">    <span class="attr">"walle"</span>: <span class="string">"此图片不能下载用作壁纸。"</span>,</span><br><span class="line">    <span class="attr">"walls"</span>: <span class="string">"下载今日美图。仅限用作桌面壁纸。"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>其中的 “images” 节点下的 “url” 值便是我们要获取的图像地址。<br>
-把它取出来，再加上Bing的网址前缀(<a href="http://cn.bing.com" target="_blank" rel="external">http://cn.bing.com</a>)即组合成了完整的图像地址。可直接浏览器查看。</p>
+把它取出来，再加上Bing的网址前缀(<a href="http://cn.bing.com" target="_blank" rel="noopener">http://cn.bing.com</a>)即组合成了完整的图像地址。可直接浏览器查看。</p>
 <h3><span id="用php去动态抓取">用PHP去动态抓取</span></h3>
 <p>获取BING每日背景图，构建API、每日抓取下载、部署私人服务器并存储，代码如下：</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// ini_set(<span class="string">'date.timezone'</span>,<span class="string">'Asia/Shanghai'</span>);  <span class="regexp">//</span>设置时区，确定为中国上海时区</span><br><span class="line"> </span><br><span class="line">// 方案一</span><br><span class="line">$path0 = <span class="string">'BingWallpaper'</span>; <span class="regexp">//</span> 定义存放图片的一级目录，这个目录是固定的，需要手动创建并设置写入权</span><br><span class="line">$path = $path0 .<span class="string">'/'</span>. date(<span class="string">"Ym"</span>); <span class="regexp">//</span> 图片缓存文件夹，以当前年月命名并自动新建文件夹</span><br><span class="line">$filename = date(<span class="string">"Ymd"</span>) .<span class="string">'.jpg'</span>;  <span class="regexp">//</span> 用年月日来命名新的文件名</span><br><span class="line"><span class="keyword">if</span> (!file_exists($path .<span class="string">'/'</span>. $filename)) &#123; <span class="regexp">//</span> 如果文件不存在，则说明今天还没有进行缓存</span><br><span class="line">    <span class="keyword">if</span>(!file_exists($path)) &#123; <span class="regexp">//</span> 如果目录不存在</span><br><span class="line">        <span class="keyword">mkdir</span>($path, <span class="number">0777</span>); <span class="regexp">//</span> 创建缓存目录</span><br><span class="line">    &#125;</span><br><span class="line">    $str = file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1'</span>); <span class="regexp">//</span> 读取必应api，获得相应数据</span><br><span class="line">    $str = json_decode($str, true);</span><br><span class="line">    $imgurl = <span class="string">'http://cn.bing.com'</span>. $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'url'</span>];    <span class="regexp">//</span> 获取图片url</span><br><span class="line">    $img = grabImage($imgurl, $path .<span class="string">'/'</span>. $filename); <span class="regexp">//</span> 读取并保存图片</span><br><span class="line">&#125;</span><br><span class="line">function grabImage($url, $filename = <span class="string">""</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>($url == <span class="string">""</span>) <span class="keyword">return</span> false; <span class="regexp">//</span> 如果$url地址为空，直接退出</span><br><span class="line">    <span class="keyword">if</span> ($filename == <span class="string">""</span>) &#123; <span class="regexp">//</span> 如果没有指定新的文件名</span><br><span class="line">        $ext = strrchr($url, <span class="string">"."</span>);  <span class="regexp">//</span> 得到$url的图片格式</span><br><span class="line">        $filename = date(<span class="string">"Ymd"</span>) . $ext;  <span class="regexp">//</span> 用天月面时分秒来命名新的文件名</span><br><span class="line">    &#125;</span><br><span class="line">    ob_start();         <span class="regexp">//</span> 打开输出</span><br><span class="line">    readfile($url);     <span class="regexp">//</span> 输出图片文件</span><br><span class="line">    $img = ob_get_contents();   <span class="regexp">//</span> 得到浏览器输出</span><br><span class="line">    ob_end_clean();             <span class="regexp">//</span> 清除输出并关闭</span><br><span class="line">    $size = strlen($img);       <span class="regexp">//</span> 得到图片大小</span><br><span class="line">    $fp2 = @fopen($filename, <span class="string">"a"</span>);</span><br><span class="line">    fwrite($fp2, $img);         <span class="regexp">//</span> 向当前目录写入图片文件，并重新命名</span><br><span class="line">    fclose($fp2);</span><br><span class="line">    <span class="keyword">return</span> $filename;           <span class="regexp">//</span> 返回新的文件名</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// <span class="regexp">//</span> 方案二</span><br><span class="line">// $path=<span class="string">'BingWallpaper'</span>;   <span class="regexp">//</span> 定义存放图片的一级目录，这个目录是固定的，需要手动创建并设置写入权</span><br><span class="line">// $path1=$path.<span class="string">'/'</span>.date(<span class="string">'Ym'</span>);  <span class="regexp">//</span> 定义存放图片的二级目录，以当前所处年份来命名</span><br><span class="line">// <span class="keyword">if</span>(!file_exists($path1)) &#123;</span><br><span class="line"><span class="regexp">//</span>     <span class="keyword">mkdir</span>($path1, <span class="number">0777</span>);</span><br><span class="line"><span class="regexp">//</span> &#125;  // 判断二级目录是否存在，若不存在，则自动创建并设置写入权</span><br><span class="line">// <span class="regexp">//</span> $path2=$path1.<span class="string">'/'</span>.date(<span class="string">'m'</span>);  <span class="regexp">//</span> 定义存放图片的三级目录，以当前所处月份来命名</span><br><span class="line">// <span class="regexp">//</span> <span class="keyword">if</span>(!file_exists($path2))&#123;</span><br><span class="line"><span class="regexp">//</span> //     <span class="keyword">mkdir</span>($path2, <span class="number">0777</span>);</span><br><span class="line"><span class="regexp">//</span> // &#125;   // 判断三级目录是否存在，若不存在，则自动创建并设置写入权</span><br><span class="line">// <span class="regexp">//</span> $pathurl=$path2.<span class="string">'/'</span>.date(<span class="string">'Ymd'</span>).<span class="string">'.jpg'</span>;   <span class="regexp">//</span> 定义图片名，以当前所处日份来命名</span><br><span class="line">// $pathurl=$path1.<span class="string">'/'</span>.date(<span class="string">'Ymd'</span>).<span class="string">'.jpg'</span>;   <span class="regexp">//</span> 定义图片名，以当前所处日份来命名</span><br><span class="line">// <span class="keyword">if</span>(!is_file($pathurl)) &#123;</span><br><span class="line"><span class="regexp">//</span>     $str=file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?idx=0&amp;n=1'</span>);   <span class="regexp">//</span> 获取图片地址，并判断图片是否已经存在</span><br><span class="line">//     <span class="keyword">if</span>(preg_match(<span class="string">"/&lt;urlBase&gt;(.+?)&lt;\/urlBase&gt;/isu"</span>, $str, $matches)) &#123; <span class="regexp">//</span> ies</span><br><span class="line">//         $imgurl=<span class="string">'http://cn.bing.com'</span>.$matches[<span class="number">1</span>].<span class="string">'_1920x1080.jpg'</span>;</span><br><span class="line"><span class="regexp">//</span>         copy($imgurl, $pathurl);</span><br><span class="line"><span class="regexp">//</span>     &#125;  //读取对应的图片并写入指定目录</span><br><span class="line">// &#125;</span><br><span class="line">// <span class="regexp">//</span> 显示图片</span><br><span class="line">// <span class="regexp">//</span> header(<span class="string">'Content-Type:image/jpeg'</span>);  <span class="regexp">//</span>定义输出类型</span><br><span class="line">// <span class="regexp">//</span> @ob_end_clean();   <span class="regexp">//</span>擦除缓存</span><br><span class="line">// <span class="regexp">//</span> @readfile($pathurl);  <span class="regexp">//</span>输出本地图片</span><br><span class="line">// <span class="regexp">//</span> @flush();   <span class="regexp">//</span>缓存</span><br><span class="line">// <span class="regexp">//</span> @ob_flush();   <span class="regexp">//</span>输出缓存 </span><br><span class="line">// <span class="regexp">//</span> <span class="keyword">exit</span>();  <span class="regexp">//</span>退出</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 方案三： + 写入图片信息 参考 https:<span class="regexp">//mkblog</span>.cn/<span class="number">492</span>/</span><br><span class="line"><span class="regexp">//</span> $path = <span class="string">'temp'</span>;   <span class="regexp">//</span>设置图片缓存文件夹</span><br><span class="line">// $filename = date(<span class="string">"Ymd"</span>) . <span class="string">'.jpg'</span>;  <span class="regexp">//</span>用年月日来命名新的文件名</span><br><span class="line">// <span class="keyword">if</span> (!file_exists($path.<span class="string">'/'</span>. $filename)) &#123; <span class="regexp">//</span>如果文件不存在，则说明今天还没有进行缓存 </span><br><span class="line">//     <span class="keyword">if</span>(!file_exists($path)) //如果目录不存在</span><br><span class="line">//     &#123;</span><br><span class="line"><span class="regexp">//</span>         <span class="keyword">mkdir</span>($path, <span class="number">0777</span>); <span class="regexp">//</span>创建缓存目录</span><br><span class="line">//     &#125;</span><br><span class="line">//     $str = file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1'</span>); <span class="regexp">//</span>读取必应api，获得相应数据</span><br><span class="line">//     $str = json_decode($str,true);</span><br><span class="line"><span class="regexp">//</span>     $imgurl = <span class="string">'http://cn.bing.com'</span>.$str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'url'</span>];    <span class="regexp">//</span>获取图片url</span><br><span class="line">//     $img = grabImage($imgurl, $path.<span class="string">'/'</span>.$filename); <span class="regexp">//</span>读取并保存图片</span><br><span class="line">//     $handle = fopen(<span class="string">"dat.txt"</span>, <span class="string">"a"</span>);    <span class="regexp">//</span>用于存放图片信息，如果不需要保存图片的相关信息，可以把下面这些去掉。</span><br><span class="line">//     <span class="keyword">if</span> ($handle) &#123;</span><br><span class="line"><span class="regexp">//</span>         $copyright = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'copyright'</span>];    <span class="regexp">//</span>说明</span><br><span class="line">//         $startdate = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'startdate'</span>];</span><br><span class="line"><span class="regexp">//</span>         $fullstartdate = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'fullstartdate'</span>];</span><br><span class="line"><span class="regexp">//</span>         $enddate = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'enddate'</span>];</span><br><span class="line"><span class="regexp">//</span>         $urlbase = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'urlbase'</span>];</span><br><span class="line"><span class="regexp">//</span>         $copyrightlink = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'copyrightlink'</span>];</span><br><span class="line"><span class="regexp">//</span>         $quiz = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'quiz'</span>];</span><br><span class="line"><span class="regexp">//</span>         $wp = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'wp'</span>];</span><br><span class="line"><span class="regexp">//</span>         $hsh = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'hsh'</span>];</span><br><span class="line"><span class="regexp">//</span>         $drk = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'drk'</span>];</span><br><span class="line"><span class="regexp">//</span>         $top = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'top'</span>];</span><br><span class="line"><span class="regexp">//</span>         $bot = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'bot'</span>];</span><br><span class="line"><span class="regexp">//</span>         $tempArr = array(<span class="string">"imgurl"</span>=&gt;$imgurl,<span class="string">"copyright"</span>=&gt;$copyright, <span class="string">"startdate"</span>=&gt;$startdate,</span><br><span class="line"><span class="regexp">//</span>         <span class="string">"fullstartdate"</span>=&gt;$fullstartdate, <span class="string">"enddate"</span>=&gt; $enddate, <span class="string">"urlbase"</span>=&gt;$urlbase,</span><br><span class="line"><span class="regexp">//</span>         <span class="string">"copyrightlink"</span>=&gt; $copyrightlink, <span class="string">"quiz"</span>=&gt;$quiz, <span class="string">"wp"</span>=&gt; $wp,</span><br><span class="line"><span class="regexp">//</span>         <span class="string">"hsh"</span>=&gt;$hsh,<span class="string">"drk"</span>=&gt;$drk, <span class="string">"top"</span>=&gt; $top, <span class="string">"bot"</span>=&gt; $bot);   <span class="regexp">//</span>将相关信息放进数组中</span><br><span class="line">//         fwrite($handle, json_encode($tempArr) .<span class="string">"\r\n"</span>); <span class="regexp">//</span>最终以json格式保存在文本文档中</span><br><span class="line">//         fclose($handle);</span><br><span class="line"><span class="regexp">//</span>     &#125;</span><br><span class="line">// &#125;</span><br><span class="line">// function grabImage($url, $filename = <span class="string">""</span>) &#123;</span><br><span class="line"><span class="regexp">//</span>     <span class="keyword">if</span>($url == <span class="string">""</span>) <span class="keyword">return</span> false; <span class="regexp">//</span>如果$url地址为空，直接退出</span><br><span class="line">//     <span class="keyword">if</span> ($filename == <span class="string">""</span>) &#123; <span class="regexp">//</span>如果没有指定新的文件名</span><br><span class="line">//         $ext = strrchr($url, <span class="string">"."</span>);  <span class="regexp">//</span>得到$url的图片格式</span><br><span class="line">//         $filename = date(<span class="string">"Ymd"</span>) . $ext;  <span class="regexp">//</span>用天月面时分秒来命名新的文件名</span><br><span class="line">//     &#125;</span><br><span class="line">//     ob_start();         <span class="regexp">//</span>打开输出</span><br><span class="line">//     readfile($url);     <span class="regexp">//</span>输出图片文件</span><br><span class="line">//     $img = ob_get_contents();   <span class="regexp">//</span>得到浏览器输出</span><br><span class="line">//     ob_end_clean();             <span class="regexp">//</span>清除输出并关闭</span><br><span class="line">//     $size = strlen($img);       <span class="regexp">//</span>得到图片大小</span><br><span class="line">//     $fp2 = @fopen($filename, <span class="string">"a"</span>);</span><br><span class="line"><span class="regexp">//</span>     fwrite($fp2, $img);         <span class="regexp">//</span>向当前目录写入图片文件，并重新命名</span><br><span class="line">//     fclose($fp2);</span><br><span class="line"><span class="regexp">//</span>     <span class="keyword">return</span> $filename;           <span class="regexp">//</span>返回新的文件名</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// ******************************************************************************************</span><br><span class="line"><span class="regexp">//</span> // 仅使用其作为背景图API，新建PHP文件</span><br><span class="line">// <span class="regexp">//</span> Bing壁纸API - <span class="number">1</span></span><br><span class="line">// $str=file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?idx=0&amp;n=1'</span>);</span><br><span class="line"><span class="regexp">//</span> <span class="keyword">if</span>(preg_match(<span class="string">"/(.+?)&lt;\/url&gt;/ies"</span>,$str,$matches))&#123;</span><br><span class="line"><span class="regexp">//</span> $imgurl=<span class="string">'http://cn.bing.com'</span>.$matches[<span class="number">1</span>];</span><br><span class="line"><span class="regexp">//</span> &#125;</span><br><span class="line">// <span class="keyword">if</span>($imgurl)&#123;</span><br><span class="line"><span class="regexp">//</span> header(<span class="string">'Content-Type: image/JPEG'</span>);</span><br><span class="line"><span class="regexp">//</span> @ob_end_clean();</span><br><span class="line"><span class="regexp">//</span> @readfile($imgurl);</span><br><span class="line"><span class="regexp">//</span> @flush(); @ob_flush();</span><br><span class="line"><span class="regexp">//</span> <span class="keyword">exit</span>();</span><br><span class="line"><span class="regexp">//</span> &#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="regexp">//</span> <span class="keyword">exit</span>(<span class="string">'error'</span>);</span><br><span class="line"><span class="regexp">//</span> &#125;</span><br><span class="line">// <span class="regexp">//</span> Warning: preg_match(): The /e modifier is <span class="keyword">no</span> longer supported, <span class="keyword">use</span> preg_replace_callback instead in /Library/WebServer/Documents/phpMyProjects/php-test/index4.php on line <span class="number">4</span></span><br><span class="line">// <span class="regexp">//</span> error</span><br><span class="line"></span><br><span class="line">// <span class="regexp">//</span> Bing壁纸API - <span class="number">2</span></span><br><span class="line">// $str = file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?idx=0&amp;n=1'</span>);   <span class="regexp">//</span> 从bing获取数据</span><br><span class="line">// <span class="keyword">if</span>(preg_match(<span class="string">'/&lt;url&gt;([^&lt;]+)&lt;\/url&gt;/isU'</span>, $str, $matches)) &#123; <span class="regexp">//</span> 正则匹配抓取图片url</span><br><span class="line">//     $imgurl = <span class="string">'http://cn.bing.com'</span>.$matches[<span class="number">1</span>];</span><br><span class="line"><span class="regexp">//</span> &#125; <span class="keyword">else</span> &#123;  <span class="regexp">//</span> 如果由于某些原因，没抓取到图片地址</span><br><span class="line">//     $imgurl = <span class="string">'http://img.infinitynewtab.com/InfinityWallpaper/2_14.jpg'</span>; <span class="regexp">//</span> 使用默认的图像(默认图像链接可修改为自己的)</span><br><span class="line">// &#125;</span><br><span class="line">// echo <span class="string">"$imgurl"</span>;</span><br><span class="line"><span class="regexp">//</span> echo <span class="string">"&lt;img src='$imgurl' /&gt;"</span>;</span><br><span class="line"><span class="regexp">//</span> header(<span class="string">"Location:&#123;$imgurl&#125;"</span>); <span class="regexp">//</span> 跳转至目标图像</span><br></pre></td></tr></table></figure>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">// ini_set(<span class="string">'date.timezone'</span>,<span class="string">'Asia/Shanghai'</span>);  <span class="regexp">//</span>设置时区，确定为中国上海时区</span><br><span class="line"> </span><br><span class="line">// 方案一</span><br><span class="line">$path0 = <span class="string">'BingWallpaper'</span>; <span class="regexp">//</span> 定义存放图片的一级目录，这个目录是固定的，需要手动创建并设置写入权</span><br><span class="line">$path = $path0 .<span class="string">'/'</span>. date(<span class="string">"Ym"</span>); <span class="regexp">//</span> 图片缓存文件夹，以当前年月命名并自动新建文件夹</span><br><span class="line">$filename = date(<span class="string">"Ymd"</span>) .<span class="string">'.jpg'</span>;  <span class="regexp">//</span> 用年月日来命名新的文件名</span><br><span class="line"><span class="keyword">if</span> (!file_exists($path .<span class="string">'/'</span>. $filename)) &#123; <span class="regexp">//</span> 如果文件不存在，则说明今天还没有进行缓存</span><br><span class="line">    <span class="keyword">if</span>(!file_exists($path)) &#123; <span class="regexp">//</span> 如果目录不存在</span><br><span class="line">        <span class="keyword">mkdir</span>($path, <span class="number">0777</span>); <span class="regexp">//</span> 创建缓存目录</span><br><span class="line">    &#125;</span><br><span class="line">    $str = file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1'</span>); <span class="regexp">//</span> 读取必应api，获得相应数据</span><br><span class="line">    $str = json_decode($str, true);</span><br><span class="line">    $imgurl = <span class="string">'http://cn.bing.com'</span>. $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'url'</span>];    <span class="regexp">//</span> 获取图片url</span><br><span class="line">    $img = grabImage($imgurl, $path .<span class="string">'/'</span>. $filename); <span class="regexp">//</span> 读取并保存图片</span><br><span class="line">&#125;</span><br><span class="line">function grabImage($url, $filename = <span class="string">""</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>($url == <span class="string">""</span>) <span class="keyword">return</span> false; <span class="regexp">//</span> 如果$url地址为空，直接退出</span><br><span class="line">    <span class="keyword">if</span> ($filename == <span class="string">""</span>) &#123; <span class="regexp">//</span> 如果没有指定新的文件名</span><br><span class="line">        $ext = strrchr($url, <span class="string">"."</span>);  <span class="regexp">//</span> 得到$url的图片格式</span><br><span class="line">        $filename = date(<span class="string">"Ymd"</span>) . $ext;  <span class="regexp">//</span> 用天月面时分秒来命名新的文件名</span><br><span class="line">    &#125;</span><br><span class="line">    ob_start();         <span class="regexp">//</span> 打开输出</span><br><span class="line">    readfile($url);     <span class="regexp">//</span> 输出图片文件</span><br><span class="line">    $img = ob_get_contents();   <span class="regexp">//</span> 得到浏览器输出</span><br><span class="line">    ob_end_clean();             <span class="regexp">//</span> 清除输出并关闭</span><br><span class="line">    $size = strlen($img);       <span class="regexp">//</span> 得到图片大小</span><br><span class="line">    $fp2 = @fopen($filename, <span class="string">"a"</span>);</span><br><span class="line">    fwrite($fp2, $img);         <span class="regexp">//</span> 向当前目录写入图片文件，并重新命名</span><br><span class="line">    fclose($fp2);</span><br><span class="line">    <span class="keyword">return</span> $filename;           <span class="regexp">//</span> 返回新的文件名</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// <span class="regexp">//</span> 方案二</span><br><span class="line">// $path=<span class="string">'BingWallpaper'</span>;   <span class="regexp">//</span> 定义存放图片的一级目录，这个目录是固定的，需要手动创建并设置写入权</span><br><span class="line">// $path1=$path.<span class="string">'/'</span>.date(<span class="string">'Ym'</span>);  <span class="regexp">//</span> 定义存放图片的二级目录，以当前所处年份来命名</span><br><span class="line">// <span class="keyword">if</span>(!file_exists($path1)) &#123;</span><br><span class="line">//     <span class="keyword">mkdir</span>($path1, <span class="number">0777</span>);</span><br><span class="line">// &#125;  // 判断二级目录是否存在，若不存在，则自动创建并设置写入权</span><br><span class="line">// <span class="regexp">//</span> $path2=$path1.<span class="string">'/'</span>.date(<span class="string">'m'</span>);  <span class="regexp">//</span> 定义存放图片的三级目录，以当前所处月份来命名</span><br><span class="line">// <span class="regexp">//</span> <span class="keyword">if</span>(!file_exists($path2))&#123;</span><br><span class="line">// <span class="regexp">//</span>     <span class="keyword">mkdir</span>($path2, <span class="number">0777</span>);</span><br><span class="line">// <span class="regexp">//</span> &#125;   // 判断三级目录是否存在，若不存在，则自动创建并设置写入权</span><br><span class="line">// <span class="regexp">//</span> $pathurl=$path2.<span class="string">'/'</span>.date(<span class="string">'Ymd'</span>).<span class="string">'.jpg'</span>;   <span class="regexp">//</span> 定义图片名，以当前所处日份来命名</span><br><span class="line">// $pathurl=$path1.<span class="string">'/'</span>.date(<span class="string">'Ymd'</span>).<span class="string">'.jpg'</span>;   <span class="regexp">//</span> 定义图片名，以当前所处日份来命名</span><br><span class="line">// <span class="keyword">if</span>(!is_file($pathurl)) &#123;</span><br><span class="line">//     $str=file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?idx=0&amp;n=1'</span>);   <span class="regexp">//</span> 获取图片地址，并判断图片是否已经存在</span><br><span class="line">//     <span class="keyword">if</span>(preg_match(<span class="string">"/&lt;urlBase&gt;(.+?)&lt;\/urlBase&gt;/isu"</span>, $str, $matches)) &#123; <span class="regexp">//</span> ies</span><br><span class="line">//         $imgurl=<span class="string">'http://cn.bing.com'</span>.$matches[<span class="number">1</span>].<span class="string">'_1920x1080.jpg'</span>;</span><br><span class="line">//         copy($imgurl, $pathurl);</span><br><span class="line">//     &#125;  //读取对应的图片并写入指定目录</span><br><span class="line">// &#125;</span><br><span class="line">// <span class="regexp">//</span> 显示图片</span><br><span class="line">// <span class="regexp">//</span> header(<span class="string">'Content-Type:image/jpeg'</span>);  <span class="regexp">//</span>定义输出类型</span><br><span class="line">// <span class="regexp">//</span> @ob_end_clean();   <span class="regexp">//</span>擦除缓存</span><br><span class="line">// <span class="regexp">//</span> @readfile($pathurl);  <span class="regexp">//</span>输出本地图片</span><br><span class="line">// <span class="regexp">//</span> @flush();   <span class="regexp">//</span>缓存</span><br><span class="line">// <span class="regexp">//</span> @ob_flush();   <span class="regexp">//</span>输出缓存 </span><br><span class="line">// <span class="regexp">//</span> <span class="keyword">exit</span>();  <span class="regexp">//</span>退出</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 方案三： + 写入图片信息 参考 https:<span class="regexp">//mkblog</span>.cn/<span class="number">492</span>/</span><br><span class="line">// $path = <span class="string">'temp'</span>;   <span class="regexp">//</span>设置图片缓存文件夹</span><br><span class="line">// $filename = date(<span class="string">"Ymd"</span>) . <span class="string">'.jpg'</span>;  <span class="regexp">//</span>用年月日来命名新的文件名</span><br><span class="line">// <span class="keyword">if</span> (!file_exists($path.<span class="string">'/'</span>. $filename)) &#123; <span class="regexp">//</span>如果文件不存在，则说明今天还没有进行缓存 </span><br><span class="line">//     <span class="keyword">if</span>(!file_exists($path)) //如果目录不存在</span><br><span class="line">//     &#123;</span><br><span class="line">//         <span class="keyword">mkdir</span>($path, <span class="number">0777</span>); <span class="regexp">//</span>创建缓存目录</span><br><span class="line">//     &#125;</span><br><span class="line">//     $str = file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1'</span>); <span class="regexp">//</span>读取必应api，获得相应数据</span><br><span class="line">//     $str = json_decode($str,true);</span><br><span class="line">//     $imgurl = <span class="string">'http://cn.bing.com'</span>.$str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'url'</span>];    <span class="regexp">//</span>获取图片url</span><br><span class="line">//     $img = grabImage($imgurl, $path.<span class="string">'/'</span>.$filename); <span class="regexp">//</span>读取并保存图片</span><br><span class="line">//     $handle = fopen(<span class="string">"dat.txt"</span>, <span class="string">"a"</span>);    <span class="regexp">//</span>用于存放图片信息，如果不需要保存图片的相关信息，可以把下面这些去掉。</span><br><span class="line">//     <span class="keyword">if</span> ($handle) &#123;</span><br><span class="line">//         $copyright = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'copyright'</span>];    <span class="regexp">//</span>说明</span><br><span class="line">//         $startdate = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'startdate'</span>];</span><br><span class="line">//         $fullstartdate = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'fullstartdate'</span>];</span><br><span class="line">//         $enddate = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'enddate'</span>];</span><br><span class="line">//         $urlbase = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'urlbase'</span>];</span><br><span class="line">//         $copyrightlink = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'copyrightlink'</span>];</span><br><span class="line">//         $quiz = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'quiz'</span>];</span><br><span class="line">//         $wp = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'wp'</span>];</span><br><span class="line">//         $hsh = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'hsh'</span>];</span><br><span class="line">//         $drk = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'drk'</span>];</span><br><span class="line">//         $top = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'top'</span>];</span><br><span class="line">//         $bot = $str[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'bot'</span>];</span><br><span class="line">//         $tempArr = array(<span class="string">"imgurl"</span>=&gt;$imgurl,<span class="string">"copyright"</span>=&gt;$copyright, <span class="string">"startdate"</span>=&gt;$startdate,</span><br><span class="line">//         <span class="string">"fullstartdate"</span>=&gt;$fullstartdate, <span class="string">"enddate"</span>=&gt; $enddate, <span class="string">"urlbase"</span>=&gt;$urlbase,</span><br><span class="line">//         <span class="string">"copyrightlink"</span>=&gt; $copyrightlink, <span class="string">"quiz"</span>=&gt;$quiz, <span class="string">"wp"</span>=&gt; $wp,</span><br><span class="line">//         <span class="string">"hsh"</span>=&gt;$hsh,<span class="string">"drk"</span>=&gt;$drk, <span class="string">"top"</span>=&gt; $top, <span class="string">"bot"</span>=&gt; $bot);   <span class="regexp">//</span>将相关信息放进数组中</span><br><span class="line">//         fwrite($handle, json_encode($tempArr) .<span class="string">"\r\n"</span>); <span class="regexp">//</span>最终以json格式保存在文本文档中</span><br><span class="line">//         fclose($handle);</span><br><span class="line">//     &#125;</span><br><span class="line">// &#125;</span><br><span class="line">// function grabImage($url, $filename = <span class="string">""</span>) &#123;</span><br><span class="line">//     <span class="keyword">if</span>($url == <span class="string">""</span>) <span class="keyword">return</span> false; <span class="regexp">//</span>如果$url地址为空，直接退出</span><br><span class="line">//     <span class="keyword">if</span> ($filename == <span class="string">""</span>) &#123; <span class="regexp">//</span>如果没有指定新的文件名</span><br><span class="line">//         $ext = strrchr($url, <span class="string">"."</span>);  <span class="regexp">//</span>得到$url的图片格式</span><br><span class="line">//         $filename = date(<span class="string">"Ymd"</span>) . $ext;  <span class="regexp">//</span>用天月面时分秒来命名新的文件名</span><br><span class="line">//     &#125;</span><br><span class="line">//     ob_start();         <span class="regexp">//</span>打开输出</span><br><span class="line">//     readfile($url);     <span class="regexp">//</span>输出图片文件</span><br><span class="line">//     $img = ob_get_contents();   <span class="regexp">//</span>得到浏览器输出</span><br><span class="line">//     ob_end_clean();             <span class="regexp">//</span>清除输出并关闭</span><br><span class="line">//     $size = strlen($img);       <span class="regexp">//</span>得到图片大小</span><br><span class="line">//     $fp2 = @fopen($filename, <span class="string">"a"</span>);</span><br><span class="line">//     fwrite($fp2, $img);         <span class="regexp">//</span>向当前目录写入图片文件，并重新命名</span><br><span class="line">//     fclose($fp2);</span><br><span class="line">//     <span class="keyword">return</span> $filename;           <span class="regexp">//</span>返回新的文件名</span><br><span class="line">// &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// ******************************************************************************************</span><br><span class="line">// <span class="regexp">//</span> 仅使用其作为背景图API，新建PHP文件</span><br><span class="line">// <span class="regexp">//</span> Bing壁纸API - <span class="number">1</span></span><br><span class="line">// $str=file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?idx=0&amp;n=1'</span>);</span><br><span class="line">// <span class="keyword">if</span>(preg_match(<span class="string">"/(.+?)&lt;\/url&gt;/ies"</span>,$str,$matches))&#123;</span><br><span class="line">// $imgurl=<span class="string">'http://cn.bing.com'</span>.$matches[<span class="number">1</span>];</span><br><span class="line">// &#125;</span><br><span class="line">// <span class="keyword">if</span>($imgurl)&#123;</span><br><span class="line">// header(<span class="string">'Content-Type: image/JPEG'</span>);</span><br><span class="line">// @ob_end_clean();</span><br><span class="line">// @readfile($imgurl);</span><br><span class="line">// @flush(); @ob_flush();</span><br><span class="line">// <span class="keyword">exit</span>();</span><br><span class="line">// &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">// <span class="keyword">exit</span>(<span class="string">'error'</span>);</span><br><span class="line">// &#125;</span><br><span class="line">// <span class="regexp">//</span> Warning: preg_match(): The /e modifier is <span class="keyword">no</span> longer supported, <span class="keyword">use</span> preg_replace_callback instead in /Library/WebServer/Documents/phpMyProjects/php-test/index4.php on line <span class="number">4</span></span><br><span class="line">// <span class="regexp">//</span> error</span><br><span class="line"></span><br><span class="line">// <span class="regexp">//</span> Bing壁纸API - <span class="number">2</span></span><br><span class="line">// $str = file_get_contents(<span class="string">'http://cn.bing.com/HPImageArchive.aspx?idx=0&amp;n=1'</span>);   <span class="regexp">//</span> 从bing获取数据</span><br><span class="line">// <span class="keyword">if</span>(preg_match(<span class="string">'/&lt;url&gt;([^&lt;]+)&lt;\/url&gt;/isU'</span>, $str, $matches)) &#123; <span class="regexp">//</span> 正则匹配抓取图片url</span><br><span class="line">//     $imgurl = <span class="string">'http://cn.bing.com'</span>.$matches[<span class="number">1</span>];</span><br><span class="line">// &#125; <span class="keyword">else</span> &#123;  <span class="regexp">//</span> 如果由于某些原因，没抓取到图片地址</span><br><span class="line">//     $imgurl = <span class="string">'http://img.infinitynewtab.com/InfinityWallpaper/2_14.jpg'</span>; <span class="regexp">//</span> 使用默认的图像(默认图像链接可修改为自己的)</span><br><span class="line">// &#125;</span><br><span class="line">// echo <span class="string">"$imgurl"</span>;</span><br><span class="line">// echo <span class="string">"&lt;img src='$imgurl' /&gt;"</span>;</span><br><span class="line">// header(<span class="string">"Location:&#123;$imgurl&#125;"</span>); <span class="regexp">//</span> 跳转至目标图像</span><br></pre></td></tr></table></figure>
 <h3><span id="文件管理">文件管理</span></h3>
-<p><a href="https://github.com/DirectoryLister/DirectoryLister" target="_blank" rel="external">DirectoryLister</a></p>
+<p><a href="https://github.com/DirectoryLister/DirectoryLister" target="_blank" rel="noopener">DirectoryLister</a></p>
 <h2><span id="参考链接">参考链接</span></h2>
-<p><a href="https://mkblog.cn/492/" target="_blank" rel="external">参考链接</a></p>
+<p><a href="https://mkblog.cn/492/" target="_blank" rel="noopener">参考链接</a></p>
 
 
                 <hr>
@@ -400,7 +411,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">BING每日美图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">解析API</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">用PHP去动态抓取</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">文件管理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">参考链接</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">BING每日美图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">解析API</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">用PHP去动态抓取</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">文件管理</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">参考链接</span></a></li></ol>
         
         </div>
       </aside>
@@ -555,14 +566,88 @@
 
     <!-- Footer -->
     <!-- Footer -->
-<footer>
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        width: 120%;
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        width: 120%;
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer class="bg-back top-line">
+    <!-- <article class="bg-back top-line"></article> -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
-                
-                
-                
+                    
+                    
                     <li>
                         <a target="_blank" href="https://www.zhihu.com/people/welcpro">
                             <span class="fa-stack fa-lg">
@@ -571,9 +656,9 @@
                             </span>
                         </a>
                     </li>
-                
+                    
 
-                
+                    
                     <li>
                         <a target="_blank" href="http://weibo.com/u/5966995114">
                             <span class="fa-stack fa-lg">
@@ -582,36 +667,46 @@
                             </span>
                         </a>
                     </li>
-                
+                    
 
-                
+                    
 
-                
+                    
                     <li>
-                        <a target="_blank"  href="https://github.com/cl9000">
+                        <a target="_blank" href="https://github.com/cl9000">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
-                
-                
+                    
+                    
                     <li>
-                        <a target="_blank"  href="https://www.jianshu.com/u/f167b0dcbdbe">
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
-                        </span>
+                            </span>
                         </a>
                     </li>
-                
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
 
-                
+                    
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; cl9000 2020 
+                    Copyright &copy; cl9000 2020
                     <br>
                     Theme by <a href="http://huangxuan.me/">Hux</a>
                     <span style="display: inline-block; margin: 0 5px;">
@@ -627,21 +722,21 @@
 
                 <!-- 不蒜子 start -->
                 
-                    <!-- 不蒜子统计 -->
-                    <p class="copyright text-muted" style="margin-top: 5px;">
-                        <span id="busuanzi_container_site_pv">
-                            本站总访问量
-                            <span id="busuanzi_value_site_pv"></span>次
-                        </span>
-                        <span class="post-meta-divider">|</span>
-                        <span id="busuanzi_container_site_uv" style='display:none'>
-                            本站访客数
-                            <span id="busuanzi_value_site_uv"></span>人
-                        </span>
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span>
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-                    </p>
-              
-              <!-- 不蒜子 end -->     
+                </p>
+                
+                <!-- 不蒜子 end -->
             </div>
         </div>
     </div>
@@ -656,6 +751,22 @@
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- 动态tab标签 -->
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
 <!-- Snackbar与Toast类似 -->
 <!-- <script src="/js/snackbar.js "></script> -->
 <!--  -->
@@ -664,12 +775,12 @@
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
@@ -694,8 +805,8 @@
 <!-- jquery.tagcloud.js -->
 <script>
     // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("https://cl9000.github.io/js/jquery.tagcloud.js",function(){
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 // size: {start: 1, end: 1, unit: 'em'},
                 // color: {start: '#bbbbee', end: '#0085a1'},
@@ -710,9 +821,9 @@
 
 <!--fastClick.js -->
 <script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
         var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
+        if ($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -726,7 +837,7 @@
 <script>
     var _baId = '2997fa63b6770debc9d754b9a29bae5f';
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?" + _baId;
         var s = document.getElementsByTagName("script")[0];
@@ -737,13 +848,10 @@
 
 <!-- weichanglu_weather https://cj.weather.com.cn/ -->
 <script type="text/javascript">
-var _fid = "aqGL3DR6qj";
-WIDGET = {FID: _fid}
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
-
-
-
 
     <!-- go Top -->
     <!-- <a id="rocket" href="#top" class=""></a> -->
@@ -755,6 +863,7 @@ WIDGET = {FID: _fid}
     <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
-</body>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":150,"height":450},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
 
 </html>

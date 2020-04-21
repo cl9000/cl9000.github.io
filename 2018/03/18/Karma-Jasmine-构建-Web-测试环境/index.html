@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- 回到顶部样式 -->
+    <!-- 回到顶部样式 start -->
     <style>
         .go-top {
             background-color: #ff4820;
@@ -42,9 +42,12 @@
             bottom: 45px
         }
     </style>
+    <!-- 回到顶部样式 end -->
+
+
 
 <!-- Head tag -->
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-CN">
@@ -52,13 +55,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
-    <meta name="baidu-site-verification" content="cTguDliTv5" />
+    <meta name="baidu-site-verification" content="cTguDliTv5">
     <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
-    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao" />
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
     <meta name="description" content="个人博客">
-    <meta name="keyword"  content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <meta name="keyword" content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -111,6 +114,7 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
 </head>
 
 
@@ -153,6 +157,7 @@
     }
     
 
+    /* tools heading */
     .tools-site-heading {
         padding: 80px 0 !important;
     }
@@ -219,10 +224,14 @@
         <div id="huxblog_navbar">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-show">
+                        <a href="#searchModal">
+                            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+                        </a>
+                    </li>
                     <li>
                         <a href="/">Home</a>
                     </li>
-
                     
                         
                     
@@ -294,6 +303,8 @@
 </script>
 
 
+
+
     <!-- Main Content -->
     
 <!-- Post Content -->
@@ -317,10 +328,10 @@
 <li>结构简单</li>
 <li>可以运行在 Node.JS 或者 Html 中</li>
 <li>基于行为驱动开发 Jasmine<br>
-<a href="http://jasmine.github.io/" target="_blank" rel="external">Jasmine项目Git 仓库地址</a><br>
-<a href="https://www.ibm.com/developerworks/cn/web/wa-lo-use-karma-jasmine-build-test-environment/index.html#icomments" target="_blank" rel="external">参考</a><br>
-<a href="http://jasmine.github.io/1.3/introduction.html" target="_blank" rel="external">jasmine基础语法</a><br>
-<a href="http://www.cnblogs.com/zhcncn/p/4330112.html" target="_blank" rel="external">jasmine基础语法</a></li>
+<a href="http://jasmine.github.io/" target="_blank" rel="noopener">Jasmine项目Git 仓库地址</a><br>
+<a href="https://www.ibm.com/developerworks/cn/web/wa-lo-use-karma-jasmine-build-test-environment/index.html#icomments" target="_blank" rel="noopener">参考</a><br>
+<a href="http://jasmine.github.io/1.3/introduction.html" target="_blank" rel="noopener">jasmine基础语法</a><br>
+<a href="http://www.cnblogs.com/zhcncn/p/4330112.html" target="_blank" rel="noopener">jasmine基础语法</a></li>
 </ul>
 <h3><span id="karma-简介">Karma 简介</span></h3>
 <ul>
@@ -331,10 +342,10 @@
 </ul>
 <blockquote>
 <ul>
-<li><a href="https://github.com/karma-runner/karma-jasmine" target="_blank" rel="external">Jasmine</a></li>
-<li><a href="https://github.com/karma-runner/karma-mocha" target="_blank" rel="external">Mocha</a></li>
+<li><a href="https://github.com/karma-runner/karma-jasmine" target="_blank" rel="noopener">Jasmine</a></li>
+<li><a href="https://github.com/karma-runner/karma-mocha" target="_blank" rel="noopener">Mocha</a></li>
 <li><a href="QUnit">QUnit</a></li>
-<li><a href="https://www.npmjs.org/browse/keyword/karma-adapter" target="_blank" rel="external">and many others</a><br>
+<li><a href="https://www.npmjs.org/browse/keyword/karma-adapter" target="_blank" rel="noopener">and many others</a><br>
 支持所有的主流浏览器</li>
 </ul>
 </blockquote>
@@ -345,7 +356,7 @@ Mac安装命令（i 是 install 命令的缩写，-D 是 --save-dev 的缩写。
 <code>$ npm install karma --save-dev</code><br>
 // 全局安装 - Mac安装路径：<code>/usr/local/bin/node</code><br>
 <code>$ nom install karma -g</code><br>
-测试是否安装成功 <code>$ karma start</code> ，成功会出现提示打开浏览器 <a href="http://localhost:9876/" target="_blank" rel="external">http://localhost:9876/</a> 访问成功页面。</p>
+测试是否安装成功 <code>$ karma start</code> ，成功会出现提示打开浏览器 <a href="http://localhost:9876/" target="_blank" rel="noopener">http://localhost:9876/</a> 访问成功页面。</p>
 <h3><span id="karma-初始化配置">Karma 初始化配置</span></h3>
 <p>安装完成之后，切换到目标项目根目录，运行：<br>
 <code>$ karma init</code> or <code>$ karma init **.conf.js</code><br>
@@ -397,7 +408,7 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 <ol start="3">
 <li>修改 <code>karma.conf.js</code> 配置文件；</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基本片段，以初始化生成为准</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">config</span>) </span>&#123;</span><br><span class="line">    config.set(&#123;</span><br><span class="line"></span><br><span class="line">        <span class="attr">preprocessors</span>: &#123;<span class="string">'test/**/*.js'</span>: <span class="string">'coverage'</span> &#125;,</span><br><span class="line">        <span class="attr">reporters</span>: [<span class="string">'progress'</span>, <span class="string">'coverage'</span>],</span><br><span class="line">        <span class="comment">// 覆盖率报告器配置</span></span><br><span class="line">        <span class="attr">coverageReporter</span>: &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">'html'</span>,</span><br><span class="line">            <span class="attr">dir</span>: <span class="string">'coverage/'</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 基本片段，以初始化生成为准</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">config</span>) </span>&#123;</span><br><span class="line">    config.set(&#123;</span><br><span class="line"></span><br><span class="line">        preprocessors: &#123;<span class="string">'test/**/*.js'</span>: <span class="string">'coverage'</span> &#125;,</span><br><span class="line">        reporters: [<span class="string">'progress'</span>, <span class="string">'coverage'</span>],</span><br><span class="line">        <span class="comment">// 覆盖率报告器配置</span></span><br><span class="line">        coverageReporter: &#123;</span><br><span class="line">            type: <span class="string">'html'</span>,</span><br><span class="line">            dir: <span class="string">'coverage/'</span></span><br><span class="line">        &#125;,</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <ol start="4">
 <li>启动karma 单元测试全自动执行<br>
 <code>$ karma start karma.conf.js</code>  OR <code>$ karma start karma.conf.js --log-level debug --single-run</code> // 此时，Karma 会自动打开浏览器，并运行相应的测试用例，而执行结果会输出到控制台。<br>
@@ -432,20 +443,20 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 为了产品的质量要尽量达到更多的覆盖率，一般对于JAVA项目来说，能达到80%就是相当高的标准了。</li>
 </ol>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">All files</span><br><span class="line"><span class="number">100</span>% Statements <span class="number">4</span>/<span class="number">4100</span>% Branches <span class="number">0</span>/<span class="number">0100</span>% Functions <span class="number">3</span>/<span class="number">3100</span>% Lines <span class="number">4</span>/<span class="number">4</span></span><br><span class="line">Press n <span class="keyword">or</span> j to go to the next uncovered block, b, p <span class="keyword">or</span> k <span class="keyword">for</span> the previous block.</span><br><span class="line"></span><br><span class="line">File		Statements		Branches		Functions		Lines	</span><br><span class="line">index.js	</span><br><span class="line"><span class="number">100</span>%	<span class="number">1</span>/<span class="number">1</span>	<span class="number">100</span>%	<span class="number">0</span>/<span class="number">0</span>	<span class="number">100</span>%	<span class="number">1</span>/<span class="number">1</span>	<span class="number">100</span>%	<span class="number">1</span>/<span class="number">1</span></span><br><span class="line">indexSpec.js	</span><br><span class="line"><span class="number">100</span>%	<span class="number">3</span>/<span class="number">3</span>	<span class="number">100</span>%	<span class="number">0</span>/<span class="number">0</span>	<span class="number">100</span>%	<span class="number">2</span>/<span class="number">2</span>	<span class="number">100</span>%	<span class="number">3</span>/<span class="number">3</span></span><br></pre></td></tr></table></figure>
-<p><strong><u><a href="https://github.com/cl9000/Karma-test" target="_blank" rel="external">测试代码git地址</a></u></strong></p>
+<p><strong><u><a href="https://github.com/cl9000/Karma-test" target="_blank" rel="noopener">测试代码git地址</a></u></strong></p>
 <h3><span id="参考资源">参考资源</span></h3>
-<p><a href="http://karma-runner.github.io/1.0/index.html" target="_blank" rel="external">Karma 官网</a><br>
-<a href="https://jasmine.github.io/tutorials/your_first_suite" target="_blank" rel="external">Jasmine 官网</a><br>
-<a href="https://www.npmjs.com/search?q=keywords:karma-plugin" target="_blank" rel="external">Karma 官网 plugins 部分</a><br>
-<a href="https://www.ibm.com/developerworks/cn/web/wa-lo-use-karma-jasmine-build-test-environment/index.html#icomments" target="_blank" rel="external">使用 Karma + Jasmine 构建 Web 测试环境</a><br>
-<a href="http://icodeit.org/2013/10/using-karma-as-the-javascript-test-runner/" target="_blank" rel="external">使用Karma运行JavaScript测试</a><br>
-<a href="http://blog.fens.me/nodejs-karma-jasmine/" target="_blank" rel="external">Karma和Jasmine自动化单元测试</a><br>
-<a href="https://yq.aliyun.com/articles/4194" target="_blank" rel="external">karma 测试框架的前世今生</a><br>
-<a href="https://www.cnblogs.com/jasmine-95/p/6054839.html" target="_blank" rel="external">Karma+Jasmine实现自动化单元测试</a><br>
-<a href="https://www.cnblogs.com/haogj/p/5204126.html" target="_blank" rel="external">Karma：1. 集成 Karma 和 Jasmine 进行单元测试</a><br>
-<a href="https://segmentfault.com/a/1190000005848842" target="_blank" rel="external">karma 入门</a><br>
-<a href="https://blog.csdn.net/anneCoder/article/details/80854101" target="_blank" rel="external">JS测试工具karma及应用</a><br>
-<a href="https://blog.csdn.net/xishaoguo/article/details/82621019?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="external">前端单元测试工具——karma安装使用</a></p>
+<p><a href="http://karma-runner.github.io/1.0/index.html" target="_blank" rel="noopener">Karma 官网</a><br>
+<a href="https://jasmine.github.io/tutorials/your_first_suite" target="_blank" rel="noopener">Jasmine 官网</a><br>
+<a href="https://www.npmjs.com/search?q=keywords:karma-plugin" target="_blank" rel="noopener">Karma 官网 plugins 部分</a><br>
+<a href="https://www.ibm.com/developerworks/cn/web/wa-lo-use-karma-jasmine-build-test-environment/index.html#icomments" target="_blank" rel="noopener">使用 Karma + Jasmine 构建 Web 测试环境</a><br>
+<a href="http://icodeit.org/2013/10/using-karma-as-the-javascript-test-runner/" target="_blank" rel="noopener">使用Karma运行JavaScript测试</a><br>
+<a href="http://blog.fens.me/nodejs-karma-jasmine/" target="_blank" rel="noopener">Karma和Jasmine自动化单元测试</a><br>
+<a href="https://yq.aliyun.com/articles/4194" target="_blank" rel="noopener">karma 测试框架的前世今生</a><br>
+<a href="https://www.cnblogs.com/jasmine-95/p/6054839.html" target="_blank" rel="noopener">Karma+Jasmine实现自动化单元测试</a><br>
+<a href="https://www.cnblogs.com/haogj/p/5204126.html" target="_blank" rel="noopener">Karma：1. 集成 Karma 和 Jasmine 进行单元测试</a><br>
+<a href="https://segmentfault.com/a/1190000005848842" target="_blank" rel="noopener">karma 入门</a><br>
+<a href="https://blog.csdn.net/anneCoder/article/details/80854101" target="_blank" rel="noopener">JS测试工具karma及应用</a><br>
+<a href="https://blog.csdn.net/xishaoguo/article/details/82621019?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task" target="_blank" rel="noopener">前端单元测试工具——karma安装使用</a></p>
 
 
                 <hr>
@@ -522,7 +533,7 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Karma + Jasmine 构建 Web 测试环境</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Jasmine 简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Karma 简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Karma 安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Karma 初始化配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Karma + Jasminae 自动化单元测试</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Karma 代码覆盖率</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">参考资源</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Karma + Jasmine 构建 Web 测试环境</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Jasmine 简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Karma 简介</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Karma 安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Karma 初始化配置</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Karma + Jasminae 自动化单元测试</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Karma 代码覆盖率</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">参考资源</span></a></li></ol>
         
         </div>
       </aside>
@@ -679,14 +690,88 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 
     <!-- Footer -->
     <!-- Footer -->
-<footer>
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        width: 120%;
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        width: 120%;
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer class="bg-back top-line">
+    <!-- <article class="bg-back top-line"></article> -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
-                
-                
-                
+                    
+                    
                     <li>
                         <a target="_blank" href="https://www.zhihu.com/people/welcpro">
                             <span class="fa-stack fa-lg">
@@ -695,9 +780,9 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
                             </span>
                         </a>
                     </li>
-                
+                    
 
-                
+                    
                     <li>
                         <a target="_blank" href="http://weibo.com/u/5966995114">
                             <span class="fa-stack fa-lg">
@@ -706,36 +791,46 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
                             </span>
                         </a>
                     </li>
-                
+                    
 
-                
+                    
 
-                
+                    
                     <li>
-                        <a target="_blank"  href="https://github.com/cl9000">
+                        <a target="_blank" href="https://github.com/cl9000">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
-                
-                
+                    
+                    
                     <li>
-                        <a target="_blank"  href="https://www.jianshu.com/u/f167b0dcbdbe">
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
-                        </span>
+                            </span>
                         </a>
                     </li>
-                
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
 
-                
+                    
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; cl9000 2020 
+                    Copyright &copy; cl9000 2020
                     <br>
                     Theme by <a href="http://huangxuan.me/">Hux</a>
                     <span style="display: inline-block; margin: 0 5px;">
@@ -751,21 +846,21 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 
                 <!-- 不蒜子 start -->
                 
-                    <!-- 不蒜子统计 -->
-                    <p class="copyright text-muted" style="margin-top: 5px;">
-                        <span id="busuanzi_container_site_pv">
-                            本站总访问量
-                            <span id="busuanzi_value_site_pv"></span>次
-                        </span>
-                        <span class="post-meta-divider">|</span>
-                        <span id="busuanzi_container_site_uv" style='display:none'>
-                            本站访客数
-                            <span id="busuanzi_value_site_uv"></span>人
-                        </span>
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span>
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-                    </p>
-              
-              <!-- 不蒜子 end -->     
+                </p>
+                
+                <!-- 不蒜子 end -->
             </div>
         </div>
     </div>
@@ -780,6 +875,22 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- 动态tab标签 -->
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
 <!-- Snackbar与Toast类似 -->
 <!-- <script src="/js/snackbar.js "></script> -->
 <!--  -->
@@ -788,12 +899,12 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
@@ -818,8 +929,8 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 <!-- jquery.tagcloud.js -->
 <script>
     // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("https://cl9000.github.io/js/jquery.tagcloud.js",function(){
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 // size: {start: 1, end: 1, unit: 'em'},
                 // color: {start: '#bbbbee', end: '#0085a1'},
@@ -834,9 +945,9 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 
 <!--fastClick.js -->
 <script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
         var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
+        if ($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -850,7 +961,7 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 <script>
     var _baId = '2997fa63b6770debc9d754b9a29bae5f';
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?" + _baId;
         var s = document.getElementsByTagName("script")[0];
@@ -861,13 +972,10 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 
 <!-- weichanglu_weather https://cj.weather.com.cn/ -->
 <script type="text/javascript">
-var _fid = "aqGL3DR6qj";
-WIDGET = {FID: _fid}
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
-
-
-
 
     <!-- go Top -->
     <!-- <a id="rocket" href="#top" class=""></a> -->
@@ -879,6 +987,7 @@ WIDGET = {FID: _fid}
     <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
-</body>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":150,"height":450},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
 
 </html>

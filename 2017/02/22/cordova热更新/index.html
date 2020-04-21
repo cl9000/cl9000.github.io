@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- 回到顶部样式 -->
+    <!-- 回到顶部样式 start -->
     <style>
         .go-top {
             background-color: #ff4820;
@@ -42,9 +42,12 @@
             bottom: 45px
         }
     </style>
+    <!-- 回到顶部样式 end -->
+
+
 
 <!-- Head tag -->
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-CN">
@@ -52,13 +55,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
-    <meta name="baidu-site-verification" content="cTguDliTv5" />
+    <meta name="baidu-site-verification" content="cTguDliTv5">
     <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
-    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao" />
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
     <meta name="description" content="个人博客">
-    <meta name="keyword"  content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <meta name="keyword" content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -111,6 +114,7 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
 </head>
 
 
@@ -153,6 +157,7 @@
     }
     
 
+    /* tools heading */
     .tools-site-heading {
         padding: 80px 0 !important;
     }
@@ -219,10 +224,14 @@
         <div id="huxblog_navbar">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-show">
+                        <a href="#searchModal">
+                            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+                        </a>
+                    </li>
                     <li>
                         <a href="/">Home</a>
                     </li>
-
                     
                         
                     
@@ -294,6 +303,8 @@
 </script>
 
 
+
+
     <!-- Main Content -->
     
 <!-- Post Content -->
@@ -319,7 +330,7 @@
 <li>
 <p><strong>Python简单服务器本地搭建</strong><br>
 首先，我们自己搭建个本地的服务器Python，测试用。在此只做开发版的热更新测试，（本地的不做，容易混，也没什么用）<br>
-Python服务器安装包<a href="https://pan.baidu.com/s/1boDMaF9" target="_blank" rel="external"><em>云盘下载眼</em></a></p>
+Python服务器安装包<a href="https://pan.baidu.com/s/1boDMaF9" target="_blank" rel="noopener"><em>云盘下载眼</em></a></p>
 <p>下载好后，我们用命令行操作：<br>
 <code>$ cd desktop</code></p>
 <p>在桌面创建文件夹，<br>
@@ -340,7 +351,7 @@ Python服务器安装包<a href="https://pan.baidu.com/s/1boDMaF9" target="_blan
 <p><strong>关键de配置</strong><br>
 1、<strong>安装 cordova-hot-code-push-cli,执行命令</strong>：<br>
 $ npm install -g cordova-hot-code-push-cli<br>
-作用：使用该命令行生成检测配置文件，通常是在 <code>www</code> 目录下动态生成 <code>chcp.json</code> 和 <code>chcp.manifest</code> 生成两个文件，插件源码地址：<a href="https://github.com/nordnet/cordova-hot-code-push" target="_blank" rel="external">https://github.com/nordnet/cordova-hot-code-push</a></p>
+作用：使用该命令行生成检测配置文件，通常是在 <code>www</code> 目录下动态生成 <code>chcp.json</code> 和 <code>chcp.manifest</code> 生成两个文件，插件源码地址：<a href="https://github.com/nordnet/cordova-hot-code-push" target="_blank" rel="noopener">https://github.com/nordnet/cordova-hot-code-push</a></p>
 <p>2、<strong>进入项目目录</strong><br>
 <code>$ cd 你的项目路径</code>。比如 我的项目在桌面上：<code>$ cd desktop/bankapp</code></p>
 <p>3、 <strong>安装热更新插件，执行命令(cordova或ionic都可以)</strong>：<br>
@@ -404,7 +415,7 @@ cordova-hcp.json内容如下：</p>
 <p>即生成平台–&gt;<code>模板生成chcp文件</code>–&gt;编译到各个平台–&gt;<code>上传www到服务器</code>–&gt;运行应用—&gt;<code>修改内容</code>–&gt; 模板重新生成chcp文件–&gt;<code>上传www文件覆盖旧的</code>—&gt;运行应用—&gt;<code>查看更新</code></p>
 </blockquote>
 <p>三、服务器保证通的通的、、、<br>
-四、再不中看这 <a href="https://github.com/nordnet/cordova-hot-code-push/issues/223" target="_blank" rel="external">-坑眼-https://github.com/nordnet/cordova-hot-code-push/issues/223</a></p>
+四、再不中看这 <a href="https://github.com/nordnet/cordova-hot-code-push/issues/223" target="_blank" rel="noopener">-坑眼-https://github.com/nordnet/cordova-hot-code-push/issues/223</a></p>
 <hr>
 <h3><span id="外壳更新">外壳更新</span></h3>
 <h4><span id="描述">描述</span></h4>
@@ -430,7 +441,7 @@ cordova-hcp.json内容如下：</p>
 <blockquote>
 <h4><span id="具体步骤">具体步骤</span></h4>
 <p>1、导入插件。外壳（版本号）的更新需要导入另外3个插件<br>
-<a href="https://github.com/apache/cordova-plugin-file" target="_blank" rel="external">cordova-plugin-file</a>、<a href="https://github.com/apache/cordova-plugin-file-transfer" target="_blank" rel="external">cordova-plugin-file-transfer</a>、<a href="https://github.com/pwlin/cordova-plugin-file-opener2" target="_blank" rel="external">cordova-plugin-file-opener2</a></p>
+<a href="https://github.com/apache/cordova-plugin-file" target="_blank" rel="noopener">cordova-plugin-file</a>、<a href="https://github.com/apache/cordova-plugin-file-transfer" target="_blank" rel="noopener">cordova-plugin-file-transfer</a>、<a href="https://github.com/pwlin/cordova-plugin-file-opener2" target="_blank" rel="noopener">cordova-plugin-file-opener2</a></p>
 </blockquote>
 <blockquote>
 <p>导入命令：<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; $ cordova <span class="keyword">plugin</span> add cordova-<span class="keyword">plugin</span>-<span class="keyword">file</span></span><br><span class="line">&gt; $ cordova <span class="keyword">plugin</span> add cordova-<span class="keyword">plugin</span>-<span class="keyword">file</span>-transfer</span><br><span class="line">&gt; $ cordova <span class="keyword">plugin</span> add cordova-<span class="keyword">plugin</span>-<span class="keyword">file</span>-opener2</span><br></pre></td></tr></table></figure></p>
@@ -443,11 +454,11 @@ cordova-hcp.json内容如下：</p>
 <p><code>min_native-interface</code>将与config.xml中的<code>native-interface</code>进行对比、如果两者不同、将会触发<code>'chcp_updateLoadFailed'</code>事件。同时、错误代码为：<br>
 <code>chcp.error.APPLICATION_BUILD_VERSION_TOO_LOW</code>，返回值为-2，那么就会执行下面的代码，弹框提示更新了。</p>
 <blockquote>
- <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> appUpdate = &#123;</span><br><span class="line">        <span class="comment">// Application Constructor</span></span><br><span class="line">        <span class="attr">initialize</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.bindEvents();</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// Bind any events that are required.</span></span><br><span class="line">        <span class="comment">// Usually you should subscribe on 'deviceready' event to know, when you can start calling cordova modules</span></span><br><span class="line">        <span class="attr">bindEvents</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">document</span>.addEventListener(<span class="string">'deviceready'</span>, <span class="keyword">this</span>.onDeviceReady, <span class="literal">false</span>);</span><br><span class="line">            <span class="built_in">document</span>.addEventListener(<span class="string">'chcp_updateLoadFailed'</span>, <span class="keyword">this</span>.onUpdateLoadError, <span class="literal">false</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// deviceready Event Handler</span></span><br><span class="line">        <span class="attr">onDeviceReady</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">onUpdateLoadError</span>: <span class="function"><span class="keyword">function</span>(<span class="params">eventData</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> error = eventData.detail.error;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 当检测出外核版本有更新，// 针对不同平台进行相应更新操作</span></span><br><span class="line">            <span class="keyword">if</span> (error &amp;&amp; error.code == chcp.error.APPLICATION_BUILD_VERSION_TOO_LOW) &#123;</span><br><span class="line">                <span class="keyword">var</span> dialogMessage = <span class="string">'有新的版本,请下载更新'</span>;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// iOS端 直接弹窗提示升级，点击ok后自动跳转</span></span><br><span class="line">                <span class="keyword">if</span>(ionic.Platform.isIOS())&#123;</span><br><span class="line">                    chcp.requestApplicationUpdate(dialogMessage, <span class="keyword">this</span>.userWentToStoreCallback, <span class="keyword">this</span>.userDeclinedRedirectCallback);</span><br><span class="line">                <span class="comment">//Android端 提示升级下载最新APK文件 </span></span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span>(ionic.Platform.isAndroid())&#123;</span><br><span class="line">                    <span class="comment">//这儿放Android端更新代码...，在下面👇</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">userWentToStoreCallback</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// user went to the store from the dialog</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">userDeclinedRedirectCallback</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// User didn't want to leave the app.</span></span><br><span class="line">            <span class="comment">// Maybe he will update later.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    appUpdate.initialize();</span><br></pre></td></tr></table></figure>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> appUpdate = &#123;</span><br><span class="line">        <span class="comment">// Application Constructor</span></span><br><span class="line">        initialize: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.bindEvents();</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// Bind any events that are required.</span></span><br><span class="line">        <span class="comment">// Usually you should subscribe on 'deviceready' event to know, when you can start calling cordova modules</span></span><br><span class="line">        bindEvents: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">document</span>.addEventListener(<span class="string">'deviceready'</span>, <span class="keyword">this</span>.onDeviceReady, <span class="literal">false</span>);</span><br><span class="line">            <span class="built_in">document</span>.addEventListener(<span class="string">'chcp_updateLoadFailed'</span>, <span class="keyword">this</span>.onUpdateLoadError, <span class="literal">false</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// deviceready Event Handler</span></span><br><span class="line">        onDeviceReady: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        &#125;,</span><br><span class="line">        onUpdateLoadError: <span class="function"><span class="keyword">function</span>(<span class="params">eventData</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> error = eventData.detail.error;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 当检测出外核版本有更新，// 针对不同平台进行相应更新操作</span></span><br><span class="line">            <span class="keyword">if</span> (error &amp;&amp; error.code == chcp.error.APPLICATION_BUILD_VERSION_TOO_LOW) &#123;</span><br><span class="line">                <span class="keyword">var</span> dialogMessage = <span class="string">'有新的版本,请下载更新'</span>;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// iOS端 直接弹窗提示升级，点击ok后自动跳转</span></span><br><span class="line">                <span class="keyword">if</span>(ionic.Platform.isIOS())&#123;</span><br><span class="line">                    chcp.requestApplicationUpdate(dialogMessage, <span class="keyword">this</span>.userWentToStoreCallback, <span class="keyword">this</span>.userDeclinedRedirectCallback);</span><br><span class="line">                <span class="comment">//Android端 提示升级下载最新APK文件 </span></span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span>(ionic.Platform.isAndroid())&#123;</span><br><span class="line">                    <span class="comment">//这儿放Android端更新代码...，在下面👇</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        userWentToStoreCallback: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// user went to the store from the dialog</span></span><br><span class="line">        &#125;,</span><br><span class="line">        userDeclinedRedirectCallback: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// User didn't want to leave the app.</span></span><br><span class="line">            <span class="comment">// Maybe he will update later.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    appUpdate.initialize();</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p><strong>Android端添加代码👆 提示升级下载最新APK文件</strong></p>
 <blockquote></blockquote>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> confirmPopup = <span class="symbol">$io</span>nicPopup.confirm(&#123;</span><br><span class="line">  <span class="attr">template</span>: <span class="string">'有新的版本,请下载更新'</span>,</span><br><span class="line">  <span class="attr">cssClass</span>: <span class="string">'popup'</span>,</span><br><span class="line">  <span class="attr">cancelText</span>:<span class="string">'取消'</span>,</span><br><span class="line">  <span class="attr">okText</span>:<span class="string">'升级'</span></span><br><span class="line">&#125;);</span><br><span class="line">confirmPopup.then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (res) &#123;</span><br><span class="line">    <span class="symbol">$io</span>nicLoading.show(&#123;</span><br><span class="line">      <span class="attr">template</span>: <span class="string">"已经下载：0%"</span></span><br><span class="line">    &#125;);</span><br><span class="line">    window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, <span class="function"><span class="keyword">function</span>(<span class="params">fileEntry</span>) </span>&#123;</span><br><span class="line">      fileEntry.getDirectory(<span class="string">"***(app名称)"</span>, &#123; <span class="attr">create</span>: <span class="literal">true</span>, <span class="attr">exclusive</span>: <span class="literal">false</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">fileEntry</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//下载代码</span></span><br><span class="line">        <span class="keyword">var</span> fileTransfer = <span class="keyword">new</span> FileTransfer();</span><br><span class="line">        fileTransfer.download(<span class="string">"app下载地址"</span>, fileEntry.toInternalURL()+<span class="string">"***(app名称).apk"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">entry</span>) </span>&#123;</span><br><span class="line">          <span class="comment">// 打开下载下来的APP</span></span><br><span class="line">          cordova.plugins.fileOpener2.open(</span><br><span class="line">            entry.toInternalURL(),<span class="comment">//下载文件保存地址</span></span><br><span class="line">            <span class="string">'application/vnd.android.package-archive'</span>, &#123;<span class="comment">//以APK文件方式打开</span></span><br><span class="line">              error: <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">              &#125;,</span><br><span class="line">              <span class="attr">success</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">        &#125;,<span class="literal">true</span>);</span><br><span class="line">        fileTransfer.onprogress = <span class="function"><span class="keyword">function</span>(<span class="params">progressEvent</span>) </span>&#123;</span><br><span class="line">          <span class="symbol">$timeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> downloadProgress = (progressEvent.loaded / progressEvent.total) * <span class="number">100</span>;</span><br><span class="line">            <span class="symbol">$io</span>nicLoading.show(&#123;</span><br><span class="line">              <span class="attr">template</span>: <span class="string">"已经下载："</span> + Math.floor(downloadProgress) + <span class="string">"%"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span> (downloadProgress &gt; <span class="number">99</span>) &#123;</span><br><span class="line">              <span class="symbol">$io</span>nicLoading.hide();</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;alert(<span class="string">"创建失败"</span>)&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> confirmPopup = <span class="symbol">$io</span>nicPopup.confirm(&#123;</span><br><span class="line">  template: <span class="string">'有新的版本,请下载更新'</span>,</span><br><span class="line">  cssClass: <span class="string">'popup'</span>,</span><br><span class="line">  cancelText:<span class="string">'取消'</span>,</span><br><span class="line">  okText:<span class="string">'升级'</span></span><br><span class="line">&#125;);</span><br><span class="line">confirmPopup.then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (res) &#123;</span><br><span class="line">    <span class="symbol">$io</span>nicLoading.show(&#123;</span><br><span class="line">      template: <span class="string">"已经下载：0%"</span></span><br><span class="line">    &#125;);</span><br><span class="line">    window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, <span class="function"><span class="keyword">function</span>(<span class="params">fileEntry</span>) </span>&#123;</span><br><span class="line">      fileEntry.getDirectory(<span class="string">"***(app名称)"</span>, &#123; <span class="attr">create</span>: <span class="literal">true</span>, <span class="attr">exclusive</span>: <span class="literal">false</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">fileEntry</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//下载代码</span></span><br><span class="line">        <span class="keyword">var</span> fileTransfer = <span class="keyword">new</span> FileTransfer();</span><br><span class="line">        fileTransfer.download(<span class="string">"app下载地址"</span>, fileEntry.toInternalURL()+<span class="string">"***(app名称).apk"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">entry</span>) </span>&#123;</span><br><span class="line">          <span class="comment">// 打开下载下来的APP</span></span><br><span class="line">          cordova.plugins.fileOpener2.open(</span><br><span class="line">            entry.toInternalURL(),<span class="comment">//下载文件保存地址</span></span><br><span class="line">            <span class="string">'application/vnd.android.package-archive'</span>, &#123;<span class="comment">//以APK文件方式打开</span></span><br><span class="line">              error: <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">              &#125;,</span><br><span class="line">              success: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">        &#125;,<span class="literal">true</span>);</span><br><span class="line">        fileTransfer.onprogress = <span class="function"><span class="keyword">function</span>(<span class="params">progressEvent</span>) </span>&#123;</span><br><span class="line">          <span class="symbol">$timeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> downloadProgress = (progressEvent.loaded / progressEvent.total) * <span class="number">100</span>;</span><br><span class="line">            <span class="symbol">$io</span>nicLoading.show(&#123;</span><br><span class="line">              template: <span class="string">"已经下载："</span> + Math.floor(downloadProgress) + <span class="string">"%"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span> (downloadProgress &gt; <span class="number">99</span>) &#123;</span><br><span class="line">              <span class="symbol">$io</span>nicLoading.hide();</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;alert(<span class="string">"创建失败"</span>)&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>3、代码添加后，执行：<br>
 <code>$ cordova-hcp build</code><br>
 4、将www文件上传到服务器覆盖旧的，使用Xcode运行应用</p>
@@ -535,7 +546,7 @@ now    - web内容下载完毕即安装更新</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">热更新的好处</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">内壳更新</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基本的配置步骤</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">外壳更新</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">外壳更新配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">通过min_native_interface监控app是否提示更新</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">具体步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">chcp.json中update字段含义</span></a></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">热更新的好处</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">内壳更新</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基本的配置步骤</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">外壳更新</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">外壳更新配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">通过min_native_interface监控app是否提示更新</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">具体步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">chcp.json中update字段含义</span></a></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -692,14 +703,88 @@ now    - web内容下载完毕即安装更新</p>
 
     <!-- Footer -->
     <!-- Footer -->
-<footer>
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        width: 120%;
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        width: 120%;
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer class="bg-back top-line">
+    <!-- <article class="bg-back top-line"></article> -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
-                
-                
-                
+                    
+                    
                     <li>
                         <a target="_blank" href="https://www.zhihu.com/people/welcpro">
                             <span class="fa-stack fa-lg">
@@ -708,9 +793,9 @@ now    - web内容下载完毕即安装更新</p>
                             </span>
                         </a>
                     </li>
-                
+                    
 
-                
+                    
                     <li>
                         <a target="_blank" href="http://weibo.com/u/5966995114">
                             <span class="fa-stack fa-lg">
@@ -719,36 +804,46 @@ now    - web内容下载完毕即安装更新</p>
                             </span>
                         </a>
                     </li>
-                
+                    
 
-                
+                    
 
-                
+                    
                     <li>
-                        <a target="_blank"  href="https://github.com/cl9000">
+                        <a target="_blank" href="https://github.com/cl9000">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
-                
-                
+                    
+                    
                     <li>
-                        <a target="_blank"  href="https://www.jianshu.com/u/f167b0dcbdbe">
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
-                        </span>
+                            </span>
                         </a>
                     </li>
-                
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
 
-                
+                    
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; cl9000 2020 
+                    Copyright &copy; cl9000 2020
                     <br>
                     Theme by <a href="http://huangxuan.me/">Hux</a>
                     <span style="display: inline-block; margin: 0 5px;">
@@ -764,21 +859,21 @@ now    - web内容下载完毕即安装更新</p>
 
                 <!-- 不蒜子 start -->
                 
-                    <!-- 不蒜子统计 -->
-                    <p class="copyright text-muted" style="margin-top: 5px;">
-                        <span id="busuanzi_container_site_pv">
-                            本站总访问量
-                            <span id="busuanzi_value_site_pv"></span>次
-                        </span>
-                        <span class="post-meta-divider">|</span>
-                        <span id="busuanzi_container_site_uv" style='display:none'>
-                            本站访客数
-                            <span id="busuanzi_value_site_uv"></span>人
-                        </span>
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span>
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-                    </p>
-              
-              <!-- 不蒜子 end -->     
+                </p>
+                
+                <!-- 不蒜子 end -->
             </div>
         </div>
     </div>
@@ -793,6 +888,22 @@ now    - web内容下载完毕即安装更新</p>
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- 动态tab标签 -->
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
 <!-- Snackbar与Toast类似 -->
 <!-- <script src="/js/snackbar.js "></script> -->
 <!--  -->
@@ -801,12 +912,12 @@ now    - web内容下载完毕即安装更新</p>
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
@@ -831,8 +942,8 @@ now    - web内容下载完毕即安装更新</p>
 <!-- jquery.tagcloud.js -->
 <script>
     // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("https://cl9000.github.io/js/jquery.tagcloud.js",function(){
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 // size: {start: 1, end: 1, unit: 'em'},
                 // color: {start: '#bbbbee', end: '#0085a1'},
@@ -847,9 +958,9 @@ now    - web内容下载完毕即安装更新</p>
 
 <!--fastClick.js -->
 <script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
         var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
+        if ($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -863,7 +974,7 @@ now    - web内容下载完毕即安装更新</p>
 <script>
     var _baId = '2997fa63b6770debc9d754b9a29bae5f';
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?" + _baId;
         var s = document.getElementsByTagName("script")[0];
@@ -874,13 +985,10 @@ now    - web内容下载完毕即安装更新</p>
 
 <!-- weichanglu_weather https://cj.weather.com.cn/ -->
 <script type="text/javascript">
-var _fid = "aqGL3DR6qj";
-WIDGET = {FID: _fid}
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
-
-
-
 
     <!-- go Top -->
     <!-- <a id="rocket" href="#top" class=""></a> -->
@@ -892,6 +1000,7 @@ WIDGET = {FID: _fid}
     <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
-</body>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":150,"height":450},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
 
 </html>

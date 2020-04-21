@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- 回到顶部样式 -->
+    <!-- 回到顶部样式 start -->
     <style>
         .go-top {
             background-color: #ff4820;
@@ -42,9 +42,12 @@
             bottom: 45px
         }
     </style>
+    <!-- 回到顶部样式 end -->
+
+
 
 <!-- Head tag -->
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="zh-CN">
@@ -52,13 +55,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
-    <meta name="baidu-site-verification" content="cTguDliTv5" />
+    <meta name="baidu-site-verification" content="cTguDliTv5">
     <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
-    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao" />
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
     <meta name="description" content="个人博客">
-    <meta name="keyword"  content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <meta name="keyword" content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
     <link rel="shortcut icon" href="/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -111,6 +114,7 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
 </head>
 
 
@@ -153,6 +157,7 @@
     }
     
 
+    /* tools heading */
     .tools-site-heading {
         padding: 80px 0 !important;
     }
@@ -213,10 +218,14 @@
         <div id="huxblog_navbar">
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-show">
+                        <a href="#searchModal">
+                            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+                        </a>
+                    </li>
                     <li>
                         <a href="/">Home</a>
                     </li>
-
                     
                         
                     
@@ -288,6 +297,8 @@
 </script>
 
 
+
+
     <!-- Main Content -->
     
 <!-- Post Content -->
@@ -305,7 +316,7 @@
 <p>设置完成后使用 <code>$ hexo new post &quot;名称&quot;</code> 新建文章时会在 <code>source/_posts</code> 目录下生成与文章同名的文件夹，将文章引用的图片放入文件夹即可。<br>
 <img src alt></p>
 <h3><span id="安装插件">安装插件</span></h3>
-<p><strong><a href="https://github.com/xcodebuild/hexo-asset-image" target="_blank" rel="external">hexo-asset-image 插件</a></strong></p>
+<p><strong><a href="https://github.com/xcodebuild/hexo-asset-image" target="_blank" rel="noopener">hexo-asset-image 插件</a></strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install https://github.com/CodeFalling/hexo-asset-image --save</span></span><br></pre></td></tr></table></figure>
 <h3><span id="使用">使用</span></h3>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">本地图片</span>](<span class="link">/NationalDay70_1920x1080.jpg</span>) </span><br><span class="line">或</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/NationalDay70_1920x1080.jpg.jpg"</span> <span class="attr">width</span> = <span class="string">"300"</span> <span class="attr">height</span> = <span class="string">"200"</span> <span class="attr">alt</span>=<span class="string">"图片名称"</span> <span class="attr">align</span>=<span class="string">center</span> /&gt;</span></span></span><br></pre></td></tr></table></figure>
@@ -314,7 +325,7 @@
 <p>生成后的代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg"</span> <span class="attr">alt</span>=<span class="string">"本地图片"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2><span id="参考">参考</span></h2>
-<p><a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="external">HEXO 官网 - https://hexo.io/zh-cn/docs/asset-folders.html</a></p>
+<p><a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="noopener">HEXO 官网 - https://hexo.io/zh-cn/docs/asset-folders.html</a></p>
 <br>
 <blockquote style="border-left: 4px solid #3F51B5;padding: 16px 20px;font-size: 14px;border-radius: 0 2px 2px 0;">
     <p>本文地址：
@@ -397,7 +408,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">HEXO 引用本地资源（图片）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">设置 _config.yml</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">安装插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">使用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">参考</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">HEXO 引用本地资源（图片）</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">设置 _config.yml</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">安装插件</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.3.</span> <span class="toc-nav-text">使用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">参考</span></a></li></ol>
         
         </div>
       </aside>
@@ -550,14 +561,88 @@
 
     <!-- Footer -->
     <!-- Footer -->
-<footer>
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        width: 120%;
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        width: 120%;
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer class="bg-back top-line">
+    <!-- <article class="bg-back top-line"></article> -->
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <ul class="list-inline text-center">
-                
-                
-                
+                    
+                    
                     <li>
                         <a target="_blank" href="https://www.zhihu.com/people/welcpro">
                             <span class="fa-stack fa-lg">
@@ -566,9 +651,9 @@
                             </span>
                         </a>
                     </li>
-                
+                    
 
-                
+                    
                     <li>
                         <a target="_blank" href="http://weibo.com/u/5966995114">
                             <span class="fa-stack fa-lg">
@@ -577,36 +662,46 @@
                             </span>
                         </a>
                     </li>
-                
+                    
 
-                
+                    
 
-                
+                    
                     <li>
-                        <a target="_blank"  href="https://github.com/cl9000">
+                        <a target="_blank" href="https://github.com/cl9000">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
-                
-                
+                    
+                    
                     <li>
-                        <a target="_blank"  href="https://www.jianshu.com/u/f167b0dcbdbe">
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
-                        </span>
+                            </span>
                         </a>
                     </li>
-                
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
 
-                
+                    
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; cl9000 2020 
+                    Copyright &copy; cl9000 2020
                     <br>
                     Theme by <a href="http://huangxuan.me/">Hux</a>
                     <span style="display: inline-block; margin: 0 5px;">
@@ -622,21 +717,21 @@
 
                 <!-- 不蒜子 start -->
                 
-                    <!-- 不蒜子统计 -->
-                    <p class="copyright text-muted" style="margin-top: 5px;">
-                        <span id="busuanzi_container_site_pv">
-                            本站总访问量
-                            <span id="busuanzi_value_site_pv"></span>次
-                        </span>
-                        <span class="post-meta-divider">|</span>
-                        <span id="busuanzi_container_site_uv" style='display:none'>
-                            本站访客数
-                            <span id="busuanzi_value_site_uv"></span>人
-                        </span>
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span>
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-                    </p>
-              
-              <!-- 不蒜子 end -->     
+                </p>
+                
+                <!-- 不蒜子 end -->
             </div>
         </div>
     </div>
@@ -651,6 +746,22 @@
 <!-- Custom Theme JavaScript -->
 <script src="/js/hux-blog.min.js"></script>
 
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- 动态tab标签 -->
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
 <!-- Snackbar与Toast类似 -->
 <!-- <script src="/js/snackbar.js "></script> -->
 <!--  -->
@@ -659,12 +770,12 @@
 <!-- async load function -->
 <script>
     function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
     }
 </script>
 
@@ -689,8 +800,8 @@
 <!-- jquery.tagcloud.js -->
 <script>
     // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("https://cl9000.github.io/js/jquery.tagcloud.js",function(){
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
             $.fn.tagcloud.defaults = {
                 // size: {start: 1, end: 1, unit: 'em'},
                 // color: {start: '#bbbbee', end: '#0085a1'},
@@ -705,9 +816,9 @@
 
 <!--fastClick.js -->
 <script>
-    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
         var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
+        if ($nav) FastClick.attach($nav);
     })
 </script>
 
@@ -721,7 +832,7 @@
 <script>
     var _baId = '2997fa63b6770debc9d754b9a29bae5f';
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?" + _baId;
         var s = document.getElementsByTagName("script")[0];
@@ -732,13 +843,10 @@
 
 <!-- weichanglu_weather https://cj.weather.com.cn/ -->
 <script type="text/javascript">
-var _fid = "aqGL3DR6qj";
-WIDGET = {FID: _fid}
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
 </script>
 <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
-
-
-
 
     <!-- go Top -->
     <!-- <a id="rocket" href="#top" class=""></a> -->
@@ -750,6 +858,7 @@ WIDGET = {FID: _fid}
     <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
-</body>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":150,"height":450},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
 
 </html>
