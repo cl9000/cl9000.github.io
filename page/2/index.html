@@ -601,11 +601,11 @@ Qu......
     <div class="tags">
         
             
-            <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
+            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
             
         
             
-            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
+            <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
             
         
             
@@ -637,6 +637,10 @@ Qu......
             
         
             
+            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
+            
+        
+            
             <a href="/tags/#Mac" title="Mac" rel="2">Mac</a>
             
         
@@ -653,19 +657,15 @@ Qu......
             
         
             
+            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
+            
+        
+            
             <a href="/tags/#🇨🇳" title="🇨🇳" rel="1">🇨🇳</a>
             
         
             
             <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
-            
-        
-            
-            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
-            
-        
-            
-            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
             
         
             
@@ -1063,6 +1063,45 @@ Qu......
             }, 3e3))
     })
 </script>
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search.js"></script>
+<script src="/libs/materialize/materialize.min.js"></script>
+<link rel="stylesheet" href="/libs/materialize/materialize.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 1.6rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
 
 
 <!-- Snackbar与Toast类似 -->
