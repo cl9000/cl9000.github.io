@@ -3,7 +3,7 @@
 .post-container .highlight {
   overflow: auto;
   margin: 20px 0;
-  padding: 15px;
+  padding: 28px 15px 15px 15px;
   font-size: 13px;
   color: #ccc;
   background: #2d2d2d;
@@ -26,6 +26,56 @@
   color: #ccc;
   background: none;
   text-shadow: none;
+}
+/* 头部 cl9000 */
+.post-container .highlight:before {
+  content: " ";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fc625d;
+  width: 12px;
+  height: 12px;
+/* left: 2.0rem; */
+  margin-top: -20px;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  z-index: 2;
+}
+/* 头部 cl9000 */
+.table-responsive:before {
+  color: #fff;
+/*content: attr(data-rel);*/
+  content: "";
+  height: 30px;
+  line-height: 30px;
+  background: #21252b;
+  font-size: 16px;
+  position: absolute;
+  margin-top: -30px;
+  left: 1.49rem;
+  width: 95.6%;
+  font-family: Ubuntu, sans-serif;
+  font-weight: 700;
+  padding: 0 120px;
+  text-indent: 15px;
+  text-align: center;
+  float: left;
+  z-index: 1;
+  border-radius: 5px 5px 0 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  pointer-events: none;
+}
+.post-container .highlight {
+/* 圆角 cl9000 */
+  border-radius: 5px 5px 5px 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .post-container .highlight pre {
   border: none;

@@ -20,7 +20,7 @@
 }
 #toc {
   width: inherit;
-  line-height: 1em;
+/*line-height 1em*/
   font-size: 0.9em;
   float: left;
   overflow: auto;

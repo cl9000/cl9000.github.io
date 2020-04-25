@@ -254,11 +254,11 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -765,7 +765,8 @@
     document.addEventListener("visibilitychange", function () {
         document.hidden ?
             (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
-            (document.title = "魏长露的博客 | Wei, C.-L. Blog", st = setTimeout(function () {
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
                 document.title = OriginTitile
             }, 3e3))
     })
@@ -774,12 +775,11 @@
 
 
 <!-- 搜索 start -->
-<script src="/libs/search.js"></script>
-<!-- <script src="/libs/materialize/materialize.min.js"></script> -->
-<link rel="stylesheet" href="/libs/materialize/materialize.min.css">
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
 <div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
     <div class="modal-content2">
-        <div class="search-header" style="font-size: 1.6rem;">
+        <div class="search-header" style="font-size: 2.0rem;">
             <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
             <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
         </div>

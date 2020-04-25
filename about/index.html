@@ -240,11 +240,11 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -499,6 +499,10 @@
     <div class="tags">
         
             
+            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
+            
+        
+            
             <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
             
         
@@ -515,15 +519,7 @@
             
         
             
-            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
-            
-        
-            
-            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
-            
-        
-            
-            <a href="/tags/#GitHub" title="GitHub" rel="1">GitHub</a>
+            <a href="/tags/#GitHub" title="GitHub" rel="2">GitHub</a>
             
         
             
@@ -543,10 +539,6 @@
             
         
             
-            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
-            
-        
-            
             <a href="/tags/#定时任务" title="定时任务" rel="1">定时任务</a>
             
         
@@ -555,7 +547,11 @@
             
         
             
-            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
+            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
+            
+        
+            
+            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
             
         
             
@@ -564,6 +560,10 @@
         
             
             <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
+            
+        
+            
+            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
             
         
             
@@ -604,6 +604,22 @@
         
             
             <a href="/tags/#hotUpdate" title="hotUpdate" rel="1">hotUpdate</a>
+            
+        
+            
+            <a href="/tags/#jsDelivr" title="jsDelivr" rel="1">jsDelivr</a>
+            
+        
+            
+            <a href="/tags/#CDN" title="CDN" rel="1">CDN</a>
+            
+        
+            
+            <a href="/tags/#免费CDN" title="免费CDN" rel="1">免费CDN</a>
+            
+        
+            
+            <a href="/tags/#npm" title="npm" rel="1">npm</a>
             
         
             
@@ -746,7 +762,7 @@
 
     <h5>₰ ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li></ul>
     </div>
 
         <hr>
@@ -959,7 +975,8 @@
     document.addEventListener("visibilitychange", function () {
         document.hidden ?
             (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
-            (document.title = "魏长露的博客 | Wei, C.-L. Blog", st = setTimeout(function () {
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
                 document.title = OriginTitile
             }, 3e3))
     })
@@ -968,12 +985,11 @@
 
 
 <!-- 搜索 start -->
-<script src="/libs/search.js"></script>
-<!-- <script src="/libs/materialize/materialize.min.js"></script> -->
-<link rel="stylesheet" href="/libs/materialize/materialize.min.css">
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
 <div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
     <div class="modal-content2">
-        <div class="search-header" style="font-size: 1.6rem;">
+        <div class="search-header" style="font-size: 2.0rem;">
             <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
             <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
         </div>

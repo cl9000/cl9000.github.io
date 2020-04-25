@@ -53,7 +53,7 @@ var searchFunc = function(path, search_id, content_id) {
                     }
                     // show search results
                     if (isMatch) {
-                        str += "<li><a href='" + data_url + "' class='search-result-title' style='font-size: 2.0rem;'>" + data_title + "</a>";
+                        str += "<li><a href='" + data_url + "' class='search-result-title' style='font-size: 2.3rem;color:#337ab7'>" + data_title + "</a>";
                         var content = data.content.trim().replace(/<[^>]+>/g, "");
                         if (first_occur >= 0) {
                             // cut out 100 characters
@@ -74,7 +74,7 @@ var searchFunc = function(path, search_id, content_id) {
                                 var regS = new RegExp(keyword,"gi");
                                 match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
                             });
-                            str += "<p class=\"search-result\" style=\"font-size: 1rem;line-height: 1.5rem;margin: 20px 0\">" + match_content + "...</p>"
+                            str += "<p class=\"search-result\" style=\"font-size: 1.5rem;line-height: 2.3rem;margin: 10px 0 20px 0;overflow: hidden;border-bottom: 1px solid #337ab7;padding-bottom: 18px;\">" + match_content + "...</p>"
                         }
                         str += "</li>";
                     }
