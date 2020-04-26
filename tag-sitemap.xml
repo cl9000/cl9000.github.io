@@ -65,27 +65,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/Karma/</loc>
-        <lastmod>2020-03-19T03:13:28.960Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Jasmine/</loc>
-        <lastmod>2020-03-19T03:13:28.960Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Web%E6%B5%8B%E8%AF%95/</loc>
-        <lastmod>2020-03-19T03:13:28.960Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/rootless/</loc>
         <lastmod>2020-04-09T11:11:23.949Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -135,20 +114,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/CSS/</loc>
-        <lastmod>2020-04-14T02:17:53.523Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Loading/</loc>
-        <lastmod>2020-04-14T02:17:53.523Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/%E7%BB%9F%E8%AE%A1/</loc>
         <lastmod>2020-04-16T01:52:56.663Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -191,43 +156,92 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/Docker/</loc>
-        <lastmod>2020-04-21T10:10:12.087Z</lastmod>
+        <loc>https://cl9000.github.io/tags/CSS/</loc>
+        <lastmod>2020-04-26T04:56:12.670Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Loading/</loc>
+        <lastmod>2020-04-26T04:56:12.670Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/GitHub/</loc>
-        <lastmod>2020-04-25T10:32:31.583Z</lastmod>
+        <lastmod>2020-04-26T07:24:09.571Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/jsDelivr/</loc>
-        <lastmod>2020-04-25T10:32:31.583Z</lastmod>
+        <lastmod>2020-04-26T07:24:09.571Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/CDN/</loc>
-        <lastmod>2020-04-25T10:32:31.583Z</lastmod>
+        <lastmod>2020-04-26T07:24:09.571Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/%E5%85%8D%E8%B4%B9CDN/</loc>
-        <lastmod>2020-04-25T10:32:31.583Z</lastmod>
+        <lastmod>2020-04-26T07:24:09.571Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/npm/</loc>
-        <lastmod>2020-04-25T10:32:31.583Z</lastmod>
+        <lastmod>2020-04-26T07:24:09.571Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Docker/</loc>
+        <lastmod>2020-04-26T08:40:08.731Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Karma/</loc>
+        <lastmod>2020-04-26T09:45:25.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Jasmine/</loc>
+        <lastmod>2020-04-26T09:45:25.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Web%E6%B5%8B%E8%AF%95/</loc>
+        <lastmod>2020-04-26T09:45:25.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Github/</loc>
+        <lastmod>2020-04-26T11:59:37.468Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc>
+        <lastmod>2020-04-26T11:59:37.468Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

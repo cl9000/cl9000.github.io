@@ -43,7 +43,7 @@
   z-index: 2;
 }
 /* 头部 cl9000 */
-.table-responsive:before {
+.highlight>.table-responsive:before {
   color: #fff;
 /*content: attr(data-rel);*/
   content: "";

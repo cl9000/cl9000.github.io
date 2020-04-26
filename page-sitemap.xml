@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>https://cl9000.github.io/about/</loc>
+        <lastmod>2020-04-26T06:43:09.698Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>https://cl9000.github.io/timeline/</loc>
         <lastmod>2020-04-15T01:02:02.822Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -16,13 +23,6 @@
     <url>
         <loc>https://cl9000.github.io/tools/</loc>
         <lastmod>2020-03-23T08:54:45.904Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://cl9000.github.io/about/</loc>
-        <lastmod>2020-03-23T08:51:16.733Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

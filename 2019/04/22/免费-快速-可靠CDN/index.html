@@ -337,8 +337,8 @@
 <h2><span id="jsdelivr-官网">jsDelivr 官网</span></h2>
 <p><strong><a href="http://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr – Open Source CDN</a></strong></p>
 <!-- ![jsDelivr-index.jpg](jsDelivr-index.jpg) -->
-<p><a href="/2019/04/22/免费-快速-可靠CDN/jsDelivr-index.jpg"><img src="/2019/04/22/免费-快速-可靠CDN/jsDelivr-index.jpg" width="100%" height="100%" alt="图片名称" align="center"></a><br>
-<a href="/2019/04/22/免费-快速-可靠CDN/jsDelivr-points.jpg"><img src="/2019/04/22/免费-快速-可靠CDN/jsDelivr-points.jpg" width="100%" height="100%" alt="图片名称" align="center"></a></p>
+<p><a href="/2019/04/22/免费-快速-可靠CDN/jsDelivr-index.jpg"><img src="/jsDelivr-index.jpg" width="100%" height="100%" alt="图片名称" align="center"></a><br>
+<a href="/2019/04/22/免费-快速-可靠CDN/jsDelivr-points.jpg"><img src="/jsDelivr-points.jpg" width="100%" height="100%" alt="图片名称" align="center"></a></p>
 <h2><span id="使用">使用</span></h2>
 <h3><span id="1-使用方式-官网首页有各个平台的引用资源方式">1、使用方式 官网首页有各个平台的引用资源方式</span></h3>
 <h4><span id="npm">#NPM</span></h4>
@@ -353,9 +353,9 @@
 </blockquote>
 <h3><span id="2-新建github仓库不是重点自己新建">2、新建gitHub仓库（不是重点，自己新建）</span></h3>
 <p>※ 新建仓库，并将仓库 clone 至本地，上传相关资源文件，并提交推送到仓库。<strong>下图已圈重点※</strong>：<br>
-<img src="/2019/04/22/免费-快速-可靠CDN/jsDelivr-gitHub0.jpg" alt="jsDelivr-gitHub0.jpg"></p>
+<img src="jsDelivr-gitHub0.jpg" alt="jsDelivr-gitHub0.jpg"></p>
 <p>※ 进入 <code>releases</code> 进行手动打包，如下图：<code>tu</code>；<strong>后面讲使用 <strong><a href="https://travis-ci.org/" target="_blank" rel="noopener">TravisCI</a></strong> 做自动更新</strong><br>
-<img src="/2019/04/22/免费-快速-可靠CDN/jsDelivr-gitHub1.jpg" alt="jsDelivr-gitHub1.jpg"></p>
+<img src="jsDelivr-gitHub1.jpg" alt="jsDelivr-gitHub1.jpg"></p>
 <h3><span id="3-引用方式圈域名重点">3、引用方式（圈域名重点）</span></h3>
 <p>※ 引用</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 过一会就可以访问测试了</span></span><br><span class="line"><span class="meta">## GitHub 方式</span></span><br><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.jsdelivr.net/gh/user/repo@version/file</span></span><br><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.jsdelivr.net/gh/github用户名/项目名@版本号/...</span></span><br><span class="line">例如</span><br><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.jsdelivr.net/gh/cl9000/jsDelivr-Test@1.0/images/2.jpg</span></span><br><span class="line"></span><br><span class="line"><span class="meta">## NPM 方式</span></span><br><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.jsdelivr.net/npm/package@version/file</span></span><br></pre></td></tr></table></figure>
@@ -374,14 +374,13 @@ jsDelivr 提供了一个可以看 CDN 文件和使用流量的地址：<a href="
 <a href="https://yremp.live/jsdeliver/" target="_blank" rel="noopener">https://yremp.live/jsdeliver/</a><br>
 <a href="https://chi.miantiao.me/make-a-cdn-by-github-jsdelivr-travisci/" target="_blank" rel="noopener">https://chi.miantiao.me/make-a-cdn-by-github-jsdelivr-travisci/</a></p>
 </blockquote>
-<h1><span id></span></h1>
 <h2><span id="持续集成-ci">持续集成 CI</span></h2>
 <p><a href="https://github.blog/2017-11-07-github-welcomes-all-ci-tools/" target="_blank" rel="noopener">CI Tools</a><br>
 <a href="https://zhuanlan.zhihu.com/p/59686072" target="_blank" rel="noopener">CI</a><br>
 CI (Continuous Integration，持续集成)。<br>
 CI 软件监视仓库，可以在开发者发送提交后立刻执行自动测试、构建、部署。通过持续执行这样一个操作，提高效率，简化构建部署，一次配置…。<br>
 常见的CI有：　Travis CI 、 Jenkins 、Circle CI</p>
-<h1><span id="travis-ci">Travis CI</span></h1>
+<h2><span id="travis-ci">Travis CI</span></h2>
 <h2><span id="介绍">介绍</span></h2>
 <p>Travis-CI是一个使用<a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html" target="_blank" rel="noopener">YAML</a>格式配置用于持续集成完成自动化测试构建部署的开源项目</p>
 <p>目前 Travis-CI 分：</p>
@@ -392,7 +391,7 @@ CI 软件监视仓库，可以在开发者发送提交后立刻执行自动测�
 </ul>
 <h2><span id="travis-使用">Travis 使用</span></h2>
 <p>Travis 注册登录 <strong><a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI 官网 travis-ci.org</a></strong> ，使用 GitHub 账号授权登录即可，登录之后，Travis 就会实时同步你 GitHub 账号的仓库，然后打开个人页面并给你想要构建的项目启用 Travis，Travis 会监听这个仓库的所有变化。如下图：<br>
-<img src="/2019/04/22/免费-快速-可靠CDN/TravisCI-0.jpg" alt="TravisCI-0.jpg"></p>
+<img src="TravisCI-0.jpg" alt="TravisCI-0.jpg"></p>
 <h2><span id="travisyml-配置文件">.travis.yml 配置文件</span></h2>
 <p>新建 <code>.travis.yml</code> 配置文件放到项目根目录下。 <code>（Mac可以使用</code>touch<code>命令创建此文件，显示隐藏文件快捷键：command+shift+. ）</code><br>
 Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 构建并部署发布到 GitHub-releases 的配置。<code>&lt;使用 go（可使用其它语言），只是符合规则，必须设置一门语言&gt;</code></p>
@@ -417,14 +416,14 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
 <blockquote>
 <p>（Github Personal Access Token 创建后退出，无法再次查看；忘记了token就只有重新生成 token。）</p>
 </blockquote>
-<p><img src="/2019/04/22/免费-快速-可靠CDN/TravisCI-GH-Token-0.jpg" alt="TravisCI-GH-Token-0.jpg"></p>
+<p><img src="TravisCI-GH-Token-0.jpg" alt="TravisCI-GH-Token-0.jpg"></p>
 <p>生成了Github Personal Access Token后就将其应用到 .travis.yml中。</p>
 <h2><span id="travis-应用-github-personal-access-token的两种方案">Travis 应用 Github Personal Access Token的两种方案</span></h2>
 <h3><span id="一-将-token-直接设置为环境变量参数">一、将 Token 直接设置为环境变量参数</span></h3>
 <ul>
 <li>进入 Travis 对应的项目页面，点击 <code>More options 中的 settings</code> 进入项目的设置环境；</li>
 <li>在 <code>Environment Variables</code> 添加环境变量：例如 <code>GH_TOKEN</code> 变量名称，值为之前生成的<code>Personal Access Token</code>，并确保<code>Display value in build log</code>为<code>FF</code>状态。<br>
-<img src="/2019/04/22/免费-快速-可靠CDN/TravisCI-GH-Token-1.jpg" alt="TravisCI-GH-Token-1.jpg"></li>
+<img src="TravisCI-GH-Token-1.jpg" alt="TravisCI-GH-Token-1.jpg"></li>
 </ul>
 <p>然后在.travis.yml文件中使用该环境变量：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 验证方式 - 生效</span></span><br><span class="line"><span class="attr">api_key:</span> <span class="string">$&#123;GH_TOKEN&#125;</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证方式 - 会报异常 待加密验证测试</span></span><br><span class="line"><span class="comment"># api_key:</span></span><br><span class="line"><span class="comment">#     secure: $&#123;GH_TOKEN&#125;</span></span><br></pre></td></tr></table></figure>
@@ -492,10 +491,11 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ...</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="literal">true</span> <span class="comment"># 发布  tag版 时才进行发包   </span></span><br><span class="line">  <span class="attr">draft:</span> <span class="literal">false</span> <span class="comment"># 不发表drafs</span></span><br></pre></td></tr></table></figure>
 <h3><span id="发布流程">发布流程</span></h3>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修改代码文件</span><br><span class="line">git add . &amp;&amp; git commit -m "first commit" &amp;&amp; git push -u origin master   # 指定分支 &lt;master分支&gt;</span><br><span class="line"></span><br><span class="line">git tag v2.0 -m "备注信息"</span><br><span class="line">git push origin --tags</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/04/22/免费-快速-可靠CDN/TravisCI-deploy-0.jpg" alt="TravisCI-deploy-0.jpg"><br>
-<img src="/2019/04/22/免费-快速-可靠CDN/TravisCI-deploy-1.jpg" alt="TravisCI-deploy-1.jpg"><br>
-<img src="/2019/04/22/免费-快速-可靠CDN/TravisCI-deploy-2.jpg" alt="TravisCI-deploy-2.jpg"><br>
-<img src="/2019/04/22/免费-快速-可靠CDN/TravisaCI-GH-releases-0.jpg" alt="TravisaCI-GH-releases-0.jpg"></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打 Tag 仍报错：Skipping a deployment with the xxx provider because this is not a tagged commit</span></span><br><span class="line"><span class="string">git</span> <span class="string">push</span> <span class="string">--delete</span> <span class="string">origin</span> <span class="string">v2.0</span></span><br><span class="line"><span class="string">git</span> <span class="string">push</span> <span class="string">origin</span> <span class="string">v2.0</span></span><br></pre></td></tr></table></figure>
+<p><img src="TravisCI-deploy-0.jpg" alt="TravisCI-deploy-0.jpg"><br>
+<img src="TravisCI-deploy-1.jpg" alt="TravisCI-deploy-1.jpg"><br>
+<img src="TravisCI-deploy-2.jpg" alt="TravisCI-deploy-2.jpg"><br>
+<img src="TravisaCI-GH-releases-0.jpg" alt="TravisaCI-GH-releases-0.jpg"></p>
 <h2><span id="问题参阅">问题参阅</span></h2>
 <ol>
 <li>
@@ -535,9 +535,9 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/" data-toggle="tooltip" data-placement="top" title="Hexo博客部署到Coding、Gitee、GitHub"> Previous
+                            <a href="/2019/09/26/Github搭建图床/" data-toggle="tooltip" data-placement="top" title="在GitHub搭建图床"> Previous
                             <br>
-                            <span>Hexo博客部署到Coding、Gitee、GitHub</span>
+                            <span>在GitHub搭建图床</span>
                             </a>
                         </li>
                     
@@ -604,7 +604,7 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">使用 Github，jsDelivr， TravisCI 搭建轻量 CDN</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">免费-快速-可靠 CDN</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">jsDelivr 官网</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">1、使用方式 官网首页有各个平台的引用资源方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">#NPM</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">#GitHub</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">#WordPress</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">2、新建gitHub仓库（不是重点，自己新建）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">3、引用方式（圈域名重点）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">演示DEMO</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">jsDelivr参考</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text"></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">持续集成 CI</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">Travis CI</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Travis 使用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">.travis.yml 配置文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.0.0.1.</span> <span class="toc-nav-text">· Travis 官网文档配置</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.0.0.2.</span> <span class="toc-nav-text">· 部署方式 /deployment</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.0.0.3.</span> <span class="toc-nav-text">· 加密密钥 /Encryption keys</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.0.0.4.</span> <span class="toc-nav-text">· GitHub发布上传releases /GitHub Releases Uploading</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.0.0.5.</span> <span class="toc-nav-text">· 官方模板 - GitHub发布上传releases - GitHub Releases Uploading</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">加密构建中使用到的密码和toke</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">创建 Github Personal Access Token</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Travis 应用 Github Personal Access Token的两种方案</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.1.</span> <span class="toc-nav-text">一、将 Token 直接设置为环境变量参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.2.</span> <span class="toc-nav-text">二、使用 Travis 提供的加密环境对其进行加密</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.2.1.</span> <span class="toc-nav-text">加密环境安装、ruby、gem</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.2.2.</span> <span class="toc-nav-text">开始加密</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">部署 deployment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">部署到 GitHub Releases</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">这只说明 部署到 GitHub Releases，发布版本，Tag时才发布releases</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">发布流程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">问题参阅</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">补充</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">TravisCI 参考</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.0.0.0.1.</span> <span class="toc-nav-text">· Travis CI 官网 travis-ci.org</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.0.0.0.2.</span> <span class="toc-nav-text">· Travis 官网文档</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.0.0.0.3.</span> <span class="toc-nav-text">· 部署方式 /deployment</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.0.0.0.4.</span> <span class="toc-nav-text">· 加密密钥 /Encryption keys</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.0.0.0.5.</span> <span class="toc-nav-text">· GitHub发布上传releases /GitHub Releases Uploading</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">使用 Github，jsDelivr， TravisCI 搭建轻量 CDN</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">免费-快速-可靠 CDN</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">jsDelivr 官网</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">使用</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.1.</span> <span class="toc-nav-text">1、使用方式 官网首页有各个平台的引用资源方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.1.1.</span> <span class="toc-nav-text">#NPM</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.1.2.</span> <span class="toc-nav-text">#GitHub</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.1.3.</span> <span class="toc-nav-text">#WordPress</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.2.</span> <span class="toc-nav-text">2、新建gitHub仓库（不是重点，自己新建）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.3.</span> <span class="toc-nav-text">3、引用方式（圈域名重点）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">演示DEMO</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">jsDelivr参考</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">持续集成 CI</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">Travis CI</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">Travis 使用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">.travis.yml 配置文件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.0.0.1.</span> <span class="toc-nav-text">· Travis 官网文档配置</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.0.0.2.</span> <span class="toc-nav-text">· 部署方式 /deployment</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.0.0.3.</span> <span class="toc-nav-text">· 加密密钥 /Encryption keys</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.0.0.4.</span> <span class="toc-nav-text">· GitHub发布上传releases /GitHub Releases Uploading</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.0.0.5.</span> <span class="toc-nav-text">· 官方模板 - GitHub发布上传releases - GitHub Releases Uploading</span></a></li></ol></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">加密构建中使用到的密码和toke</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">创建 Github Personal Access Token</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">14.</span> <span class="toc-nav-text">Travis 应用 Github Personal Access Token的两种方案</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">14.1.</span> <span class="toc-nav-text">一、将 Token 直接设置为环境变量参数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">14.2.</span> <span class="toc-nav-text">二、使用 Travis 提供的加密环境对其进行加密</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">14.2.1.</span> <span class="toc-nav-text">加密环境安装、ruby、gem</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">14.2.2.</span> <span class="toc-nav-text">开始加密</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">15.</span> <span class="toc-nav-text">部署 deployment</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">15.1.</span> <span class="toc-nav-text">部署到 GitHub Releases</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">15.2.</span> <span class="toc-nav-text">这只说明 部署到 GitHub Releases，发布版本，Tag时才发布releases</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">15.3.</span> <span class="toc-nav-text">发布流程</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">16.</span> <span class="toc-nav-text">问题参阅</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">17.</span> <span class="toc-nav-text">补充</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">18.</span> <span class="toc-nav-text">TravisCI 参考</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">18.0.0.0.1.</span> <span class="toc-nav-text">· Travis CI 官网 travis-ci.org</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">18.0.0.0.2.</span> <span class="toc-nav-text">· Travis 官网文档</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">18.0.0.0.3.</span> <span class="toc-nav-text">· 部署方式 /deployment</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">18.0.0.0.4.</span> <span class="toc-nav-text">· 加密密钥 /Encryption keys</span></a></li><li class="toc-nav-item toc-nav-level-6"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">18.0.0.0.5.</span> <span class="toc-nav-text">· GitHub发布上传releases /GitHub Releases Uploading</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
         
         </div>
       </aside>
@@ -740,18 +740,19 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
 <!-- chrome Firefox 中文锚点定位失效-->
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!-- smooth scroll behavior polyfill  -->
-<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
 <script>
-        $('#toc').on('click','a',function(a){
-            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-            // console.log(window.navigator.userAgent,isChrome)
-                // if(isChrome) {
-                    // console.log(a.currentTarget.outerHTML);
-                    // console.log($(a.currentTarget).attr("href"));
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
                     //跳转到指定锚点
-                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
-                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
-                // }
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
         })  
 </script>
 
@@ -957,6 +958,7 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
 <script src="/libs/other/wenzi.js"></script>
 
 <!-- 动态tab标签 -->
+
 <script type="text/javascript">
     var OriginTitile = document.title, st;
     document.addEventListener("visibilitychange", function () {
@@ -968,6 +970,7 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
             }, 3e3))
     })
 </script>
+
 
 
 
@@ -1100,6 +1103,7 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
     <!-- <a id="rocket" href="#top" class=""></a> -->
     <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
     <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 
     <!-- Image to hack wechat -->
@@ -1107,6 +1111,6 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":150,"height":450},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</body>
 
 </html>

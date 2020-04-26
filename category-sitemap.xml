@@ -28,27 +28,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/Karma/</loc>
-        <lastmod>2020-03-19T03:13:28.960Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/categories/Karma/Jasmine/</loc>
-        <lastmod>2020-03-19T03:13:28.960Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/categories/Karma/Jasmine/Web%E6%B5%8B%E8%AF%95/</loc>
-        <lastmod>2020-03-19T03:13:28.960Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/categories/JS/</loc>
         <lastmod>2020-04-10T10:49:36.261Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -58,13 +37,6 @@
     <url>
         <loc>https://cl9000.github.io/categories/Mac/</loc>
         <lastmod>2020-04-13T09:48:58.266Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/categories/CSS/</loc>
-        <lastmod>2020-04-14T02:17:53.523Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -86,6 +58,34 @@
     <url>
         <loc>https://cl9000.github.io/categories/HEXO/%E7%BB%9F%E8%AE%A1/%E8%AE%BF%E9%97%AE%E9%87%8F/</loc>
         <lastmod>2020-04-16T01:52:56.663Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/CSS/</loc>
+        <lastmod>2020-04-26T04:56:12.670Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/Karma/</loc>
+        <lastmod>2020-04-26T09:45:25.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/Karma/Jasmine/</loc>
+        <lastmod>2020-04-26T09:45:25.071Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/Karma/Jasmine/Web%E6%B5%8B%E8%AF%95/</loc>
+        <lastmod>2020-04-26T09:45:25.071Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -370,33 +370,31 @@ Mac安装命令（i 是 install 命令的缩写，-D 是 --save-dev 的缩写。
 <code>$ karma init</code> or <code>$ karma init **.conf.js</code><br>
 执行命令后，会被问到一系列的问题</p>
 <ul>
-<li>
-<p><code>What testing framework do you want to use?</code><br>
-默认情况下 Jasmine, Mocha, QUnit 都已经被安装了，这里我们可以直接使用它们的名称。如果在应用中用到了其它的测试框架，那就需要我们安装它们所对应的插件，并在配置文件中标注它们（详见 karma.conf.js 中的 plugins 项）</p>
-</li>
-<li>
-<p><code>Do you want to use Require.js?</code><br>
+<li><code>What testing framework do you want to use?</code><br>
+默认情况下 Jasmine, Mocha, QUnit 都已经被安装了，这里我们可以直接使用它们的名称。如果在应用中用到了其它的测试框架，那就需要我们安装它们所对应的插件，并在配置文件中标注它们（详见 karma.conf.js 中的 plugins 项）</li>
+</ul>
+<ul>
+<li><code>Do you want to use Require.js?</code><br>
 This will add Require.js plugin.<br>
-Require.js 是异步加载规范（AMD）的实现。常被作为基础代码库，应用在了很多的项目与框架之中，例如 Dojo, AngularJs 等、</p>
-</li>
-<li>
-<p><code>Do you want to capture a browser automatically?</code><br>
-选择需要运行测试用例的浏览器。需要注意的就是，必须保证所对应的浏览器插件已经安装成功。</p>
-</li>
-<li>
-<p><code>What is the location of your source and test files?</code><br>
+Require.js 是异步加载规范（AMD）的实现。常被作为基础代码库，应用在了很多的项目与框架之中，例如 Dojo, AngularJs 等、</li>
+</ul>
+<ul>
+<li><code>Do you want to capture a browser automatically?</code><br>
+选择需要运行测试用例的浏览器。需要注意的就是，必须保证所对应的浏览器插件已经安装成功。</li>
+</ul>
+<ul>
+<li><code>What is the location of your source and test files?</code><br>
 You can use glob patterns, eg.  <strong>js/*.js&quot; or &quot;test/**/*Spec.js</strong>.<br>
-选择测试用例所在的目录位置。Karma 支持通配符的方式配置文件或目录，例如 <strong>js/*.js&quot; or &quot;test/**/*Spec.js</strong> 等。如果目录或文件使用相对位置，要清楚地是，此时的路径是相对于当前运行 karma 命令时所在的目录。</p>
-</li>
-<li>
-<p><code>Should any of the files included by the previous patterns be excluded?</code><br>
+选择测试用例所在的目录位置。Karma 支持通配符的方式配置文件或目录，例如 <strong>js/*.js&quot; or &quot;test/**/*Spec.js</strong> 等。如果目录或文件使用相对位置，要清楚地是，此时的路径是相对于当前运行 karma 命令时所在的目录。</li>
+</ul>
+<ul>
+<li><code>Should any of the files included by the previous patterns be excluded?</code><br>
 You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
-目录中不包括的那些文件。</p>
-</li>
-<li>
-<p><code>Do you want Karma to watch all the files and run tests on change?</code><br>
-是否需要 Karma 自动监听文件？并且文件一旦被修改，就重新运行测试用例？</p>
-</li>
+目录中不包括的那些文件。</li>
+</ul>
+<ul>
+<li><code>Do you want Karma to watch all the files and run tests on change?</code><br>
+是否需要 Karma 自动监听文件？并且文件一旦被修改，就重新运行测试用例？</li>
 </ul>
 <p>最终 Karma 生成如下的配置文件 <code>karma.conf.js</code>，如下：</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">// Karma configuration</span><br><span class="line">// Generated <span class="keyword">on</span> Wed Mar <span class="number">18</span> <span class="number">2018</span> <span class="number">14</span>:<span class="number">36</span>:<span class="number">01</span> GMT+<span class="number">0800</span> (GMT+<span class="number">08</span>:<span class="number">00</span>)</span><br><span class="line"></span><br><span class="line">module.exports = <span class="function"><span class="keyword">function</span><span class="params">(config)</span> &#123;</span></span><br><span class="line">  config.<span class="keyword">set</span>(&#123;</span><br><span class="line"></span><br><span class="line">    // base path that will <span class="keyword">be</span> used <span class="keyword">to</span> <span class="built_in">resolve</span> <span class="keyword">all</span> patterns (eg. <span class="keyword">files</span>, exclude)</span><br><span class="line">    basePath: <span class="string">''</span>,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // frameworks <span class="keyword">to</span> use</span><br><span class="line">    // available framework<span class="variable">s:</span> http<span class="variable">s:</span>//npmjs.org/<span class="keyword">browse</span>/keyword/karma-adapter</span><br><span class="line">    framework<span class="variable">s:</span> [<span class="string">'jasmine'</span>],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // <span class="keyword">list</span> of <span class="keyword">files</span> / patterns <span class="keyword">to</span> load in the browser</span><br><span class="line">    <span class="keyword">file</span><span class="variable">s:</span> [</span><br><span class="line">      <span class="string">"test/**/*.js"</span>,</span><br><span class="line">      <span class="string">"test/**/*Spec.js"</span>,</span><br><span class="line">      // &#123;</span><br><span class="line">      //   pattern: <span class="string">'test/**/*.js'</span>,</span><br><span class="line">      //   // false 表示初始化的时候不会使用 script 标签直接将相关 js 引入到浏览器，需要自己写代码加载</span><br><span class="line">      //   included: false</span><br><span class="line">      // &#125;,</span><br><span class="line">      // &#123;</span><br><span class="line">      //   pattern: <span class="string">'test/**/*Spec.js'</span>,</span><br><span class="line">      //   included: false</span><br><span class="line">      // &#125;</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // <span class="keyword">list</span> of <span class="keyword">files</span> / patterns <span class="keyword">to</span> exclude</span><br><span class="line">    exclude: [</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // preprocess matching <span class="keyword">files</span> before serving them <span class="keyword">to</span> the browser</span><br><span class="line">    // available preprocessor<span class="variable">s:</span> http<span class="variable">s:</span>//npmjs.org/<span class="keyword">browse</span>/keyword/karma-preprocessor</span><br><span class="line">    preprocessor<span class="variable">s:</span> &#123;<span class="string">'test/**/*.js'</span>: <span class="string">'coverage'</span> &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // test results reporter <span class="keyword">to</span> use</span><br><span class="line">    // possible value<span class="variable">s:</span> <span class="string">'dots'</span>, <span class="string">'progress'</span></span><br><span class="line">    // available reporter<span class="variable">s:</span> http<span class="variable">s:</span>//npmjs.org/<span class="keyword">browse</span>/keyword/karma-reporter</span><br><span class="line">    reporter<span class="variable">s:</span> [<span class="string">'progress'</span>, <span class="string">'coverage'</span>],</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">    // 覆盖率报告器配置</span><br><span class="line">    coverageReporter: &#123;</span><br><span class="line">      <span class="built_in">type</span>: <span class="string">'html'</span>,</span><br><span class="line">      dir: <span class="string">'coverage/'</span></span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // web server port</span><br><span class="line">    por<span class="variable">t:</span> <span class="number">9876</span>,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // enable / disable colors in the output (reporters <span class="built_in">and</span> logs)</span><br><span class="line">    color<span class="variable">s:</span> true,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // level of logging</span><br><span class="line">    // possible value<span class="variable">s:</span> config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG</span><br><span class="line">    logLeve<span class="variable">l:</span> config.LOG_INFO,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // enable / disable watching <span class="keyword">file</span> <span class="built_in">and</span> executing tests whenever any <span class="keyword">file</span> <span class="keyword">changes</span></span><br><span class="line">    autoWatch: true,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // start these browsers</span><br><span class="line">    // available browser launcher<span class="variable">s:</span> http<span class="variable">s:</span>//npmjs.org/<span class="keyword">browse</span>/keyword/karma-launcher</span><br><span class="line">    // - Chrome, ChromeCanary, Firefox, Opera, Safari (<span class="keyword">only</span> Mac), PhantomJS,</span><br><span class="line">    // IE (<span class="keyword">only</span> Windows) </span><br><span class="line">    browser<span class="variable">s:</span> [<span class="string">'Chrome'</span>],</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    // Continuous Integration <span class="keyword">mode</span></span><br><span class="line">    // <span class="keyword">if</span> true, Karma captures browsers, runs the tests <span class="built_in">and</span> exits</span><br><span class="line">    singleRun: false,</span><br><span class="line"></span><br><span class="line">    // Concurrency level</span><br><span class="line">    // how many browser should <span class="keyword">be</span> started simultaneous</span><br><span class="line">    concurrency: Infinity</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    // 参考其他配置</span><br><span class="line">    // will <span class="keyword">be</span> resolved <span class="keyword">to</span> basePath (in the same way <span class="keyword">as</span> <span class="keyword">files</span>/exclude patterns) </span><br><span class="line">    junitReporter: &#123;outputFile: <span class="string">'test-results.xml'</span>&#125;, </span><br><span class="line"></span><br><span class="line">    // If browser does not capture in given timeout [ms], kill it </span><br><span class="line">    captureTimeou<span class="variable">t:</span> <span class="number">20000</span>, </span><br><span class="line"></span><br><span class="line">    // report which specs are slower than <span class="number">500</span>ms </span><br><span class="line">    reportSlowerThan: <span class="number">500</span>, </span><br><span class="line"></span><br><span class="line">    plugin<span class="variable">s:</span> [</span><br><span class="line">    <span class="string">'karma-jasmine'</span></span><br><span class="line">    ] </span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -673,18 +671,19 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 <!-- chrome Firefox 中文锚点定位失效-->
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!-- smooth scroll behavior polyfill  -->
-<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
 <script>
-        $('#toc').on('click','a',function(a){
-            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-            // console.log(window.navigator.userAgent,isChrome)
-                // if(isChrome) {
-                    // console.log(a.currentTarget.outerHTML);
-                    // console.log($(a.currentTarget).attr("href"));
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
                     //跳转到指定锚点
-                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
-                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
-                // }
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
         })  
 </script>
 
@@ -890,6 +889,7 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
 <script src="/libs/other/wenzi.js"></script>
 
 <!-- 动态tab标签 -->
+
 <script type="text/javascript">
     var OriginTitile = document.title, st;
     document.addEventListener("visibilitychange", function () {
@@ -901,6 +901,7 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
             }, 3e3))
     })
 </script>
+
 
 
 
@@ -1033,6 +1034,7 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
     <!-- <a id="rocket" href="#top" class=""></a> -->
     <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
     <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 
     <!-- Image to hack wechat -->
@@ -1040,6 +1042,6 @@ You can use glob patterns, eg. <strong>**/*.swp</strong>.<br>
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":150,"height":450},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</body>
 
 </html>

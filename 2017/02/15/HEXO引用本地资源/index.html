@@ -316,7 +316,7 @@
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
                 <h2><span id="hexo-引用本地资源图片">HEXO 引用本地资源（图片）</span></h2>
-<p><img src="/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg" alt="本地图片"></p>
+<p><img src="/NationalDay70_1920x1080.jpg" alt="本地图片"></p>
 <h3><span id="设置-_configyml">设置 _config.yml</span></h3>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>设置完成后使用 <code>$ hexo new post &quot;名称&quot;</code> 新建文章时会在 <code>source/_posts</code> 目录下生成与文章同名的文件夹，将文章引用的图片放入文件夹即可。<br>
@@ -326,8 +326,8 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install https://github.com/CodeFalling/hexo-asset-image --save</span></span><br></pre></td></tr></table></figure>
 <h3><span id="使用">使用</span></h3>
 <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">本地图片</span>](<span class="link">/NationalDay70_1920x1080.jpg</span>) </span><br><span class="line">或</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/NationalDay70_1920x1080.jpg.jpg"</span> <span class="attr">width</span> = <span class="string">"300"</span> <span class="attr">height</span> = <span class="string">"200"</span> <span class="attr">alt</span>=<span class="string">"图片名称"</span> <span class="attr">align</span>=<span class="string">center</span> /&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p><img src="/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg" alt="本地图片"><br>
-<img src="/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg.jpg" width="300" height="200" alt="图片名称" align="center"></p>
+<p><img src="/NationalDay70_1920x1080.jpg" alt="本地图片"><br>
+<img src="/NationalDay70_1920x1080.jpg.jpg" width="300" height="200" alt="图片名称" align="center"></p>
 <p>生成后的代码：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"/2017/02/15/HEXO引用本地资源/NationalDay70_1920x1080.jpg"</span> <span class="attr">alt</span>=<span class="string">"本地图片"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2><span id="参考">参考</span></h2>
@@ -542,18 +542,19 @@
 <!-- chrome Firefox 中文锚点定位失效-->
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!-- smooth scroll behavior polyfill  -->
-<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
 <script>
-        $('#toc').on('click','a',function(a){
-            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-            // console.log(window.navigator.userAgent,isChrome)
-                // if(isChrome) {
-                    // console.log(a.currentTarget.outerHTML);
-                    // console.log($(a.currentTarget).attr("href"));
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
                     //跳转到指定锚点
-                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
-                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
-                // }
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
         })  
 </script>
 
@@ -759,6 +760,7 @@
 <script src="/libs/other/wenzi.js"></script>
 
 <!-- 动态tab标签 -->
+
 <script type="text/javascript">
     var OriginTitile = document.title, st;
     document.addEventListener("visibilitychange", function () {
@@ -770,6 +772,7 @@
             }, 3e3))
     })
 </script>
+
 
 
 
@@ -902,6 +905,7 @@
     <!-- <a id="rocket" href="#top" class=""></a> -->
     <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
     <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 
     <!-- Image to hack wechat -->
@@ -909,6 +913,6 @@
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":150,"height":450},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</body>
 
 </html>

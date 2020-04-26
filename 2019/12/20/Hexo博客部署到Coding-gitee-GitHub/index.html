@@ -339,10 +339,10 @@
 <li>首先去去<a href="https://coding.net/" target="_blank" rel="noopener">Coding官网注册</a>账号，进入官网，选择免费注册。</li>
 </ol>
 <!-- ![本地图片](/0.jpg) -->
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/0.jpg" width="400" height="600" alt="图片名称" align="center">
+<img src="/0.jpg" width="400" height="600" alt="图片名称" align="center">
 <ol start="2">
 <li>注册完成之后就会进入主页面，然后点击创建新项目，如下图:<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/1.jpg" alt="本地图片"></li>
+<img src="/1.jpg" alt="本地图片"></li>
 </ol>
 <blockquote>
 <ul>
@@ -356,14 +356,14 @@
 <ol start="3">
 <li>
 <p>选择第三个DevOps项目后，会出现下面的页面：<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/2.jpg" alt="本地图片"></p>
+<img src="/2.jpg" alt="本地图片"></p>
 </li>
 <li>
 <p>设置公钥，可以设置全局、针对单个项目的。<br>
 4.1、 单项目的公钥，如下图：<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/3.jpg" alt="本地图片"><br>
+<img src="/3.jpg" alt="本地图片"><br>
 4.2、 全局公钥 - (设置了真多项目的可以跳过这一步)<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/4.jpg" alt="本地图片"><br>
+<img src="/4.jpg" alt="本地图片"><br>
 <strong>公钥可以使用Github，或原来已经生成的。</strong></p>
 </li>
 </ol>
@@ -372,35 +372,35 @@
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh  // 查看是否存在，不存在的话，可使用Mac自带的ssh 新生成一个。</span><br><span class="line">// 存在</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>复制 <code>ssh - 结尾</code>，粘贴到新增的密钥中，名称自定义，选择 <code>永久有效</code>，然后新建。<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/5.jpg" alt="本地图片"><br>
+<img src="/5.jpg" alt="本地图片"><br>
 测试验证：<br>
 <code>$ ssh -T git@git.coding.net</code><br>
 第一次建立连接会要求信任主机，输入相关的用户名或者密码，在控制台输入验证，验证成功即可。</p>
 <ol start="5">
 <li>然后复制你的项目地址，粘贴到配置文件 <code>_config.yml</code>，如图所示：<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/6.jpg" alt="本地图片"><br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/7.jpg" alt="本地图片"></li>
+<img src="/6.jpg" alt="本地图片"><br>
+<img src="/7.jpg" alt="本地图片"></li>
 </ol>
 <p>然后再执行 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> 部署，这是仓库中便有了部署代码。</p>
 <ol start="6">
 <li>打开 coding 的管理页面，找到 静态网站，发布静态网站。<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/8.jpg" alt="本地图片"><br>
+<img src="/8.jpg" alt="本地图片"><br>
 填写基本的信息，点击保存：<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/9.jpg" alt="本地图片"><br>
+<img src="/9.jpg" alt="本地图片"><br>
 点击保存，就会进入下一个页面：<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/10.jpg" alt="本地图片"><br>
+<img src="/10.jpg" alt="本地图片"><br>
 首次点击 <code>立即部署</code> ，之后就会有部署记录，若需要配置自己的域名，点击上图的 <code>设置</code> 进行设置：<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/11.jpg" alt="本地图片"></li>
+<img src="/11.jpg" alt="本地图片"></li>
 <li>Coding 里面还有些其它的扩展功能，项目协调、制品库、测试管理、文档管理等。这也是一些公司的流程，自己可以尝试下。</li>
 </ol>
 <h2><span id="gitee平台码云">Gitee平台（码云）</span></h2>
 <ol>
 <li>流程基本一致，比较简单，<a href="https://gitee.com/" target="_blank" rel="noopener">码云官网注册</a></li>
 <li>建立仓库，添加公钥，配置本地仓库地址<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/12.jpg" alt="本地图片"></li>
+<img src="/12.jpg" alt="本地图片"></li>
 <li>上传部署博客代码 <code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li>
 <li>点击 <code>服务 - Gitee Pages</code>，进入页面查看相关规则，点击部署即可，<br>
-<img src="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/13.jpg" alt="本地图片"></li>
+<img src="/13.jpg" alt="本地图片"></li>
 </ol>
 <p>Gitee 平台，免费版不会自动部署<br>
 Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHub可直接拉取，部署，更快捷。</p>
@@ -427,9 +427,9 @@ Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHu
                     
                     
                         <li class="next">
-                            <a href="/2019/04/22/免费-快速-可靠CDN/" data-toggle="tooltip" data-placement="top" title="使用 Github，jsDelivr，TravisCI 搭建轻量 CDN">Next
+                            <a href="/2019/09/26/Github搭建图床/" data-toggle="tooltip" data-placement="top" title="在GitHub搭建图床">Next
                             <br>
-                            <span>使用 Github，jsDelivr，TravisCI 搭建轻量 CDN</span>
+                            <span>在GitHub搭建图床</span>
                             </a>
                         </li>
                     
@@ -624,18 +624,19 @@ Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHu
 <!-- chrome Firefox 中文锚点定位失效-->
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!-- smooth scroll behavior polyfill  -->
-<script type="text/javascript" src="/js/smoothscroll.js"></script>
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
 <script>
-        $('#toc').on('click','a',function(a){
-            // var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
-            // console.log(window.navigator.userAgent,isChrome)
-                // if(isChrome) {
-                    // console.log(a.currentTarget.outerHTML);
-                    // console.log($(a.currentTarget).attr("href"));
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
                     //跳转到指定锚点
-                    // document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
-                    document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
-                // }
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
         })  
 </script>
 
@@ -841,6 +842,7 @@ Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHu
 <script src="/libs/other/wenzi.js"></script>
 
 <!-- 动态tab标签 -->
+
 <script type="text/javascript">
     var OriginTitile = document.title, st;
     document.addEventListener("visibilitychange", function () {
@@ -852,6 +854,7 @@ Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHu
             }, 3e3))
     })
 </script>
+
 
 
 
@@ -984,6 +987,7 @@ Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHu
     <!-- <a id="rocket" href="#top" class=""></a> -->
     <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
     <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
     <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
 
     <!-- Image to hack wechat -->
@@ -991,6 +995,6 @@ Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHu
     <!-- Migrate from head to bottom, no longer block render and still work -->
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/haru02.model.json"},"display":{"position":"right","width":150,"height":450},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</body>
 
 </html>
