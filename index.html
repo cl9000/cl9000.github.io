@@ -208,7 +208,7 @@
                     <div class="site-heading">
                         <h1>Weichanglu</h1>
                         <!--<hr class="small">-->
-                        <span class="subheading">For the next quantum leap 离开世界之前，一切都是过程</span>
+                        <span class="subheading">你知道的越多，你不知道的越多</span>
                     </div>
                     
                 </div>
@@ -254,16 +254,14 @@
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -275,9 +273,13 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
+                        
+                    
                         
                     
                         
@@ -414,18 +416,18 @@ Coding平台
     <a href="/2019/09/26/Github搭建图床/">
         <h2 class="post-title">
                                  
-            在GitHub搭建图床
+            在GitHub搭建免费图床
         </h2>
         <h3 class="post-subtitle">
-            
+            GitHub 免费图床
         </h3>
         <div class="post-content-preview">
-            在GitHub搭建图床 - Mac版本
-用到：GitHub、 jsDelivr、 PicGo  或 iPic，这里用 PicGo
+            在GitHub搭建免费图床 - Mac版本
+用到：GitHub、 jsDelivr、 PicGo  或 iPic，这里使用 PicGo
 iPic 参考
 为甚
-之前使用的图床是七牛云图床，用着还不错，但后来开始收费了，又迁移到新浪图床，币花光了…，而且目前很多的图床开始收费了。
-于是有了现在在Github上托管，由于速度很慢，便借助了一个免费的CDN jsdelivr，之前一直用其访问资源文件，速度......
+之前为了托管突图片使用的图床是七牛云图床，用着还不错，但后来开始收费了，又迁移到新浪图床，币花光了，然后又放在了本地去加载，但后期发布其他平台不好使…，网上找了一堆图床都开始开始收费了，毕竟人家也要吃饭。
+于是有了现在在Github上托......
         </div>
     </a>
     
@@ -507,6 +509,39 @@ Jasmine 是一款 JavaScript BDD（行为驱动开发）测试框架，它不依
 
 <div class="post-preview">
 
+    <a href="/2017/12/24/iOS利用Jenkins实现自动化打包（SVN版）/">
+        <h2 class="post-title">
+                                 
+            iOS利用 Jenkins 实现自动化打包（SVN版）
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            Mac上安装Jekins简单介绍
+在此记录权当作为笔记，或提供给需要的同学参考，如有问题请及时提出，谢谢大家审阅。
+Jenkins安装
+1、手动安装 去 jenkins官网下载 Mac 版本安装包进行安装
+2、也可以使用 Homebrew 安装，执行下面命令：
+$ brew install jenkins
+安装jenkins完成后，在终端输入：
+$ jenkins start 或者 jenk......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            December 24, 2017
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
     <a href="/2017/09/11/Extension-Chrome扩展程序开发/">
         <h2 class="post-title">
                                  
@@ -528,6 +563,37 @@ Chrome扩展 是一个用Web技术开发、用来增强浏览器功能的软件�
         <p class="post-meta">
             Posted by cl9000 on
             September 11, 2017
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2017/08/14/在iOS中Protocol-Buffer-v3-3-0-的使用/">
+        <h2 class="post-title">
+                                 
+            在iOS中Protocol Buffer(v3.3.0)的使用
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            
+在此仅做笔记记录，以便后期查阅，如有问题，及时联系，多谢大家审阅。
+一、Protocol Buffer
+最新版本Protobuf3.3.0 在iOS中的使用（OC与Swift使用一样）
+具体使用参考官方文档(需要翻墙)
+protocol buffers是一种灵活，高效，自动化的结构化数据序列化机制。类似于我们现在使用的XML和JSON。是Google公司推出出的。但是（__但是__的前面都......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            August 14, 2017
             
         </p>
     
@@ -605,75 +671,6 @@ plist文件位置：
 <!-- cl9000 添加样式解决首页列表缺失分割线 -->
 <hr style="height: 1px !important;">
 
-<div class="post-preview">
-
-    <a href="/2017/04/03/Mac-rootless机制/">
-        <h2 class="post-title">
-                                 
-            Mac rootless机制
-        </h2>
-        <h3 class="post-subtitle">
-            Mac rootless机制 `Operation not permitted`
-        </h3>
-        <div class="post-content-preview">
-            Mac rootless机制 Operation not permitted
-Mac使用 sudo 或切换成 root 权限，还是出现
-Operation not permitted
-这是由于 Max OS X El 的rootless机制，即sudo也不能操作部分文件目录， 所以如果需要执行，需要先关闭rootless功能。可以进入恢复模式关闭rootless机制：
-1、重启Mac，按 c......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            April 03, 2017
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2017/04/01/fullpage-js/">
-        <h2 class="post-title">
-                                 
-            fullpage.js 使用
-        </h2>
-        <h3 class="post-subtitle">
-            fullpage
-        </h3>
-        <div class="post-content-preview">
-            fullpage.js
-链接
-
-fullPage.js 官方
-fullPage.js 页面
-
-在使用
-
-360
-http://themify.me/demo/#theme=fullpane
-http://www.kesstrio.com/#galleryPage
-http://boxx.hk/tc/
-http://www.camanihome.com/#contacts
-https://li......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            April 01, 2017
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
 
 
 <!-- Pager -->
@@ -710,6 +707,10 @@ https://li......
         
             
             <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
+            
+        
+            
+            <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
             
         
             
@@ -753,10 +754,6 @@ https://li......
             
         
             
-            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
-            
-        
-            
             <a href="/tags/#定时任务" title="定时任务" rel="1">定时任务</a>
             
         
@@ -765,7 +762,15 @@ https://li......
             
         
             
+            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
+            
+        
+            
             <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
+            
+        
+            
+            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
             
         
             
@@ -774,14 +779,6 @@ https://li......
         
             
             <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
-            
-        
-            
-            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
-            
-        
-            
-            <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
             
         
             
@@ -822,6 +819,22 @@ https://li......
         
             
             <a href="/tags/#hotUpdate" title="hotUpdate" rel="1">hotUpdate</a>
+            
+        
+            
+            <a href="/tags/#iOS" title="iOS" rel="2">iOS</a>
+            
+        
+            
+            <a href="/tags/#Jenkins" title="Jenkins" rel="1">Jenkins</a>
+            
+        
+            
+            <a href="/tags/#自动化打包" title="自动化打包" rel="1">自动化打包</a>
+            
+        
+            
+            <a href="/tags/#protocol buffer" title="protocol buffer" rel="1">protocol buffer</a>
             
         
             
@@ -980,7 +993,7 @@ https://li......
 
     <h5>₰ ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li></ul>
     </div>
 
         <hr>
@@ -1158,11 +1171,11 @@ https://li......
                         本站总访问量
                         <span id="busuanzi_value_site_pv"></span>次
                     </span>
-                    <span class="post-meta-divider">|</span>
+                    <!-- <span class="post-meta-divider">|</span>
                     <span id="busuanzi_container_site_uv" style='display:none'>
                         本站访客数
                         <span id="busuanzi_value_site_uv"></span>人
-                    </span>
+                    </span> -->
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                 </p>
                 

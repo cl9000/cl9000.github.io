@@ -67,7 +67,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          在GitHub搭建图床 - 魏长露的博客 | Wei, C.-L. Blog
+          在GitHub搭建免费图床 - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
@@ -190,8 +190,8 @@
                                 title="图床">图床</a>
                             
                         </div>
-                        <h1>在GitHub搭建图床</h1>
-                        <h2 class="subheading"></h2>
+                        <h1>在GitHub搭建免费图床</h1>
+                        <h2 class="subheading">GitHub 免费图床</h2>
                         <span class="meta">
                             Posted by cl9000 on
                             September 26, 2019
@@ -241,16 +241,14 @@
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -262,9 +260,13 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
+                        
+                    
                         
                     
                         
@@ -319,16 +321,16 @@
             <!-- Post Container -->
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <h2><span id="在github搭建图床-mac版本">在GitHub搭建图床 - Mac版本</span></h2>
-<p>用到：<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>、 <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr</a>、 <a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo</a>  或 <a href="https://apps.apple.com/cn/app/ipic-markdown-%E5%9B%BE%E5%BA%8A-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7/id1101244278?mt=12" target="_blank" rel="noopener">iPic</a>，这里用 <strong>PicGo</strong></p>
+                <h2><span id="在github搭建免费图床-mac版本">在GitHub搭建免费图床 - Mac版本</span></h2>
+<p>用到：<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>、 <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr</a>、 <a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo</a>  或 <a href="https://apps.apple.com/cn/app/ipic-markdown-%E5%9B%BE%E5%BA%8A-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%B7%A5%E5%85%B7/id1101244278?mt=12" target="_blank" rel="noopener">iPic</a>，这里使用 <strong>PicGo</strong></p>
 <p><a href="https://toolinbox.net/iPic/" target="_blank" rel="noopener">iPic 参考</a></p>
 <h2><span id="为甚">为甚</span></h2>
-<p>之前使用的图床是七牛云图床，用着还不错，但后来开始收费了，又迁移到新浪图床，币花光了…，而且目前很多的图床开始收费了。</p>
-<p>于是有了现在在Github上托管，由于速度很慢，便借助了一个免费的CDN <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">jsdelivr</a>，之前一直用其访问资源文件，速度还可以的，但只能用于个人项目。</p>
+<p>之前为了托管突图片使用的图床是七牛云图床，用着还不错，但后来开始收费了，又迁移到新浪图床，币花光了，然后又放在了本地去加载，但后期发布其他平台不好使…，网上找了一堆图床都开始开始收费了，毕竟人家也要吃饭。</p>
+<p>于是有了现在在Github上托管，直接访问的话，国内速度很慢，便借助了一个免费的CDN <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr</a>，之前一直用其访问资源文件，速度还可以的，但基本只能用于个人项目。</p>
 <h2><span id="下载picgo">下载PicGo</span></h2>
 <p><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo下载链接</a> 查看不同的版本，根据系统平台下载对应程序，<strong>Mac</strong> 选择 <strong>dmg</strong> 文件进行下载即可。</p>
 <h2><span id="配置-github">配置 GitHub</span></h2>
-<p>首先去Github创建个图片仓库，名称自定义，配置是名称要写对</p>
+<p>首先去Github创建个图片仓库，名称自定义，配置时名称要写对</p>
 <p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/gh-wel-imgs-0.png" alt></p>
 <p>新建 Personal access tokens， 名称自定义，自己用的话全部钩上。（其实权限只要 repo 即可）。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/gh-wel-imgs-1.png" alt></p>
@@ -339,19 +341,22 @@
 <strong>分支：</strong> <code>master</code><br>
 <strong>token：</strong> 生成的 <code>Personal access tokens</code><br>
 <strong>指定存储路径：</strong> <code>images/</code>   （PicGo上传文件时，将自动在Github仓库中创建此文件夹。注意末尾要加 <strong>/</strong>）<br>
-<strong>自定义域名：</strong> <a href="https://cdn.jsdelivr.net/gh/%E7%94%A8%E6%88%B7%E5%90%8D/%E5%9B%BE%E5%BA%8A%E4%BB%93%E5%BA%93%E5%90%8D%E3%80%82" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/用户名/图床仓库名。</a><br>
-（如果设置了自定义域名，PicGo生成的访问链接，将是（自定义域名+文件名）的拼接方式，这里使用 jsDelivr 加速访问。）</p>
+<strong>自定义域名：</strong> <code>https://cdn.jsdelivr.net/gh/用户名/图床仓库名</code><br>
+（如果设置了自定义域名，PicGo生成的访问链接，将是 <code>自定义域名+文件名</code> 的访问方式，这里使用 jsDelivr 加速访问。）</p>
 <p><a href="https://picgo.github.io/PicGo-Doc/zh/guide/" target="_blank" rel="noopener">PicGo配置文档</a></p>
 <p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/gh-wel-imgs-2.png" alt></p>
 <p>iPic用法差不多， <a href="https://toolinbox.net/iPic/" target="_blank" rel="noopener">iPic 参考</a>。</p>
 <h2><span id="后记">后记</span></h2>
 <p><strong>注意：</strong> 这个软件目前不支持删除功能，删除需要去GitHub手动删除。<br>
-Electron开发的，有空可以自己改改。</p>
+使用 <a href="https://www.electronjs.org/" target="_blank" rel="noopener">Electron</a> 开发。</p>
 <h2><span id="refrence">Refrence</span></h2>
-<p><a href="https://picgo.github.io/PicGo-Doc/zh/guide/" target="_blank" rel="noopener">PicGo</a><br>
-<a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo 下载地址</a><br>
-<a href="http://www.blossomingmay.com/blog/2019-08/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" target="_blank" rel="noopener">如何在自己的GitHub搭建图床</a><br>
-<a href="https://www.cnblogs.com/lfri/p/12210721.html" target="_blank" rel="noopener">GitHub+jsDelivr+PicGo搭建快速免费图床</a></p>
+<ul>
+<li><a href="https://picgo.github.io/PicGo-Doc/zh/guide/" target="_blank" rel="noopener">PicGo</a></li>
+<li><a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">PicGo 下载地址</a></li>
+<li><a href="https://cl9000.github.io/">在GitHub搭建免费图床 cl9000</a></li>
+<li><a href="http://www.blossomingmay.com/blog/2019-08/%E5%A6%82%E4%BD%95%E5%9C%A8%E8%87%AA%E5%B7%B1%E7%9A%84github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/" target="_blank" rel="noopener">如何在自己的GitHub搭建图床</a></li>
+<li><a href="https://www.cnblogs.com/lfri/p/12210721.html" target="_blank" rel="noopener">GitHub+jsDelivr+PicGo搭建快速免费图床</a></li>
+</ul>
 
 
                 <hr>
@@ -422,7 +427,7 @@ Electron开发的，有空可以自己改改。</p>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">在GitHub搭建图床 - Mac版本</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">为甚</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">下载PicGo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">配置 GitHub</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">配置 PicGo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">后记</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Refrence</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">在GitHub搭建免费图床 - Mac版本</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">为甚</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">下载PicGo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">配置 GitHub</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">配置 PicGo</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">后记</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Refrence</span></a></li></ol>
         
         </div>
       </aside>
@@ -740,11 +745,11 @@ Electron开发的，有空可以自己改改。</p>
                         本站总访问量
                         <span id="busuanzi_value_site_pv"></span>次
                     </span>
-                    <span class="post-meta-divider">|</span>
+                    <!-- <span class="post-meta-divider">|</span>
                     <span id="busuanzi_container_site_uv" style='display:none'>
                         本站访客数
                         <span id="busuanzi_value_site_uv"></span>人
-                    </span>
+                    </span> -->
                     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
                 </p>
                 
