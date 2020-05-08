@@ -232,6 +232,8 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/about/">About</a>
                         </li>
@@ -243,8 +245,6 @@
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -310,19 +310,33 @@
 
         <!-- Post Container -->
         <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <html>
+            <!DOCTYPE html>
+  <html style="font-size: 12px">
   <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <title>在线证件照换底色_生活常用</title>
+   
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-colorpicker/2.5.2/js/bootstrap-colorpicker.min.js"></script>
+    <link src="https://cdn.bootcss.com/bootstrap-colorpicker/2.5.2/css/bootstrap-colorpicker.min.css" rel="stylesheet">
     <script>
-      // window.onerror = function (errorMessage, scriptURI, lineNumber, columnNumber, errorObj) {
-      //   parent.window.reportbug(errorMessage, scriptURI, lineNumber, columnNumber, errorObj);
-      // }
+      window.onerror = function (errorMessage, scriptURI, lineNumber, columnNumber, errorObj) {
+        parent.window.reportbug(errorMessage, scriptURI, lineNumber, columnNumber, errorObj);
+      } 
     </script>
-
     <style>
       .btn {
         margin: 0 10px;
-        /* width: 84px;
-        height: 36px; */
+        width: 48px;
+        height: 36px;
         border-radius: 4px;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -387,9 +401,6 @@
         text-decoration: none
       }
     </style>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-    <link src="https://cdn.bootcss.com/bootstrap-colorpicker/2.5.2/css/bootstrap-colorpicker.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/bootstrap-colorpicker/2.5.2/js/bootstrap-colorpicker.min.js"></script>
     <script>
       //自动获取背景色
       function setImageDependentBackgroundColor(t) {
@@ -403,7 +414,6 @@
         canvas.width = width;
         canvas.height = height;
         canvas.getContext('2d').drawImage(imageToParse, 0, 0, width, height);
-
 
         var colorArray = Array.from(  // using that canvas element, create an array of color information by...
           canvas.getContext('2d').getImageData(
@@ -461,11 +471,9 @@
           for (var i = 0; i < 8; i++) {
             var tmpX = seed[0] + surround[2 * i]
             var tmpY = seed[1] + surround[2 * i + 1]
-
             if (tmpX < 0 || tmpY < 0 || tmpX >= width || tmpY >= height) {
 
             } else if (marked[tmpY][tmpX] == 0) {
-
               if (Math.abs(isTolerance(tmpX, tmpY)) >= distance) {
                 // 符合容差的点标记为2
                 marked[tmpY][tmpX] = isTolerance(tmpX, tmpY);
@@ -479,7 +487,6 @@
         }
 
         // 将标记的像素设为目标色
-
         for (var i = 0; i < height; i++) {
           for (var j = 0; j < width; j++) {
             if (marked[i][j] >= distance) {
@@ -491,11 +498,9 @@
               src.data[tmp + 3] = Math.ceil(255 * (1 - marked[i][j]));
               //console.log(marked[tmpY][tmpX]);
             } else {
-
               src.data[tmp + 3] = Math.ceil(255 * (1 - marked[i][j]));
               newPix = normal({ red: 0, green: 0, blue: 255, alpha: 255 },
                 { red: src.data[tmp], green: src.data[tmp + 1], blue: src.data[tmp + 2], alpha: 125 });
-
               if (newPix) {
                 // 将处理好的像素赋值给背景图ImageData（实际上你传给蝴蝶图也没问题，只是下面putImageData的时候需要指向蝴蝶图罢了）
                 src.data[tmp + 0] = newPix.red;
@@ -503,7 +508,6 @@
                 src.data[tmp + 2] = newPix.blue;
                 src.data[tmp + 3] = newPix.alpha;
               }
-
             }
           }
         }
@@ -524,7 +528,6 @@
           var offset = list1[i] - list2[i];
           sum += offset * offset;
         }
-
         return sum;
       }
       var RGB_MAX_DISTANCE_SQUARE = euclideanDistanceSquare([255, 255, 255], [0, 0, 0]);
@@ -534,26 +537,24 @@
       console.log(rgbSimilarity([255, 255, 255], [0, 0, 0]));
       function normal(background, butterfly) {
         /// <summary>正常模式</summary>
-
         return {
-          red: Math.min(background.red, butterfly.red),
+          red:   Math.min(background.red, butterfly.red),
           green: Math.min(background.green, butterfly.green),
-          blue: Math.min(background.blue, butterfly.blue),
+          blue:  Math.min(background.blue, butterfly.blue),
           alpha: Math.min(background.alpha, butterfly.alpha)
         };
-
       }
       function normal2(background, butterfly) {
         /// <summary>正常模式2</summary>
-
-        return {
+        var bgbf = {
           red: butterfly.red * alpha + background.red * (1 - alpha),
           green: butterfly.green * alpha + background.green * (1 - alpha),
           blue: butterfly.blue * alpha + background.blue * (1 - alpha),
           alpha: butterfly.alpha * alpha + background.alpha * (1 - alpha)
         }
-
+        return bgbf;
       }
+
       $(function () {
         document.getElementById('imageDependentColor').onclick = function () {
           document.getElementById('color').click();
@@ -561,16 +562,15 @@
         document.getElementById('imageNewColor').onclick = function () {
           document.getElementById('color2').click();
         };
-
         document.getElementById('color').onchange = function () {
           document.getElementById("imageDependentColor").style.backgroundColor = this.value;
           alert("原图背景色系自动识别，修改后可能导致背景色修改不理想！");
-          setImageDependentBackgroundColor(false)
+          setImageDependentBackgroundColor(false);
         };
         document.getElementById('color2').onchange = function () {
           document.getElementById("imageNewColor").style.backgroundColor = this.value;
           document.getElementById("canvas").style.backgroundColor = this.value;
-          setImageDependentBackgroundColor(false)
+          setImageDependentBackgroundColor(false);
         };
 
         if (document.getElementById('myimg').complete) {
@@ -584,44 +584,53 @@
         mfileinput.addEventListener('change', readFile, false);
       });
 
+      // 固定常用颜色 红、蓝、白
+      function setColor(colorVal) {
+          document.getElementById("imageNewColor").style.backgroundColor = colorVal;
+          document.getElementById("canvas").style.backgroundColor = colorVal;
+          setImageDependentBackgroundColor(false);
+        };
+
+      // 读取文件
       function readFile() {
-        var mmimg = document.getElementById("myimg");
+        var mimg = document.getElementById("myimg");
         var file = this.files[0];
         if (!/image\/\w+/.test(file.type)) {
-          alert("请确保文件为图像类型");
+          alert("请上传图像类型文件");
           return false;
         }
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
-          mmimg.onload = function () {
+          mimg.onload = function () {
             setImageDependentBackgroundColor(true);
           }
-          mmimg.src = this.result;
+          mimg.src = this.result;
         }
       }
 
-      function downimg() {
+      // 下载图片
+      function downImg() {
         var canvas = document.getElementById("canvas");
         var bCtx = canvas.getContext('2d');
         var imageData = bCtx.getImageData(0, 0, canvas.width, canvas.height);
-
         bCtx.putImageData(imageData, 0, 0);
-        var _c = document.createElement('canvas')
-        _c.width = canvas.width
-        _c.height = canvas.height
-        var _xt = _c.getContext('2d')
-        _xt.fillStyle = document.getElementById('color2').value
-        _xt.fillRect(0, 0, canvas.width, canvas.height)
-        _xt.drawImage(canvas, 0, 0)
+        var _c = document.createElement('canvas');
+        _c.width = canvas.width;
+        _c.height = canvas.height;
+        var _xt = _c.getContext('2d');
+        // _xt.fillStyle = document.getElementById('color2').value;
+        _xt.fillStyle = document.getElementById('canvas').style.backgroundColor;
+        _xt.fillRect(0, 0, canvas.width, canvas.height);
+        _xt.drawImage(canvas, 0, 0);
+        var that = this;
         _c.toBlob(blob => {
-          let evt = document.createEvent('HTMLEvents')
-          evt.initEvent('click', true, true)
-          let aEl = document.createElement('a')
-          // aEl.download = this.filename;
-          var filename2 = (this.filename == undefined ? "pic_" : this.filename) + new Date().format("MM-dd");
+          let evt = document.createEvent('HTMLEvents');
+          evt.initEvent('click', true, true);
+          let aEl = document.createElement('a');
+          var filename2 = new Date().format("yyyyMMdd") + (this.filename ? this.filename : "_pic");
           aEl.download = filename2;
-          aEl.href = createObjectURL(blob)
+          aEl.href = createObjectURL(blob);
           aEl.dispatchEvent(new MouseEvent('click', {
             bubbles: true,
             cancelable: true,
@@ -630,22 +639,28 @@
         }, 1)
       }
 
-      // 
+      // createObjectURL
       function createObjectURL(blob) {
         var url = window.URL || window.webkitURL || window.mozURL || window.msURL
         return url['createObjectURL'](blob);
       }
 
-      // 格式化时间
+      /**
+       * 格式化时间
+       * yyyy年MM月dd日
+       * MM/dd/yyyy
+       * yyyyMMdd
+       * yyyy-MM-dd hh:mm:ss
+       */
       Date.prototype.format = function(fmt){
         var o = {
-          "M+": this.getMonth() + 1,               //月份
-          "d+": this.getDate(),                    //日
-          "h+": this.getHours(),                   //小时
-          "m+": this.getMinutes(),                 //分
-          "s+": this.getSeconds(),                 //秒
+          "M+": this.getMonth() + 1,                   //月份
+          "d+": this.getDate(),                        //日
+          "h+": this.getHours(),                       //小时
+          "m+": this.getMinutes(),                     //分
+          "s+": this.getSeconds(),                     //秒
           "q+": Math.floor((this.getMonth() + 3) / 3), //季度
-          "S": this.getMilliseconds()             //毫秒
+          "S" : this.getMilliseconds()                 //毫秒
         };
         if (/(y+)/.test(fmt)) {
           fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
@@ -661,27 +676,41 @@
   <link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
 </head>
 
-<body class="vsc-initialized">
-  <div class="controls" align="center" style="margin: 100px 10px 10px 45px;">
-    <button id="imageDependentColor" class="btn btn-upload" style="background-color: rgb(255, 255, 255);">原背景色</button>
-    <button id="imageNewColor" class="btn btn-upload" style="background-color:#000;color:gray">新背景色</button>
-    <br><br>
+<body>
+  <div class="controls" align="center" style="margin: 100px 10px 45px 10px;">
+    <div style="display: inline-flex;">
+      <p style="margin: 0;line-height: 35px;">原背景色:</p>
+      <button id="imageDependentColor" class="btn btn-upload" style="background-color: rgb(255, 255, 255);" disabled="true"></button>
+      <p style="margin: 0;line-height: 35px;">新背景色<span style="font-size: 10px;color: #848484;">(点击修改)</span>:</p>
+      <button id="imageNewColor" class="btn btn-upload" style="background-color:#000;color:gray"></button>
+    </div><br><br>
+    <div>
+      <span style="font-size:12px;color:gray;">（手机端请选择固定常见颜色：红、蓝、白）</span><br><br>
+      <div style="display: inline-flex;">
+        <button class="btn btn-upload" style="background-color: rgb(255 0 0);" onclick="setColor('#ff3333');">红</button>
+        <button class="btn btn-upload" style="background-color: rgb(67 142 219);" onclick="setColor('#438edb');">蓝1</button>
+        <button class="btn btn-upload" style="background-color: rgb(255 255 255);" onclick="setColor('#ffffff');">白</button>
+      </div>
+    </div><br>
+
     <input type="file" id="fileinput" style="font-size: 14px;"><br><br>
-    <div style="display:inline;vertical-align:text-top;">
+    <div style="display: inline;vertical-align: text-top;">
       <input type="range" value="0.85" max="1" min="0.5" step="0.005" id="rongcha" onchange="setImageDependentBackgroundColor(!1)"><br>
       <span style="font-size:12px;color:gray;">（容差：微调来调节图片背景色修改达到最佳效果！）</span>
       <span id="bgdis">0.85</span>
-      </div>
+    </div>
   </div>
   <div align="center">
     <section class="full-width" style="display:inline">&nbsp;
-      <img id="myimg" style="max-width:300px;min-width:450px" crossorigin="anonymous" src="./abc.jpg" alt="image">&nbsp;
+      <img id="myimg" style="max-width: 300px;min-width: 300px;min-height: 300px;" src="./abc.jpg" alt="image">&nbsp;
         <canvas id="canvas" style="background-color:#000" width="300" height="370"></canvas>
     </section><br><br>
-    <button id="downloadimg" class="btn-sure" onclick="downimg()">下载新证件照</button>
+    <button id="downloadimg" class="btn-sure" onclick="downImg()">下载新证件照</button>
   </div>
-  <div style="position:absolute;left:-3000px"><input style="position:absolute;left:-3000px" type="color" id="color">
-    <input style="position:absolute;left:-3000px" type="color" id="color2"></div>
+  <div style="position: absolute;left: -3000px;">
+    <input style="position:absolute;left:-3000px" type="color" id="color">
+    <input style="position:absolute;left:-3000px" type="color" id="color2">
+  </div>
 </body>
 </html>
             <br> 
@@ -728,10 +757,6 @@
     <div class="tags">
         
             
-            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
-            
-        
-            
             <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
             
         
@@ -756,6 +781,10 @@
             
         
             
+            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
+            
+        
+            
             <a href="/tags/#GitHub" title="GitHub" rel="2">GitHub</a>
             
         
@@ -772,6 +801,10 @@
             
         
             
+            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
+            
+        
+            
             <a href="/tags/#Mac" title="Mac" rel="2">Mac</a>
             
         
@@ -785,22 +818,6 @@
         
             
             <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
-            
-        
-            
-            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
-            
-        
-            
-            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
-            
-        
-            
-            <a href="/tags/#🇨🇳" title="🇨🇳" rel="1">🇨🇳</a>
-            
-        
-            
-            <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
             
         
             
@@ -832,6 +849,18 @@
             
         
             
+            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
+            
+        
+            
+            <a href="/tags/#🇨🇳" title="🇨🇳" rel="1">🇨🇳</a>
+            
+        
+            
+            <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
+            
+        
+            
             <a href="/tags/#Ionic" title="Ionic" rel="1">Ionic</a>
             
         
@@ -860,6 +889,14 @@
             
         
             
+            <a href="/tags/#CSS" title="CSS" rel="1">CSS</a>
+            
+        
+            
+            <a href="/tags/#Loading" title="Loading" rel="1">Loading</a>
+            
+        
+            
             <a href="/tags/#jsDelivr" title="jsDelivr" rel="1">jsDelivr</a>
             
         
@@ -873,14 +910,6 @@
         
             
             <a href="/tags/#npm" title="npm" rel="1">npm</a>
-            
-        
-            
-            <a href="/tags/#CSS" title="CSS" rel="1">CSS</a>
-            
-        
-            
-            <a href="/tags/#Loading" title="Loading" rel="1">Loading</a>
             
         
     </div>
