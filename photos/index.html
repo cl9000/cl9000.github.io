@@ -156,7 +156,8 @@
 
     header.intro-header {
         background-image: url('https://api.berryapi.net/?service=App.Bing.Images');
-            /*page*/
+            /* background-size: 100% 100%; */
+            /*about*/
             
     }
 
@@ -178,9 +179,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     
-                    <div class="site-heading">
+                    <div class="site-heading tools-site-heading">
                         <h1>Weichanglu</h1>
-                        <!--<hr class="small">-->
                         <span class="subheading">你知道的越多，你不知道的越多</span>
                     </div>
                     
@@ -232,11 +232,11 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/archive/">Archive</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -303,14 +303,21 @@
     <div class="row">
         
     
-        <!-- USE SIDEBAR -->
-
-        <!-- Sidebar Container -->
-        
-
-        <!-- Post Container -->
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <!DOCTYPE html>
+            <!-- 指定页面 NO SIDEBAR archive -->
+            <!-- Post Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+                <!-- 
+layout: "photo"
+title: "Photo"
+date: 2020-05-07 09:50:21
+description: "追求卓越，成功自然会追上你。"
+header-img: ""
+aplayer: false
+fixed: false
+comments: false
+about: true # 处理头部图片高度
+ -->
+<!DOCTYPE html>
   <html style="font-size: 12px;">
   <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
@@ -678,13 +685,13 @@
 </head>
 
 <body>
-  <div class="controls" align="center" style="margin: 100px 10px 45px 10px;">
+  <div class="controls" align="center" style="margin: 10px;">
     <div style="display: inline-flex;font-size: 1.1rem;">
       <p style="margin: 0;line-height: 35px;">原背景色:</p>
       <button id="imageDependentColor" class="btn btn-upload" style="background-color: rgb(255, 255, 255);" disabled="true"></button>
       <p style="margin: 0;line-height: 35px;">新背景色<span style="font-size: 10px;color: #848484;">(点击修改)</span>:</p>
-      <button id="imageNewColor" class="btn btn-upload" style="background-color:#000;color:gray"></button>
-    </div><br><br>
+      <button id="imageNewColor" class="btn btn-upload" style="background-color:#ff3333;color:gray"></button>
+    </div><br>
     <div>
       <span style="font-size:12px;color:gray;">（手机端请选择固定常见颜色：红、蓝、白）</span><br><br>
       <div style="display: inline-flex;">
@@ -694,17 +701,17 @@
       </div>
     </div><br>
 
-    <input type="file" id="fileinput" style="font-size: 14px;"><br><br>
+    <input type="file" id="fileinput" style="font-size: 14px;"><br>
     <div style="display: inline;vertical-align: text-top;">
-      <input type="range" value="0.85" max="1" min="0.5" step="0.005" id="rongcha" onchange="setImageDependentBackgroundColor(!1)"><br>
+      <input type="range" value="0.85" max="1" min="0.5" step="0.005" id="rongcha" onchange="setImageDependentBackgroundColor(!1)">
       <span style="font-size:12px;color:gray;">（容差：微调来调节图片背景色修改达到最佳效果！）</span>
       <span id="bgdis">0.85</span>
     </div>
   </div>
   <div align="center">
     <section class="full-width" style="display:inline">&nbsp;
-      <img id="myimg" style="max-width: 300px;min-width: 300px;min-height: 300px;" src="./abc.jpg" alt="image">&nbsp;
-        <canvas id="canvas" style="background-color:#000" width="300" height="370"></canvas>
+      <img id="myimg" style="max-width: 300px;min-width: 300px;min-height: 300px;margin: 0;display: inline-flex;vertical-align: baseline;" src="./abc.jpg" alt="image">&nbsp;
+      <canvas id="canvas" style="background-color:#ff3333" width="300" height="370"></canvas>
     </section><br><br>
     <button id="downloadimg" class="btn-sure" onclick="downImg()">下载新证件照</button>
   </div>
@@ -714,345 +721,7 @@
   </div>
 </body>
 </html>
-            <br> 
-
-            <!-- require APlayer -->
-            
-    
-            <!-- 如果开启评论功能 -->
-            
-                <hr>
-                
-                <!-- 来必力 -->
-                
-                <!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
-                <script type="text/javascript">
-                   (function(d, s) {
-                       var j, e = d.getElementsByTagName(s)[0];
-                       if (typeof LivereTower === 'function') { return; }
-                       j = d.createElement(s);
-                       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                       j.async = true;
-                
-                       e.parentNode.insertBefore(j, e);
-                   })(document, 'script');
-                </script>
-                <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-                <!-- 来必力City版 公共JS代码 end -->
-                
-                <!-- 来必力 -->
-                
-            
-        </div>
-
-        <!-- Sidebar Container -->
-        
-            <!-- Sidebar Container -->
-<div class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-12 col-xs-12 sidebar-container">
-    
-        <!-- Featured Tags -->
-
-<section>
-    <!-- no hr -->
-    <h5><a href="/tags/">₷ FEATURED TAGS</a></h5>
-    <div class="tags">
-        
-            
-            <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
-            
-        
-            
-            <a href="/tags/#Docker" title="Docker" rel="1">Docker</a>
-            
-        
-            
-            <a href="/tags/#Github" title="Github" rel="1">Github</a>
-            
-        
-            
-            <a href="/tags/#图床" title="图床" rel="1">图床</a>
-            
-        
-            
-            <a href="/tags/#HEXO" title="HEXO" rel="5">HEXO</a>
-            
-        
-            
-            <a href="/tags/#统计" title="统计" rel="1">统计</a>
-            
-        
-            
-            <a href="/tags/#访问量" title="访问量" rel="1">访问量</a>
-            
-        
-            
-            <a href="/tags/#GitHub" title="GitHub" rel="2">GitHub</a>
-            
-        
-            
-            <a href="/tags/#Coding" title="Coding" rel="1">Coding</a>
-            
-        
-            
-            <a href="/tags/#Gitee" title="Gitee" rel="1">Gitee</a>
-            
-        
-            
-            <a href="/tags/#码云" title="码云" rel="1">码云</a>
-            
-        
-            
-            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
-            
-        
-            
-            <a href="/tags/#Mac" title="Mac" rel="2">Mac</a>
-            
-        
-            
-            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
-            
-        
-            
-            <a href="/tags/#定时任务" title="定时任务" rel="1">定时任务</a>
-            
-        
-            
-            <a href="/tags/#launchctl" title="launchctl" rel="1">launchctl</a>
-            
-        
-            
-            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
-            
-        
-            
-            <a href="/tags/#🇨🇳" title="🇨🇳" rel="1">🇨🇳</a>
-            
-        
-            
-            <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
-            
-        
-            
-            <a href="/tags/#BING" title="BING" rel="1">BING</a>
-            
-        
-            
-            <a href="/tags/#bing 图" title="bing 图" rel="1">bing 图</a>
-            
-        
-            
-            <a href="/tags/#Chrome" title="Chrome" rel="1">Chrome</a>
-            
-        
-            
-            <a href="/tags/#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
-            
-        
-            
-            <a href="/tags/#Karma" title="Karma" rel="1">Karma</a>
-            
-        
-            
-            <a href="/tags/#Jasmine" title="Jasmine" rel="1">Jasmine</a>
-            
-        
-            
-            <a href="/tags/#Web测试" title="Web测试" rel="1">Web测试</a>
-            
-        
-            
-            <a href="/tags/#Ionic" title="Ionic" rel="1">Ionic</a>
-            
-        
-            
-            <a href="/tags/#热更新" title="热更新" rel="1">热更新</a>
-            
-        
-            
-            <a href="/tags/#hotUpdate" title="hotUpdate" rel="1">hotUpdate</a>
-            
-        
-            
-            <a href="/tags/#iOS" title="iOS" rel="2">iOS</a>
-            
-        
-            
-            <a href="/tags/#Jenkins" title="Jenkins" rel="1">Jenkins</a>
-            
-        
-            
-            <a href="/tags/#自动化打包" title="自动化打包" rel="1">自动化打包</a>
-            
-        
-            
-            <a href="/tags/#protocol buffer" title="protocol buffer" rel="1">protocol buffer</a>
-            
-        
-            
-            <a href="/tags/#jsDelivr" title="jsDelivr" rel="1">jsDelivr</a>
-            
-        
-            
-            <a href="/tags/#CDN" title="CDN" rel="1">CDN</a>
-            
-        
-            
-            <a href="/tags/#免费CDN" title="免费CDN" rel="1">免费CDN</a>
-            
-        
-            
-            <a href="/tags/#npm" title="npm" rel="1">npm</a>
-            
-        
-            
-            <a href="/tags/#CSS" title="CSS" rel="1">CSS</a>
-            
-        
-            
-            <a href="/tags/#Loading" title="Loading" rel="1">Loading</a>
-            
-        
-    </div>
-</section>
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-    <h5><a href="/about/">₶ ABOUT ME</a></h5>
-    <div class="short-about">
-
-        
-            <img id = "avatar_pic" src="/img/avatar/ironman.png" />
-        
-
-        
-            <p>DO WHAT YOU LOVE WHAT YOU DO.</p>
-        
-
-        <!-- SNS Link -->
-        <ul class="list-inline">
-            
-            
-            
-                <li>
-                    <a target="_blank" href="https://www.zhihu.com/people/welcpro">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-stack-1x fa-inverse fa-spin">知</i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-                <li>
-                    <a target="_blank" href="http://weibo.com/u/5966995114">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-weibo fa-stack-1x fa-inverse" style="color: #FF0000"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://github.com/cl9000">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-
-            
-                <li>
-                    <a target="_blank"  href="https://www.jianshu.com/u/f167b0dcbdbe">
-                        <span class="fa-stack fa-lg">
-                           <i class="fa fa-circle fa-stack-2x"></i>
-                           <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-                <li>
-                    <a href="/feed.xml">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
-            
-            
-            
-            
-        </ul>
-    </div>
-</section>
-
-        <hr>
-    
-        <!-- Friends Blog -->
-
-<h5>₧ FRIENDS</h5>
-<ul class="list-inline">
-
-    
-        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
-    
-        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
-    
-        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
-    
-        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
-    
-        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
-    
-        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
-    
-        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
-    
-        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
-    
-        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
-    
-        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
-    
-        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
-    
-        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
-    
-        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
-    
-        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
-    
-        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
-    
-        <li><a href="" target="_blank">undefined</a></li>
-    
-</ul>
-
-        <hr>
-    
-        <!-- ARCHIVES -->
-
-    <h5>₰ ARCHIVES</h5>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li></ul>
-    </div>
-
-        <hr>
-    
-</div>
-
-        
+            </div>
 
     
     </div>
