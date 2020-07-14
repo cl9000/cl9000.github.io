@@ -262,11 +262,11 @@
                         
                     
                         
-                    
-                        
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
+                        
+                    
                         
                     
                         
@@ -366,7 +366,8 @@ Nginx 反向代理 访问接口为相对地址：  <code>/api/getData</code></p>
 <p>配置代理，下面意思就是我们请求中有 api 这样的就会代理到 <code>http://127.0.0.1:8088</code>，所以我们只要访问 <code>http://localhost:80/api/getData</code>，这个不跨域的接口，然后就会由Nginx截取接口并反向代理到 <code>http://localhost:8088/api/getData</code>。</p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">      <span class="attribute">listen</span>       <span class="number">80</span>;</span><br><span class="line">      <span class="attribute">server_name</span> localhost,test2.com;</span><br><span class="line"></span><br><span class="line">      <span class="comment">#charset koi8-r;</span></span><br><span class="line">      <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line"></span><br><span class="line">      <span class="attribute">location</span> / &#123;</span><br><span class="line">          <span class="attribute">root</span>   html;</span><br><span class="line">          <span class="attribute">index</span>  index.html index.htm;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line"><span class="attribute">location</span><span class="regexp"> ^~</span> /html5 &#123;</span><br><span class="line">         <span class="attribute">alias</span> /Users/weichanglu/Desktop/Login;</span><br><span class="line">         </span><br><span class="line">         <span class="comment"># HTML5 History 模式配置</span></span><br><span class="line">         <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /html5/index.html;</span><br><span class="line">         <span class="comment">#index  index.html;</span></span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="comment"># URL重写 仅将 /api 下的url反向代理到后端地址</span></span><br><span class="line">      <span class="attribute">location</span><span class="regexp"> ^~</span> /api &#123;</span><br><span class="line">          <span class="comment"># rewrite ^/api/(.*)$ /$1 break; ## /api/xxx 改为 /xxx</span></span><br><span class="line">          <span class="attribute">proxy_pass</span> http://127.0.0.1:8088; <span class="comment"># 转发地址</span></span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
 <p>配置好之后需要重启一下 Nginx 服务，执行一下重启命名即可。若有问题，可先停掉 Ngix，再重新启动。<br>
-若 80 端口不可用，可换用其它端口，或者清掉Mac自带 Apache 的80端口</p>
+若 80 端口不可用，可换用其它端口，或者清掉Mac自带 Apache 的80端口<br>
+查看Nginx占用进程： <code>$ ps aux | grep nginx</code></p>
 <h4><span id="验证跨域的解决">验证跨域的解决</span></h4>
 <p>使用 Nginx 需要把 ajax 请求的接口换成相对地址，如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ajax.open('GET', 'http://127.0.0.1:8088/api/getData', true);</span></span><br><span class="line">   ajax.open(<span class="string">'GET'</span>, <span class="string">'/api/getData'</span>, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
