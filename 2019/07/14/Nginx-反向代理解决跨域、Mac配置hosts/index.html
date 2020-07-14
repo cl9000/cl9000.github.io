@@ -254,11 +254,11 @@
                         
                     
                         
-                    
-                        
                         <li>
                             <a href="/archive/">Archive</a>
                         </li>
+                        
+                    
                         
                     
                         
@@ -388,7 +388,7 @@ Nginx 反向代理 访问接口为相对地址：  <code>/api/getData</code></p>
 <code>127.0.0.1 	test2.com</code><br>
 为了验证是否生效，可以再新增一行：<br>
 <code>127.0.0.1 	www.taobao.com</code><br>
-替换掉源文件后，浏览器输入 <a href="www.taobao.com">www.taobao.com</a>，看是否还可以访问，不能正常访问说明已经生效。（验证完即可删除）</p>
+替换掉源文件后，浏览器输入 <a href="www.taobao.com">www.taobao.com</a>，看是否还可以访问，不能正常访问说明已经生效。（验证完即可删除，否则原网站不可访问）</p>
 <p>测试域名地址: <a href="http://test2.com/html5/" target="_blank" rel="noopener">http://test2.com/html5/</a>，正常访问，说明已生效</p>
 <h4><span id="若hosts文件并不生效">若hosts文件并不生效</span></h4>
 <p>Chrome浏览器输入：<a href="chrome://net-internals/#dns" target="_blank" rel="noopener">chrome://net-internals/#dns</a><br>
@@ -396,7 +396,7 @@ Nginx 反向代理 访问接口为相对地址：  <code>/api/getData</code></p>
 <img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/chrome-dns.png" alt="chrome-dns.png"></p>
 <p>再重新访问：<br>
 <a href="http://test2.com/html5/" target="_blank" rel="noopener">http://test2.com/html5/</a> 正常访问，说明已生效</p>
-<p><a href="www.taobao.com">www.taobao.com</a> 不能正常访问说明已经生效。（验证完即可删除）</p>
+<p><a href="www.taobao.com">www.taobao.com</a> 不能正常访问说明已经生效。（验证完即可删除，否则原网站不可访问）</p>
 <h3><span id="参考">参考</span></h3>
 <p><a href="https://zhuanlan.zhihu.com/p/94197713" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/94197713</a><br>
 <a href="https://www.cnblogs.com/hustskyking/p/hosts-modify.html" target="_blank" rel="noopener">修改Hosts为何不生效，是DNS缓存？</a></p>
