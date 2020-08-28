@@ -341,10 +341,10 @@
 <li>首先去去<a href="https://coding.net/" target="_blank" rel="noopener">Coding官网注册</a>账号，进入官网，选择免费注册。</li>
 </ol>
 <!-- ![本地图片](/0.jpg) -->
-<img src="/0.jpg" width="400" height="600" alt="图片名称" align="center">
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-0.jpg" width="400" height="600" alt="图片名称" align="center">
 <ol start="2">
 <li>注册完成之后就会进入主页面，然后点击创建新项目，如下图:<br>
-<img src="/1.jpg" alt="本地图片"></li>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-1.jpg" alt="本地图片"></li>
 </ol>
 <blockquote>
 <ul>
@@ -358,14 +358,14 @@
 <ol start="3">
 <li>
 <p>选择第三个DevOps项目后，会出现下面的页面：<br>
-<img src="/2.jpg" alt="本地图片"></p>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-2.jpg" alt="本地图片"></p>
 </li>
 <li>
 <p>设置公钥，可以设置全局、针对单个项目的。<br>
 4.1、 单项目的公钥，如下图：<br>
-<img src="/3.jpg" alt="本地图片"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-3.jpg" alt="本地图片"><br>
 4.2、 全局公钥 - (设置了真多项目的可以跳过这一步)<br>
-<img src="/4.jpg" alt="本地图片"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-4.jpg" alt="本地图片"><br>
 <strong>公钥可以使用Github，或原来已经生成的。</strong></p>
 </li>
 </ol>
@@ -374,35 +374,35 @@
 </blockquote>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -al ~/.ssh  // 查看是否存在，不存在的话，可使用Mac自带的ssh 新生成一个。</span><br><span class="line">// 存在</span><br><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure>
 <p>复制 <code>ssh - 结尾</code>，粘贴到新增的密钥中，名称自定义，选择 <code>永久有效</code>，然后新建。<br>
-<img src="/5.jpg" alt="本地图片"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-5.jpg" alt="本地图片"><br>
 测试验证：<br>
 <code>$ ssh -T git@git.coding.net</code><br>
 第一次建立连接会要求信任主机，输入相关的用户名或者密码，在控制台输入验证，验证成功即可。</p>
 <ol start="5">
 <li>然后复制你的项目地址，粘贴到配置文件 <code>_config.yml</code>，如图所示：<br>
-<img src="/6.jpg" alt="本地图片"><br>
-<img src="/7.jpg" alt="本地图片"></li>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-6.jpg" alt="本地图片"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-7.jpg" alt="本地图片"></li>
 </ol>
 <p>然后再执行 <code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> 部署，这是仓库中便有了部署代码。</p>
 <ol start="6">
 <li>打开 coding 的管理页面，找到 静态网站，发布静态网站。<br>
-<img src="/8.jpg" alt="本地图片"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-8.jpg" alt="本地图片"><br>
 填写基本的信息，点击保存：<br>
-<img src="/9.jpg" alt="本地图片"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-9.jpg" alt="本地图片"><br>
 点击保存，就会进入下一个页面：<br>
-<img src="/10.jpg" alt="本地图片"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-10.jpg" alt="本地图片"><br>
 首次点击 <code>立即部署</code> ，之后就会有部署记录，若需要配置自己的域名，点击上图的 <code>设置</code> 进行设置：<br>
-<img src="/11.jpg" alt="本地图片"></li>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-11.jpg" alt="本地图片"></li>
 <li>Coding 里面还有些其它的扩展功能，项目协调、制品库、测试管理、文档管理等。这也是一些公司的流程，自己可以尝试下。</li>
 </ol>
 <h2><span id="gitee平台码云">Gitee平台（码云）</span></h2>
 <ol>
 <li>流程基本一致，比较简单，<a href="https://gitee.com/" target="_blank" rel="noopener">码云官网注册</a></li>
 <li>建立仓库，添加公钥，配置本地仓库地址<br>
-<img src="/12.jpg" alt="本地图片"></li>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-12.jpg" alt="本地图片"></li>
 <li>上传部署博客代码 <code>$ hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li>
 <li>点击 <code>服务 - Gitee Pages</code>，进入页面查看相关规则，点击部署即可，<br>
-<img src="/13.jpg" alt="本地图片"></li>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/Hexo-Coding-Gitee-13.jpg" alt="本地图片"></li>
 </ol>
 <p>Gitee 平台，免费版不会自动部署<br>
 Gitee 可以同步其它的仓库代码，例如GitHub，如果已部署了GitHub可直接拉取，部署，更快捷。</p>

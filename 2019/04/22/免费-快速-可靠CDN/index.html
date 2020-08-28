@@ -155,7 +155,7 @@
     /* 滚动条自定义 end */
 
     header.intro-header {
-        background-image: url('20200425.jpg');
+        background-image: url('https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/20190425.jpg');
             /*post*/
             
     }
@@ -338,9 +338,9 @@
 <p>内容分发网络（英语：Content Delivery Network或Content Distribution Network，缩写：CDN）是指一种透过互联网互相连接的电脑网络系统，利用最靠近每位用户的服务器，更快、更可靠地将音乐、图片、影片、应用程序及其他文件发送给用户，来提供高性能、可扩展性及低成本的网络内容传递给用户。    <strong>---- [万维百科]</strong></p>
 <h2><span id="jsdelivr-官网">jsDelivr 官网</span></h2>
 <p><strong><a href="http://www.jsdelivr.com/" target="_blank" rel="noopener">jsDelivr – Open Source CDN</a></strong></p>
-<!-- ![jsDelivr-index.jpg](jsDelivr-index.jpg) -->
-<p><a href="/2019/04/22/免费-快速-可靠CDN/jsDelivr-index.jpg"><img src="/jsDelivr-index.jpg" width="100%" height="100%" alt="图片名称" align="center"></a><br>
-<a href="/2019/04/22/免费-快速-可靠CDN/jsDelivr-points.jpg"><img src="/jsDelivr-points.jpg" width="100%" height="100%" alt="图片名称" align="center"></a></p>
+<!-- ![jsDelivr-index.jpg](https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/jsDelivr-index.jpg) -->
+<p><a href="/2019/04/22/免费-快速-可靠CDN/jsDelivr-index.jpg"><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/jsDelivr-index.jpg" width="100%" height="100%" alt="图片名称" align="center"></a><br>
+<a href="/2019/04/22/免费-快速-可靠CDN/jsDelivr-points.jpg"><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/jsDelivr-points.jpg" width="100%" height="100%" alt="图片名称" align="center"></a></p>
 <h2><span id="使用">使用</span></h2>
 <h3><span id="1-使用方式-官网首页有各个平台的引用资源方式">1、使用方式 官网首页有各个平台的引用资源方式</span></h3>
 <h4><span id="npm">#NPM</span></h4>
@@ -355,9 +355,9 @@
 </blockquote>
 <h3><span id="2-新建github仓库不是重点自己新建">2、新建gitHub仓库（不是重点，自己新建）</span></h3>
 <p>※ 新建仓库，并将仓库 clone 至本地，上传相关资源文件，并提交推送到仓库。<strong>下图已圈重点※</strong>：<br>
-<img src="jsDelivr-gitHub0.jpg" alt="jsDelivr-gitHub0.jpg"></p>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/jsDelivr-gitHub0.jpg" alt="jsDelivr-gitHub0.jpg"></p>
 <p>※ 进入 <code>releases</code> 进行手动打包，如下图：<code>tu</code>；<strong>后面讲使用 <strong><a href="https://travis-ci.org/" target="_blank" rel="noopener">TravisCI</a></strong> 做自动更新</strong><br>
-<img src="jsDelivr-gitHub1.jpg" alt="jsDelivr-gitHub1.jpg"></p>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/jsDelivr-gitHub1.jpg" alt="jsDelivr-gitHub1.jpg"></p>
 <h3><span id="3-引用方式圈域名重点">3、引用方式（圈域名重点）</span></h3>
 <p>※ 引用</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 过一会就可以访问测试了</span></span><br><span class="line"><span class="meta">## GitHub 方式</span></span><br><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.jsdelivr.net/gh/user/repo@version/file</span></span><br><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.jsdelivr.net/gh/github用户名/项目名@版本号/...</span></span><br><span class="line">例如</span><br><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.jsdelivr.net/gh/cl9000/jsDelivr-Test@1.0/images/2.jpg</span></span><br><span class="line"></span><br><span class="line"><span class="meta">## NPM 方式</span></span><br><span class="line"><span class="symbol">https:</span><span class="comment">//cdn.jsdelivr.net/npm/package@version/file</span></span><br></pre></td></tr></table></figure>
@@ -393,7 +393,7 @@ CI 软件监视仓库，可以在开发者发送提交后立刻执行自动测�
 </ul>
 <h2><span id="travis-使用">Travis 使用</span></h2>
 <p>Travis 注册登录 <strong><a href="https://travis-ci.org/" target="_blank" rel="noopener">Travis CI 官网 travis-ci.org</a></strong> ，使用 GitHub 账号授权登录即可，登录之后，Travis 就会实时同步你 GitHub 账号的仓库，然后打开个人页面并给你想要构建的项目启用 Travis，Travis 会监听这个仓库的所有变化。如下图：<br>
-<img src="TravisCI-0.jpg" alt="TravisCI-0.jpg"></p>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/TravisCI-0.jpg" alt="TravisCI-0.jpg"></p>
 <h2><span id="travisyml-配置文件">.travis.yml 配置文件</span></h2>
 <p>新建 <code>.travis.yml</code> 配置文件放到项目根目录下。 <code>（Mac可以使用</code>touch<code>命令创建此文件，显示隐藏文件快捷键：command+shift+. ）</code><br>
 Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 构建并部署发布到 GitHub-releases 的配置。<code>&lt;使用 go（可使用其它语言），只是符合规则，必须设置一门语言&gt;</code></p>
@@ -418,14 +418,14 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
 <blockquote>
 <p>（Github Personal Access Token 创建后退出，无法再次查看；忘记了token就只有重新生成 token。）</p>
 </blockquote>
-<p><img src="TravisCI-GH-Token-0.jpg" alt="TravisCI-GH-Token-0.jpg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/TravisCI-GH-Token-0.jpg" alt="TravisCI-GH-Token-0.jpg"></p>
 <p>生成了Github Personal Access Token后就将其应用到 .travis.yml中。</p>
 <h2><span id="travis-应用-github-personal-access-token的两种方案">Travis 应用 Github Personal Access Token的两种方案</span></h2>
 <h3><span id="一-将-token-直接设置为环境变量参数">一、将 Token 直接设置为环境变量参数</span></h3>
 <ul>
 <li>进入 Travis 对应的项目页面，点击 <code>More options 中的 settings</code> 进入项目的设置环境；</li>
 <li>在 <code>Environment Variables</code> 添加环境变量：例如 <code>GH_TOKEN</code> 变量名称，值为之前生成的<code>Personal Access Token</code>，并确保<code>Display value in build log</code>为<code>FF</code>状态。<br>
-<img src="TravisCI-GH-Token-1.jpg" alt="TravisCI-GH-Token-1.jpg"></li>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/TravisCI-GH-Token-1.jpg" alt="TravisCI-GH-Token-1.jpg"></li>
 </ul>
 <p>然后在.travis.yml文件中使用该环境变量：</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 验证方式 - 生效</span></span><br><span class="line"><span class="attr">api_key:</span> <span class="string">$&#123;GH_TOKEN&#125;</span> </span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证方式 - 会报异常 待加密验证测试</span></span><br><span class="line"><span class="comment"># api_key:</span></span><br><span class="line"><span class="comment">#     secure: $&#123;GH_TOKEN&#125;</span></span><br></pre></td></tr></table></figure>
@@ -494,10 +494,10 @@ Travis 会根据 .travis.yml 里的内容进行构建，下面是个简单的 �
 <h3><span id="发布流程">发布流程</span></h3>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修改代码文件</span><br><span class="line">git add . &amp;&amp; git commit -m "first commit" &amp;&amp; git push -u origin master   # 指定分支 &lt;master分支&gt;</span><br><span class="line"></span><br><span class="line">git tag v2.0 -m "备注信息"</span><br><span class="line">git push origin --tags</span><br></pre></td></tr></table></figure>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打 Tag 仍报错：Skipping a deployment with the xxx provider because this is not a tagged commit</span></span><br><span class="line"><span class="string">git</span> <span class="string">push</span> <span class="string">--delete</span> <span class="string">origin</span> <span class="string">v2.0</span></span><br><span class="line"><span class="string">git</span> <span class="string">push</span> <span class="string">origin</span> <span class="string">v2.0</span></span><br></pre></td></tr></table></figure>
-<p><img src="TravisCI-deploy-0.jpg" alt="TravisCI-deploy-0.jpg"><br>
-<img src="TravisCI-deploy-1.jpg" alt="TravisCI-deploy-1.jpg"><br>
-<img src="TravisCI-deploy-2.jpg" alt="TravisCI-deploy-2.jpg"><br>
-<img src="TravisaCI-GH-releases-0.jpg" alt="TravisaCI-GH-releases-0.jpg"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/TravisCI-deploy-0.jpg" alt="TravisCI-deploy-0.jpg"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/TravisCI-deploy-1.jpg" alt="TravisCI-deploy-1.jpg"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/TravisCI-deploy-2.jpg" alt="TravisCI-deploy-2.jpg"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/TravisaCI-GH-releases-0.jpg" alt="TravisaCI-GH-releases-0.jpg"></p>
 <h2><span id="问题参阅">问题参阅</span></h2>
 <ol>
 <li>
