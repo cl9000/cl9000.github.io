@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://cl9000.github.io/"/>
-  <updated>2020-09-09T08:57:47.834Z</updated>
+  <updated>2020-04-26T08:40:08.731Z</updated>
   <id>https://cl9000.github.io/</id>
   
   <author>
@@ -15,45 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>【HBuilderX】uniapp-cli更新/语法提示库</title>
-    <link href="https://cl9000.github.io/2020/09/09/HBuilderX-uniapp-cli%E6%9B%B4%E6%96%B0-%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA%E5%BA%93/"/>
-    <id>https://cl9000.github.io/2020/09/09/HBuilderX-uniapp-cli%E6%9B%B4%E6%96%B0-%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA%E5%BA%93/</id>
-    <published>2020-09-09T08:51:55.000Z</published>
-    <updated>2020-09-09T08:57:47.834Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote style="border-left: 4px solid #3F51B5;padding: 16px 20px;color: black;font-weight:300;border-radius: 0 2px 2px 0;">    那些疯狂到认为自己能够改变世界的人，才能真正改变世界。——<strong>史蒂夫·乔布斯</strong><br></blockquote><br><h3><span id="缘由">缘由：</span></h3><p>&lt;语法提示库&gt;、&lt;uniapp-cli依赖包node_modules全更新&gt;、&lt;Browserslist：caniuse-lite is outdated&gt;</p><h3><span id="hbuilderx-更新脚手架uniapp-cli依赖包node_modules">HBuilderX 更新脚手架(uniapp-cli)依赖包node_modules</span></h3><p>目录路径 <code>HBuilderX\plugins\uniapp-cli\</code></p><p>进入uniapp-cli目录下，删除<code>node_modules</code>和<code>package-lock.json</code>文件，执行命令<code>$ npm install</code></p><p>替换旧版本软件路径下的文件(建议删除原node_modules文件夹)：</p><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\n</span>ode_modules</span><br><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\p</span>ackage.json</span><br><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\p</span>ackage-lock.json</span><br></pre></td></tr></table></figure><p>刷新，退出重新启动生效。</p><h3><span id="hbuilderx语法提示库">HBuilderX语法提示库</span></h3><p>目录路径 <code>HBuilderX\plugins\</code><br>外网HX自动下载语法提示库，下载完成后，进入路径<code>HBuilderX\plugins\</code>，拷贝 <code>ls 和 jre</code>文件夹备用</p><p>进入旧版本软件路径 <code>HBuilderX\plugins\</code>，粘贴 <code>ls 和 jre</code>文件夹，刷新重启即可。<br>另还有个 <code>nodeserver</code>文件夹，也可以按照上述方法同时拷贝至目录</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote style=&quot;border-left: 4px solid #3F51B5;padding: 16px 20px;color: black;font-weight:300;border-radius: 0 2px 2px 0;&quot;&gt;
-    那些疯狂到认为自
-      
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="https://cl9000.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-      <category term="HBuilderX" scheme="https://cl9000.github.io/tags/HBuilderX/"/>
-    
-      <category term="uniapp-cli" scheme="https://cl9000.github.io/tags/uniapp-cli/"/>
-    
-      <category term="脚手架" scheme="https://cl9000.github.io/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/"/>
-    
-      <category term="依赖包" scheme="https://cl9000.github.io/tags/%E4%BE%9D%E8%B5%96%E5%8C%85/"/>
-    
-      <category term="npm" scheme="https://cl9000.github.io/tags/npm/"/>
-    
-      <category term="node_modules" scheme="https://cl9000.github.io/tags/node-modules/"/>
-    
-      <category term="语法提示库" scheme="https://cl9000.github.io/tags/%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA%E5%BA%93/"/>
-    
-  </entry>
   
   <entry>
     <title>Docker</title>
@@ -207,6 +168,45 @@
       <category term="CDN" scheme="https://cl9000.github.io/tags/CDN/"/>
     
       <category term="免费CDN" scheme="https://cl9000.github.io/tags/%E5%85%8D%E8%B4%B9CDN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【HBuilderX】uniapp-cli更新/语法提示库</title>
+    <link href="https://cl9000.github.io/2019/03/09/HBuilderX-uniapp-cli%E6%9B%B4%E6%96%B0-%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA%E5%BA%93/"/>
+    <id>https://cl9000.github.io/2019/03/09/HBuilderX-uniapp-cli%E6%9B%B4%E6%96%B0-%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA%E5%BA%93/</id>
+    <published>2019-03-09T08:51:55.000Z</published>
+    <updated>2020-09-09T09:00:11.058Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote style="border-left: 4px solid #3F51B5;padding: 16px 20px;color: black;font-weight:300;border-radius: 0 2px 2px 0;">    那些疯狂到认为自己能够改变世界的人，才能真正改变世界。——<strong>史蒂夫·乔布斯</strong><br></blockquote><br><h3><span id="缘由">缘由：</span></h3><p>&lt;语法提示库&gt;、&lt;uniapp-cli依赖包node_modules全更新&gt;、&lt;Browserslist：caniuse-lite is outdated&gt;</p><h3><span id="hbuilderx-更新脚手架uniapp-cli依赖包node_modules">HBuilderX 更新脚手架(uniapp-cli)依赖包node_modules</span></h3><p>目录路径 <code>HBuilderX\plugins\uniapp-cli\</code></p><p>进入uniapp-cli目录下，删除<code>node_modules</code>和<code>package-lock.json</code>文件，执行命令<code>$ npm install</code></p><p>替换旧版本软件路径下的文件(建议删除原node_modules文件夹)：</p><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\n</span>ode_modules</span><br><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\p</span>ackage.json</span><br><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\p</span>ackage-lock.json</span><br></pre></td></tr></table></figure><p>刷新，退出重新启动生效。</p><h3><span id="hbuilderx语法提示库">HBuilderX语法提示库</span></h3><p>目录路径 <code>HBuilderX\plugins\</code><br>外网HX自动下载语法提示库，下载完成后，进入路径<code>HBuilderX\plugins\</code>，拷贝 <code>ls 和 jre</code>文件夹备用</p><p>进入旧版本软件路径 <code>HBuilderX\plugins\</code>，粘贴 <code>ls 和 jre</code>文件夹，刷新重启即可。<br>另还有个 <code>nodeserver</code>文件夹，也可以按照上述方法同时拷贝至目录</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote style=&quot;border-left: 4px solid #3F51B5;padding: 16px 20px;color: black;font-weight:300;border-radius: 0 2px 2px 0;&quot;&gt;
+    那些疯狂到认为自
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://cl9000.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="HBuilderX" scheme="https://cl9000.github.io/tags/HBuilderX/"/>
+    
+      <category term="uniapp-cli" scheme="https://cl9000.github.io/tags/uniapp-cli/"/>
+    
+      <category term="脚手架" scheme="https://cl9000.github.io/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/"/>
+    
+      <category term="依赖包" scheme="https://cl9000.github.io/tags/%E4%BE%9D%E8%B5%96%E5%8C%85/"/>
+    
+      <category term="npm" scheme="https://cl9000.github.io/tags/npm/"/>
+    
+      <category term="node_modules" scheme="https://cl9000.github.io/tags/node-modules/"/>
+    
+      <category term="语法提示库" scheme="https://cl9000.github.io/tags/%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA%E5%BA%93/"/>
     
   </entry>
   
