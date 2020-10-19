@@ -198,6 +198,13 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/tags/iOS/</loc>
+        <lastmod>2020-04-27T02:18:27.009Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/tags/protocol-buffer/</loc>
         <lastmod>2020-04-27T02:18:27.009Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -387,22 +394,22 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/iOS/</loc>
-        <lastmod>2020-10-19T04:26:31.197Z</lastmod>
+        <loc>https://cl9000.github.io/tags/i4/</loc>
+        <lastmod>2020-10-19T04:28:44.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-        <lastmod>2020-10-19T04:26:31.197Z</lastmod>
+        <lastmod>2020-10-19T04:28:44.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/%E8%99%9A%E6%8B%9F%E4%BD%8D%E7%BD%AE/</loc>
-        <lastmod>2020-10-19T04:26:31.197Z</lastmod>
+        <loc>https://cl9000.github.io/tags/%E8%99%9A%E6%8B%9F%E5%AE%9A%E4%BD%8D/</loc>
+        <lastmod>2020-10-19T04:28:44.467Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
