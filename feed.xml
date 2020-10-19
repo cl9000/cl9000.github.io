@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://cl9000.github.io/"/>
-  <updated>2020-10-19T04:28:44.467Z</updated>
+  <updated>2020-10-19T05:28:08.400Z</updated>
   <id>https://cl9000.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://cl9000.github.io/2020/10/19/iOS-virtualPositon/"/>
     <id>https://cl9000.github.io/2020/10/19/iOS-virtualPositon/</id>
     <published>2020-10-19T04:18:29.000Z</published>
-    <updated>2020-10-19T04:28:44.467Z</updated>
+    <updated>2020-10-19T05:28:08.400Z</updated>
     
-    <content type="html"><![CDATA[<p>使用<strong>i4</strong> 修改软件虚拟位置，步骤入下</p><ol><li>Mac appStore（或PC-i4官网）下载 i4（爱思助手）<br><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/ios-location001.png" alt="ios-location001.png"></li><li>数据线连接手机后，工具 - 虚拟定位<br><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/ios-location002.png" alt="ios-location002.png"></li><li>搜索位置或经纬度录入设置<br><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/ios-location003.png" alt="ios-location003.png"></li></ol><p><strong>注意</strong><br>iOS14系统仅支持3个小时，若恢复真实位置，需要重新启动手机</p>]]></content>
+    <content type="html"><![CDATA[<p>使用<strong>i4</strong> 修改软件虚拟位置，步骤入下</p><ol><li>Mac appStore（或PC-i4官网）下载 i4（爱思助手）<br><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/ios-location001.png" alt="ios-location001.png"></li><li>数据线连接手机后，工具 - 虚拟定位<br><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/ios-location002.png" alt="ios-location002.png"></li><li>搜索位置或经纬度录入设置<br><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/ios-location003.png" alt="ios-location003.png"></li></ol><p><strong>注意</strong><br>iOS14系统仅支持3个小时，若恢复真实位置，需要重新启动手机。</p>]]></content>
     
     <summary type="html">
     
