@@ -107,6 +107,37 @@
   </entry>
   
   <entry>
+    <title>国内解决 reCAPTCHA 无法访问</title>
+    <link href="https://cl9000.github.io/2019/10/21/%E8%A7%A3%E5%86%B3recaptcha%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/"/>
+    <id>https://cl9000.github.io/2019/10/21/%E8%A7%A3%E5%86%B3recaptcha%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE/</id>
+    <published>2019-10-21T03:08:32.000Z</published>
+    <updated>2020-10-21T03:25:46.935Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/reCAPTCHA.png" alt="reCAPTCHA.png"></p><ol><li><p>打开 Chrome 或 Firefox 浏览器，此以Chrome为主</p></li><li><p>下载 gooreplacer <a href="https://pan.baidu.com/s/1n24QfvGstMfI27HpF3LVXw" target="_blank" rel="noopener">链接:https://pan.baidu.com/s/1n24QfvGstMfI27HpF3LVXw  密码:rb0d</a> 或方法二（此处不作具体介绍，内有详细操作方法）</p></li><li><p>打开 <code>chrome://extensions/</code>，将下载的 <code>gooreplacer.crx</code> 拖进扩展，添加安装</p></li><li><p>点击 Gooreplacer，打开 Gooreplacer操作面板</p></li><li><p>点击 <code>新增</code></p></li><li><p>在Source（匹配模式）框内填入 <code>www.google.com/recaptcha</code></p></li><li><p>在Destination （目标地址）栏填入 <code>recaptcha.net/recaptcha</code></p></li><li><p>点击 Submit （提交）</p></li><li><p>重启浏览器，然后访问需要recaptcha的网站</p></li></ol><p>注意：下载包内还有另一种方法，也可以尝试，此仅为收集方法，不做相关解释，不承担任何责任。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/reCAPTCHA.png&quot; alt=&quot;reCAPTCHA.png&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开 Chrome 或 Firefox 浏
+      
+    
+    </summary>
+    
+    
+    
+      <category term="reCAPTCHA" scheme="https://cl9000.github.io/tags/reCAPTCHA/"/>
+    
+      <category term="Google人机验证" scheme="https://cl9000.github.io/tags/Google%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81/"/>
+    
+      <category term="gooreplacer" scheme="https://cl9000.github.io/tags/gooreplacer/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在GitHub搭建免费图床</title>
     <link href="https://cl9000.github.io/2019/09/26/Github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/"/>
     <id>https://cl9000.github.io/2019/09/26/Github%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A/</id>
@@ -612,29 +643,6 @@
     
     
       <category term="文字转语音" scheme="https://cl9000.github.io/tags/%E6%96%87%E5%AD%97%E8%BD%AC%E8%AF%AD%E9%9F%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>XcodeBuildSetting中大小写设置</title>
-    <link href="https://cl9000.github.io/2017/03/22/Xcode%E4%B8%ADBuildSetting%E5%A4%A7%E5%B0%8F%E5%86%99%E8%AE%BE%E7%BD%AE/"/>
-    <id>https://cl9000.github.io/2017/03/22/Xcode%E4%B8%ADBuildSetting%E5%A4%A7%E5%B0%8F%E5%86%99%E8%AE%BE%E7%BD%AE/</id>
-    <published>2017-03-22T15:03:09.000Z</published>
-    <updated>2020-03-08T15:12:35.642Z</updated>
-    
-    <content type="html"><![CDATA[<h3><span id="关于xcode中buildsetting各属性名大小写切换-记录以备忘">关于Xcode中BuildSetting各属性名大小写切换-记录以备忘</span></h3><a id="more"></a><p>首先打开Xcode，进入工程BuildSetting选项<br>各属性名大小写：<br>Xcode–Editor–Show Setting Names<br>各属性值大小写：<br>Xcode–Editor–Show Definitions<br>如图:<br><img src="http://ol3jdapgi.bkt.clouddn.com/17-3-22/49571838-file_1490197315454_169e7.png" alt></p><p><img src="http://ol3jdapgi.bkt.clouddn.com/17-3-22/56620836-file_1490197315282_16817.png" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3&gt;关于Xcode中BuildSetting各属性名大小写切换-记录以备忘&lt;/h3&gt;
-    
-    </summary>
-    
-    
-      <category term="Xcode" scheme="https://cl9000.github.io/categories/Xcode/"/>
-    
-    
-      <category term="Xcode" scheme="https://cl9000.github.io/tags/Xcode/"/>
     
   </entry>
   
