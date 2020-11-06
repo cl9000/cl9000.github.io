@@ -170,13 +170,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/Github/</loc>
-        <lastmod>2020-04-27T01:43:54.556Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/%E5%9B%BE%E5%BA%8A/</loc>
         <lastmod>2020-04-27T01:43:54.556Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -459,6 +452,62 @@
     <url>
         <loc>https://cl9000.github.io/tags/ERROR-root-code/</loc>
         <lastmod>2020-11-05T10:37:43.857Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Github/</loc>
+        <lastmod>2020-11-06T08:50:39.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Github-Profile/</loc>
+        <lastmod>2020-11-06T08:50:39.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Github-Gist/</loc>
+        <lastmod>2020-11-06T08:50:39.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/wakatime/</loc>
+        <lastmod>2020-11-06T08:50:39.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/shields-io/</loc>
+        <lastmod>2020-11-06T08:50:39.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/simpleicons/</loc>
+        <lastmod>2020-11-06T08:50:39.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/visitor-badge/</loc>
+        <lastmod>2020-11-06T08:50:39.408Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/readme/</loc>
+        <lastmod>2020-11-06T08:50:39.408Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
