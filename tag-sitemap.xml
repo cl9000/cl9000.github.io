@@ -254,34 +254,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/ajax/</loc>
-        <lastmod>2020-11-10T09:15:06.706Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/fetch/</loc>
-        <lastmod>2020-11-10T09:15:06.706Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E5%8E%9F%E7%94%9F/</loc>
-        <lastmod>2020-11-10T09:15:06.706Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/js/</loc>
-        <lastmod>2020-11-10T09:15:06.706Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/Karma/</loc>
         <lastmod>2020-11-10T09:15:16.097Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -340,34 +312,6 @@
     <url>
         <loc>https://cl9000.github.io/tags/my-cnf/</loc>
         <lastmod>2020-11-10T09:15:43.758Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Nginx/</loc>
-        <lastmod>2020-11-10T09:15:49.676Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E8%B7%A8%E5%9F%9F/</loc>
-        <lastmod>2020-11-10T09:15:49.676Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</loc>
-        <lastmod>2020-11-10T09:15:49.676Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/hosts/</loc>
-        <lastmod>2020-11-10T09:15:49.676Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -508,6 +452,62 @@
     <url>
         <loc>https://cl9000.github.io/tags/Loading/</loc>
         <lastmod>2020-11-10T10:09:15.588Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Nginx/</loc>
+        <lastmod>2020-11-10T10:13:45.347Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E8%B7%A8%E5%9F%9F/</loc>
+        <lastmod>2020-11-10T10:13:45.347Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</loc>
+        <lastmod>2020-11-10T10:13:45.347Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/hosts/</loc>
+        <lastmod>2020-11-10T10:13:45.347Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/ajax/</loc>
+        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/fetch/</loc>
+        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E5%8E%9F%E7%94%9F/</loc>
+        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/js/</loc>
+        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
