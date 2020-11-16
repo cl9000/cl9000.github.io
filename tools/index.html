@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 start -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+    <!-- 回到顶部样式 end -->
+
+
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5">
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword" content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Tools - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/tools/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+    
+
+    /* 滚动条自定义 start */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color:transparent; */
+        /* -webkit-border-radius:2em; */
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(4, 125, 238);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    /* 滚动条自定义 end */
+
+    header.intro-header {
+        background-image: url('https://api.berryapi.net/?service=App.Bing.Images');
+            /* max-height: 300px; */
+            /*tools*/
+            
+    }
+
+    
+
+    /* tools heading */
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <div class="site-heading tools-site-heading">
+                        <h1>Tools</h1>
+                        <!-- <hr class="small"> -->
+                        <span class="subheading">每个人都受两种教育，一种来自别人，另一种更重要的是来自自己。</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="searchIcon">
+                        <a href="#searchModal">
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+    <!-- Main Content -->
+    
+<style type="text/css">
+    /* 名言 */
+    .tool-bgimg {
+        background-image: url('https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+
+    .bg-dark-6:hover {
+        transition: all .3s;
+        transform: scale(1.01);
+        box-shadow: 0 0 20px 0 rgba(10, 10, 10, .45);
+    }
+
+    .bg-dark-6:before {
+        position: absolute;
+        background: rgba(2, 2, 2, 0.3);
+        content: " ";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .text-6 {
+        font-style: normal;
+        font-size: 1.8rem;
+        font-family: "Roboto Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: left;
+        color: white;
+        display: block;
+        padding: 16px 30px 8px 30px;
+    }
+
+    .text-6-1 {
+        position: relative;
+        padding: 8px 30px;
+        font-size: 1.6rem;
+        text-transform: none;
+    }
+
+    .text-7 {
+        position: relative;
+        font-size: 16px;
+        font-family: "Roboto Condensed", sans-serif;
+        letter-spacing: 2px;
+        text-align: right;
+        padding-right: 60px;
+        padding-bottom: 30px;
+        color: white;
+    }
+
+    /* 字体放大 🔎 */
+    .saying-scale:hover {
+        transform: scale(1.02) rotate(0deg);
+        color: #f1a128;
+        font-weight: 600;
+    }
+
+    /* 动画线 🧶 */
+    .saying-line {
+        position: relative;
+        /* padding-bottom: 7px; */
+    }
+
+    .saying-line:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        content: "";
+        transition-delay: 0s;
+        transition-timing-function: ease-in-out;
+        transition-duration: .5s;
+        transform: scaleX(0);
+    }
+
+    .saying-line:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+
+    /* 视频 */
+    .module {
+        overflow: hidden;
+        border-radius: 5px;
+        margin: 20px 0;
+        display: block;
+        position: relative;
+        padding: 50px 0;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    .bg-dark-60 {
+        color: #fff;
+    }
+
+    .bg-dark-60:before {
+        position: absolute;
+        background: rgba(34, 34, 34, 0.8);
+        content: " ";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+    .video-box {
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .video-box-icon>a>i {
+        line-height: 1.8;
+        font-size: 40px;
+        color: #fff;
+    }
+
+    .video-title {
+        letter-spacing: 4px;
+        font-size: 30px;
+        margin: 10px 0 0;
+    }
+
+    .font-alt {
+        font-family: "Roboto Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .video-subtitle {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .video-bg {
+        background-image: url('/video/20190324.gif');
+    }
+
+
+    /* 图片缩放 */
+    .post-cover {
+        position: relative;
+        width: 100%;
+        margin-bottom: 14px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 20px 0 rgba(222, 222, 222, .32);
+        transition: all .3s;
+        transform: scale(1);
+        z-index: 1;
+    }
+
+    .post-cover:hover {
+        box-shadow: 0 0 30px 0 rgba(179, 179, 179, .45);
+        transform: scale(1.02);
+    }
+
+    .post-cover:hover img {
+        transform: scale(1.6);
+    }
+
+    .post-cover img {
+        width: 100%;
+        border-radius: 5px;
+        vertical-align: middle;
+        transition: all .5s;
+        transform: scale(1);
+    }
+
+    /* 飞机动画 */
+    /* 横向移动 转向 向上（页面上移、图片下移） */
+    .plan-1 {
+        /* text-align: center;  */
+        color: #ffffff;
+        position: relative;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+
+    .plan-anm:hover {
+        animation-name: plan;
+        animation-duration: 3s, .75s;
+        animation-delay: 0s, 1s;
+        animation-timing-function: ease-in, linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        /* animation-play-state: running;  */
+    }
+
+    @keyframes plan {
+        from {
+            transform: translateX(0) scaleX(1.5)
+        }
+
+        to {
+            transform: translateX(70rem) scaleX(1.5) rotate(-90deg) translateY(90px)
+        }
+    }
+
+
+    /* 视频框动画 */
+
+</style>
+
+
+<!-- Main Content -->
+<div class="container">
+
+    <!-- 名言 -->
+    <section class="tool-bgimg bg-dark-6">
+        <div class="plan-1"><i class="fa fa-space-shuttle fa-2x plan-anm" aria-hidden="true"></i></div>
+        <div class="text-6 saying-line saying-scale">沉思四十年人生与沉思一万年人生没有两样。因为你会看到更多的东西吗？</div>
+        <div class="text-6 text-6-1">Meditating on forty years of life is no different from meditating on ten thousand years of life. Because will you see more?</div>
+        <div class="text-7">—— 马尔库·奥勒留</div>
+    </section>
+
+    <!-- 公益视频 -->
+    <section class="module bg-dark-60 video-bg" data-background="/video/20190324.gif">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="video-box">
+                    <div class="video-box-icon">
+                        <a class="video-pop-up" href="/video/20190324.mp4">
+                            <i class="fa fa-video-camera fa-3x white" aria-hidden="false"></i>
+                        </a>
+                    </div>
+                    <div class="video-title font-alt">公益视频</div>
+                    <div class="video-subtitle font-alt">你知道中国人有多拼吗？</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文章头部图 尺寸做了调整，删除下面max即可 -->
+    <section style="border-radius: 5px;float: right;">
+        <div class="post-cover" style="max-width: 240px;">
+            <img src="https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg">
+        </div>
+    </section>
+
+
+    <div class="row">
+        <!-- <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> -->
+
+        <!-- 工具数据 -->
+            
+
+        <!-- 工具标签云 -->
+        <div id='tag_cloud' class="tags">
+            
+            <a style="background-color:#3a45f9;color: #fff;" href="#常用推荐" title="常用推荐"
+                rel="常用推荐">常用推荐</a>
+            
+            <a style="background-color:#3a45f9;color: #fff;" href="#每日开眼" title="每日开眼"
+                rel="每日开眼">每日开眼</a>
+            
+        </div>
+
+        <!-- 工具列表 -->
+        
+        <div class="panel">
+            <div class="l_title"><i class="fa fa-flag"></i>
+                <span class="web-title">常用推荐</span>
+            </div>
+            <div class="row2">
+                
+                
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="http://so.uigreat.com/" target="_blank">
+                            <div class="l_box">
+                                <div class="web-content-top">
+                                    <!-- <if condition="empty($vs.logo) neq true"> -->
+                                    <div class="web-logo">
+                                        <img class="img-responsive" src="https://img.uigreat.com/logo.svg">
+                                    </div> <span class="web-name">UI设计师导航网 - 优阁</span></span>
+                                    <!-- </if> -->
+                                </div>
+                                <div class="web-content-bottom">
+                                    <div class="dot web-content-bottom-content">
+                                        UI - 设计工具导航 &nbsp; Read more »
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    
+                
+                
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://tool.lu/" target="_blank">
+                            <div class="l_box">
+                                <div class="web-content-top">
+                                    <!-- <if condition="empty($vs.logo) neq true"> -->
+                                    <div class="web-logo">
+                                        <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
+                                    </div> <span class="web-name">在线工具</span></span>
+                                    <!-- </if> -->
+                                </div>
+                                <div class="web-content-bottom">
+                                    <div class="dot web-content-bottom-content">
+                                        常用工具导航 &nbsp; Read more »
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    
+                
+                
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="http://dh.tianapi.com/Index/index.html" target="_blank">
+                            <div class="l_box">
+                                <div class="web-content-top">
+                                    <!-- <if condition="empty($vs.logo) neq true"> -->
+                                    <div class="web-logo">
+                                        <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
+                                    </div> <span class="web-name">天行导航</span></span>
+                                    <!-- </if> -->
+                                </div>
+                                <div class="web-content-bottom">
+                                    <div class="dot web-content-bottom-content">
+                                        常用工具导航 &nbsp; Read more »
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    
+                
+                
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://www.dujin.org/navs/" target="_blank">
+                            <div class="l_box">
+                                <div class="web-content-top">
+                                    <!-- <if condition="empty($vs.logo) neq true"> -->
+                                    <div class="web-logo">
+                                        <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
+                                    </div> <span class="web-name">工具 - 网络地址抓取2</span></span>
+                                    <!-- </if> -->
+                                </div>
+                                <div class="web-content-bottom">
+                                    <div class="dot web-content-bottom-content">
+                                        常用工具导航 &nbsp; Read more »
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    
+                
+                
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="/photos/index.html">
+                            <div class="l_box">
+                                <div class="web-content-top">
+                                    <div class="web-logo">
+                                        <img class="img-responsive" src="">
+                                    </div> <span class="web-name">在线证件照换底色</span></span>
+                                </div>
+                                <div class="web-content-bottom">
+                                    <div class="dot web-content-bottom-content">
+                                        常用工具 &nbsp; Read more »
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    
+                
+            </div>
+        </div>
+        
+        <div class="panel">
+            <div class="l_title"><i class="fa fa-eye"></i>
+                <span class="web-title">每日开眼</span>
+            </div>
+            <div class="row2">
+                
+                
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://tools.ccswust.org/" target="_blank">
+                            <div class="l_box">
+                                <div class="web-content-top">
+                                    <!-- <if condition="empty($vs.logo) neq true"> -->
+                                    <div class="web-logo">
+                                        <img class="img-responsive" src="https://static.fotor.com.cn/assets/stickers/freelancer_ls_08/8ac5ab2f-cb4a-45b5-9d9d-3bd20dfd74d6_medium_thumb.jpg">
+                                    </div> <span class="web-name">工具 - 网络地址抓取1</span></span>
+                                    <!-- </if> -->
+                                </div>
+                                <div class="web-content-bottom">
+                                    <div class="dot web-content-bottom-content">
+                                        常用工具导航 &nbsp; Read more »
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    
+                
+            </div>
+        </div>
+        
+
+    </div>
+    <!-- </div> -->
+</div>
+
+<style>
+    .panel {
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding-bottom: 20px;
+        box-shadow: 0 14px 20px 0 rgba(234, 63, 255, 0), 0 15px 40px 0 rgba(79, 125, 183, 0.08);
+        -webkit-box-shadow: 0 14px 20px 0 rgba(234, 63, 255, 0), 0 15px 40px 0 rgba(79, 125, 183, 0.08);
+    }
+
+    .l_title {
+        color: #3945f9;
+        background: #ffffff;
+        padding: 18px 10px 20px 26px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+    }
+
+    .web-title {
+        font-size: 1.6rem;
+        color: #101010;
+        margin-left: 10px;
+    }
+
+    .row2 {
+        padding: 10px;
+    }
+
+    .row2::before {
+        display: table;
+        content: " ";
+    }
+
+    .row2:after {
+        clear: both;
+        display: table;
+        content: " ";
+    }
+
+    @media (min-width: 768px) {
+        .col-sm-6 {
+            width: 50%;
+            float: left;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .col-md-4 {
+            width: 33.33333333%;
+            float: left;
+        }
+    }
+
+    .col-lg-3,
+    .col-md-4,
+    .col-sm-6 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        outline: 0;
+    }
+
+    a:hover,
+    a:focus {
+        text-decoration: none
+    }
+
+    .l_box {
+        min-height: 132px;
+        padding: 15px 20px;
+        background-color: #fff;
+        border: 1px solid #f0f0f0;
+        margin: 0 0 20px 0;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .l_box:hover {
+        transform: translateY(-6px);
+        -webkit-transform: translateY(-6px);
+        -moz-transform: translateY(-6px);
+        box-shadow: 0 26px 40px -24px rgba(79, 125, 183, .3);
+        -webkit-box-shadow: 0 26px 40px -24px rgba(79, 125, 183, .3);
+        -moz-box-shadow: 0 26px 40px -24px rgba(79, 125, 183, .3);
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+    .web-content-top {
+        height: 40px;
+        display: flex;
+        margin-bottom: 4px;
+    }
+
+    .web-logo {
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-right: 10px;
+        border: 1px solid #eeeeee;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: #cc866c;
+    }
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    span.web-name {
+        line-height: 40px;
+        color: #474856;
+        word-wrap: break-word;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .web-content-bottom {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        font-size: 13px;
+        color: #808080;
+        padding: 10px 0 0 0;
+    }
+
+    .web-content-bottom {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        font-size: 13px;
+        color: #808080;
+        padding: 10px 0 0 0;
+    }
+</style>
+
+
+
+<!-- loading-001 html -->
+<!-- <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div> -->
+<!-- loading-002 html -->
+<!-- <div class="loading">
+    <div class="circle-one"></div>
+    <div class="circle-two"></div>
+</div> -->
+
+<!-- loading-001 -->
+<style>
+    @keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: #222222;
+        z-index: 2000;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #3498db;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        z-index: 2001;
+    }
+
+    #loader::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #e74c3c;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+    }
+
+    #loader::after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #f9c922;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+    }
+</style>
+
+<!-- loading-002 -->
+<style>
+    @keyframes spinPulse {
+        0% {
+            -webkit-transform: rotate(160deg);
+            opacity: 0;
+            box-shadow: 0 0 1px #505050;
+        }
+
+        50% {
+            -webkit-transform: rotate(145deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: rotate(-320deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes spinoffPulse {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    .loading {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        z-index: 99;
+        transform: translateX(-50%);
+    }
+
+    .loading::before {
+        content: ' ';
+        position: fixed;
+        top: -50%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(74, 74, 74, 0.16);
+    }
+
+    .loading .circle-one {
+        background-color: rgba(0, 0, 0, 0);
+        border: 5px solid rgba(0, 183, 229, 0.9);
+        opacity: .9;
+        border-right: 5px solid rgba(0, 0, 0, 0);
+        border-left: 5px solid rgba(0, 0, 0, 0);
+        border-radius: 50px;
+        box-shadow: 0 0 35px #2187e7;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        animation: spinPulse 1s infinite linear;
+        -moz-animation: spinPulse 1s infinite ease-in-out;
+        -webkit-animation: spinPulse 1s infinite linear;
+    }
+
+    .loading .circle-two {
+        background-color: rgba(0, 0, 0, 0);
+        border: 5px solid rgba(0, 183, 229, 0.9);
+        opacity: .9;
+        border-left: 5px solid rgba(0, 0, 0, 0);
+        border-right: 5px solid rgba(0, 0, 0, 0);
+        border-radius: 50px;
+        box-shadow: 0 0 15px #2187e7;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto;
+        position: relative;
+        top: -40px;
+        animation: spinoffPulse 1s infinite linear;
+        -moz-animation: spinoffPulse 1s infinite linear;
+        -webkit-animation: spinoffPulse 1s infinite linear;
+    }
+</style>
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer>
+    <!-- <article class="bg-back top-line"></article> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2020
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    |
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <!-- <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span> -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                </p>
+                
+                <!-- 不蒜子 end -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- other wenzi.js -->
+<script src="/libs/other/wenzi.js"></script>
+
+<!-- 动态tab标签 -->
+
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 2.0rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
+
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+</body>
+
+</html>

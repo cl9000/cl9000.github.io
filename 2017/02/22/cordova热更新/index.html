@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 start -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+    <!-- 回到顶部样式 end -->
+
+
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5">
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword" content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          [Ionic] - ionic热更新 - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/2017/02/22/cordova热更新/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+    
+
+    /* 滚动条自定义 start */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color:transparent; */
+        /* -webkit-border-radius:2em; */
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(4, 125, 238);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    /* 滚动条自定义 end */
+
+    header.intro-header {
+        background-image: url('/img/article_header/article_header.png');
+            /*post*/
+            
+    }
+
+    
+
+    /* tools heading */
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#Ionic"
+                                title="Ionic">Ionic</a>
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#热更新"
+                                title="热更新">热更新</a>
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#hotUpdate"
+                                title="hotUpdate">hotUpdate</a>
+                            
+                        </div>
+                        <h1>[Ionic] - ionic热更新</h1>
+                        <h2 class="subheading">cordova热更新</h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            February 22, 2017
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="searchIcon">
+                        <a href="#searchModal">
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <h3><span id="简介">简介</span></h3>
+<p>关于Cordova的热更新问题，国内的资料比较少，许多博客上都是胡乱的抄袭，准确性极低，无任何实用性，并且步骤不够完整，在此亲手测试了一下，并整理详细的步骤以供备忘和参考。</p>
+<h4><span id="热更新的好处">热更新的好处</span></h4>
+<p>通常ionic源码可包括（HTML，JavaScript，CSS文件和其他资源），<br>
+通过cordova热更新插件cordova-hot-code-push-plugin来是实现客户端的代码<strong>热更新</strong>。<br>
+避免了之前<strong>更改代码</strong>后<strong>重新打版</strong>再提交至<strong>应用商店审核</strong>的流程，实现后台动态更新代码<br>
+热更新原理图（扒来的。。。图不孬，有助理解）<br>
+<img src="http://ol3jdapgi.bkt.clouddn.com/17-2-23/23692450-file_1487824130397_4399.png" alt></p>
+<a id="more"></a>
+<h3><span id="内壳更新">内壳更新</span></h3>
+<h4><span id="基本的配置步骤">基本的配置步骤</span></h4>
+<ul>
+<li>
+<p><strong>Python简单服务器本地搭建</strong><br>
+首先，我们自己搭建个本地的服务器Python，测试用。在此只做开发版的热更新测试，（本地的不做，容易混，也没什么用）<br>
+Python服务器安装包<a href="https://pan.baidu.com/s/1boDMaF9" target="_blank" rel="noopener"><em>云盘下载眼</em></a></p>
+<p>下载好后，我们用命令行操作：<br>
+<code>$ cd desktop</code></p>
+<p>在桌面创建文件夹，<br>
+<code>$ mkdir pythonServe</code><br>
+<code>$ cd pythonServer</code><br>
+进入到所创建的的文件夹，执行：<strong>*</strong> 注意遵循大小写&lt;9999 为端口号可自定义&gt;<br>
+<code>$ python -m SimpleHTTPServer 9999</code></p>
+<p>效果如下即为搭建成功：<br>
+<img src="http://ol3jdapgi.bkt.clouddn.com/17-2-22/85060264-file_1487754857902_e047.png" alt><br>
+用终端查看下自己的ip, 执行命令<code>$ ifconfig</code>即可获取，此 <strong>ip+端口号</strong> 就是你服务器地址，<strong>如果切换网络，要更新下面的服务器地址，切记哦！</strong><br>
+服务器到此搭建完毕告一段落…</p>
+</li>
+<li>
+<p><strong>ionic项目文件 配置：</strong></p>
+<p>首先，创建工程：#创建de略过…<br>
+<code>$ cordova create bankapp com.example.bankapp bankapp</code><br>
+或   <code>$ ionic start bankapp tabs -a &quot;bankapp&quot; -i com.example.bankapp</code></p>
+<p><strong>关键de配置</strong><br>
+1、<strong>安装 cordova-hot-code-push-cli,执行命令</strong>：<br>
+$ npm install -g cordova-hot-code-push-cli<br>
+作用：使用该命令行生成检测配置文件，通常是在 <code>www</code> 目录下动态生成 <code>chcp.json</code> 和 <code>chcp.manifest</code> 生成两个文件，插件源码地址：<a href="https://github.com/nordnet/cordova-hot-code-push" target="_blank" rel="noopener">https://github.com/nordnet/cordova-hot-code-push</a></p>
+<p>2、<strong>进入项目目录</strong><br>
+<code>$ cd 你的项目路径</code>。比如 我的项目在桌面上：<code>$ cd desktop/bankapp</code></p>
+<p>3、 <strong>安装热更新插件，执行命令(cordova或ionic都可以)</strong>：<br>
+<code>$ cordova plugin add cordova-hot-code-push-plugin</code></p>
+<p>***注意：**网上有安装下插件，没什么用，这是个实时更新插件，用于本地的同步更新，此处我们用不到:<code>$ ionic plugin add cordova-hot-code-push-local-dev-addon</code></p>
+<p>4、<strong>创建cordova-hcp.json模板</strong><br>
+在cordova项目根目录下创建一个 cordova-hcp.json模板文件。<br>
+cordova-hcp.json内容如下：</p>
+  <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"autogenerated"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"bankapp"</span>,</span><br><span class="line">  <span class="attr">"min_native_interface"</span>: <span class="number">1</span>, <span class="comment">//最小支持的外壳app版本</span></span><br><span class="line">  <span class="attr">"content_url"</span>: <span class="string">"http://192.168.1.101:9999/www"</span>,</span><br><span class="line">  <span class="attr">"ios_identifier"</span>:<span class="string">"https://itues.apple.com/cn/***"</span>, <span class="comment">//打版提交App Store下载的地址</span></span><br><span class="line">  <span class="attr">"update"</span>: <span class="string">"now"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>&amp;注意</strong> ：content_url：是你服务器上要更新的文件地址，</p>
+<p>执行： <code>$ cordova-hcp build</code><br>
+就会利用这个模板自动在<code>www</code>文件夹下生成新的 chcp.json和chcp.manifest文件，而不用手动更改 www/chcp.json了。<br>
+解析下：</p>
+<ul>
+<li>min_native_interface: 记录当前App的外壳版本值</li>
+<li>chcp.manifest文件记录版本的hash值</li>
+<li>ios_identifier:记录App在苹果商店上的位置，就是外壳地址</li>
+<li>release：内壳时间戳版本，根据时间戳来更新的。</li>
+<li>content_url: 是你服务器内更新的文件地址。此处建议设为www文件夹，因为我们改动代码后要把www文件进行更新，可以直接将改动后的www文件夹把服务器上旧的的www替换掉。</li>
+</ul>
+</li>
+</ul>
+<p>5、 <strong>配置config.xml文件</strong><br>
+在config.xml文件中添加以下代码:<br>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">chcp</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">native-interface</span> <span class="attr">version</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">config-file</span> <span class="attr">url</span>=<span class="string">"http://192.168.1.101:9999/www/chcp.json"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">chcp</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>&amp;注意：url为你服务器中更新文件的地址/ chcp.json</strong><br>
+**&amp;注意：**内壳更新 要把cordova-hcp.json和config.xml中的 版本号设置为一样的</p>
+<p>6、<strong>完成以上准备，开始测试 热更新(html、css或js等资源的动态更新，即内壳更新）</strong><br>
+执行下面：</p>
+<ul>
+<li><code>$ cordova platform add ios</code> 生成平台</li>
+<li><code>$ cordova-hcp build</code> 生成新chcp.json和chcp.manifest文件（重新打个时间戳realease）</li>
+<li><code>$ cordova build ios/android</code> 编译包到各个平台</li>
+<li>将www文件夹拷贝到服务器中</li>
+<li>在Xcode 中运行工程应用</li>
+<li>在webStore中（开发工具自选）更改一些www文件夹中的内容（如html、css、js或其它的资源）</li>
+</ul>
+<blockquote>
+<p>在此，随便改下就可以<img src="http://ol3jdapgi.bkt.clouddn.com/17-2-23/78903485-file_1487820563941_fc2d.png" alt><img src="http://ol3jdapgi.bkt.clouddn.com/17-2-23/49367720-file_1487820670266_1cbe.png" alt></p>
+</blockquote>
+<ul>
+<li><code>$ cordova-hcp build</code></li>
+<li>再次将更改后的www的文件拷贝到服务器中，把原来旧的www文件替换即可</li>
+<li>**&amp;**在浏览器中测试下自己的服务器通否：</li>
+</ul>
+<blockquote>
+<p>这是我的我的临时搭建Python地址 ：<code>http://192.168.1.101:9999</code></p>
+</blockquote>
+<ul>
+<li>在Xcode中再次运行应用，查看内容是否进行了更新</li>
+</ul>
+<blockquote>
+<p><img src="http://ol3jdapgi.bkt.clouddn.com/17-2-23/6717957-file_1487820904958_166e4.png" alt><img src="http://ol3jdapgi.bkt.clouddn.com/17-2-23/71100471-file_1487820851920_183f9.png" alt><br>
+热更新完成后日志如下:<br>
+<img src="http://ol3jdapgi.bkt.clouddn.com/17-2-23/54124854-file_1487826952862_ee03.png" alt></p>
+</blockquote>
+<p>到此内壳更新就结束了，在这总结下可能会遇到的问题:<br>
+一、chcp.json和config.xml中的服务器的地址不要写错,chcp.json中的地址：服务器上更新文件的地址；config.xml中的地址：服务器上更新文件的地址+chcp.json<br>
+二、首次要先在服务器上打个初始版本，流程如下：</p>
+<blockquote>
+<p>即生成平台–&gt;<code>模板生成chcp文件</code>–&gt;编译到各个平台–&gt;<code>上传www到服务器</code>–&gt;运行应用—&gt;<code>修改内容</code>–&gt; 模板重新生成chcp文件–&gt;<code>上传www文件覆盖旧的</code>—&gt;运行应用—&gt;<code>查看更新</code></p>
+</blockquote>
+<p>三、服务器保证通的通的、、、<br>
+四、再不中看这 <a href="https://github.com/nordnet/cordova-hot-code-push/issues/223" target="_blank" rel="noopener">-坑眼-https://github.com/nordnet/cordova-hot-code-push/issues/223</a></p>
+<hr>
+<h3><span id="外壳更新">外壳更新</span></h3>
+<h4><span id="描述">描述</span></h4>
+<p>这个外壳更新有点强制化，比如你在使用应用时，突然弹出个pop,提示你有新的版本更新了，人性化点的还有个取消按钮；强制性的就确定后直接跳转到AppStore了。这在你自己怎么设置了。<br>
+像原生的版本更新就没有强制；如你打版提交审核上架了，客户端也就仅在appStore商店有个更新提醒，更不更在客户了。</p>
+<h4><span id="外壳更新配置">外壳更新配置</span></h4>
+<p>上面的内壳更新整好后，这就比较简单了，因该配的已配置好，只在这改改某些属性就可以</p>
+<h5><span id="通过min_native_interface监控app是否提示更新">通过min_native_interface监控app是否提示更新</span></h5>
+<p>所需最小的外壳app版本. 这是app的build版本号，是个整型数字, 不是应用商店中看到的形如”1.0.0”字符串。</p>
+<p>在 config.xml中，这样指定build版本号，例如：app外壳里的config.xml是这样的：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">chcp</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">native-interface</span> <span class="attr">version</span>=<span class="string">"1"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">config-file</span> <span class="attr">url</span>=<span class="string">"http://192.168.191.2:9999/www/chcp.json"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">chcp</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>与www目录下的cordova-hcp.json/chcp.json里面的min_native_interface数值相对应，</p>
+<blockquote>
+<p>若服务器里的min_native_interface也对应是1，就不会出现提示用户升级版本的状态（即外壳更新），正常修改www目录的内容通过更新release值，和客户端进行对比，可实现热更新（即内壳更新）。</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"autogenerated"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"bankapp"</span>,</span><br><span class="line">  <span class="attr">"min_native_interface"</span>: <span class="number">1</span>, <span class="comment">//最小内核版本号</span></span><br><span class="line">  <span class="attr">"content_url"</span>: <span class="string">"http://192.168.191.2:9999/www"</span>,</span><br><span class="line">  <span class="attr">"ios_identifier"</span>: <span class="string">"https://itues.apple.com/cn/***"</span>, <span class="comment">//打版提交App Store下载的地址</span></span><br><span class="line">  <span class="attr">"update"</span>: <span class="string">"now"</span>,</span><br><span class="line">  <span class="attr">"release"</span>: <span class="string">"2017.02.23-12.53.32"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>假设你的外壳app加了个新的插件或文件，应该会更新外壳app。为了防止用户通过热更新下载了不适合他现有外壳app的web内容，应该设置下 min_native_interface 的值<br>
+下面我们将 min_native_interface 的值改为 2</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"autogenerated"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"bankapp"</span>,</span><br><span class="line">  <span class="attr">"min_native_interface"</span>: <span class="number">2</span>, <span class="comment">//最小支持的外壳app版本</span></span><br><span class="line">  <span class="attr">"content_url"</span>: <span class="string">"http://192.168.191.2:9999/www"</span>,</span><br><span class="line">  <span class="attr">"ios_identifier"</span>: <span class="string">"https://itues.apple.com/cn/***"</span>, <span class="comment">//打版提交App Store下载的地址</span></span><br><span class="line">  <span class="attr">"update"</span>: <span class="string">"now"</span>,</span><br><span class="line">  <span class="attr">"release"</span>: <span class="string">"2017.02.23-12.53.32"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>热更新插件加载到这段json的时候, 发现 min_native_interface 比当前外壳app的build号要大，便不会下载web内容。而是触发一个chcp_updateLoadFailed 错误通知, 告诉用户需要升级外壳app版本了。</p>
+<p>此属性将与config.xml中的native-interface进行对比，如果发现两者不同时，将会触发相应的事件，比如，手机端app中config.xml的<code>native-interface</code>值比服务器上的chcp.json文件中的<code>min_native_interface</code>值小时，将会触发<code>’chcp_updateLoadFailed’</code>事件，同时，错误代码为：<br>
+<code>chcp.error.APPLICATION_BUILD_VERSION_TOO_LOW</code> 通过这个错误码调用js端监听相应事件通过弹窗提示用户去升级，跳转到AppStore或下载新安装包。</p>
+<blockquote>
+<h4><span id="具体步骤">具体步骤</span></h4>
+<p>1、导入插件。外壳（版本号）的更新需要导入另外3个插件<br>
+<a href="https://github.com/apache/cordova-plugin-file" target="_blank" rel="noopener">cordova-plugin-file</a>、<a href="https://github.com/apache/cordova-plugin-file-transfer" target="_blank" rel="noopener">cordova-plugin-file-transfer</a>、<a href="https://github.com/pwlin/cordova-plugin-file-opener2" target="_blank" rel="noopener">cordova-plugin-file-opener2</a></p>
+</blockquote>
+<blockquote>
+<p>导入命令：<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; $ cordova <span class="keyword">plugin</span> add cordova-<span class="keyword">plugin</span>-<span class="keyword">file</span></span><br><span class="line">&gt; $ cordova <span class="keyword">plugin</span> add cordova-<span class="keyword">plugin</span>-<span class="keyword">file</span>-transfer</span><br><span class="line">&gt; $ cordova <span class="keyword">plugin</span> add cordova-<span class="keyword">plugin</span>-<span class="keyword">file</span>-opener2</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>2、添加代码-弹框-跳转至商店更新 <strong>&amp; ios_identifier为要跳转的地址</strong><br>
+将下面的代码放到 .run function中启动时就调用（看自己怎么封装的，我封到router中了）如图:<br>
+<img src="http://ol3jdapgi.bkt.clouddn.com/17-2-23/27198743-file_1487830770384_8925.png" alt></p>
+</blockquote>
+<p><code>min_native-interface</code>将与config.xml中的<code>native-interface</code>进行对比、如果两者不同、将会触发<code>'chcp_updateLoadFailed'</code>事件。同时、错误代码为：<br>
+<code>chcp.error.APPLICATION_BUILD_VERSION_TOO_LOW</code>，返回值为-2，那么就会执行下面的代码，弹框提示更新了。</p>
+<blockquote>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> appUpdate = &#123;</span><br><span class="line">        <span class="comment">// Application Constructor</span></span><br><span class="line">        initialize: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.bindEvents();</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// Bind any events that are required.</span></span><br><span class="line">        <span class="comment">// Usually you should subscribe on 'deviceready' event to know, when you can start calling cordova modules</span></span><br><span class="line">        bindEvents: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">document</span>.addEventListener(<span class="string">'deviceready'</span>, <span class="keyword">this</span>.onDeviceReady, <span class="literal">false</span>);</span><br><span class="line">            <span class="built_in">document</span>.addEventListener(<span class="string">'chcp_updateLoadFailed'</span>, <span class="keyword">this</span>.onUpdateLoadError, <span class="literal">false</span>);</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">// deviceready Event Handler</span></span><br><span class="line">        onDeviceReady: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        &#125;,</span><br><span class="line">        onUpdateLoadError: <span class="function"><span class="keyword">function</span>(<span class="params">eventData</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> error = eventData.detail.error;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 当检测出外核版本有更新，// 针对不同平台进行相应更新操作</span></span><br><span class="line">            <span class="keyword">if</span> (error &amp;&amp; error.code == chcp.error.APPLICATION_BUILD_VERSION_TOO_LOW) &#123;</span><br><span class="line">                <span class="keyword">var</span> dialogMessage = <span class="string">'有新的版本,请下载更新'</span>;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// iOS端 直接弹窗提示升级，点击ok后自动跳转</span></span><br><span class="line">                <span class="keyword">if</span>(ionic.Platform.isIOS())&#123;</span><br><span class="line">                    chcp.requestApplicationUpdate(dialogMessage, <span class="keyword">this</span>.userWentToStoreCallback, <span class="keyword">this</span>.userDeclinedRedirectCallback);</span><br><span class="line">                <span class="comment">//Android端 提示升级下载最新APK文件 </span></span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span>(ionic.Platform.isAndroid())&#123;</span><br><span class="line">                    <span class="comment">//这儿放Android端更新代码...，在下面👇</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        userWentToStoreCallback: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// user went to the store from the dialog</span></span><br><span class="line">        &#125;,</span><br><span class="line">        userDeclinedRedirectCallback: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// User didn't want to leave the app.</span></span><br><span class="line">            <span class="comment">// Maybe he will update later.</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    appUpdate.initialize();</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>Android端添加代码👆 提示升级下载最新APK文件</strong></p>
+<blockquote></blockquote>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> confirmPopup = <span class="symbol">$io</span>nicPopup.confirm(&#123;</span><br><span class="line">  template: <span class="string">'有新的版本,请下载更新'</span>,</span><br><span class="line">  cssClass: <span class="string">'popup'</span>,</span><br><span class="line">  cancelText:<span class="string">'取消'</span>,</span><br><span class="line">  okText:<span class="string">'升级'</span></span><br><span class="line">&#125;);</span><br><span class="line">confirmPopup.then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (res) &#123;</span><br><span class="line">    <span class="symbol">$io</span>nicLoading.show(&#123;</span><br><span class="line">      template: <span class="string">"已经下载：0%"</span></span><br><span class="line">    &#125;);</span><br><span class="line">    window.resolveLocalFileSystemURL(cordova.file.externalRootDirectory, <span class="function"><span class="keyword">function</span>(<span class="params">fileEntry</span>) </span>&#123;</span><br><span class="line">      fileEntry.getDirectory(<span class="string">"***(app名称)"</span>, &#123; <span class="attr">create</span>: <span class="literal">true</span>, <span class="attr">exclusive</span>: <span class="literal">false</span> &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">fileEntry</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//下载代码</span></span><br><span class="line">        <span class="keyword">var</span> fileTransfer = <span class="keyword">new</span> FileTransfer();</span><br><span class="line">        fileTransfer.download(<span class="string">"app下载地址"</span>, fileEntry.toInternalURL()+<span class="string">"***(app名称).apk"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">entry</span>) </span>&#123;</span><br><span class="line">          <span class="comment">// 打开下载下来的APP</span></span><br><span class="line">          cordova.plugins.fileOpener2.open(</span><br><span class="line">            entry.toInternalURL(),<span class="comment">//下载文件保存地址</span></span><br><span class="line">            <span class="string">'application/vnd.android.package-archive'</span>, &#123;<span class="comment">//以APK文件方式打开</span></span><br><span class="line">              error: <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">              &#125;,</span><br><span class="line">              success: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">        &#125;,<span class="literal">true</span>);</span><br><span class="line">        fileTransfer.onprogress = <span class="function"><span class="keyword">function</span>(<span class="params">progressEvent</span>) </span>&#123;</span><br><span class="line">          <span class="symbol">$timeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> downloadProgress = (progressEvent.loaded / progressEvent.total) * <span class="number">100</span>;</span><br><span class="line">            <span class="symbol">$io</span>nicLoading.show(&#123;</span><br><span class="line">              template: <span class="string">"已经下载："</span> + Math.floor(downloadProgress) + <span class="string">"%"</span></span><br><span class="line">            &#125;);</span><br><span class="line">            <span class="keyword">if</span> (downloadProgress &gt; <span class="number">99</span>) &#123;</span><br><span class="line">              <span class="symbol">$io</span>nicLoading.hide();</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;;</span><br><span class="line">      &#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;alert(<span class="string">"创建失败"</span>)&#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>3、代码添加后，执行：<br>
+<code>$ cordova-hcp build</code><br>
+4、将www文件上传到服务器覆盖旧的，使用Xcode运行应用</p>
+<blockquote>
+<p><strong>注意</strong>&amp;出现问题****<br>
+1、没有弹框提示–第一次要清理下缓存/或把应用从模拟器卸掉，从新运行<br>
+2、网络若不好，反应会很慢，等会才会弹出。。。</p>
+</blockquote>
+<p>结果如图：<img src="http://ol3jdapgi.bkt.clouddn.com/17-2-23/84229099-file_1487836202356_da.png" alt></p>
+<h5><span id="chcpjson中update字段含义">chcp.json中update字段含义</span></h5>
+<p>指定了什么时候安装web内容更新，支持的值有：</p>
+<blockquote>
+<p>start  - app启动时安装更新，默认值<br>
+resume - app从后台切换过来的时候安装更新<br>
+now    - web内容下载完毕即安装更新</p>
+</blockquote>
+<p>好了，先总结这么多，可能会有些细节落下，望大家参考时，给我提下，我在继续补充。</p>
+
+
+                <hr>
+                <!-- Pager &rarr; 箭头 -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2017/03/22/Xcode中BuildSetting大小写设置/" data-toggle="tooltip" data-placement="top" title="XcodeBuildSetting中大小写设置"> Previous
+                            <br>
+                            <span>XcodeBuildSetting中大小写设置</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2017/02/16/HEXO-添加访问量统计/" data-toggle="tooltip" data-placement="top" title="HEXO 添加访问量统计">Next
+                            <br>
+                            <span>HEXO 添加访问量统计</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
+                
+
+                <!-- 来必力 start -->
+                
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">热更新的好处</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">内壳更新</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">基本的配置步骤</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">外壳更新</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">描述</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">外壳更新配置</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">通过min_native_interface监控app是否提示更新</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">具体步骤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.3.1.</span> <span class="toc-nav-text">chcp.json中update字段含义</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Ionic" title="Ionic">Ionic</a>
+                        
+                          <a class="tag" href="/tags/#热更新" title="热更新">热更新</a>
+                        
+                          <a class="tag" href="/tags/#hotUpdate" title="hotUpdate">hotUpdate</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
+                    
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
+                    
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
+                    
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
+                    
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
+                    
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
+                    
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
+                    
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
+                    
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
+                    
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
+                    
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
+                    
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
+                        <li><a href="" target="_blank">undefined</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
+<script>
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer>
+    <!-- <article class="bg-back top-line"></article> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2020
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    |
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <!-- <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span> -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                </p>
+                
+                <!-- 不蒜子 end -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- other wenzi.js -->
+<script src="/libs/other/wenzi.js"></script>
+
+<!-- 动态tab标签 -->
+
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 2.0rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
+
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+</body>
+
+</html>
