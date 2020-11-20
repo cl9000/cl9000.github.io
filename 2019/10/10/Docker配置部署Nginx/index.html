@@ -67,11 +67,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          国内解决 reCAPTCHA 无法访问 - 魏长露的博客 | Wei, C.-L. Blog
+          Docker配置部署Nginx - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
-    <link rel="canonical" href="https://cl9000.github.io/2019/10/21/解决recaptcha无法访问/">
+    <link rel="canonical" href="https://cl9000.github.io/2019/10/10/Docker配置部署Nginx/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -182,23 +182,23 @@
                         <div class="tags">
                             
                             <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#reCAPTCHA"
-                                title="reCAPTCHA">reCAPTCHA</a>
+                                href="/tags/#Docker"
+                                title="Docker">Docker</a>
                             
                             <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#Google人机验证"
-                                title="Google人机验证">Google人机验证</a>
+                                href="/tags/#Nginx"
+                                title="Nginx">Nginx</a>
                             
                             <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#gooreplacer"
-                                title="gooreplacer">gooreplacer</a>
+                                href="/tags/#Docker配置部署Nginx"
+                                title="Docker配置部署Nginx">Docker配置部署Nginx</a>
                             
                         </div>
-                        <h1>国内解决 reCAPTCHA 无法访问</h1>
-                        <h2 class="subheading">解决recaptcha无法访问</h2>
+                        <h1>Docker配置部署Nginx</h1>
+                        <h2 class="subheading">Docker配置部署Nginx</h2>
                         <span class="meta">
                             Posted by cl9000 on
-                            October 21, 2019
+                            October 10, 2019
                         </span>
                     </div>
                     
@@ -325,37 +325,53 @@
             <!-- Post Container -->
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/reCAPTCHA.png" alt="reCAPTCHA.png"></p>
-<ol>
-<li>
-<p>打开 Chrome 或 Firefox 浏览器，此以Chrome为主</p>
-</li>
-<li>
-<p>下载 gooreplacer <a href="https://pan.baidu.com/s/1n24QfvGstMfI27HpF3LVXw" target="_blank" rel="noopener">链接:https://pan.baidu.com/s/1n24QfvGstMfI27HpF3LVXw  密码:rb0d</a> 或方法二（此处不作具体介绍，内有详细操作方法）</p>
-</li>
-<li>
-<p>打开 <code>chrome://extensions/</code>，将下载的 <code>gooreplacer.crx</code> 拖进扩展，添加安装</p>
-</li>
-<li>
-<p>点击 Gooreplacer，打开 Gooreplacer操作面板</p>
-</li>
-<li>
-<p>点击 <code>新增</code></p>
-</li>
-<li>
-<p>在Source（匹配模式）框内填入 <code>www.google.com/recaptcha</code></p>
-</li>
-<li>
-<p>在Destination （目标地址）栏填入 <code>recaptcha.net/recaptcha</code></p>
-</li>
-<li>
-<p>点击 Submit （提交）</p>
-</li>
-<li>
-<p>重启浏览器，然后访问需要recaptcha的网站</p>
-</li>
-</ol>
-<p>注意：下载包内还有另一种方法，也可以尝试，此仅为收集方法，不做相关解释，不承担任何责任。</p>
+                <h2><span id="docker配置部署nginx">Docker配置部署Nginx</span></h2>
+<h3><span id="docker配置部署nginx-mac作为主机">Docker配置部署Nginx (Mac作为主机)</span></h3>
+<h4><span id="简介">简介</span></h4>
+<p>我们在进行web开发时，可以使用浏览器直接进行调试，涉及到部署到服务器可以使用Nginx、Tomcat、NodeServe等web服务进行部署测试。<br>
+下面我们使用Docker容器中Nginx来进行部署，然后通过docker启动Nginx，将Nginx配置及html目录映射到Mac本机，直接运行。</p>
+<h4><span id="docker-安装">Docker 安装</span></h4>
+<p><a href="https://cl9000.github.io/2020/01/17/Docker/">Docker 不同环境安装</a></p>
+<p>目前，我在Mac本机也安装了Docker，仅为走下面测试流程，服务器可参考各服务商的文档。<br>
+<a href="https://cloud.tencent.com/document/product/213/46000" target="_blank" rel="noopener">腾讯云服务器</a></p>
+<h4><span id="docker配置部署nginx">Docker配置部署Nginx</span></h4>
+<p>直接打开终端，执行<br>
+<code>$ docker version</code><br>
+正常安装了docker，响应类似如下：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Client: Docker Engine - Community</span><br><span class="line"> Cloud integration  0.1.18</span><br><span class="line"> Version:           19.03.13</span><br><span class="line"> <span class="built_in">..</span>. <span class="built_in">..</span>.</span><br><span class="line"></span><br><span class="line">Server: Docker Engine - Community</span><br><span class="line"> Engine:</span><br><span class="line">  Version:          19.03.13</span><br><span class="line">  <span class="built_in">..</span>. <span class="built_in">..</span>.</span><br><span class="line"> containerd:</span><br><span class="line">  Version:          v1.3.7</span><br><span class="line">  <span class="built_in">..</span>. <span class="built_in">..</span>.</span><br><span class="line"> runc:</span><br><span class="line">  Version:          1.0.0-rc10</span><br><span class="line">  <span class="built_in">..</span>. <span class="built_in">..</span>.</span><br><span class="line"> docker-init:</span><br><span class="line">  Version:          0.18.0</span><br><span class="line">  <span class="built_in">..</span>. <span class="built_in">..</span>.</span><br></pre></td></tr></table></figure>
+<h4><span id="正式步骤开始">正式步骤开始：</span></h4>
+<p><strong>1. 拉取 Nginx 镜像</strong><br>
+执行</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>docker pull nginx    /<span class="regexp">/ 优先本地，若本地无，则会 Pulling from library/nginx</span></span><br><span class="line"><span class="variable">$ </span>docker images</span><br></pre></td></tr></table></figure>
+<p>响应</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">REPOSITORY          <span class="keyword">TAG</span>                 <span class="title">IMAGE</span> ID            CREATED             SIZE</span><br><span class="line">nginx               latest              daee903b4e43        <span class="number">3</span> hours ago        <span class="number">133M</span>B</span><br></pre></td></tr></table></figure>
+<p><strong>2. 在主机上创建用于映射Nginx的目录（此处为我Mac主机，或个人云服务器）</strong><br>
+执行（此处我直接映射至桌面，或者可以直接映射至本地项目目录）</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir -p ~/Desktop/nginx_home<span class="built_in">/config </span>\</span><br><span class="line">&amp;&amp; mkdir -p ~/Desktop/nginx_home/conf.d \</span><br><span class="line">&amp;&amp;  mkdir -p ~/Desktop/nginx_home/logs</span><br></pre></td></tr></table></figure>
+<p><strong>3. 使用vim在 ~/Desktop/nginx_home/config 目录下生成 nginx.conf 文件，内容如下:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">user  nginx;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">error_log  /var/log/nginx/error.log warn;</span><br><span class="line">pid        /var/run/nginx.pid;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       /etc/nginx/mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    log_format  main  &apos;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &apos;</span><br><span class="line">                      &apos;$status $body_bytes_sent &quot;$http_referer&quot; &apos;</span><br><span class="line">                      &apos;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&apos;;</span><br><span class="line"></span><br><span class="line">    access_log  /var/log/nginx/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"></span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line">    #gzip  on;</span><br><span class="line"></span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>4. 使用vim 在 ~/Desktop/nginx_home/conf.d 生成 default.conf 文件，内容如下:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen       80;</span><br><span class="line">    server_name  localhost;</span><br><span class="line"></span><br><span class="line">    #charset koi8-r;</span><br><span class="line">    #access_log  /var/log/nginx/host.access.log  main;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root   /usr/share/nginx/html;</span><br><span class="line">        index  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    #error_page  404              /404.html;</span><br><span class="line"></span><br><span class="line">    # redirect server error pages to the static page /50x.html</span><br><span class="line">    #</span><br><span class="line">    error_page   500 502 503 504  /50x.html;</span><br><span class="line">    location = /50x.html &#123;</span><br><span class="line">        root   /usr/share/nginx/html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    # proxy the PHP scripts to Apache listening on 127.0.0.1:80</span><br><span class="line">    #</span><br><span class="line">    #location ~ \.php$ &#123;</span><br><span class="line">    #    proxy_pass   http://127.0.0.1;</span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span><br><span class="line">    #</span><br><span class="line">    #location ~ \.php$ &#123;</span><br><span class="line">    #    root           html;</span><br><span class="line">    #    fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">    #    fastcgi_index  index.php;</span><br><span class="line">    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;</span><br><span class="line">    #    include        fastcgi_params;</span><br><span class="line">    #&#125;</span><br><span class="line"></span><br><span class="line">    # deny access to .htaccess files, if Apache&apos;s document root</span><br><span class="line">    # concurs with nginx&apos;s one</span><br><span class="line">    #</span><br><span class="line">    #location ~ /\.ht &#123;</span><br><span class="line">    #    deny  all;</span><br><span class="line">    #&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>6. 运行如下的命令</strong><br>
+执行，获取镜像 IMAGE ID</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line"></span><br><span class="line">响应：</span><br><span class="line">$ docker images</span><br><span class="line">REPOSITORY          <span class="keyword">TAG</span>                 <span class="title">IMAGE</span> ID            CREATED             SIZE</span><br><span class="line">nginx               latest              daee903b4e43        <span class="number">3</span> hours ago        <span class="number">133M</span>B</span><br></pre></td></tr></table></figure>
+<p>执行，启动容器和映射目录命令，注意路径，</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name web-nginx -p <span class="number">8100</span>:<span class="number">80</span> \</span><br><span class="line">  -v <span class="regexp">~/Desktop/</span>nginx_home<span class="regexp">/config/</span>nginx.<span class="string">conf:</span><span class="regexp">/etc/</span>nginx/nginx.conf \</span><br><span class="line">  -v <span class="regexp">~/Desktop/</span>nginx_home<span class="regexp">/conf.d:/</span>etc<span class="regexp">/nginx/</span>conf.d \</span><br><span class="line">  -v <span class="regexp">~/Desktop/</span>nginx_home<span class="regexp">/logs:/</span>var<span class="regexp">/log/</span>nginx \</span><br><span class="line">  -v <span class="regexp">~/Desktop/</span>nginx_home<span class="regexp">/webs:/</span>usr<span class="regexp">/share/</span>nginx \</span><br><span class="line">  -d daee903b4e43</span><br></pre></td></tr></table></figure>
+<p><strong>7. 浏览器验证</strong><br>
+<a href="http://localhost:8100" target="_blank" rel="noopener"> http://localhost:8100</a>即可 进入到nginx欢迎页面。</p>
+<p>如果想要正式点，可以修改本地host文件映射一个域名。<br>
+Mac host文件路径 ~/etc/<br>
+修改 host 文件（复制修改），新增一行，保存。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span> 	test2.com</span><br></pre></td></tr></table></figure>
+<p>再次浏览器验证：<br>
+<a href="http://test2.com:8100" target="_blank" rel="noopener">http://test2.com:8100</a>即可 进入到nginx欢迎页面。</p>
+<h4><span id="使用命令">使用命令</span></h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">docker pull nginx</span><br><span class="line">docker images</span><br><span class="line">docker run -d --name=web -p <span class="number">80</span>:<span class="number">80</span> nginx:latest  映射端口启动容器</span><br><span class="line">docker exec -i -t web bash  进入容器bash</span><br><span class="line">ps -l 、 ps -ef  (无ps 执行$ apt-<span class="keyword">get</span> update &amp;&amp; apt-<span class="keyword">get</span> install procps) </span><br><span class="line"></span><br><span class="line">docker inspect web</span><br><span class="line">docker network ls可以看到所有的驱动</span><br><span class="line">ifconfig</span><br><span class="line">iptables -t nat -xvL 命令可以看到添加的nat规则</span><br><span class="line">docker logs web 查看日志</span><br><span class="line"></span><br><span class="line">(无vim 执行$ apt-<span class="keyword">get</span> update &amp;&amp; apt-<span class="keyword">get</span> install vim) </span><br><span class="line">(无 lrzsz 执行$ apt-<span class="keyword">get</span> update &amp;&amp; apt-<span class="keyword">get</span> install lrzsz) 文件上传到docker里 </span><br><span class="line">路径下执行 $ rz</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">mkdir -p ~/Desktop/nginx_home/config  \</span><br><span class="line">&amp;&amp; mkdir -p ~/Desktop/nginx_home/conf.d  \</span><br><span class="line">&amp;&amp; mkdir -p ~/Desktop/nginx_home/logs</span><br><span class="line"></span><br><span class="line">docker run --name web-nginx -p 8100:80 \</span><br><span class="line">  -v ~/Desktop/nginx_home/config/nginx.conf:/etc/nginx/nginx.conf \</span><br><span class="line">  -v ~/Desktop/nginx_home/conf.d:/etc/nginx/conf.d \</span><br><span class="line">  -v ~/Desktop/nginx_home/logs:/var/log/nginx \</span><br><span class="line">  -v ~/Desktop/nginx_home/webs:/usr/share/nginx \</span><br><span class="line">  -d daee903b4e43</span><br><span class="line"></span><br><span class="line"> http://localhost:8100</span><br></pre></td></tr></table></figure>
+<h3><span id="ref">Ref</span></h3>
+<ul>
+<li><a href="https://segmentfault.com/a/1190000020618395" target="_blank" rel="noopener">https://segmentfault.com/a/1190000020618395</a></li>
+<li><a href="https://blog.51cto.com/12445563/2067064" target="_blank" rel="noopener">Docker部署nginx实现负载均衡</a></li>
+</ul>
 
 
                 <hr>
@@ -363,17 +379,17 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2019/12/20/Hexo博客部署到Coding-gitee-GitHub/" data-toggle="tooltip" data-placement="top" title="Hexo博客部署到Coding、Gitee、GitHub"> Previous
+                            <a href="/2019/10/21/解决recaptcha无法访问/" data-toggle="tooltip" data-placement="top" title="国内解决 reCAPTCHA 无法访问"> Previous
                             <br>
-                            <span>Hexo博客部署到Coding、Gitee、GitHub</span>
+                            <span>国内解决 reCAPTCHA 无法访问</span>
                             </a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2019/10/10/Docker配置部署Nginx/" data-toggle="tooltip" data-placement="top" title="Docker配置部署Nginx">Next
+                            <a href="/2019/09/26/Github搭建图床/" data-toggle="tooltip" data-placement="top" title="在GitHub搭建免费图床">Next
                             <br>
-                            <span>Docker配置部署Nginx</span>
+                            <span>在GitHub搭建免费图床</span>
                             </a>
                         </li>
                     
@@ -426,7 +442,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="nav">none</ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Docker配置部署Nginx</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">Docker配置部署Nginx (Mac作为主机)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.2.</span> <span class="toc-nav-text">Docker 安装</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.3.</span> <span class="toc-nav-text">Docker配置部署Nginx</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.4.</span> <span class="toc-nav-text">正式步骤开始：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.1.5.</span> <span class="toc-nav-text">使用命令</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">Ref</span></a></li></ol></li></ol>
         
         </div>
       </aside>
@@ -443,11 +459,11 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#reCAPTCHA" title="reCAPTCHA">reCAPTCHA</a>
+                          <a class="tag" href="/tags/#Docker" title="Docker">Docker</a>
                         
-                          <a class="tag" href="/tags/#Google人机验证" title="Google人机验证">Google人机验证</a>
+                          <a class="tag" href="/tags/#Nginx" title="Nginx">Nginx</a>
                         
-                          <a class="tag" href="/tags/#gooreplacer" title="gooreplacer">gooreplacer</a>
+                          <a class="tag" href="/tags/#Docker配置部署Nginx" title="Docker配置部署Nginx">Docker配置部署Nginx</a>
                         
                     </div>
                 </section>
