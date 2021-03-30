@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 start -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+    <!-- 回到顶部样式 end -->
+
+
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5">
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword" content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          值得收藏的[CSS]形状 - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/2020/03/30/值得收藏的-CSS-形状/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+    
+
+    /* 滚动条自定义 start */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color:transparent; */
+        /* -webkit-border-radius:2em; */
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(4, 125, 238);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    /* 滚动条自定义 end */
+
+    header.intro-header {
+        background-image: url('/img/article_header/article_bg.jpg');
+            /*post*/
+            
+    }
+
+    
+
+    /* tools heading */
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#CSS"
+                                title="CSS">CSS</a>
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#形状"
+                                title="形状">形状</a>
+                            
+                        </div>
+                        <h1>值得收藏的[CSS]形状</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            March 30, 2020
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="searchIcon">
+                        <a href="#searchModal">
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <p>译者：cl9000</p>
+<p>原文：<a href="https://css-tricks.com/the-shapes-of-css/" target="_blank" rel="noopener">https://css-tricks.com/the-shapes-of-css/</a></p>
+<p>CSS能够制作各种形状。方形和长方形很简单，因为它们是网的自然形状。添加宽度和高度，你就有了你需要的确切大小的矩形。添加边界半径，你可以圆形的形状，和足够的它，你可以把这些矩形变成圆形和椭圆形。</p>
+<p>我们还在CSS中获得了::before和::after伪元素，这使我们可以向原始元素添加两个形状。通过巧妙地使用定位、转换和许多其他技巧，我们可以只用一个HTML元素在CSS中创建许多形状。</p>
+<blockquote>
+<p>These days, you’re best bet for drawing shapes is either SVG or using a clip-path in CSS, which is SVG-like (and can reference SVG). For example, look at these SVG icon sets, or this clip-path editor. This article was written originally before either of these technologies really took hold!</p>
+</blockquote>
+<p>【译文】虽然我们现在大都使用字体图标或者svg图片，似乎使用 CSS 来做图标意义不是很大，但怎么实现这些图标用到的一些技巧及思路是很值得我们的学习。</p>
+<p></p><h3><span id="矩形rectangle-shape">矩形（Rectangle Shape）</span></h3><p></p>
+<div id="rectangle"></div>
+<style contenteditable>
+    #rectangle {
+        width: 200px;
+        height: 100px;
+        background: red;
+    }
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#rectangle</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="圆形circle-shape">圆形（Circle Shape）</span></h3>
+<div id="circle"></div>
+<style contenteditable>
+#circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    border-radius: 50%
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#circle</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="椭圆形oval-shape">椭圆形（Oval Shape）</span></h3>
+<div id="oval"></div>
+<style contenteditable>
+#oval {
+    width: 200px;
+    height: 100px;
+    background: red;
+    border-radius: 100px / 50px;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#oval</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">100px</span> / <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="上三角形triangle-up-shape">上三角形（Triangle Up Shape）</span></h3>
+<div id="triangle-up"></div>
+<style contenteditable>
+#triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-up</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="下三角形-triangle-down-shape">下三角形 （Triangle Down Shape）</span></h3>
+<div id="triangle-down"></div>
+<style contenteditable>
+#triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-up</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="左三角形-triangle-left-shape">左三角形 （Triangle Left Shape）</span></h3>
+<div id="triangle-left"></div>
+<style contenteditable>
+#triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-right: 100px solid red;
+    border-bottom: 50px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-left</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="右三角形-triangle-right-shape">右三角形 （Triangle Right Shape）</span></h3>
+<div id="triangle-right"></div>
+<style contenteditable>
+#triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 100px solid red;
+    border-bottom: 50px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-right</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="左上角三角形-triangle-top-left-shape">左上角三角形 （Triangle Top Left Shape）</span></h3>
+<div id="triangle-topleft"></div>
+<style contenteditable>
+#triangle-topleft {
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-right: 100px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topleft</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="右上角三角形-triangle-top-right-shape">右上角三角形 （Triangle Top Right Shape）</span></h3>
+<div id="triangle-topright"></div>
+<style contenteditable>
+#triangle-topright {
+    width: 0;
+    height: 0;
+    border-top: 100px solid red;
+    border-left: 100px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-topright</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="左下角三角形-triangle-bottom-left-shape">左下角三角形 （Triangle Bottom Left Shape）</span></h3>
+<div id="triangle-bottomleft"></div>
+<style contenteditable>
+#triangle-bottomleft {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid red;
+    border-right: 100px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomleft</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="右下角三角形-triangle-bottom-right-shape">右下角三角形 （Triangle Bottom Right Shape）</span></h3>
+<div id="triangle-bottomright"></div>
+<style contenteditable>
+#triangle-bottomright {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid red;
+    border-left: 100px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#triangle-bottomright</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="弯尾箭形-curved-tail-arrow-shape">弯尾箭形 （Curved Tail Arrow Shape）</span></h3>
+<div id="curvedarrow"></div>
+<style contenteditable>
+    #curvedarrow {
+      position: relative;
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-right: 9px solid red;
+      transform: rotate(10deg);
+    }
+    #curvedarrow:after {
+      content: "";
+      position: absolute;
+      border: 0 solid transparent;
+      border-top: 3px solid red;
+      border-radius: 20px 0 0 0;
+      top: -12px;
+      left: -9px;
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+    }
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#curvedarrow</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">9px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">9px</span> solid red;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">10deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#curvedarrow</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">3px</span> solid red;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">20px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">9px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="梯形-trapezoid-shape">梯形 （Trapezoid Shape）</span></h3>
+<div id="trapezoid"></div>
+<style contenteditable>
+#trapezoid {
+    border-bottom: 100px solid red;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 100px;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#trapezoid</span> &#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">25px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">25px</span> solid transparent;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="平行四边-parallelogram-shape">平行四边 （Parallelogram Shape）</span></h3>
+<div id="parallelogram"></div>
+<style contenteditable>
+#parallelogram {
+    width: 150px;
+    height: 100px;
+    transform: skew(20deg);
+    background: red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#parallelogram</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">20deg</span>);</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="星6分的形状-star-6-points-shape">星(6分)的形状 （Star (6-points) Shape）</span></h3>
+<div id="star-six"></div>
+<br>
+<style contenteditable>
+#star-six {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    position: relative;
+}
+#star-six:after {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid red;
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: -50px;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#parallelogram</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">20deg</span>);</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="星5分的形状-star-5-points-shape">星(5分)的形状 （Star (5-points) Shape）</span></h3>
+<br>
+<div id="star-five"></div>
+<style contenteditable>
+    #star-five {
+      margin: 50px 0;
+      position: relative;
+      display: block;
+      color: red;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid red;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+    }
+    #star-five:before {
+      border-bottom: 80px solid red;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      position: absolute;
+      height: 0;
+      width: 0;
+      top: -45px;
+      left: -65px;
+      display: block;
+      content: '';
+      transform: rotate(-35deg);
+    }
+    #star-five:after {
+      position: absolute;
+      display: block;
+      color: red;
+      top: 3px;
+      left: -105px;
+      width: 0px;
+      height: 0px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid red;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+      content: '';
+    }
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#star-five</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">50px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">70px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">35deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#star-five</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">80px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">30px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">30px</span> solid transparent;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">45px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">65px</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-<span class="number">35deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#star-five</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">105px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">70px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">100px</span> solid transparent;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-<span class="number">70deg</span>);</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="五角大楼的形状-pentagon-shape">五角大楼的形状 （Pentagon Shape）</span></h3>
+<p><br><br></p>
+<div id="pentagon"></div>
+<style contenteditable>
+#pentagon {
+    position: relative;
+    width: 54px;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: red transparent;
+}
+#pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#parallelogram</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">20deg</span>);</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="六边形的形状-hexagon-shape">六边形的形状 （Hexagon Shape）</span></h3>
+<br>
+<div id="hexagon"></div>
+<br>
+<style contenteditable>
+#hexagon {
+  width: 100px;
+  height: 57.735px;
+  background: red;
+  position: relative;
+}
+#hexagon::before {
+  content: "";
+  position: absolute;
+  top: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 28.8675px solid red;
+}
+#hexagon::after {
+  content: "";
+  position: absolute;
+  bottom: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 28.8675px solid red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#parallelogram</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">20deg</span>);</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="八角形状-octagon-shape">八角形状 （Octagon Shape）</span></h3>
+<div id="octagon"></div>
+<style contenteditable>
+#octagon {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+}
+#octagon:before {
+    content: "";
+    width: 100px;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 29px solid red;
+    border-left: 29px solid #eee;
+    border-right: 29px solid #eee;
+}
+#octagon:after {
+    content: "";
+    width: 100px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 29px solid red;
+    border-left: 29px solid #eee;
+    border-right: 29px solid #eee;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#octagon</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#octagon</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">29px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">29px</span> solid <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">29px</span> solid <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#octagon</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">29px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">29px</span> solid <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">29px</span> solid <span class="number">#eee</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="心形-heart-shape">心形 （Heart Shape）</span></h3>
+<div id="heart"></div>
+<style contenteditable>
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#heart</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">90px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#heart</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#heart</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50px</span> <span class="number">50px</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-<span class="number">45deg</span>);</span><br><span class="line">    <span class="attribute">transform-origin</span>: <span class="number">0</span> <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#heart</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);</span><br><span class="line">    <span class="attribute">transform-origin</span>: <span class="number">100%</span> <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="形状-infinity-shape">∞形状 （Infinity Shape ）</span></h3>
+<div id="infinity"></div>
+<style contenteditable>
+#infinity {
+    position: relative;
+    width: 212px;
+    height: 100px;
+    box-sizing: content-box;
+}
+#infinity:before,
+#infinity:after {
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 20px solid red;
+    border-radius: 50px 50px 0 50px;
+    transform: rotate(-45deg);
+}
+#infinity:after {
+    left: auto;
+    right: 0;
+    border-radius: 50px 50px 50px 0;
+    transform: rotate(45deg);
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#infinity</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">212px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#infinity</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#infinity</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">20px</span> solid red;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50px</span> <span class="number">50px</span> <span class="number">0</span> <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-<span class="number">45deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#infinity</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: auto;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50px</span> <span class="number">50px</span> <span class="number">50px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="钻石广场形状-diamond-square-shape">钻石广场形状 （Diamond Square Shape）</span></h3>
+<div id="diamond"></div>
+<style contenteditable>
+#diamond {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: red;
+    position: relative;
+    top: -50px;
+}
+#diamond:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 50px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#diamond</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-bottom-color</span>: red;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#diamond</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-top-color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="钻石盾牌形状-diamond-shield-shape">钻石盾牌形状 （Diamond Shield Shape）</span></h3>
+<div id="diamond-shield"></div>
+<style contenteditable>
+#diamond-shield {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom: 20px solid red;
+    position: relative;
+    top: -50px;
+}
+#diamond-shield:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 70px solid red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#diamond-shield</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">20px</span> solid red;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#diamond-shield</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">70px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="钻石狭窄的形状-diamond-narrow-shape">钻石狭窄的形状 （Diamond Narrow Shape）</span></h3>
+<div id="diamond-narrow"></div>
+<style contenteditable>
+#diamond-narrow {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom: 70px solid red;
+    position: relative;
+    top: -50px;
+}
+#diamond-narrow:after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 70px;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 70px solid red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#diamond-narrow</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">70px</span> solid red;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#diamond-narrow</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">70px</span> solid red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="切割钻石形状-cut-diamond-shape">切割钻石形状 （Cut Diamond Shape）</span></h3>
+<div id="cut-diamond"></div>
+<style contenteditable>
+#cut-diamond {
+    border-style: solid;
+    border-color: transparent transparent red transparent;
+    border-width: 0 25px 25px 25px;
+    height: 0;
+    width: 50px;
+    box-sizing: content-box;
+    position: relative;
+    margin: 20px 0 50px 0;
+}
+#cut-diamond:after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: -25px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+    border-width: 70px 50px 0 50px;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#cut-diamond</span> &#123;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: transparent transparent red transparent;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">0</span> <span class="number">25px</span> <span class="number">25px</span> <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">0</span> <span class="number">50px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#cut-diamond</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-color</span>: red transparent transparent transparent;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">70px</span> <span class="number">50px</span> <span class="number">0</span> <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="鸡蛋的形状-egg-shape">鸡蛋的形状 （Egg Shape）</span></h3>
+<div id="egg"></div>
+<style contenteditable>
+#egg {
+    display: block;
+    width: 126px;
+    height: 180px;
+    background-color: red;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#egg</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">126px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">180px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: red;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span> <span class="number">50%</span> <span class="number">50%</span> <span class="number">50%</span> / <span class="number">60%</span> <span class="number">60%</span> <span class="number">40%</span> <span class="number">40%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="吃豆人的形状-pac-man-shape">吃豆人的形状 （Pac-Man Shape）</span></h3>
+<div id="pacman"></div>
+<style contenteditable>
+#pacman {
+    width: 0px;
+    height: 0px;
+    border-right: 60px solid transparent;
+    border-top: 60px solid red;
+    border-left: 60px solid red;
+    border-bottom: 60px solid red;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#pacman</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">60px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">60px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">60px</span> solid red;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">60px</span> solid red;</span><br><span class="line">    <span class="attribute">border-top-left-radius</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">border-bottom-left-radius</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">border-bottom-right-radius</span>: <span class="number">60px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="谈论泡沫形状-talk-bubble-shape">谈论泡沫形状 （Talk Bubble Shape）</span></h3>
+<div id="talkbubble"></div>
+<style contenteditable>
+#talkbubble {
+    width: 120px;
+    height: 80px;
+    background: red;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#talkbubble:before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 26px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-right: 26px solid red;
+    border-bottom: 13px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#talkbubble</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">-moz-border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">-webkit-border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#talkbubble</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">26px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">13px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">26px</span> solid red;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">13px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="rss提要的形状-rss-feed-shape">RSS提要的形状 （RSS Feed Shape）</span></h3>
+<div id="rss"></div>
+<style contenteditable>
+#rss {
+    width: 20em;
+    height: 20em;
+    border-radius: 3em;
+    background-color: #ff0000;
+    font-size: 14px;
+  }
+#rss:before {
+    content: '';
+    z-index: 1;
+    display: block;
+    height: 5em;
+    width: 5em;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 11.5em;
+    left: 3.5em;
+  }
+#rss:after {
+    content: '';
+    display: block;
+    background: #ff0000;
+    width: 13em;
+    height: 13em;
+    top: -2em;
+    left: 3.8em;
+    border-radius: 2.5em;
+    position: relative;
+    box-shadow:
+      -2em 2em 0 0 #fff inset,
+      -4em 4em 0 0 #ff0000 inset,
+      -6em 6em 0 0 #fff inset
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#rss</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20em</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3em</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#ff0000</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="selector-id">#rss</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">5em</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">5em</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#fff</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">11.5em</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">3.5em</span>;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="selector-id">#rss</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#ff0000</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">13em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">13em</span>;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">2em</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">3.8em</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">2.5em</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">box-shadow</span>:</span><br><span class="line">      -<span class="number">2em</span> <span class="number">2em</span> <span class="number">0</span> <span class="number">0</span> <span class="number">#fff</span> inset,</span><br><span class="line">      -<span class="number">4em</span> <span class="number">4em</span> <span class="number">0</span> <span class="number">0</span> <span class="number">#ff0000</span> inset,</span><br><span class="line">      -<span class="number">6em</span> <span class="number">6em</span> <span class="number">0</span> <span class="number">0</span> <span class="number">#fff</span> inset</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="12点爆破形状-12-point-burst-shape">12点爆破形状 （12 Point Burst Shape）</span></h3>
+<div id="burst-12"></div>
+<style contenteditable>
+#burst-12 {
+    background: red;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+}
+#burst-12:before,
+#burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    background: red;
+}
+#burst-12:before {
+    transform: rotate(30deg);
+}
+#burst-12:after {
+    transform: rotate(60deg);
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#burst-12</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#burst-12</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#burst-12</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#burst-12</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">30deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#burst-12</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">60deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="8点爆破形状-8-point-burst-shape">8点爆破形状 （8 Point Burst Shape）</span></h3>
+<div id="burst-8"></div>
+<style contenteditable>
+#burst-8 {
+    background: red;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    text-align: center;
+    transform: rotate(20deg);
+}
+#burst-8:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 80px;
+    background: red;
+    transform: rotate(135deg);
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#burst-8</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">20deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#burst-8</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">135deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="阴阳形状太极-yin-yang-shape">阴阳形状/太极 （Yin Yang Shape）</span></h3>
+<div id="yin-yang"></div>
+<style contenteditable>
+#yin-yang {
+    width: 96px;
+    box-sizing: content-box;
+    height: 48px;
+    background: #eee;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    position: relative;
+}
+#yin-yang:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #eee;
+    border: 18px solid red;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+#yin-yang:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: red;
+    border: 18px solid #eee;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    box-sizing: content-box;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#yin-yang</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">96px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">48px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-color</span>: red;</span><br><span class="line">    <span class="attribute">border-style</span>: solid;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">2px</span> <span class="number">2px</span> <span class="number">50px</span> <span class="number">2px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#yin-yang</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">18px</span> solid red;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#yin-yang</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">18px</span> solid <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="徽章丝带形状-badge-ribbon-shape">徽章丝带形状 （Badge Ribbon Shape）</span></h3>
+<div id="badge-ribbon"></div>
+<br>
+<style contenteditable>
+#badge-ribbon {
+    position: relative;
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+}
+#badge-ribbon:before,
+#badge-ribbon:after {
+    content: '';
+    position: absolute;
+    border-bottom: 70px solid red;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    top: 70px;
+    left: -10px;
+    transform: rotate(-140deg);
+}
+#badge-ribbon:after {
+    left: auto;
+    right: -10px;
+    transform: rotate(140deg);
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#badge-ribbon</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#badge-ribbon</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#badge-ribbon</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">70px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">40px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">40px</span> solid transparent;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">70px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(-<span class="number">140deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#badge-ribbon</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">left</span>: auto;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">140deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="太空入侵者的形状-space-invader-shape">太空入侵者的形状 （Space Invader Shape）</span></h3>
+<div id="space-invader"></div>
+<style contenteditable>
+#space-invader {
+    box-shadow: 0 0 0 1em red,
+    0 1em 0 1em red,
+    -2.5em 1.5em 0 .5em red,
+    2.5em 1.5em 0 .5em red,
+    -3em -3em 0 0 red,
+    3em -3em 0 0 red,
+    -2em -2em 0 0 red,
+    2em -2em 0 0 red,
+    -3em -1em 0 0 red,
+    -2em -1em 0 0 red,
+    2em -1em 0 0 red,
+    3em -1em 0 0 red,
+    -4em 0 0 0 red,
+    -3em 0 0 0 red,
+    3em 0 0 0 red,
+    4em 0 0 0 red,
+    -5em 1em 0 0 red,
+    -4em 1em 0 0 red,
+    4em 1em 0 0 red,
+    5em 1em 0 0 red,
+    -5em 2em 0 0 red,
+    5em 2em 0 0 red,
+    -5em 3em 0 0 red,
+    -3em 3em 0 0 red,
+    3em 3em 0 0 red,
+    5em 3em 0 0 red,
+    -2em 4em 0 0 red,
+    -1em 4em 0 0 red,
+    1em 4em 0 0 red,
+    2em 4em 0 0 red;
+    background: red;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    margin: 50px 0 70px 65px;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#space-invader</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1em</span> red,</span><br><span class="line">    <span class="number">0</span> <span class="number">1em</span> <span class="number">0</span> <span class="number">1em</span> red,</span><br><span class="line">    -<span class="number">2.5em</span> <span class="number">1.5em</span> <span class="number">0</span> .<span class="number">5em</span> red,</span><br><span class="line">    <span class="number">2.5em</span> <span class="number">1.5em</span> <span class="number">0</span> .<span class="number">5em</span> red,</span><br><span class="line">    -<span class="number">3em</span> -<span class="number">3em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">3em</span> -<span class="number">3em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">2em</span> -<span class="number">2em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">2em</span> -<span class="number">2em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">3em</span> -<span class="number">1em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">2em</span> -<span class="number">1em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">2em</span> -<span class="number">1em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">3em</span> -<span class="number">1em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">4em</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">3em</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">3em</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">4em</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">5em</span> <span class="number">1em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">4em</span> <span class="number">1em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">4em</span> <span class="number">1em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">5em</span> <span class="number">1em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">5em</span> <span class="number">2em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">5em</span> <span class="number">2em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">5em</span> <span class="number">3em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">3em</span> <span class="number">3em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">3em</span> <span class="number">3em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">5em</span> <span class="number">3em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">2em</span> <span class="number">4em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    -<span class="number">1em</span> <span class="number">4em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">1em</span> <span class="number">4em</span> <span class="number">0</span> <span class="number">0</span> red,</span><br><span class="line">    <span class="number">2em</span> <span class="number">4em</span> <span class="number">0</span> <span class="number">0</span> red;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">50px</span> <span class="number">0</span> <span class="number">70px</span> <span class="number">65px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="电视屏幕的形状-tv-screen-shape">电视屏幕的形状 （TV Screen Shape）</span></h3>
+<div id="tv"></div>
+<style contenteditable>
+#tv {
+    position: relative;
+    width: 200px;
+    height: 150px;
+    margin: 20px 0;
+    background: red;
+    border-radius: 50% / 10%;
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+}
+#tv:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    background: inherit;
+    border-radius: 5% / 50%;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#tv</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">20px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span> / <span class="number">10%</span>;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">text-indent</span>: .<span class="number">1em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#tv</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">10%</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">10%</span>;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">5%</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">5%</span>;</span><br><span class="line">    <span class="attribute">background</span>: inherit;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5%</span> / <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="雪佛龙的形状-chevron-shape">雪佛龙的形状 （Chevron Shape）</span></h3>
+<br>
+<div id="chevron"></div>
+<style contenteditable>
+#chevron {
+    position: relative;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 6px;
+    height: 60px;
+    width: 200px;
+}
+#chevron:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 51%;
+    background: red;
+    transform: skew(0deg, 6deg);
+}
+#chevron:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: red;
+    transform: skew(0deg, -6deg);
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#chevron</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>: <span class="number">6px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#chevron</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">51%</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">0deg</span>, <span class="number">6deg</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#chevron</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">skew</span>(<span class="number">0deg</span>, -<span class="number">6deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="放大镜的形状-magnifying-glass-shape">放大镜的形状 （Magnifying Glass Shape）</span></h3>
+<div id="magnifying-glass"></div>
+<style contenteditable>
+#magnifying-glass {
+    font-size: 10em;
+    display: inline-block;
+    width: 0.4em;
+    box-sizing: content-box;
+    height: 0.4em;
+    border: 0.1em solid red;
+    position: relative;
+    border-radius: 0.35em;
+}
+#magnifying-glass:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -0.25em;
+    bottom: -0.1em;
+    border-width: 0;
+    background: red;
+    width: 0.35em;
+    height: 0.08em;
+    transform: rotate(45deg);
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#magnifying-glass</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">10em</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0.4em</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0.4em</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0.1em</span> solid red;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">0.35em</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#magnifying-glass</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">0.25em</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">0.1em</span>;</span><br><span class="line">    <span class="attribute">border-width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0.35em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0.08em</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="脸书图标-facebook-icon-shape">脸书图标 （Facebook Icon Shape）</span></h3>
+<div id="facebook-icon"></div>
+<style contenteditable>
+#facebook-icon {
+    background: red;
+    text-indent: -999em;
+    width: 100px;
+    height: 110px;
+    box-sizing: content-box;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    border: 15px solid red;
+    border-bottom: 0;
+}
+#facebook-icon:before {
+    content: "/20";
+    position: absolute;
+    background: red;
+    width: 40px;
+    height: 90px;
+    bottom: -30px;
+    right: -37px;
+    border: 20px solid #eee;
+    border-radius: 25px;
+    box-sizing: content-box;
+}
+#facebook-icon:after {
+    content: "/20";
+    position: absolute;
+    width: 55px;
+    top: 50px;
+    height: 20px;
+    background: #eee;
+    right: 5px;
+    box-sizing: content-box;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#facebook-icon</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">text-indent</span>: -<span class="number">999em</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">110px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">15px</span> solid red;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#facebook-icon</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"/20"</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">90px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">37px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">20px</span> solid <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">25px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#facebook-icon</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">"/20"</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">55px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="月亮形状-moon-shape">月亮形状 （Moon Shape）</span></h3>
+<div id="moon"></div><br>
+<style contenteditable>
+#moon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 0 red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#moon</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">15px</span> <span class="number">15px</span> <span class="number">0</span> <span class="number">0</span> red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="标签形状-flag-shape">标签形状 （Flag Shape）</span></h3>
+<div id="flag"></div><br>
+<style contenteditable>
+#flag {
+    width: 110px;
+    height: 56px;
+    box-sizing: content-box;
+    padding-top: 15px;
+    position: relative;
+    background: red;
+    color: white;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+}
+#flag:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 13px solid #eee;
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#flag</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">110px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">56px</span>;</span><br><span class="line">    <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">    <span class="attribute">padding-top</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">11px</span>;</span><br><span class="line">    <span class="attribute">letter-spacing</span>: <span class="number">0.2em</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">text-transform</span>: uppercase;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#flag</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">13px</span> solid <span class="number">#eee</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">55px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">55px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="锥形状-cone-shape">锥形状 （Cone Shape ）</span></h3>
+<div id="cone"></div><br>
+<style contenteditable>
+#cone {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-top: 100px solid red;
+    border-radius: 50%;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#cone</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">70px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">70px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">100px</span> solid red;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="十字形状-cross-shape">十字形状 （Cross Shape）</span></h3>
+<div id="cross"></div><br>
+<style contenteditable>
+#cross {
+    background: red;
+    height: 100px;
+    position: relative;
+    width: 20px;
+}
+#cross:after {
+    background: red;
+    content: "";
+    height: 20px;
+    left: -40px;
+    position: absolute;
+    top: 40px;
+    width: 100px;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#cross</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#cross</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="基地形状-base-shape">基地形状 （Base Shape）</span></h3>
+<div id="base"></div><br>
+<style contenteditable>
+#base {
+    background: red;
+    display: inline-block;
+    height: 55px;
+    margin-left: 20px;
+    margin-top: 55px;
+    position: relative;
+    width: 100px;
+}
+#base:before {
+    border-bottom: 35px solid red;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    content: "";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: -35px;
+    width: 0;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#base</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: red;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">55px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">55px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#base</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">35px</span> solid red;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">50px</span> solid transparent;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">35px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="指针的形状-pointer-shape">指针的形状 (Pointer Shape）</span></h3>
+<div id="pointer"></div><br>
+<style contenteditable>
+#pointer {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: red;
+}
+#pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+#pointer:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid red;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#pointer</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#pointer</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">20px</span> solid white;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">20px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">20px</span> solid transparent;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#pointer</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">20px</span> solid red;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">20px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">20px</span> solid transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="锁的形状-lock-shape">锁的形状 （Lock Shape）</span></h3>
+<div id="lock"></div><br>
+<style contenteditable>
+#lock {
+    font-size: 8px;
+    position: relative;
+    width: 18em;
+    height: 13em;
+    border-radius: 2em;
+    top: 10em;
+    box-sizing: border-box;
+    border: 3.5em solid red;
+    border-right-width: 7.5em;
+    border-left-width: 7.5em;
+    margin: 0 0 6rem 0;
+}
+#lock:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: 2.5em solid red;
+    width: 14em;
+    height: 12em;
+    left: 50%;
+    margin-left: -7em;
+    top: -12em;
+    border-top-left-radius: 7em;
+    border-top-right-radius: 7em;
+}
+#lock:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: 1em solid red;
+    width: 5em;
+    height: 8em;
+    border-radius: 2.5em;
+    left: 50%;
+    top: -1em;
+    margin-left: -2.5em;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#moon</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">15px</span> <span class="number">15px</span> <span class="number">0</span> <span class="number">0</span> red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3><span id="扭转角的形状-reverse-corners-shape">扭转角的形状 （Reverse Corners Shape）</span></h3>
+<div id="moon"></div><br>
+<style contenteditable>
+#curved-corner-bottomleft,
+#curved-corner-bottomright,
+#curved-corner-topleft,
+#curved-corner-topright {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+#curved-corner-bottomleft:before,
+#curved-corner-bottomright:before,
+#curved-corner-topleft:before,
+#curved-corner-topright:before {
+  content: "";
+  display: block;
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  border-radius: 50%;
+}
+#curved-corner-bottomleft:before {
+  bottom: 0;
+  left: 0;
+  box-shadow: -50px 50px 0 0 red;
+}
+#curved-corner-bottomright:before {
+  bottom: 0;
+  right: 0;
+  box-shadow: 50px 50px 0 0 red;
+}
+#curved-corner-topleft:before {
+  top: 0;
+  left: 0;
+  box-shadow: -50px -50px 0 0 red;
+}
+#curved-corner-topright:before {
+  top: 0;
+  right: 0;
+  box-shadow: 50px -50px 0 0 red;
+}
+</style>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#curved-corner-bottomleft</span>,</span><br><span class="line"><span class="selector-id">#curved-corner-bottomright</span>,</span><br><span class="line"><span class="selector-id">#curved-corner-topleft</span>,</span><br><span class="line"><span class="selector-id">#curved-corner-topright</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#curved-corner-bottomleft</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#curved-corner-bottomright</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#curved-corner-topleft</span><span class="selector-pseudo">:before</span>,</span><br><span class="line"><span class="selector-id">#curved-corner-topright</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200%</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#curved-corner-bottomleft</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: -<span class="number">50px</span> <span class="number">50px</span> <span class="number">0</span> <span class="number">0</span> red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#curved-corner-bottomright</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">50px</span> <span class="number">50px</span> <span class="number">0</span> <span class="number">0</span> red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#curved-corner-topleft</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: -<span class="number">50px</span> -<span class="number">50px</span> <span class="number">0</span> <span class="number">0</span> red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#curved-corner-topright</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">50px</span> -<span class="number">50px</span> <span class="number">0</span> <span class="number">0</span> red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+                <hr>
+                <!-- Pager &rarr; 箭头 -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/10/15/GitHub-Profile-GitHub个人首页/" data-toggle="tooltip" data-placement="top" title="GitHub 个人页的README文件 GitHub Profile"> Previous
+                            <br>
+                            <span>GitHub 个人页的README文件 GitHub Profile</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/01/17/Docker/" data-toggle="tooltip" data-placement="top" title="Docker">Next
+                            <br>
+                            <span>Docker</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
+                
+
+                <!-- 来必力 start -->
+                
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">矩形（Rectangle Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">圆形（Circle Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">椭圆形（Oval Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">上三角形（Triangle Up Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">下三角形 （Triangle Down Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">左三角形 （Triangle Left Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">右三角形 （Triangle Right Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">左上角三角形 （Triangle Top Left Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">右上角三角形 （Triangle Top Right Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">左下角三角形 （Triangle Bottom Left Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">右下角三角形 （Triangle Bottom Right Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">12.</span> <span class="toc-nav-text">弯尾箭形 （Curved Tail Arrow Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">13.</span> <span class="toc-nav-text">梯形 （Trapezoid Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">14.</span> <span class="toc-nav-text">平行四边 （Parallelogram Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">15.</span> <span class="toc-nav-text">星(6分)的形状 （Star (6-points) Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">16.</span> <span class="toc-nav-text">星(5分)的形状 （Star (5-points) Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">17.</span> <span class="toc-nav-text">五角大楼的形状 （Pentagon Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">18.</span> <span class="toc-nav-text">六边形的形状 （Hexagon Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">19.</span> <span class="toc-nav-text">八角形状 （Octagon Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">20.</span> <span class="toc-nav-text">心形 （Heart Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">21.</span> <span class="toc-nav-text">∞形状 （Infinity Shape ）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">22.</span> <span class="toc-nav-text">钻石广场形状 （Diamond Square Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">23.</span> <span class="toc-nav-text">钻石盾牌形状 （Diamond Shield Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">24.</span> <span class="toc-nav-text">钻石狭窄的形状 （Diamond Narrow Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">25.</span> <span class="toc-nav-text">切割钻石形状 （Cut Diamond Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">26.</span> <span class="toc-nav-text">鸡蛋的形状 （Egg Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">27.</span> <span class="toc-nav-text">吃豆人的形状 （Pac-Man Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">28.</span> <span class="toc-nav-text">谈论泡沫形状 （Talk Bubble Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">29.</span> <span class="toc-nav-text">RSS提要的形状 （RSS Feed Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">30.</span> <span class="toc-nav-text">12点爆破形状 （12 Point Burst Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">31.</span> <span class="toc-nav-text">8点爆破形状 （8 Point Burst Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">32.</span> <span class="toc-nav-text">阴阳形状/太极 （Yin Yang Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">33.</span> <span class="toc-nav-text">徽章丝带形状 （Badge Ribbon Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">34.</span> <span class="toc-nav-text">太空入侵者的形状 （Space Invader Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">35.</span> <span class="toc-nav-text">电视屏幕的形状 （TV Screen Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">36.</span> <span class="toc-nav-text">雪佛龙的形状 （Chevron Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">37.</span> <span class="toc-nav-text">放大镜的形状 （Magnifying Glass Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">38.</span> <span class="toc-nav-text">脸书图标 （Facebook Icon Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">39.</span> <span class="toc-nav-text">月亮形状 （Moon Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">40.</span> <span class="toc-nav-text">标签形状 （Flag Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">41.</span> <span class="toc-nav-text">锥形状 （Cone Shape ）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">42.</span> <span class="toc-nav-text">十字形状 （Cross Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">43.</span> <span class="toc-nav-text">基地形状 （Base Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">44.</span> <span class="toc-nav-text">指针的形状 (Pointer Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">45.</span> <span class="toc-nav-text">锁的形状 （Lock Shape）</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">46.</span> <span class="toc-nav-text">扭转角的形状 （Reverse Corners Shape）</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#CSS" title="CSS">CSS</a>
+                        
+                          <a class="tag" href="/tags/#形状" title="形状">形状</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
+                    
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
+                    
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
+                    
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
+                    
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
+                    
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
+                    
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
+                    
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
+                    
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
+                    
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
+                    
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
+                    
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
+                        <li><a href="" target="_blank">undefined</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
+<script>
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer>
+    <!-- <article class="bg-back top-line"></article> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2021
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    |
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <!-- <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span> -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                </p>
+                
+                <!-- 不蒜子 end -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- other wenzi.js -->
+<script src="/libs/other/wenzi.js"></script>
+
+<!-- 动态tab标签 -->
+
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 2.0rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
+
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+</body>
+
+</html>
