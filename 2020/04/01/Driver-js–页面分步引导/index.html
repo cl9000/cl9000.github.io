@@ -67,11 +67,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          【HBuilderX】uniapp-cli更新node_modules/语法提示库 - 魏长露的博客 | Wei, C.-L. Blog
+          Driver.js–页面分步引导 - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
-    <link rel="canonical" href="https://cl9000.github.io/2019/03/09/HBuilderX-uniapp-cli更新-语法提示库/">
+    <link rel="canonical" href="https://cl9000.github.io/2020/04/01/Driver-js–页面分步引导/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -182,47 +182,15 @@
                         <div class="tags">
                             
                             <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#HBuilderX"
-                                title="HBuilderX">HBuilderX</a>
-                            
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#uniapp-cli"
-                                title="uniapp-cli">uniapp-cli</a>
-                            
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#脚手架"
-                                title="脚手架">脚手架</a>
-                            
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#依赖包"
-                                title="依赖包">依赖包</a>
-                            
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#npm"
-                                title="npm">npm</a>
-                            
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#node_modules"
-                                title="node_modules">node_modules</a>
-                            
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#语法提示库"
-                                title="语法提示库">语法提示库</a>
-                            
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#Browserslist"
-                                title="Browserslist">Browserslist</a>
-                            
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#caniuse-liteIsOutdated"
-                                title="caniuse-liteIsOutdated">caniuse-liteIsOutdated</a>
+                                href="/tags/#-Driver.js -Driverjs -前端引导页 -分布式引导 -Javascirpt"
+                                title="-Driver.js -Driverjs -前端引导页 -分布式引导 -Javascirpt">-Driver.js -Driverjs -前端引导页 -分布式引导 -Javascirpt</a>
                             
                         </div>
-                        <h1>【HBuilderX】uniapp-cli更新node_modules/语法提示库</h1>
-                        <h2 class="subheading">HBuilderX-uniapp-cli更新-语法提示库</h2>
+                        <h1>Driver.js–页面分步引导</h1>
+                        <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by cl9000 on
-                            March 09, 2019
+                            April 01, 2020
                         </span>
                     </div>
                     
@@ -349,23 +317,95 @@
             <!-- Post Container -->
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <blockquote style="border-left: 4px solid #3F51B5;padding: 16px 20px;color: black;font-weight:300;border-radius: 0 2px 2px 0;">
-    那些疯狂到认为自己能够改变世界的人，才能真正改变世界。——<strong>史蒂夫·乔布斯</strong><br>
-</blockquote>
-<br>
-<h3><span id="缘由">缘由：</span></h3>
-<p>&lt;语法提示库&gt;、&lt;uniapp-cli依赖包node_modules全更新&gt;、&lt;Browserslist：caniuse-lite is outdated&gt;</p>
-<h3><span id="hbuilderx-更新脚手架uniapp-cli依赖包node_modules">HBuilderX 更新脚手架(uniapp-cli)依赖包node_modules</span></h3>
-<p>目录路径 <code>HBuilderX\plugins\uniapp-cli\</code></p>
-<p>进入uniapp-cli目录下，删除<code>node_modules</code>和<code>package-lock.json</code>文件，执行命令<code>$ npm install</code></p>
-<p>替换旧版本软件路径下的文件(建议删除原node_modules文件夹)：</p>
-<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\n</span>ode_modules</span><br><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\p</span>ackage.json</span><br><span class="line">HBuilderX<span class="symbol">\p</span>lugins<span class="symbol">\u</span>niapp-cli<span class="symbol">\p</span>ackage-lock.json</span><br></pre></td></tr></table></figure>
-<p>刷新，退出重新启动生效。</p>
-<h3><span id="hbuilderx语法提示库">HBuilderX语法提示库</span></h3>
-<p>目录路径 <code>HBuilderX\plugins\</code><br>
-外网HX自动下载语法提示库，下载完成后，进入路径<code>HBuilderX\plugins\</code>，拷贝 <code>ls 和 jre</code>文件夹备用</p>
-<p>进入旧版本软件路径 <code>HBuilderX\plugins\</code>，粘贴 <code>ls 和 jre</code>文件夹，刷新重启即可。<br>
-另还有个 <code>nodeserver</code>文件夹，也可以按照上述方法同时拷贝至目录</p>
+                <p><strong>好好工作，搞好身体，互相帮助 —</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/driverjs001.png" alt></p>
+<p>一个轻量级(约4kb gzip)但强大的JavaScript引擎，帮助您驱动用户的注意力在页面上。</p>
+<p>一些示例用例可以创建强大的特性介绍、动作调用组件、焦点转移器等。</p>
+<p>通过 Driver.js ，你可以突出显示页面上的项目，以吸引用户的注意力。你也可以在网站改版后，使用它来引导用户展示新功能。</p>
+<h4><span id="特色功能"><strong>特色功能：</strong></span></h4>
+<ul>
+<li>突出显示页面上的任何任何项目</li>
+<li>锁定用户交互</li>
+<li>创建功能介绍</li>
+<li>为用户添加聚焦器</li>
+<li>高度可定制 – 可在任何地方使用，可覆盖</li>
+<li>界面友好 – 可通过按键控制</li>
+<li>轻量级 – gzip 压缩后只有约4kb</li>
+<li>在所有主流浏览器中保持一致的行为</li>
+<li>免费用于个人和商业用途</li>
+</ul>
+<h3><span id="安装"><strong>安装</strong></span></h3>
+<p>无论你喜欢哪种方式，你都可以使用 yarn 或 npm 进行安装。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add driver.js</span><br><span class="line">npm install driver.js</span><br></pre></td></tr></table></figure>
+<p>或者直接在文件中引入它。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=<span class="string">"stylesheet"</span> href=<span class="string">"/dist/driver.min.css"</span>&gt;</span><br><span class="line">&lt;script src=<span class="string">"/dist/driver.min.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h3><span id="用法"><strong>用法</strong></span></h3>
+<h4><span id="highlighting-a-single-element-without-popover-突出显示单个元素"><strong>Highlighting a Single Element – Without Popover 突出显示单个元素</strong></span></h4>
+<p>__ <a href="https://kamranahmed.info/driver.js/" target="_blank" rel="noopener">Show Demo</a></p>
+<p>你只需传递选择器即可突出显示单个元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> driver = <span class="keyword">new</span> Driver();</span><br><span class="line">driver.highlight(<span class="string">'#create-post'</span>);</span><br></pre></td></tr></table></figure>
+<p>一个实际的例子是：使用它来调暗背景并突出显示所需的元素，例如 Facebook 创建帖子的方式。</p>
+<p>这方面的实际用例可能是当用户与元素交互时突出显示元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> focusDriver = <span class="keyword">new</span> Driver();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Highlight the section on focus</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'creation-input'</span>)</span><br><span class="line">  .addEventListener(<span class="string">'focus'</span>, (e) =&gt; &#123;</span><br><span class="line">    focusDriver.focus(<span class="string">'#creation-input'</span>);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>聚焦任何输入，看看它是如何将高亮显示从一个元素移动到另一个元素的<br>
+你也可以关闭动画或者在角落设置padding。稍后会详细介绍。</p>
+<h4><span id="highlighting-a-single-element-with-popover-突出显示单个元素-弹出窗口"><strong>Highlighting a Single Element – With Popover 突出显示单个元素-弹出窗口</strong></span></h4>
+<p>如果想在突出显示的元素旁边显示一些细节，可以通过指定标题和描述轻松实现<br>
+__ <a href="https://kamranahmed.info/driver.js/" target="_blank" rel="noopener">Show Demo</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> driver = <span class="keyword">new</span> Driver();</span><br><span class="line">driver.highlight(&#123;</span><br><span class="line">  element: <span class="string">'#some-element'</span>,</span><br><span class="line">  popover: &#123;</span><br><span class="line">    title: <span class="string">'Title for the Popover'</span>,</span><br><span class="line">    description: <span class="string">'Description for it'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>你也可以通过一组特定的选项来修改这个弹出窗口的行为。下面有更多的介绍。<br>
+此外，title 和 description 也可以使用 HTML。</p>
+<h4><span id="popover-positioning-弹出窗口定位"><strong>Popover Positioning 弹出窗口定位</strong></span></h4>
+<p>__ <a href="https://kamranahmed.info/driver.js/" target="_blank" rel="noopener">Show Demo</a></p>
+<p>你也可以改变弹出窗口的位置为<code>left, left-center, left-bottom, top, top-center, top-right, right, right-center, right-bottom或者bottom, bottom-center, bottom-right, mid-center</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> driver = <span class="keyword">new</span> Driver();</span><br><span class="line">driver.highlight(&#123;</span><br><span class="line">  element: <span class="string">'#some-element'</span>,</span><br><span class="line">  popover: &#123;</span><br><span class="line">    title: <span class="string">'Title for the Popover'</span>,</span><br><span class="line">    description: <span class="string">'Description for it'</span>,</span><br><span class="line">    <span class="comment">// position can be left, left-center, left-bottom, top,</span></span><br><span class="line">    <span class="comment">// top-center, top-right, right, right-center, right-bottom,</span></span><br><span class="line">    <span class="comment">// bottom, bottom-center, bottom-right, mid-center</span></span><br><span class="line">    position: <span class="string">'left'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>如果你不指定位置或指定它为自动，它会自动为弹出窗口找到合适的位置并显示它</p>
+<h4><span id="html弹窗-html-in-popovers"><strong>HTML弹窗 HTML in Popovers</strong></span></h4>
+<p>__ <a href="https://kamranahmed.info/driver.js/" target="_blank" rel="noopener">Show Demo</a><br>
+你也可以在主体中指定HTML或者弹出窗口的标题。下面是一个例子:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> driver = <span class="keyword">new</span> Driver();</span><br><span class="line">driver.highlight(&#123;</span><br><span class="line">  element: <span class="string">'#some-element'</span>,</span><br><span class="line">  popover: &#123;</span><br><span class="line">    title: <span class="string">'&lt;em&gt;An italicized title&lt;/em&gt;'</span>,</span><br><span class="line">    description: <span class="string">'Description may also contain &lt;strong&gt;HTML&lt;/strong&gt;'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>当然，它可以是任何有效的HTML。</p>
+<h4><span id="禁用关闭外部单击-disable-close-on-outside-click"><strong>禁用关闭外部单击 Disable Close on Outside Click</strong></span></h4>
+<p>__ <a href="https://kamranahmed.info/driver.js/" target="_blank" rel="noopener">Show Demo</a></p>
+<p>默认情况下，driver.js会被重置，如果用户点击突出显示的元素，你可以禁用这个:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> driver = <span class="keyword">new</span> Driver(&#123;</span><br><span class="line">    allowClose: <span class="literal">false</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">driver.highlight(&#123;</span><br><span class="line">  element: <span class="string">'#some-element'</span>,</span><br><span class="line">  popover: &#123;</span><br><span class="line">    title: <span class="string">'&lt;em&gt;An italicized title&lt;/em&gt;'</span>,</span><br><span class="line">    description: <span class="string">'Description may also contain &lt;strong&gt;HTML&lt;/strong&gt;'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>如果你使用这个选项，对于多步骤驱动程序，它会在你完成弹出窗口后关闭，或者你可以通过编程关闭它。对于单个元素弹窗，你需要正确地关闭它，否则它不会被关闭</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">driver.reset()</span><br></pre></td></tr></table></figure>
+<h4><span id="creating-feature-introductions-创建功能介绍"><strong>Creating Feature Introductions 创建功能介绍</strong></span></h4>
+<p>__ <a href="https://kamranahmed.info/driver.js/" target="_blank" rel="noopener">Show Demo</a><br>
+您还可以进行功能强大的特性介绍，以指导用户了解这些特性。只需提供一个步骤数组，其中每个步骤指定要突出显示的元素。</p>
+<p>下面是一个简单的例子，告诉你如何结合介绍中的步骤</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> driver = <span class="keyword">new</span> Driver();</span><br><span class="line"><span class="comment">// Define the steps for introduction</span></span><br><span class="line">driver.defineSteps([</span><br><span class="line">  &#123;</span><br><span class="line">    element: <span class="string">'#first-element-introduction'</span>,</span><br><span class="line">    popover: &#123;</span><br><span class="line">      className: <span class="string">'first-step-popover-class'</span>,</span><br><span class="line">      title: <span class="string">'Title on Popover'</span>,</span><br><span class="line">      description: <span class="string">'Body of the popover'</span>,</span><br><span class="line">      position: <span class="string">'left'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    element: <span class="string">'#second-element-introduction'</span>,</span><br><span class="line">    popover: &#123;</span><br><span class="line">      title: <span class="string">'Title on Popover'</span>,</span><br><span class="line">      description: <span class="string">'Body of the popover'</span>,</span><br><span class="line">      position: <span class="string">'top'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    element: <span class="string">'#third-element-introduction'</span>,</span><br><span class="line">    popover: &#123;</span><br><span class="line">      title: <span class="string">'Title on Popover'</span>,</span><br><span class="line">      description: <span class="string">'Body of the popover'</span>,</span><br><span class="line">      position: <span class="string">'right'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">]);</span><br><span class="line"><span class="comment">// Start the introduction</span></span><br><span class="line">driver.start();</span><br></pre></td></tr></table></figure>
+<p>这只是特性介绍的一个快速示例。想要更丰富的体验，请浏览<a href>&quot;Quick Tour&quot;</a></p>
+<p>你也可以关闭弹出窗口中的页脚按钮，在这种情况下，用户可以使用键盘上的箭头键来控制弹出窗口。或者您可以使用驱动程序提供的方法来控制它。</p>
+<h4><span id="without-overlay-没有覆盖叠加"><strong>Without Overlay 没有覆盖叠加</strong></span></h4>
+<p>__ <a href="https://kamranahmed.info/driver.js/" target="_blank" rel="noopener">Show Demo</a><br>
+你也可以创建特性介绍和做上面列出的所有事情而不需要叠加。你所要做的就是将不透明度设置为0。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> driver = <span class="keyword">new</span> Driver(&#123;</span><br><span class="line">    opacity: <span class="number">0</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">driver.highlight(&#123;</span><br><span class="line">  element: <span class="string">'#run-element-without-popover'</span>,</span><br><span class="line">  popover: &#123;</span><br><span class="line">    title: <span class="string">'Title for the Popover'</span>,</span><br><span class="line">    description: <span class="string">'Description for it'</span>,</span><br><span class="line">    position: <span class="string">'top'</span>, <span class="comment">// can be `top`, `left`, `right`, `bottom`</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>你也可以对功能介绍做同样的事情</p>
+<h4><span id="更多"><strong>更多</strong></span></h4>
+<p>Driver Definition</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> driver = <span class="keyword">new</span> Driver(&#123;</span><br><span class="line">  className: <span class="string">'scoped-class'</span>, <span class="comment">// className to wrap driver.js popover</span></span><br><span class="line">  animate: <span class="literal">true</span>,  <span class="comment">// Animate while changing highlighted element</span></span><br><span class="line">  opacity: <span class="number">0.75</span>,  <span class="comment">// Background opacity (0 means only popovers and without overlay)</span></span><br><span class="line">  padding: <span class="number">10</span>,    <span class="comment">// Distance of element from around the edges</span></span><br><span class="line">  allowClose: <span class="literal">true</span>, <span class="comment">// Whether clicking on overlay should close or not</span></span><br><span class="line">  overlayClickNext: <span class="literal">false</span>, <span class="comment">// Should it move to next step on overlay click</span></span><br><span class="line">  doneBtnText: <span class="string">'Done'</span>, <span class="comment">// Text on the final button</span></span><br><span class="line">  closeBtnText: <span class="string">'Close'</span>, <span class="comment">// Text on the close button for this step</span></span><br><span class="line">  nextBtnText: <span class="string">'Next'</span>, <span class="comment">// Next button text for this step</span></span><br><span class="line">  prevBtnText: <span class="string">'Previous'</span>, <span class="comment">// Previous button text for this step</span></span><br><span class="line">  showButtons: <span class="literal">false</span>, <span class="comment">// Do not show control buttons in footer</span></span><br><span class="line">  keyboardControl: <span class="literal">true</span>, <span class="comment">// Allow controlling through keyboard (escape to close, arrow keys to move)</span></span><br><span class="line">  scrollIntoViewOptions: &#123;&#125;, <span class="comment">// We use `scrollIntoView()` when possible, pass here the options for it if you want any</span></span><br><span class="line">  onHighlightStarted: (Element) &#123;&#125;, <span class="comment">// Called when element is about to be highlighted</span></span><br><span class="line">  onHighlighted: (Element) &#123;&#125;, <span class="comment">// Called when element is fully highlighted</span></span><br><span class="line">  onDeselected: (Element) &#123;&#125;, <span class="comment">// Called when element has been deselected</span></span><br><span class="line">  onReset: (Element) &#123;&#125;,        <span class="comment">// Called when overlay is about to be cleared</span></span><br><span class="line">  onNext: <span class="function">(<span class="params">Element</span>) =&gt;</span> &#123;&#125;,      <span class="comment">// Called when moving to next step on any step</span></span><br><span class="line">  onPrevious: <span class="function">(<span class="params">Element</span>) =&gt;</span> &#123;&#125;,  <span class="comment">// Called when moving to next step on any step</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>请注意，您在驱动程序定义中提供的所有按钮选项都可以通过在步骤定义中提供它们来为特定的步骤覆盖</p>
+<p>步骤定义<br>
+这里有一组选项，你可以在每个步骤中传递，即步骤数组中的一个项目或你传递给highlight方法的对象</p>
+<pre><code class="language-js">const stepDefinition = {
+  element: '#some-item',        // Query selector string or Node to be highlighted
+  popover: {                    // There will be no popover if empty or not given
+    className: 'popover-class', // className to wrap this specific step popover in addition to the general className in Driver options
+    title: 'Title',             // Title on the popover
+    description: 'Description', // Body of the popover
+    showButtons: false,         // Do not show control buttons in footer
+    closeBtnText: 'Close',      // Text on the close button for this step
+    nextBtnText: 'Next',        // Next button text for this step
+    prevBtnText: 'Previous',    // Previous button text for this step
+  }
+</code></pre>
+<p>您可以使用多种选项来实现您想要的任何目标。我有一些进一步改进它的计划，确保关注<a href="https://github.com/kamranahmedse/driver.js" target="_blank" rel="noopener">GitHub page - https://github.com/kamranahmedse/driver.js</a>页面</p>
+<h3><span id="参考地址">参考地址</span></h3>
+<p>github：<a href="https://github.com/kamranahmedse/driver.js" target="_blank" rel="noopener">https://github.com/kamranahmedse/driver.js</a><br>
+用法和用例介绍：<a href="https://kamranahmed.info/driver.js/" target="_blank" rel="noopener">https://kamranahmed.info/driver.js/</a><br>
+简单的安装使用介绍（中文，非官方）：<a href="http://f2ex.cn/driver-js/" target="_blank" rel="noopener">http://f2ex.cn/driver-js/</a></p>
 
 
                 <hr>
@@ -373,17 +413,17 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2019/04/22/免费-快速-可靠CDN/" data-toggle="tooltip" data-placement="top" title="使用 Github，jsDelivr，TravisCI 搭建轻量 CDN"> Previous
+                            <a href="/2020/10/15/GitHub-Profile-GitHub个人首页/" data-toggle="tooltip" data-placement="top" title="GitHub 个人页的README文件 GitHub Profile"> Previous
                             <br>
-                            <span>使用 Github，jsDelivr，TravisCI 搭建轻量 CDN</span>
+                            <span>GitHub 个人页的README文件 GitHub Profile</span>
                             </a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2018/12/19/Mac-更新node版本/" data-toggle="tooltip" data-placement="top" title="Mac 更新node版本">Next
+                            <a href="/2020/04/01/【译文】你可能不知道你可以用Chrome的开发者控制台做的事情/" data-toggle="tooltip" data-placement="top" title="【译文】你可能不知道你可以用Chrome的开发者控制台做的事情">Next
                             <br>
-                            <span>Mac 更新node版本</span>
+                            <span>【译文】你可能不知道你可以用Chrome的开发者控制台做的事情</span>
                             </a>
                         </li>
                     
@@ -436,7 +476,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">缘由：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">HBuilderX 更新脚手架(uniapp-cli)依赖包node_modules</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">HBuilderX语法提示库</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">特色功能：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">安装</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">用法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Highlighting a Single Element – Without Popover 突出显示单个元素</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Highlighting a Single Element – With Popover 突出显示单个元素-弹出窗口</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Popover Positioning 弹出窗口定位</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">HTML弹窗 HTML in Popovers</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">禁用关闭外部单击 Disable Close on Outside Click</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Creating Feature Introductions 创建功能介绍</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Without Overlay 没有覆盖叠加</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">更多</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">参考地址</span></a>
         
         </div>
       </aside>
@@ -453,23 +493,7 @@
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
                        
-                          <a class="tag" href="/tags/#HBuilderX" title="HBuilderX">HBuilderX</a>
-                        
-                          <a class="tag" href="/tags/#uniapp-cli" title="uniapp-cli">uniapp-cli</a>
-                        
-                          <a class="tag" href="/tags/#脚手架" title="脚手架">脚手架</a>
-                        
-                          <a class="tag" href="/tags/#依赖包" title="依赖包">依赖包</a>
-                        
-                          <a class="tag" href="/tags/#npm" title="npm">npm</a>
-                        
-                          <a class="tag" href="/tags/#node_modules" title="node_modules">node_modules</a>
-                        
-                          <a class="tag" href="/tags/#语法提示库" title="语法提示库">语法提示库</a>
-                        
-                          <a class="tag" href="/tags/#Browserslist" title="Browserslist">Browserslist</a>
-                        
-                          <a class="tag" href="/tags/#caniuse-liteIsOutdated" title="caniuse-liteIsOutdated">caniuse-liteIsOutdated</a>
+                          <a class="tag" href="/tags/#-Driver.js -Driverjs -前端引导页 -分布式引导 -Javascirpt" title="-Driver.js -Driverjs -前端引导页 -分布式引导 -Javascirpt">-Driver.js -Driverjs -前端引导页 -分布式引导 -Javascirpt</a>
                         
                     </div>
                 </section>
