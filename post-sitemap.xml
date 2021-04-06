@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/2020/10/19/iOS-virtualPositon/</loc>
+        <lastmod>2021-04-06T04:24:00.670Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/2020/04/02/Bespoke-js%E2%80%93%E5%9F%BA%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6/</loc>
         <lastmod>2021-04-01T09:38:49.744Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -169,14 +177,6 @@
     <url>
         <loc>https://cl9000.github.io/2018/03/18/Karma-Jasmine-%E6%9E%84%E5%BB%BA-Web-%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83/</loc>
         <lastmod>2020-11-10T09:15:16.097Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2020/10/19/iOS-virtualPositon/</loc>
-        <lastmod>2020-11-10T09:14:53.391Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

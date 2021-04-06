@@ -184,27 +184,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/i4/</loc>
-        <lastmod>2020-11-10T09:14:53.391Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-        <lastmod>2020-11-10T09:14:53.391Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E8%99%9A%E6%8B%9F%E5%AE%9A%E4%BD%8D/</loc>
-        <lastmod>2020-11-10T09:14:53.391Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/Karma/</loc>
         <lastmod>2020-11-10T09:15:16.097Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -571,6 +550,34 @@
     <url>
         <loc>https://cl9000.github.io/tags/Bespoke-js-Bespokejs-%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6-Javascript/</loc>
         <lastmod>2021-04-01T09:38:49.744Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
+        <lastmod>2021-04-06T04:24:00.670Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E8%99%9A%E6%8B%9F%E5%AE%9A%E4%BD%8D/</loc>
+        <lastmod>2021-04-06T04:24:00.670Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E6%89%8B%E6%9C%BA%E5%AE%9A%E4%BD%8D/</loc>
+        <lastmod>2021-04-06T04:24:00.670Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E4%BF%AE%E6%94%B9%E5%AE%9A%E4%BD%8D/</loc>
+        <lastmod>2021-04-06T04:24:00.670Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
