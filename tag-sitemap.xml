@@ -548,13 +548,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/Bespoke-js-Bespokejs-%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6-Javascript/</loc>
-        <lastmod>2021-04-01T09:38:49.744Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
         <lastmod>2021-04-06T05:01:04.507Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -599,6 +592,13 @@
     <url>
         <loc>https://cl9000.github.io/tags/Plyr/</loc>
         <lastmod>2021-04-06T09:25:43.222Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Bespoke-js-Bespokejs-%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6-Javascript/</loc>
+        <lastmod>2021-04-07T03:02:10.587Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
