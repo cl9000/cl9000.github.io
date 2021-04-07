@@ -237,13 +237,13 @@
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
@@ -260,11 +260,11 @@
                         
                     
                         
-                    
-                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
+                        
+                    
                         
                     
                     
@@ -329,18 +329,51 @@
 <p>如果你想获取站点的URL信息，那么window.location对象什么很适合你！使用其属性获取有关当前页面地址的信息，或使用其方法进行某些页面重定向或刷新。</p>
 <p><code>https://morioh.com/search?c=cl9000#1</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.location.origin    → <span class="string">'"https://morioh.com'</span></span><br><span class="line">               .protocol  → <span class="string">'https:'</span></span><br><span class="line">               .host      → <span class="string">'morioh.com'</span></span><br><span class="line">               .hostname  → <span class="string">'morioh.com'</span></span><br><span class="line">               .port      → <span class="string">''</span></span><br><span class="line">               .pathname  → <span class="string">'/search'</span></span><br><span class="line">               .search    → <span class="string">'?c=cl9000'</span></span><br><span class="line">               .hash      → <span class="string">'#1'</span></span><br><span class="line">               .href      → <span class="string">'https://morioh.com/search?c=cl9000#1'</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.location.assign(<span class="string">'url'</span>)</span><br><span class="line">               .replace(<span class="string">'url'</span>)</span><br><span class="line">               .reload()</span><br><span class="line">               .toString()</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
-<p>window.location 属性<br>
-window.location<br>
-返回值<br>
-.origin	站点主地址(协议 + 主机名 + 端口)<br>
-.protocol	协议架构 (http: 或者 htts:)<br>
-.host	域名 + 端口<br>
-.port	端口<br>
-.pathname	最前页的 ‘/’ 后面跟的路径<br>
-.search	? 后跟的查询字符串<br>
-.hash	从 # 号开始的部分<br>
-.href	完整网址</p>
+<p>23</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.location.assign(<span class="string">'url'</span>)</span><br><span class="line">                .replace(<span class="string">'url'</span>)</span><br><span class="line">                .reload()</span><br><span class="line">                .toString()</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
+<h2><span id="windowlocation-属性">window.location 属性</span></h2>
+<table>
+<thead>
+<tr>
+<th>window.location</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.origin</td>
+<td>站点主地址(协议 + 主机名 + 端口)</td>
+</tr>
+<tr>
+<td>.protocol</td>
+<td>协议架构 (http: 或者 htts:)</td>
+</tr>
+<tr>
+<td>.host</td>
+<td>域名 + 端口</td>
+</tr>
+<tr>
+<td>.port</td>
+<td>端口</td>
+</tr>
+<tr>
+<td>.pathname</td>
+<td>最前页的 ‘/’ 后面跟的路径</td>
+</tr>
+<tr>
+<td>.search</td>
+<td>? 后跟的查询字符串</td>
+</tr>
+<tr>
+<td>.hash</td>
+<td>从 # 号开始的部分</td>
+</tr>
+<tr>
+<td>.href</td>
+<td>完整网址</td>
+</tr>
+</tbody>
+</table>
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## host 和 hostname 的区别</span><br><span class="line">在上面的示例中，你可能注意到host和hostname返回相同的值。那么为什么要这些属性。好吧，这与端口号有关，让我们来看看。</span><br><span class="line"></span><br><span class="line">#### 没有端口的 URL</span><br><span class="line">```js</span><br><span class="line">https:<span class="comment">//morioh.com/search</span></span><br><span class="line">​</span><br><span class="line">window.location.host; <span class="comment">// 'morioh.com'</span></span><br><span class="line">window.location.hostname; <span class="comment">// 'morioh.com'</span></span><br><span class="line">​</span><br><span class="line">window.location.port; <span class="comment">// ''</span></span><br></pre></td></tr></table></figure>
 <h4><span id="带端口的-url">带端口的 URL</span></h4>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//morioh.com/search"8080</span></span><br><span class="line">​</span><br><span class="line"><span class="built_in">window</span>.location.host; <span class="comment">// 'morioh.com:8080'</span></span><br><span class="line"><span class="built_in">window</span>.location.hostname; <span class="comment">// 'morioh.com'</span></span><br><span class="line"><span class="built_in">window</span>.location.port; <span class="comment">// '8080'</span></span><br></pre></td></tr></table></figure>
@@ -453,7 +486,7 @@ window.location<br>
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">带端口的 URL</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">如何更改 URL 属性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">Location 对象</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">window.location  VS  location</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">window.location 方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">window.location.toString</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">assign vs replace</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">Assign</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">Replace</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">如何让页面重定向</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number"></span> <span class="toc-nav-text">replace VS assign VS href</span></a>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">window.location 属性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">带端口的 URL</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">如何更改 URL 属性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">Location 对象</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">window.location  VS  location</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">window.location 方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">window.location.toString</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">assign vs replace</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">Assign</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">Replace</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">如何让页面重定向</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">replace VS assign VS href</span></a></li></ol>
         
         </div>
       </aside>
