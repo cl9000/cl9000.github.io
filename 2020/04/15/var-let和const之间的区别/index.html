@@ -67,7 +67,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          var，et和const之间的区别 - 魏长露的博客 | Wei, C.-L. Blog
+          var，let和const之间的区别 - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
@@ -186,7 +186,7 @@
                                 title="JavaScript">JavaScript</a>
                             
                         </div>
-                        <h1>var，et和const之间的区别</h1>
+                        <h1>var，let和const之间的区别</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by cl9000 on
@@ -237,13 +237,13 @@
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
@@ -258,11 +258,11 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -341,14 +341,14 @@
 <p><strong>在 <code>for</code> 循环之外执行 <code>var</code> 操作</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i); <span class="comment">// Prints 0, 1 and 2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i);   <span class="comment">// Prints 3</span></span><br></pre></td></tr></table></figure>
 <p>因为 <code>var</code> 是函数作用域的。变量<code>i</code>可以在<code>for</code>循环之外被访问(代码块).</p>
-<p>** <code>var</code> 重新分配**</p>
+<p><strong><code>var</code> 重新分配</strong></p>
 <p>使用var的变量可以重新赋值，也可以重新定义。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> foo = <span class="number">1</span>;</span><br><span class="line">    foo = <span class="number">30</span>;</span><br><span class="line">    <span class="keyword">var</span> foo = <span class="number">101</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(foo);  <span class="comment">// Prints 101</span></span><br><span class="line">&#125;</span><br><span class="line">myFn();</span><br></pre></td></tr></table></figure>
 <h3><span id="2-let">2. let</span></h3>
 <p><strong>在 <code>for</code> 循环之外执行 <code>let</code> 操作</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i); <span class="comment">// Prints 0, 1 and 2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i);   <span class="comment">// ReferenceError: i is not defined</span></span><br></pre></td></tr></table></figure>
 <p>因为 <code>let</code> 是块范围的。变量 <code>i</code> 在 <code>for</code> 循环之外是不可访问的(代码块).</p>
-<p>** <code>let</code> 重新分配和重新定义**<br>
+<p><strong><code>let</code> 重新分配和重新定义</strong><br>
 使用let的变量可以重新赋值，但不能重新定义。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> foo = <span class="number">1</span>;</span><br><span class="line">    foo = <span class="number">30</span>;</span><br><span class="line">    <span class="keyword">let</span> foo = <span class="number">101</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(foo);  </span><br><span class="line">&#125;</span><br><span class="line">myFn();</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -391,9 +391,7 @@ Uncaught SyntaxError: Identifier ‘foo’ has already been declared <br><br>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(foo);</span><br><span class="line"><span class="keyword">let</span> foo = <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>Output</strong><br><br>
-<br><br>
-ReferenceError: foo is not defined <br><br>
-<br></p>
+ReferenceError: foo is not defined</p>
 </blockquote>
 <p><strong>你能猜到下面代码片段的输出是什么吗?</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFun</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(foo);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> foo = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">myFun();</span><br></pre></td></tr></table></figure>
