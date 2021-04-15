@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/JS/</loc>
-        <lastmod>2020-11-10T09:12:02.747Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/categories/iOS/protocol-buffer/</loc>
         <lastmod>2020-11-10T09:12:18.027Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -135,6 +128,13 @@
     <url>
         <loc>https://cl9000.github.io/categories/%E9%9A%8F%E7%AC%94/</loc>
         <lastmod>2020-11-12T02:52:24.294Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/JS/</loc>
+        <lastmod>2021-04-15T09:16:09.862Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -7,8 +7,48 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/2020/04/15/var-let%E5%92%8Cconst%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+        <lastmod>2021-04-15T09:28:58.403Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2020/04/02/Bespoke-js%E2%80%93%E5%9F%BA%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6/</loc>
+        <lastmod>2021-04-15T09:16:18.499Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2017/04/01/fullpage-js/</loc>
+        <lastmod>2021-04-15T09:16:09.862Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2020/04/01/Driver-js%E2%80%93%E9%A1%B5%E9%9D%A2%E5%88%86%E6%AD%A5%E5%BC%95%E5%AF%BC/</loc>
+        <lastmod>2021-04-15T09:15:57.690Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2020/04/01/%E3%80%90%E8%AF%91%E6%96%87%E3%80%91%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E4%BD%A0%E5%8F%AF%E4%BB%A5%E7%94%A8Chrome%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
+        <lastmod>2021-04-15T09:15:41.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/2021/01/28/%E5%8F%AF%E9%80%89%E9%93%BE%E3%80%90-%E3%80%91JavaScript%E4%B8%AD%E7%9A%84%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
-        <lastmod>2021-04-14T09:19:01.876Z</lastmod>
+        <lastmod>2021-04-15T09:15:31.909Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +56,31 @@
 
     <url>
         <loc>https://cl9000.github.io/2020/04/14/JavaScript%E4%B8%ADconst%E5%92%8CObject-freeze%EF%BC%88%EF%BC%89%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
-        <lastmod>2021-04-14T07:03:39.025Z</lastmod>
+        <lastmod>2021-04-15T09:15:23.610Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2018/07/15/JS%E5%8E%9F%E7%94%9Fajax%E8%AF%B7%E6%B1%82-fetch/</loc>
+        <lastmod>2021-04-15T09:15:21.275Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2020/04/12/%E4%BD%BFtap%E6%9D%A5%E5%BF%AB%E9%80%9Fdebug/</loc>
+        <lastmod>2021-04-15T08:34:09.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2020/05/27/%E8%99%9A%E6%8B%9FDOMVS%E5%BD%B1%E5%AD%90DOM/</loc>
+        <lastmod>2021-04-15T06:47:21.176Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -25,14 +89,6 @@
     <url>
         <loc>https://cl9000.github.io/2020/04/12/%E4%B8%89%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84JS%E6%8A%80%E5%B7%A7/</loc>
         <lastmod>2021-04-12T09:11:09.780Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2020/04/12/%E4%BD%BFtap%E6%9D%A5%E5%BF%AB%E9%80%9Fdebug/</loc>
-        <lastmod>2021-04-12T08:57:18.869Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -63,22 +119,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/2020/04/02/Bespoke-js%E2%80%93%E5%9F%BA%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6/</loc>
-        <lastmod>2021-04-07T05:22:37.154Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2020/04/01/Driver-js%E2%80%93%E9%A1%B5%E9%9D%A2%E5%88%86%E6%AD%A5%E5%BC%95%E5%AF%BC/</loc>
-        <lastmod>2021-04-07T05:21:56.955Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/2020/04/06/Plyr%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
         <lastmod>2021-04-06T09:25:43.222Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -89,14 +129,6 @@
     <url>
         <loc>https://cl9000.github.io/2020/10/19/iOS-virtualPositon/</loc>
         <lastmod>2021-04-06T05:01:04.507Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2020/04/01/%E3%80%90%E8%AF%91%E6%96%87%E3%80%91%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E4%BD%A0%E5%8F%AF%E4%BB%A5%E7%94%A8Chrome%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
-        <lastmod>2021-04-01T03:13:10.454Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -129,14 +161,6 @@
     <url>
         <loc>https://cl9000.github.io/2019/03/09/HBuilderX-uniapp-cli%E6%9B%B4%E6%96%B0-%E8%AF%AD%E6%B3%95%E6%8F%90%E7%A4%BA%E5%BA%93/</loc>
         <lastmod>2020-11-12T02:52:24.294Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2018/07/15/JS%E5%8E%9F%E7%94%9Fajax%E8%AF%B7%E6%B1%82-fetch/</loc>
-        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -313,14 +337,6 @@
     <url>
         <loc>https://cl9000.github.io/2017/08/14/%E5%9C%A8iOS%E4%B8%ADProtocol-Buffer-v3-3-0-%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
         <lastmod>2020-11-10T09:12:18.027Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2017/04/01/fullpage-js/</loc>
-        <lastmod>2020-11-10T09:12:02.747Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

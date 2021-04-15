@@ -51,13 +51,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/fullpage-js/</loc>
-        <lastmod>2020-11-10T09:12:02.747Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/protocol-buffer/</loc>
         <lastmod>2020-11-10T09:12:18.027Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -394,34 +387,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/ajax/</loc>
-        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/fetch/</loc>
-        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E5%8E%9F%E7%94%9F/</loc>
-        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/js/</loc>
-        <lastmod>2020-11-10T10:13:56.091Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/HBuilderX/</loc>
         <lastmod>2020-11-12T02:52:24.294Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -520,20 +485,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/chrome/</loc>
-        <lastmod>2021-04-01T03:13:10.454Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/console/</loc>
-        <lastmod>2021-04-01T03:13:10.454Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
         <lastmod>2021-04-06T05:01:04.507Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -578,69 +529,6 @@
     <url>
         <loc>https://cl9000.github.io/tags/Plyr/</loc>
         <lastmod>2021-04-06T09:25:43.222Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Driver-js/</loc>
-        <lastmod>2021-04-07T05:21:56.955Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Driverjs/</loc>
-        <lastmod>2021-04-07T05:21:56.955Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%95%E5%AF%BC%E9%A1%B5/</loc>
-        <lastmod>2021-04-07T05:21:56.955Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%95%E5%AF%BC/</loc>
-        <lastmod>2021-04-07T05:21:56.955Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Javascirpt/</loc>
-        <lastmod>2021-04-07T05:21:56.955Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Bespoke-js/</loc>
-        <lastmod>2021-04-07T05:22:37.154Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Bespokejs/</loc>
-        <lastmod>2021-04-07T05:22:37.154Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6/</loc>
-        <lastmod>2021-04-07T05:22:37.154Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/Javascript/</loc>
-        <lastmod>2021-04-07T05:22:37.154Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -702,22 +590,141 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/debug/</loc>
-        <lastmod>2021-04-12T08:57:18.869Z</lastmod>
+        <loc>https://cl9000.github.io/tags/DOM/</loc>
+        <lastmod>2021-04-15T06:47:21.176Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/JavaScript/</loc>
-        <lastmod>2021-04-14T09:19:01.876Z</lastmod>
+        <loc>https://cl9000.github.io/tags/HTML/</loc>
+        <lastmod>2021-04-15T06:47:21.176Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Shadow-Dom/</loc>
+        <lastmod>2021-04-15T06:47:21.176Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Virtual-Dom/</loc>
+        <lastmod>2021-04-15T06:47:21.176Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/debug/</loc>
+        <lastmod>2021-04-15T08:34:09.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Javascript/</loc>
+        <lastmod>2021-04-15T08:34:09.484Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/ajax/</loc>
+        <lastmod>2021-04-15T09:15:21.275Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/fetch/</loc>
+        <lastmod>2021-04-15T09:15:21.275Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E5%8E%9F%E7%94%9F/</loc>
+        <lastmod>2021-04-15T09:15:21.275Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
-        <lastmod>2021-04-14T09:19:01.876Z</lastmod>
+        <lastmod>2021-04-15T09:15:31.909Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/chrome/</loc>
+        <lastmod>2021-04-15T09:15:41.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Driver-js/</loc>
+        <lastmod>2021-04-15T09:15:57.690Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Driverjs/</loc>
+        <lastmod>2021-04-15T09:15:57.690Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%95%E5%AF%BC%E9%A1%B5/</loc>
+        <lastmod>2021-04-15T09:15:57.690Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%95%E5%AF%BC/</loc>
+        <lastmod>2021-04-15T09:15:57.690Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/fullpage-js/</loc>
+        <lastmod>2021-04-15T09:16:09.862Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Bespoke-js/</loc>
+        <lastmod>2021-04-15T09:16:18.499Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Bespokejs/</loc>
+        <lastmod>2021-04-15T09:16:18.499Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6/</loc>
+        <lastmod>2021-04-15T09:16:18.499Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/JavaScript/</loc>
+        <lastmod>2021-04-15T09:28:58.403Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
