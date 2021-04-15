@@ -250,8 +250,6 @@
                         
                     
                         
-                    
-                        
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
@@ -263,6 +261,8 @@
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
+                        
+                    
                         
                     
                         
@@ -353,9 +353,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> foo = <span class="number">1</span>;</span><br><span class="line">    foo = <span class="number">30</span>;</span><br><span class="line">    <span class="keyword">let</span> foo = <span class="number">101</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(foo);  </span><br><span class="line">&#125;</span><br><span class="line">myFn();</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>Output</strong><br><br>
-<br><br>
-Uncaught SyntaxError: Identifier ‘foo’ has already been declared <br><br>
-<br></p>
+Uncaught SyntaxError: Identifier ‘foo’ has already been declared</p>
 </blockquote>
 <p>但是，如果 <code>let</code> 变量在不同的作用域中定义，就不会出现错误。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> foo = <span class="number">1</span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> foo = <span class="number">2</span>;</span><br><span class="line">  <span class="built_in">console</span>.log(foo);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">    <span class="keyword">let</span> foo = <span class="number">3</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(foo);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(foo);</span><br><span class="line">myFn();</span><br></pre></td></tr></table></figure>
