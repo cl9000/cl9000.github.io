@@ -67,11 +67,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          可选链【?.】JavaScript中的运算符 - 魏长露的博客 | Wei, C.-L. Blog
+          三个有用的JS技巧 - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
-    <link rel="canonical" href="https://cl9000.github.io/2021/01/28/可选链【-】JavaScript中的运算符/">
+    <link rel="canonical" href="https://cl9000.github.io/2020/04/12/JavaScript三个有用的JS技巧/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -185,16 +185,12 @@
                                 href="/tags/#JavaScript"
                                 title="JavaScript">JavaScript</a>
                             
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#运算符"
-                                title="运算符">运算符</a>
-                            
                         </div>
-                        <h1>可选链【?.】JavaScript中的运算符</h1>
+                        <h1>三个有用的JS技巧</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by cl9000 on
-                            January 28, 2021
+                            April 12, 2020
                         </span>
                     </div>
                     
@@ -241,13 +237,13 @@
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
@@ -262,13 +258,13 @@
                         
                     
                         
+                    
+                        
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
-                        
-                    
-                        
-                    
                         
                     
                     
@@ -321,75 +317,43 @@
             <!-- Post Container -->
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <p>人生不是一种享乐，而是一桩十分沉重的工作。 —-&lt;列夫·托尔斯泰&gt;</p>
+                <p>​<br>
+人只有献身于社会，才能找出那短暂而有风险的生命的意义。——&lt;阿尔伯特·爱因斯坦&gt;</p>
+<p>原文链接<br>
+<a href="https://www.jstips.co/en/javascript/three-useful-hacks/" target="_blank" rel="noopener">https://www.jstips.co/en/javascript/three-useful-hacks/</a></p>
+<h2><span id="1-从后到前获取数组项">1、从后到前获取数组项</span></h2>
+<p>如果要从后到前获取数组项，只需执行以下操作：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newArray = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">​</span><br><span class="line"><span class="built_in">console</span>.log(newArray.slice(<span class="number">-1</span>)); <span class="comment">// [4]</span></span><br><span class="line"><span class="built_in">console</span>.log(newArray.slice(<span class="number">-2</span>)); <span class="comment">// [3, 4]</span></span><br><span class="line"><span class="built_in">console</span>.log(newArray.slice(<span class="number">-3</span>)); <span class="comment">// [2, 3, 4]</span></span><br><span class="line"><span class="built_in">console</span>.log(newArray.slice(<span class="number">-4</span>)); <span class="comment">// [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+<h2><span id="2-短路有条件">2、短路有条件</span></h2>
+<p>如果必须在条件为 true 的情况下执行函数，如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(condition)&#123;</span><br><span class="line">    dosomething();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>您可以像这样使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">condition &amp;&amp; dosomething();</span><br></pre></td></tr></table></figure>
+<h2><span id="3-使用-设置变量默认值">3、使用 || 设置变量默认值</span></h2>
+<p>如果必须为变量设置默认值，则可以执行以下操作：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a;</span><br><span class="line">​</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">//undefined</span></span><br><span class="line">​</span><br><span class="line">a = a || <span class="string">'default value'</span>;</span><br><span class="line">​</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">//default value</span></span><br><span class="line">​</span><br><span class="line">a = a || <span class="string">'new value'</span>;</span><br><span class="line">​</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">//default valu</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>作者：Ashish Lahoti<br>
-译者：cl9000<br>
-来源：<a href="https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/" target="_blank" rel="noopener">https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/</a></p>
+<p>原文链接：<a href="https://www.jstips.co/en/javascript/three-useful-hacks/" target="_blank" rel="noopener">https://www.jstips.co/en/javascript/three-useful-hacks/</a></p>
 </blockquote>
-<p>可选的链?.运算符用于通过隐式空检查访问嵌套的对象属性。</p>
-<h2><span id="概述">概述</span></h2>
-<p>如何使用无效<code>（null和undefined）</code>检查访问对象的嵌套属性？假设我们必须通过网络api的响应访问用户详细信息？</p>
-<p>您可以<code>? ... :</code>像这样使用嵌套的三元运算符：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userName = response ? (response.data ? (response.data.user ? response.data.user.name : <span class="literal">null</span>) : <span class="literal">null</span>) : <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
-<p>或者您可以在<code>if</code>这种情况下进行空值检查：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> userName = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">if</span>(response &amp;&amp; response.data &amp;&amp; response.data.user)&#123;</span><br><span class="line">  userName = response.data.user.name;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>甚至更好的方法可以使其&amp;&amp;像这样的单衬板链条状态：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userName = response &amp;&amp; response.data &amp;&amp; response.data.user &amp;&amp; response.data.user.name;</span><br></pre></td></tr></table></figure>
-<p>上面的代码的共同点是，链接有时可能真的很长，并且变得更加难以格式化和读取。这是可选的链接?.运算符提供帮助的地方，该运算符提供了隐式的无效检查，并使我们的代码更小，更好。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userName = response?.data?.user?.name;</span><br></pre></td></tr></table></figure>
-<h2><span id="句法">句法</span></h2>
-<p>可选的链<code>?.</code>运算符在<code>Javascript ES2020</code>中引入，其语法如下：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj.val?.prop       returns obj.val.prop <span class="keyword">if</span> val exists, otherwise <span class="literal">undefined</span>.</span><br><span class="line">obj.func?.(args)    returns obj.func(args) <span class="keyword">if</span> func exists, otherwise <span class="literal">undefined</span>.</span><br><span class="line">obj.arr?.[index]    returns obj.array[index] <span class="keyword">if</span> array exists, otherwise <span class="literal">undefined</span>.</span><br></pre></td></tr></table></figure>
-<p>使用可选链<code>?.</code>运算符</p>
-<p>让我们看看<code>?.</code>操作符与<code>user</code>对象的用法：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user = &#123;</span><br><span class="line">  name: <span class="string">"John"</span>,</span><br><span class="line">  age: <span class="number">21</span>,</span><br><span class="line">  homeaddress: &#123;</span><br><span class="line">    country: <span class="string">"USA"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  hobbies: [&#123;<span class="attr">name</span>: <span class="string">"Coding"</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">"Cooking"</span>&#125;],</span><br><span class="line">  getFirstName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2><span id="具有属性">具有属性</span></h2>
-<p>访问存在的属性返回值：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.homeaddress.country); </span><br><span class="line"><span class="comment">// prints "USA";</span></span><br></pre></td></tr></table></figure>
-<p>访问不存在的属性会引发错误：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.officeaddress.country); </span><br><span class="line"><span class="comment">// throws error "Uncaught TypeError: Cannot read property 'country' of undefined"</span></span><br></pre></td></tr></table></figure>
-<p>使用<code>?.</code>不存在的可选链运算符访问属性将返回<code>undefined</code>：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.officeaddress?.country); </span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
-<h2><span id="具有功能">具有功能</span></h2>
-<p>调用存在的函数返回值：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.getFirstName()); </span><br><span class="line"><span class="comment">// prints "John";</span></span><br></pre></td></tr></table></figure>
-<p>调用不存在的函数会引发错误：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.getLastName()); </span><br><span class="line"><span class="comment">// throws error "Uncaught TypeError: user.getLastName is not a function";</span></span><br></pre></td></tr></table></figure>
-<p>用<code>?.</code>不存在的<code>Optional chaining operator</code>调用一个函数将返回<code>undefined：-</code></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.getLastName?.()); </span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
-<h2><span id="与数组">与数组</span></h2>
-<p>访问数组的现有索引返回值：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.hobbies[<span class="number">0</span>].name); </span><br><span class="line"><span class="comment">// prints "Coding";</span></span><br></pre></td></tr></table></figure>
-<p>访问数组的不存在的索引会引发错误：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.hobbies[<span class="number">3</span>].name); </span><br><span class="line"><span class="comment">// throws error "Uncaught TypeError: Cannot read property 'name' of undefined"</span></span><br></pre></td></tr></table></figure>
-<p>使用可选的链运算符访问数组的不存在的索引<code>?.</code> 将返回undefined：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.hobbies[<span class="number">3</span>]?.name); </span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
-<p>访问不存在的数组会引发错误：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.dislikes[<span class="number">0</span>].name); </span><br><span class="line"><span class="comment">// throws error "Uncaught TypeError: Cannot read property '0' of undefined"</span></span><br></pre></td></tr></table></figure>
-<p>使用<code>?.</code>不存在的可选链运算符访问数组将返回<code>undefined</code>：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.dislikes?.[<span class="number">0</span>]?.name); </span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
-<h2><span id="与nullish合并-操作符">与Nullish合并?? 操作符</span></h2>
-<p>现在，您知道如果对象不存在，则可选链运算符<code>?.</code>将返回<code>undefined</code>。有时您想返回一个值，而不是<code>undefined</code>通过使用<code>Nullish Coalescing??</code>运算符和可选的<code>chaining?.</code>运算符来返回一个值。</p>
-<p>如果没有空值合并<code>??</code>运算符，则返回<code>undefined</code>：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> country = user.officeaddress?.country;</span><br><span class="line"><span class="built_in">console</span>.log(country);</span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
-<p>使用空值合并<code>??</code>运算符，返回默认值：-</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> country = user.officeaddress?.country ?? <span class="string">"USA"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(country);</span><br><span class="line"><span class="comment">// prints "USA"</span></span><br></pre></td></tr></table></figure>
-<p>原文链接：<br>
-<a href="https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/" target="_blank" rel="noopener">https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/</a></p>
-<p>参考其它：<br>
-<a href="https://seifi.org/javascript/optional-chaining-in-javascript.html" target="_blank" rel="noopener">https://seifi.org/javascript/optional-chaining-in-javascript.html</a></p>
+<p>关注【公众号】，了解更多。</p>
 
 
                 <hr>
                 <!-- Pager &rarr; 箭头 -->
                 <ul class="pager">
                     
+                        <li class="previous">
+                            <a href="/2020/05/27/虚拟DOMVS影子DOM/" data-toggle="tooltip" data-placement="top" title="虚拟DOM（Virtual Dom） VS 影子DOM（Shadow Dom）"> Previous
+                            <br>
+                            <span>虚拟DOM（Virtual Dom） VS 影子DOM（Shadow Dom）</span>
+                            </a>
+                        </li>
+                    
                     
                         <li class="next">
-                            <a href="/2020/11/05/python-error-root-code-for-hash-md5/" data-toggle="tooltip" data-placement="top" title="python：ERROR:root:code for hash md5 was not found.">Next
+                            <a href="/2020/04/12/使tap来快速debug/" data-toggle="tooltip" data-placement="top" title="使用 tap 快速 debug">Next
                             <br>
-                            <span>python：ERROR:root:code for hash md5 was not found.</span>
+                            <span>使用 tap 快速 debug</span>
                             </a>
                         </li>
                     
@@ -442,7 +406,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">句法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">具有属性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">具有功能</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">与数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">与Nullish合并?? 操作符</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1、从后到前获取数组项</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2、短路有条件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3、使用 || 设置变量默认值</span></a></li></ol>
         
         </div>
       </aside>
@@ -460,8 +424,6 @@
                     <div class="tags">
                        
                           <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
-                        
-                          <a class="tag" href="/tags/#运算符" title="运算符">运算符</a>
                         
                     </div>
                 </section>
