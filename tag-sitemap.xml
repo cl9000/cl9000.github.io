@@ -723,29 +723,29 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/JavaScript/</loc>
-        <lastmod>2021-04-16T06:23:52.093Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/Lexical-Scope%EF%BC%88%E8%AF%8D%E6%B3%95%E8%8C%83%E5%9B%B4%EF%BC%89/</loc>
-        <lastmod>2021-04-16T06:23:52.093Z</lastmod>
+        <lastmod>2021-04-16T06:33:52.718Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/Closures%EF%BC%88%E9%97%AD%E5%8C%85%EF%BC%89/</loc>
-        <lastmod>2021-04-16T06:23:52.093Z</lastmod>
+        <lastmod>2021-04-16T06:33:52.718Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://cl9000.github.io/tags/Currying%EF%BC%88%E6%9F%AF%E9%87%8C%E5%8C%96%EF%BC%89/</loc>
-        <lastmod>2021-04-16T06:23:52.093Z</lastmod>
+        <lastmod>2021-04-16T06:33:52.718Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/JavaScript/</loc>
+        <lastmod>2021-04-16T07:04:59.780Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
