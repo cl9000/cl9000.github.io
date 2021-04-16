@@ -378,13 +378,13 @@
     
     
     
+      <category term="JavaScript" scheme="https://cl9000.github.io/tags/JavaScript/"/>
+    
       <category term="Bespoke.js" scheme="https://cl9000.github.io/tags/Bespoke-js/"/>
     
       <category term="Bespokejs" scheme="https://cl9000.github.io/tags/Bespokejs/"/>
     
       <category term="演示文稿微框架" scheme="https://cl9000.github.io/tags/%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6/"/>
-    
-      <category term="JavaScript" scheme="https://cl9000.github.io/tags/JavaScript/"/>
     
   </entry>
   
@@ -410,8 +410,6 @@
     
     
     
-      <category term="JavaScript" scheme="https://cl9000.github.io/tags/JavaScript/"/>
-    
       <category term="Driver.js" scheme="https://cl9000.github.io/tags/Driver-js/"/>
     
       <category term="Driverjs" scheme="https://cl9000.github.io/tags/Driverjs/"/>
@@ -419,6 +417,8 @@
       <category term="前端引导页" scheme="https://cl9000.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%95%E5%AF%BC%E9%A1%B5/"/>
     
       <category term="分布式引导" scheme="https://cl9000.github.io/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%95%E5%AF%BC/"/>
+    
+      <category term="JavaScript" scheme="https://cl9000.github.io/tags/JavaScript/"/>
     
   </entry>
   
