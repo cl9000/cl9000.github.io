@@ -271,8 +271,6 @@
                         
                     
                         
-                    
-                        
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
@@ -282,6 +280,8 @@
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
+                        
+                    
                         
                     
                     
@@ -339,6 +339,134 @@
         <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
             <!-- Main Content -->
 
+
+<div class="post-preview">
+
+    <a href="/2019/04/22/免费-快速-可靠CDN/">
+        <h2 class="post-title">
+                                 
+            使用 Github，jsDelivr，TravisCI 搭建轻量 CDN
+        </h2>
+        <h3 class="post-subtitle">
+            免费-快速-可靠CDN
+        </h3>
+        <div class="post-content-preview">
+            使用 Github，jsDelivr， TravisCI 搭建轻量 CDN
+免费-快速-可靠 CDN
+内容分发网络（英语：Content Delivery Network或Content Distribution Network，缩写：CDN）是指一种透过互联网互相连接的电脑网络系统，利用最靠近每位用户的服务器，更快、更可靠地将音乐、图片、影片、应用程序及其他文件发送给用户，来提供高性能、可......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            April 22, 2019
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2019/03/09/HBuilderX-uniapp-cli更新-语法提示库/">
+        <h2 class="post-title">
+                                 
+            【HBuilderX】uniapp-cli更新node_modules/语法提示库
+        </h2>
+        <h3 class="post-subtitle">
+            HBuilderX-uniapp-cli更新-语法提示库
+        </h3>
+        <div class="post-content-preview">
+            
+    那些疯狂到认为自己能够改变世界的人，才能真正改变世界。——史蒂夫·乔布斯
+
+
+缘由：
+&lt;语法提示库&gt;、&lt;uniapp-cli依赖包node_modules全更新&gt;、&lt;Browserslist：caniuse-lite is outdated&gt;
+HBuilderX 更新脚手架(uniapp-cli)依赖包node_modules
+目录路径 HBui......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            March 09, 2019
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2018/12/19/Mac-更新node版本/">
+        <h2 class="post-title">
+                                 
+            Mac 更新node版本
+        </h2>
+        <h3 class="post-subtitle">
+            Mac-更新node版本
+        </h3>
+        <div class="post-content-preview">
+            MAC升级Nodejs和Npm到最新版
+Node.js官网
+第一步，先查看本机node.js版本
+$ node -v
+第二步，清除node.js的cache
+$ sudo npm cache clean -f
+第三步，安装 n 工具，这个工具是专门用来管理node.js版本的
+$ sudo npm install -g n
+第四步，安装最新版本的node.js
+$ sudo n stable......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            December 19, 2018
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2018/11/03/mysql错误ER-TRUNCATED-WRONG-VALUE-FOR-FIELD/">
+        <h2 class="post-title">
+                                 
+            mysql错误 ER_TRUNCATED_WRONG_VALUE_FOR_FIELD
+        </h2>
+        <h3 class="post-subtitle">
+            mysql错误ER-TRUNCATED-WRONG-VALUE-FOR-FIELD
+        </h3>
+        <div class="post-content-preview">
+            ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value
+Mac系统下mysql报错：ER_TRUNCATED_WRONG_VALUE_FOR_FIELD: Incorrect string value
+这种原因是mysql字符集编码导致。
+
+查看 mysql 字符集编码
+进入mysql，终端执行
+$ mysql -u root -......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            November 03, 2018
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
 
 <div class="post-preview">
 
@@ -543,144 +671,6 @@ protocol buffers是一种灵活，高效，自动化的结构化数据序列化�
 <!-- cl9000 添加样式解决首页列表缺失分割线 -->
 <hr style="height: 1px !important;">
 
-<div class="post-preview">
-
-    <a href="/2017/04/13/BING-获取BING每日美图/">
-        <h2 class="post-title">
-                                 
-            [BING] 获取BING每日美图、构建API、每日抓取下载、部署私人服务器并存储
-        </h2>
-        <h3 class="post-subtitle">
-            BING-获取BING每日美图
-        </h3>
-        <div class="post-content-preview">
-            BING每日美图
-解析API
-bing 搜索
-
-F12 查看源码，定位背景地址、解析可以获得首页图的获取API。格式：
-1http://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1
-注意，这里有几个GET参数，它们的作用分别是：
-
-n，必要参数。这是输出信息的数量。比如n=1，即为1条，以此类推，至多输出8条。
-for......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            April 13, 2017
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2017/04/09/Mac-定时任务-launchctl/">
-        <h2 class="post-title">
-                                 
-            Mac 定时任务 launchctl
-        </h2>
-        <h3 class="post-subtitle">
-            Mac-定时任务-launchctl
-        </h3>
-        <div class="post-content-preview">
-            Mac 定时任务 launchctl
-launchctl
-launchctl: 是一个统一的服务管理框架，可以启动、停止和管理守护进程、应用程序、进程和脚本等。
-launchctl是通过配置文件来指定执行周期和任务的。
-配置文件（plist文件）
-launchctl 将根据plist文件的信息来启动任务。
-plist文件位置：
-
-~/Library/LaunchAgents 由用户自己定义的......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            April 09, 2017
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2017/04/03/Mac-rootless机制/">
-        <h2 class="post-title">
-                                 
-            Mac rootless机制  `Operation not permitted`
-        </h2>
-        <h3 class="post-subtitle">
-            Mac-rootless机制
-        </h3>
-        <div class="post-content-preview">
-            Mac rootless机制 Operation not permitted
-Mac使用 sudo 或切换成 root 权限，还是出现
-Operation not permitted
-这是由于 Max OS X El 的rootless机制，即sudo也不能操作部分文件目录， 所以如果需要执行，需要先关闭rootless功能。可以进入恢复模式关闭rootless机制：
-1、重启Mac，按 c......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            April 03, 2017
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2017/04/01/fullpage-js/">
-        <h2 class="post-title">
-                                 
-            fullpage.js 使用
-        </h2>
-        <h3 class="post-subtitle">
-            fullpage-js
-        </h3>
-        <div class="post-content-preview">
-            fullpage.js
-链接
-
-fullPage.js 官方
-fullPage.js 页面
-
-在使用
-
-360
-http://themify.me/demo/#theme=fullpane
-http://www.kesstrio.com/#galleryPage
-http://boxx.hk/tc/
-http://www.camanihome.com/#contacts
-https://li......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            April 01, 2017
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
 
 
 <!-- Pager -->
@@ -732,6 +722,22 @@ https://li......
             
         
             
+            <a href="/tags/#Bespoke.js" title="Bespoke.js" rel="1">Bespoke.js</a>
+            
+        
+            
+            <a href="/tags/#Bespokejs" title="Bespokejs" rel="1">Bespokejs</a>
+            
+        
+            
+            <a href="/tags/#演示文稿微框架" title="演示文稿微框架" rel="1">演示文稿微框架</a>
+            
+        
+            
+            <a href="/tags/#JavaScript" title="JavaScript" rel="15">JavaScript</a>
+            
+        
+            
             <a href="/tags/#CSS" title="CSS" rel="3">CSS</a>
             
         
@@ -741,6 +747,22 @@ https://li......
         
             
             <a href="/tags/#Docker" title="Docker" rel="2">Docker</a>
+            
+        
+            
+            <a href="/tags/#Chrome" title="Chrome" rel="1">Chrome</a>
+            
+        
+            
+            <a href="/tags/#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
+            
+        
+            
+            <a href="/tags/#Nginx" title="Nginx" rel="2">Nginx</a>
+            
+        
+            
+            <a href="/tags/#Docker配置部署Nginx" title="Docker配置部署Nginx" rel="1">Docker配置部署Nginx</a>
             
         
             
@@ -757,38 +779,6 @@ https://li......
         
             
             <a href="/tags/#分布式引导" title="分布式引导" rel="1">分布式引导</a>
-            
-        
-            
-            <a href="/tags/#JavaScript" title="JavaScript" rel="11">JavaScript</a>
-            
-        
-            
-            <a href="/tags/#Bespoke.js" title="Bespoke.js" rel="1">Bespoke.js</a>
-            
-        
-            
-            <a href="/tags/#Bespokejs" title="Bespokejs" rel="1">Bespokejs</a>
-            
-        
-            
-            <a href="/tags/#演示文稿微框架" title="演示文稿微框架" rel="1">演示文稿微框架</a>
-            
-        
-            
-            <a href="/tags/#Nginx" title="Nginx" rel="2">Nginx</a>
-            
-        
-            
-            <a href="/tags/#Docker配置部署Nginx" title="Docker配置部署Nginx" rel="1">Docker配置部署Nginx</a>
-            
-        
-            
-            <a href="/tags/#Chrome" title="Chrome" rel="1">Chrome</a>
-            
-        
-            
-            <a href="/tags/#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
             
         
             
@@ -920,14 +910,6 @@ https://li......
             
         
             
-            <a href="/tags/#Mac" title="Mac" rel="2">Mac</a>
-            
-        
-            
-            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
-            
-        
-            
             <a href="/tags/#Karma" title="Karma" rel="1">Karma</a>
             
         
@@ -937,6 +919,14 @@ https://li......
         
             
             <a href="/tags/#Web测试" title="Web测试" rel="1">Web测试</a>
+            
+        
+            
+            <a href="/tags/#Mac" title="Mac" rel="2">Mac</a>
+            
+        
+            
+            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
             
         
             
@@ -988,10 +978,6 @@ https://li......
             
         
             
-            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
-            
-        
-            
             <a href="/tags/#播放器" title="播放器" rel="1">播放器</a>
             
         
@@ -1013,6 +999,10 @@ https://li......
         
             
             <a href="/tags/#正则表达式" title="正则表达式" rel="1">正则表达式</a>
+            
+        
+            
+            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
             
         
             
@@ -1056,6 +1046,14 @@ https://li......
             
         
             
+            <a href="/tags/#mysql" title="mysql" rel="1">mysql</a>
+            
+        
+            
+            <a href="/tags/#my.cnf" title="my.cnf" rel="1">my.cnf</a>
+            
+        
+            
             <a href="/tags/#iOS" title="iOS" rel="2">iOS</a>
             
         
@@ -1065,14 +1063,6 @@ https://li......
         
             
             <a href="/tags/#自动化打包" title="自动化打包" rel="1">自动化打包</a>
-            
-        
-            
-            <a href="/tags/#mysql" title="mysql" rel="1">mysql</a>
-            
-        
-            
-            <a href="/tags/#my.cnf" title="my.cnf" rel="1">my.cnf</a>
             
         
             
@@ -1088,11 +1078,7 @@ https://li......
             
         
             
-            <a href="/tags/#debug" title="debug" rel="1">debug</a>
-            
-        
-            
-            <a href="/tags/#Javascript" title="Javascript" rel="1">Javascript</a>
+            <a href="/tags/#chrome" title="chrome" rel="1">chrome</a>
             
         
             
@@ -1100,7 +1086,11 @@ https://li......
             
         
             
-            <a href="/tags/#chrome" title="chrome" rel="1">chrome</a>
+            <a href="/tags/#debug" title="debug" rel="1">debug</a>
+            
+        
+            
+            <a href="/tags/#Javascript" title="Javascript" rel="1">Javascript</a>
             
         
             
@@ -1120,18 +1110,6 @@ https://li......
             
         
             
-            <a href="/tags/#reCAPTCHA" title="reCAPTCHA" rel="1">reCAPTCHA</a>
-            
-        
-            
-            <a href="/tags/#Google人机验证" title="Google人机验证" rel="1">Google人机验证</a>
-            
-        
-            
-            <a href="/tags/#gooreplacer" title="gooreplacer" rel="1">gooreplacer</a>
-            
-        
-            
             <a href="/tags/#DOM" title="DOM" rel="1">DOM</a>
             
         
@@ -1145,6 +1123,18 @@ https://li......
         
             
             <a href="/tags/#Virtual Dom" title="Virtual Dom" rel="1">Virtual Dom</a>
+            
+        
+            
+            <a href="/tags/#reCAPTCHA" title="reCAPTCHA" rel="1">reCAPTCHA</a>
+            
+        
+            
+            <a href="/tags/#Google人机验证" title="Google人机验证" rel="1">Google人机验证</a>
+            
+        
+            
+            <a href="/tags/#gooreplacer" title="gooreplacer" rel="1">gooreplacer</a>
             
         
     </div>
@@ -1279,7 +1269,7 @@ https://li......
 
     <h5>₰ ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li></ul>
     </div>
 
         <hr>
