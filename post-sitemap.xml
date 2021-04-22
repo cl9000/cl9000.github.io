@@ -7,6 +7,46 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/2020/03/30/CSS-%E5%80%BC%E5%BE%97%E6%94%B6%E8%97%8F%E7%9A%84-CSS-%E5%BD%A2%E7%8A%B6/</loc>
+        <lastmod>2021-04-22T02:20:46.190Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2020/04/02/JavaScript-Bespoke-js%E2%80%93%E5%9F%BA%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6/</loc>
+        <lastmod>2021-04-22T02:20:20.470Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2020/04/12/JavaScript-%E4%BD%BFtap%E6%9D%A5%E5%BF%AB%E9%80%9Fdebug/</loc>
+        <lastmod>2021-04-22T02:20:10.718Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2017/04/01/JavaScript-fullpage-js/</loc>
+        <lastmod>2021-04-22T02:19:42.999Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2020/04/01/JavaScript-Driver-js%E2%80%93%E9%A1%B5%E9%9D%A2%E5%88%86%E6%AD%A5%E5%BC%95%E5%AF%BC/</loc>
+        <lastmod>2021-04-22T02:19:36.584Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/2020/04/04/JavaScript%E4%B8%ADPromises/</loc>
         <lastmod>2021-04-21T09:01:10.563Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -127,30 +167,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/2020/04/02/Bespoke-js%E2%80%93%E5%9F%BA%E4%BA%8E%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF%E5%BE%AE%E6%A1%86%E6%9E%B6/</loc>
-        <lastmod>2021-04-15T09:16:18.499Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2017/04/01/fullpage-js/</loc>
-        <lastmod>2021-04-15T09:16:09.862Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2020/04/01/Driver-js%E2%80%93%E9%A1%B5%E9%9D%A2%E5%88%86%E6%AD%A5%E5%BC%95%E5%AF%BC/</loc>
-        <lastmod>2021-04-15T09:15:57.690Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/2020/04/01/%E3%80%90%E8%AF%91%E6%96%87%E3%80%91%E4%BD%A0%E5%8F%AF%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E4%BD%A0%E5%8F%AF%E4%BB%A5%E7%94%A8Chrome%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E6%8E%A7%E5%88%B6%E5%8F%B0%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85/</loc>
         <lastmod>2021-04-15T09:15:41.470Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -161,14 +177,6 @@
     <url>
         <loc>https://cl9000.github.io/2018/07/15/JS%E5%8E%9F%E7%94%9Fajax%E8%AF%B7%E6%B1%82-fetch/</loc>
         <lastmod>2021-04-15T09:15:21.275Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2020/04/12/%E4%BD%BFtap%E6%9D%A5%E5%BF%AB%E9%80%9Fdebug/</loc>
-        <lastmod>2021-04-15T08:34:09.484Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -209,14 +217,6 @@
     <url>
         <loc>https://cl9000.github.io/2020/04/06/Plyr%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
         <lastmod>2021-04-06T09:25:43.222Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2020/03/30/%E5%80%BC%E5%BE%97%E6%94%B6%E8%97%8F%E7%9A%84-CSS-%E5%BD%A2%E7%8A%B6/</loc>
-        <lastmod>2021-03-30T13:05:16.606Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
