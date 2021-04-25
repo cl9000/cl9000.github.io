@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 start -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+    <!-- 回到顶部样式 end -->
+
+
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5">
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword" content="weichanglu, Weichanglu, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          JavaScript 中的 Console-API - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/2020/06/17/JavaScript中的console-API/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+    
+
+    /* 滚动条自定义 start */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color:transparent; */
+        /* -webkit-border-radius:2em; */
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(4, 125, 238);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    /* 滚动条自定义 end */
+
+    header.intro-header {
+        background-image: url('/img/article_header/article_bg.jpg');
+            /*post*/
+            
+    }
+
+    
+
+    /* tools heading */
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#JavaScript"
+                                title="JavaScript">JavaScript</a>
+                            
+                        </div>
+                        <h1>JavaScript 中的 Console-API</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            June 17, 2020
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="searchIcon">
+                        <a href="#searchModal">
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <p>达到完美境界并不是无以复加，而是无可去除。——&lt;安托万·德·圣·埃克苏佩里&gt;</p>
+<blockquote>
+<p>作者：Ashish Lahoti<br>
+译者：cl9000<br>
+来源：<a href="https://codingnconcepts.com/javascript/console-api-walkthrough/" target="_blank" rel="noopener">https://codingnconcepts.com/javascript/console-api-walkthrough/</a></p>
+</blockquote>
+<p>在本文中，我们将通过一些简单的例子演示 <code>JavaScript</code> 的 <code>Console API</code> 方法</p>
+<h2><span id="1-consolelog">1. console.log</span></h2>
+<p><code>console.log</code> 是将值记录到控制台的最常用方法:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> name = <span class="string">'Console!'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'hello,'</span>, name);    <span class="comment">//hello, Console!</span></span><br></pre></td></tr></table></figure>
+<p>我们还可以使用 <code>String Template Literal</code>（使用 <code>${}</code> 包裹 变量值）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">`hello, <span class="subst">$&#123;name&#125;</span>`</span>);  <span class="comment">//hello, Console!</span></span><br></pre></td></tr></table></figure>
+<p>我们还可以在单​​个语句中将多个值记录到控制台：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> key = <span class="string">'value'</span>;</span><br><span class="line"><span class="keyword">const</span> number = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> fruits = [<span class="string">'apple'</span>, <span class="string">'banana'</span>, <span class="string">'mango'</span>];</span><br><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'key:'</span>, name, <span class="string">'number:'</span>, number, <span class="string">'fruits:'</span>, fruits, <span class="string">'obj:'</span>, obj);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>key: Console! number: 1 fruits: (3) [“apple”, “banana”, “mango”] obj: {a: 1, b: 2}</p>
+</blockquote>
+<p>就像一样console.log，我们还有其他方法可以将值记录到控制台：</p>
+<ul>
+<li><code>console.debug</code> 就像带有“调试”日志级别的 <code>console.log</code> 一样。通常，浏览器的默认日志级别为 <code>info</code>，直到您将日志级别更改为 <code>debug</code>才会显示。</li>
+<li><code>console.info</code> 就像 <code>console.log</code> 具有<code>“ info”</code>日志级别</li>
+<li><code>console.warn</code> 将警告打印到控制台</li>
+<li><code>console.error</code> 将对象作为错误打印到控制台，并包括堆栈跟踪</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.debug(<span class="string">'Let me find you'</span>);  <span class="comment">//won't be displayed</span></span><br><span class="line"><span class="built_in">console</span>.info(<span class="string">'Just FYI'</span>);</span><br><span class="line"><span class="built_in">console</span>.warn(<span class="string">'I told you !'</span>);</span><br><span class="line"><span class="built_in">console</span>.error(<span class="string">'I cannot do it.'</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Just FYI</strong><br>
+<span style="background:yellow">➤ ⚠️ I told you !</span><br>
+<span style="color:red">➤ ⓧ I cannot do it.</span></p>
+</blockquote>
+<h2><span id="2-consoleassert">2. console.assert</span></h2>
+<p>您可以使用进行一些断言测试 <code>console.assert</code>。</p>
+<p>第一个参数是一个表达式，如果计算结果为false，则断言失败，第二个参数作为错误输出到控制台。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// this will pass, nothing will be logged</span></span><br><span class="line"><span class="built_in">console</span>.assert(<span class="number">2</span> == <span class="string">'2'</span>, <span class="string">'2 not == to "2"'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// this fails, '3 not === to "3"' will be logged</span></span><br><span class="line"><span class="built_in">console</span>.assert(<span class="number">3</span> === <span class="string">'3'</span>, <span class="string">'3 not === to "3"'</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><span style="color:red">➤ ⓧ Assertion failed: 3 not === to “3”</span></p>
+</blockquote>
+<p>您还可以在断言失败时输出的第二个参数中传递一个对象：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> x = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">const</span> y = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">const</span> reason = <span class="string">'x is expected to be less than y'</span>;</span><br><span class="line"><span class="built_in">console</span>.assert(x &lt; y, &#123;x, y, reason&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+<span style="color:red">➤ ⓧ Assertion failed:</span>  ➤ {x: 5, y: 3, reason: “x is expected to be less than y”}</p>
+</blockquote>
+<h2><span id="3-consoleclear">3. console.clear</span></h2>
+<p>您可以使用 <code>console.clear</code> 以下命令清除控制台：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.clear();</span><br></pre></td></tr></table></figure>
+<h2><span id="4-consolecount">4. console.count</span></h2>
+<p><code>console.count</code>方法用于计算使用相同提供的标签调用它的次数。例如，这里有两个计数器，一个用于偶数，一个用于奇数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>].forEach(<span class="function"><span class="params">nb</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (nb % <span class="number">2</span> === <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="built_in">console</span>.count(<span class="string">'even'</span>);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.count(<span class="string">'odd'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+odd: 1<br>
+even: 1<br>
+odd: 2<br>
+even: 2<br>
+odd: 3</p>
+</blockquote>
+<p>console.countReset如果我们在上面的示例之后执行以下操作，则该方法用于将计数器重置为1，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.countReset(<span class="string">'even'</span>);</span><br><span class="line"><span class="built_in">console</span>.countReset(<span class="string">'odd'</span>);</span><br><span class="line"><span class="built_in">console</span>.count(<span class="string">'even'</span>);</span><br><span class="line"><span class="built_in">console</span>.count(<span class="string">'odd'</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+even: 1<br>
+odd: 1</p>
+</blockquote>
+<h2><span id="5-consoledir">5. console.dir</span></h2>
+<p>您可以使用以下命令以格式化的方式打印对象的所有内部属性 console.dir</p>
+<p>我们可以打印的原型方法数组或对象使用console.dir，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.dir([<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"qux"</span>]);  <span class="comment">//Array</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.dir(&#123;<span class="attr">a</span>: <span class="string">"foo"</span>, <span class="attr">b</span>: <span class="string">"bar"</span>&#125;);   <span class="comment">//Object</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+▼ Array(3)<br>
+0: &quot;foo&quot;<br>
+1: &quot;bar&quot;<br>
+2: &quot;qux&quot;<br>
+length: 3<br>
+▼ <strong>proto</strong>: Array(0)<br>
+➤ concat: ƒ concat()<br>
+➤ constructor: ƒ Array()<br>
+➤ …<br>
+▼ Object<br>
+a: &quot;foo&quot;<br>
+b: &quot;bar&quot;<br>
+➤ <strong>proto</strong>: Object</p>
+</blockquote>
+<p>我们也可以将功能的范围和封闭使用打印console.dir，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> outerFunc  = <span class="function"><span class="keyword">function</span>(<span class="params">c</span>)</span>&#123; </span><br><span class="line">  <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">var</span> innerFunc = <span class="function"><span class="keyword">function</span>(<span class="params">d</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">return</span> a + b + c + d;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> innerFunc;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.dir(outerFunc(<span class="number">3</span>));</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+▼ ƒ innerFunc(d)<br>
+arguments: null<br>
+caller: null<br>
+length: 1<br>
+name: &quot;innerFunc&quot;<br>
+➤ prototype: {constructor: ƒ}<br>
+➤ <strong>proto</strong>: ƒ ()<br>
+▼ [[[Scopes]]: Scopes[2]<br>
+➤ 0: Closure (outerFunc) {c: 3, a: 1}<br>
+➤ 1: Global {parent: Window, opener: null, top: Window, length: 1, frames: Window, …}</p>
+</blockquote>
+<h2><span id="6-consoledirxml">6. console.dirxml</span></h2>
+<p>您可以使用树状结构以HTML格式打印DOM元素 console.dirxml</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.dirxml(<span class="built_in">document</span>.body);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+<code>▼ &lt;body&gt;</code><br>
+<code>&lt;h1&gt;hello&lt;/h1&gt;</code><br>
+<code>&lt;script&gt;</code><br>
+<code>console.dirxml(document.body);</code><br>
+<code>&lt;/script&gt;</code><br>
+<code>&lt;/body&gt;</code></p>
+</blockquote>
+<h2><span id="7-consolegroup">7. console.group</span></h2>
+<p>您可以使用console.group和将日志消息分组在一起console.groupEnd。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.group(<span class="string">"API Details"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"Scheme : HTTPS"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"Host   : example.com"</span>);</span><br><span class="line"><span class="built_in">console</span>.groupEnd();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+▼ API Details<br>
+Scheme : HTTPS<br>
+Host   : <a href="http://example.com" target="_blank" rel="noopener">example.com</a></p>
+</blockquote>
+<p>请注意，使用记录的组消息console.group最初已扩展。如果您希望默认情况下将它们折叠起来，则可以console.groupCollapsed改用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.groupCollapsed(<span class="string">"API Details"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"Scheme : HTTPS"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"Host   : example.com"</span>);</span><br><span class="line"><span class="built_in">console</span>.groupEnd();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+▶ API Details</p>
+</blockquote>
+<p>您可以进一步将消息分组到嵌套级别。这样，您就可以以干净的格式将层次结构数据打印到控制台：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.group(<span class="string">"API Details"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"Scheme : HTTPS"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"Host   : example.com"</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// nesting</span></span><br><span class="line">  <span class="built_in">console</span>.group(<span class="string">"User API"</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Method   : GET"</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"Endpoint : /user"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// further nesting</span></span><br><span class="line">    <span class="built_in">console</span>.group(<span class="string">"Query Parameters"</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"id : 1"</span>);</span><br><span class="line">    <span class="built_in">console</span>.groupEnd();</span><br><span class="line"></span><br><span class="line">  <span class="built_in">console</span>.groupEnd();</span><br><span class="line"><span class="built_in">console</span>.groupEnd();</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+▼ API Details<br>
+Scheme : HTTPS<br>
+Host   : <code>example.com</code><br>
+▼ User API<br>
+Method   : GET<br>
+Endpoint : /user<br>
+▼ Query Parameters<br>
+id : 1</p>
+</blockquote>
+<h2><span id="8-consoletable">8. console.table</span></h2>
+<p>您可以使用以表格格式打印数据 <code>console.table</code> 。该方法对于可视化大型对象和数组非常有用。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> john  = &#123; <span class="attr">firstName</span>: <span class="string">"John"</span>,  <span class="attr">lastName</span>: <span class="string">"Smith"</span>, <span class="attr">age</span>: <span class="number">41</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> jane  = &#123; <span class="attr">firstName</span>: <span class="string">"Jane"</span>,  <span class="attr">lastName</span>: <span class="string">"Doe"</span>,   <span class="attr">age</span>: <span class="number">38</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> emily = &#123; <span class="attr">firstName</span>: <span class="string">"Emily"</span>, <span class="attr">lastName</span>: <span class="string">"Jones"</span>, <span class="attr">age</span>: <span class="number">12</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.table([john, jane, emily]);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌─────────┬───────────┬──────────┬─────┐</span><br><span class="line">│ (index) │ firstName │ lastName │ age │</span><br><span class="line">├─────────┼───────────┼──────────┼─────┤</span><br><span class="line">│    <span class="number">0</span>    │  <span class="string">'John'</span>   │ <span class="string">'Smith'</span>  │ <span class="number">41</span>  │</span><br><span class="line">│    <span class="number">1</span>    │  <span class="string">'Jane'</span>   │  <span class="string">'Doe'</span>   │ <span class="number">38</span>  │</span><br><span class="line">│    <span class="number">2</span>    │  <span class="string">'Emily'</span>  │ <span class="string">'Jones'</span>  │ <span class="number">12</span>  │</span><br><span class="line">└─────────┴───────────┴──────────┴─────┘</span><br><span class="line">▶ <span class="built_in">Array</span>(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>您还可以选择以这种方式处理大型对象时仅打印少量属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.table([john, jane, emily], [<span class="string">"firstName"</span>]);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">┌─────────┬───────────┐</span><br><span class="line">│ (index) │ firstName │</span><br><span class="line">├─────────┼───────────┤</span><br><span class="line">│    <span class="number">0</span>    │  <span class="string">'John'</span>   │</span><br><span class="line">│    <span class="number">1</span>    │  <span class="string">'Jane'</span>   │</span><br><span class="line">│    <span class="number">2</span>    │  <span class="string">'Emily'</span>  │</span><br><span class="line">└─────────┴───────────┘</span><br><span class="line">▶ <span class="built_in">Array</span>(<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<h2><span id="9-consoletime">9. console.time</span></h2>
+<p>您可以通过以 <code>console.time</code> 开头 和 以 <code>console.timeEnd</code> 结束来打印代码执行所花费的时间。</p>
+<p>计时器可以有一个可选标签，如果您使用带标签的计时器，则两者 <code>console.time</code> 和 <code>console.timeEnd</code> 标签应具有相同的标签。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.time(<span class="string">'fetching data'</span>);</span><br><span class="line">fetch(<span class="string">'https://jsonplaceholder.typicode.com/users'</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">d</span> =&gt;</span> d.json())</span><br><span class="line">  .then(<span class="built_in">console</span>.log);</span><br><span class="line"><span class="built_in">console</span>.timeEnd(<span class="string">'fetching data'</span>);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+fetching data: 0.435791015625ms<br>
+▶ (10) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]</p>
+</blockquote>
+<h2><span id="10-consoletrace">10. console.trace</span></h2>
+<p>您可以用来 <code>console.trace()</code> 将方法执行流的堆栈跟踪打印到控制台。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> first = <span class="function"><span class="params">()</span> =&gt;</span> &#123; second(); &#125;;</span><br><span class="line"><span class="keyword">const</span> second = <span class="function"><span class="params">()</span> =&gt;</span> &#123; third(); &#125;;</span><br><span class="line"><span class="keyword">const</span> third = <span class="function"><span class="params">()</span> =&gt;</span> &#123; fourth(); &#125;;</span><br><span class="line"><span class="keyword">const</span> fourth = <span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="built_in">console</span>.trace(<span class="string">"The trace"</span>); &#125;;</span><br><span class="line">first();</span><br></pre></td></tr></table></figure>
+<p>您将获得控制台输出，可以单击以导航到源。<code>@ file_name:line_number</code></p>
+<blockquote>
+<p><strong>Output</strong><br>
+▼ The trace<br>
+fourth        @ test:4<br>
+third	        @ test:3<br>
+second        @ test:2<br>
+first	        @ test:1<br>
+(anonymous)   @ test:5</p>
+</blockquote>
+<h2><span id="11-consolelog格式">11. console.log格式</span></h2>
+<p><code>console.log</code> 还提供了格式设置，以使我们的日志消息在其他消息中脱颖而出。这使我们能够在控制台中找到重要消息。</p>
+<ul>
+<li><code>%s</code>  将值格式化为字符串</li>
+<li><code>%d</code> 或 <code>%i</code> 将值格式化为整数</li>
+<li><code>%f</code>  将值格式化为浮点数</li>
+<li><code>%o</code>  用于打印为可扩展的 <code>DOM</code> 元素</li>
+<li><code>%O</code>  用于打印为 <code>JavaScript</code> 对象</li>
+<li><code>%c</code>  用于将 <code>CSS</code> 样式规则应用于第二个参数指定的输出字符串</li>
+</ul>
+<p>我们将值格式化为字符串，整数和浮点数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'The %s is turning %d in next %f months'</span>, <span class="string">'kid'</span>, <span class="number">18</span>, <span class="number">2.5</span>);</span><br><span class="line"><span class="comment">//The kid is turning 18 in next 2.5 months</span></span><br></pre></td></tr></table></figure>
+<p>让我们看看将DOM打印为可扩展HTML元素树或JSON对象树有什么大惊小怪的：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'%o'</span>, <span class="built_in">document</span>.body);   <span class="comment">//Print HTML element tree</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'%O'</span>, <span class="built_in">document</span>.body);   <span class="comment">//Print JSON object tree</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+▶ <code>&lt;body class=&quot;body&quot; data-gr-c-s-loaded=&quot;true&quot;&gt; ... &lt;body&gt;</code><br>
+▶ <code>body.body</code></p>
+</blockquote>
+<p>您可以像这样打印彩色格式化的日志消息：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> red = <span class="string">'color:red'</span>;</span><br><span class="line"><span class="keyword">const</span> orange = <span class="string">'color:orange'</span>;</span><br><span class="line"><span class="keyword">const</span> green = <span class="string">'color:green'</span>;</span><br><span class="line"><span class="keyword">const</span> blue = <span class="string">'color:blue'</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'%cHello %cWorld %cfoo %cbar'</span>, red, orange, green, blue);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Output</strong><br>
+<span style="color:red">Hello</span> <span style="color:orange">World</span> <span style="color:green">foo</span> <span style="color:blue">bar</span></p>
+</blockquote>
+<p>还可以使用多个样式属性将时尚的横幅打印到控制台：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line"><span class="string">'%cThanks for reading %cCodingNConcepts :)'</span>,</span><br><span class="line"><span class="string">'color: #000; font-weight: bold; font-size: 1.5rem; border: 1px solid black; padding: 5px; margin-right: 5px;'</span>,</span><br><span class="line"><span class="string">'color: #e22d30; font-weight: bold; font-size: 2rem; text-shadow: 0 0 5px rgba(0,0,0,0.2);'</span>,</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h3><span id="参考">参考</span></h3>
+<ul>
+<li><a href="https://codingnconcepts.com/javascript/console-api-walkthrough/" target="_blank" rel="noopener">https://codingnconcepts.com/javascript/console-api-walkthrough/</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Console_API" target="_blank" rel="noopener">MDN Web Docs - Console_API https://developer.mozilla.org/zh-CN/docs/Web/API/Console_API</a></li>
+</ul>
+<p>…</p>
+<p><strong>关注【公众号】，了解更多。</strong><br>
+<strong>关注【公众号】，了解更多。</strong><br>
+<strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
+
+
+                <hr>
+                <!-- Pager &rarr; 箭头 -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/07/18/JavaScript中的Classes/" data-toggle="tooltip" data-placement="top" title="JavaScript中的Classes"> Previous
+                            <br>
+                            <span>JavaScript中的Classes</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/06/07/JavaScript中的console-table（）/" data-toggle="tooltip" data-placement="top" title="JavaScript 中的 console.table（）">Next
+                            <br>
+                            <span>JavaScript 中的 console.table（）</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
+                
+
+                <!-- 来必力 start -->
+                
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1. console.log</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2. console.assert</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">3. console.clear</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">4. console.count</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">5. console.dir</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">6. console.dirxml</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">7. console.group</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">8. console.table</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">9. console.time</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">10. console.trace</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">11. console.log格式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text">参考</span></a></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
+                    
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
+                    
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
+                    
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
+                    
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
+                    
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
+                    
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
+                    
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
+                    
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
+                    
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
+                    
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
+                    
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
+                        <li><a href="" target="_blank">undefined</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
+<script>
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer>
+    <!-- <article class="bg-back top-line"></article> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2021
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    |
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <!-- <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span> -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                </p>
+                
+                <!-- 不蒜子 end -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- other wenzi.js -->
+<script src="/libs/other/wenzi.js"></script>
+
+<!-- 动态tab标签 -->
+
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 2.0rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
+
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+</body>
+
+</html>
