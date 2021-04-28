@@ -67,11 +67,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          魏长露的博客 | Wei, C.-L. Blog
+          JavaScript 中字符串第一个字母大写 - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
-    <link rel="canonical" href="https://cl9000.github.io/keynote/">
+    <link rel="canonical" href="https://cl9000.github.io/2020/06/20/JavaScript中字符串第一个字母大写/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -155,8 +155,8 @@
     /* 滚动条自定义 end */
 
     header.intro-header {
-        background-image: url('/img/header_img/404.jpg');
-            /*page*/
+        background-image: url('/img/article_header/article_bg.jpg');
+            /*post*/
             
     }
 
@@ -178,10 +178,20 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     
-                    <div class="site-heading">
-                        <h1>Weichanglu</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">keynote-test</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#JavaScript"
+                                title="JavaScript">JavaScript</a>
+                            
+                        </div>
+                        <h1>JavaScript 中字符串第一个字母大写</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            June 20, 2020
+                        </span>
                     </div>
                     
                 </div>
@@ -299,107 +309,138 @@
 
     <!-- Main Content -->
     
-<!-- Image to hack wechat -->
-<!-- <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        /*background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')*/
-        height: 500px;
-        overflow: hidden;
-    }
-    header iframe{
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-</style>
-<!--<header class="intro-header" >-->
-    <!--<iframe src="null"/>-->
-        <!--<div class="container">-->
-            <!--<div class="row">-->
-                <!--<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">-->
-                    <!--<div class="post-heading">-->
-                        <!--<div class="tags">-->
-                            <!---->
-                              <!--<a class="tag" href="/undefined" title="undefined">undefined</a>-->
-                            <!---->
-                              <!--<a class="tag" href="/undefined" title="undefined">undefined</a>-->
-                            <!---->
-                              <!--<a class="tag" href="/undefined" title="undefined">undefined</a>-->
-                            <!---->
-                        <!--</div>-->
-
-                        <!--<h1></h1>-->
-                        <!--<h2 class="subheading">888888</h2>-->
-                        <!--<span class="meta">-->
-                            <!--Posted by cl9000 on-->
-                            <!--March 05, 2020-->
-                        <!--</span>-->
-                        <!---->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</iframe>-->
-<!--</header>-->
-
-<!-- 转为404页面 start -->
-<!-- Page Header -->
-<header class="intro-header" style="background-image: url('/img/header_img/404.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-                <div class="site-heading" id="tag-heading">
-                    <h1>404</h1>
-                    <hr class="small" style="width: 100px;">
-                    <span class="subheading">keynote-test</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<script>
-    document.body.classList.add('page-fullscreen');
-</script>
-<!-- 转为404页面 end -->
-
 <!-- Post Content -->
 <article>
     <div class="container">
         <div class="row">
 
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                
+                <p>To the one with a hammer, everything looks like a nail. （手中有锤，看什么都像钉）——&lt;芒格&gt;</p>
+<blockquote>
+<p>作者：Ashish Lahoti<br>
+译者：cl9000<br>
+来源：<a href="https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/" target="_blank" rel="noopener">https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</a></p>
+</blockquote>
+<p>在本文中，我们将学习如何在 <code>JavaScript</code> 中大写字符串的第一个字母。</p>
+<h2><span id="1-capitalize-函数">1. ‘capitalize’ 函数</span></h2>
+<p>你可以使用这个自定义的 <code>make capitalize()</code> 函数来将字符串的首字母大写:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// es5 way</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">capitalize</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> string.charAt(<span class="number">0</span>).toUpperCase() + string.slice(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// es6 way using destructuring </span></span><br><span class="line"><span class="keyword">const</span> capitalize = <span class="function">(<span class="params">[first,...rest]</span>) =&gt;</span> first.toUpperCase() + rest.join(<span class="string">''</span>);</span><br></pre></td></tr></table></figure>
+<h2><span id="2-capitalize-函数详细">2. ‘capitalize’ 函数详细</span></h2>
+<p>让我们来看看使用 <code>capitalize()</code> 函数所涉及的步骤:</p>
+<ul>
+<li>使用 <code>charAt()</code> 方法获取字符串的第一个字母</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> string = <span class="string">"string"</span>;</span><br><span class="line"></span><br><span class="line">string.charAt(<span class="number">0</span>);  <span class="comment">// Returns "s"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 <code>toUpperCase()</code> 方法将第一个字母转换为大写</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> string = <span class="string">"string"</span>;</span><br><span class="line"></span><br><span class="line">string.charAt(<span class="number">0</span>).toUpperCase();  <span class="comment">// Returns "S"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用 <code>slice()</code> 方法获取除第一个字母以外的字符串的其余部分</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> string = <span class="string">"string"</span>;</span><br><span class="line"></span><br><span class="line">string.slice(<span class="number">1</span>);  <span class="comment">// Returns "tring"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意，<code>slice(1)</code> 的意思是从索引 <strong>1</strong> 到字符串末尾的子字符串。或者，你也可以使用 <code>substring(1)</code>。</p>
+</blockquote>
+<ul>
+<li>最后，将第一个大写字母添加到字符串的其余部分</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> string = <span class="string">"string"</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">capitalize</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> string.charAt(<span class="number">0</span>).toUpperCase() + string.slice(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">capitalize(string);  <span class="comment">// Returns "String"</span></span><br></pre></td></tr></table></figure>
+<h2><span id="在字符串中添加-capitalize方法">在字符串中添加 <code>capitalize</code>方法</span></h2>
+<p>我们还可以将自定义 <code>capitalize()</code> 函数添加到 <strong>String.prototype</strong> 方法，这样我们可以直接在字符串上使用它。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> string = <span class="string">"string"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* this is how methods are defined in prototype of any built-in Object */</span></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(<span class="built_in">String</span>.prototype, <span class="string">'capitalize'</span>, &#123;</span><br><span class="line">    value: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.charAt(<span class="number">0</span>).toUpperCase() + <span class="keyword">this</span>.slice(<span class="number">1</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    writable: <span class="literal">true</span>, <span class="comment">// so that one can overwrite it later</span></span><br><span class="line">    configurable: <span class="literal">true</span> <span class="comment">// so that it can be deleted later</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">string.capitalize(); <span class="comment">// Returns "String"</span></span><br></pre></td></tr></table></figure>
+<h2><span id="大写给定字符串中每个单词的首字母">大写给定字符串中每个单词的首字母</span></h2>
+<p>我们可以使用 <code>capitalizeSentence</code> 函数来大写句子中每个单词的首字母:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">capitalizeSentence</span>(<span class="params">sentence</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> sentence</span><br><span class="line">      .split(<span class="string">" "</span>)</span><br><span class="line">      .map(<span class="function"><span class="params">string</span> =&gt;</span> string.charAt(<span class="number">0</span>).toUpperCase() + string.slice(<span class="number">1</span>))</span><br><span class="line">      .join(<span class="string">" "</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">capitalizeSentence(<span class="string">"a quick brown fox jumps over the lazy dog"</span>);</span><br><span class="line"><span class="comment">// "A Quick Brown Fox Jumps Over The Lazy Dog"</span></span><br></pre></td></tr></table></figure>
+<h4><span id="参考">参考</span></h4>
+<ul>
+<li><a href="https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/" target="_blank" rel="noopener">https://codingnconcepts.com/javascript/how-to-capitalize-first-letter-of-string-in-javascript/</a></li>
+</ul>
+<p><strong>关注【公众号】，了解更多。</strong><br>
+<strong>关注【公众号】，了解更多。</strong><br>
+<strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
+
 
                 <hr>
-
-                
-
+                <!-- Pager &rarr; 箭头 -->
                 <ul class="pager">
                     
+                        <li class="previous">
+                            <a href="/2020/07/16/JavaScript中的调试技巧/" data-toggle="tooltip" data-placement="top" title="JavaScript 中的调试技巧"> Previous
+                            <br>
+                            <span>JavaScript 中的调试技巧</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/06/20/JavaScript中数组删除重复项/" data-toggle="tooltip" data-placement="top" title="JavaScript 中数组删除重复项">Next
+                            <br>
+                            <span>JavaScript 中数组删除重复项</span>
+                            </a>
+                        </li>
                     
                 </ul>
 
+                <br>
+
+                <!--打赏-->
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
                 
 
+                <!-- 来必力 start -->
                 
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
 
             </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
-    <!-- Sidebar Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">1. ‘capitalize’ 函数</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">2. ‘capitalize’ 函数详细</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">在字符串中添加 capitalize方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">大写给定字符串中每个单词的首字母</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.0.1.</span> <span class="toc-nav-text">参考</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
 
                 <!-- Featured Tags -->
                 
@@ -407,7 +448,9 @@
                     <!-- no hr -->
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-                        <a class="tag-link" href="/tags/3d-touch/">3d-touch<span class="tag-count">1</span></a><a class="tag-link" href="/tags/BING/">BING<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Bespoke-js/">Bespoke.js<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Bespokejs/">Bespokejs<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Browserslist/">Browserslist<span class="tag-count">1</span></a><a class="tag-link" href="/tags/CDN/">CDN<span class="tag-count">1</span></a><a class="tag-link" href="/tags/CSS/">CSS<span class="tag-count">2</span></a><a class="tag-link" href="/tags/CSS形状/">CSS形状<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Chrome/">Chrome<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Chrome-Extension/">Chrome Extension<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Closures（闭包）/">Closures（闭包）<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Coding/">Coding<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Currying（柯里化）/">Currying（柯里化）<span class="tag-count">1</span></a><a class="tag-link" href="/tags/DOM/">DOM<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Docker/">Docker<span class="tag-count">2</span></a><a class="tag-link" href="/tags/Docker配置部署Nginx/">Docker配置部署Nginx<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Driver-js/">Driver.js<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Driverjs/">Driverjs<span class="tag-count">1</span></a><a class="tag-link" href="/tags/ERROR-root-code/">ERROR:root:code<span class="tag-count">1</span></a><a class="tag-link" href="/tags/GitHub/">GitHub<span class="tag-count">2</span></a><a class="tag-link" href="/tags/Gitee/">Gitee<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Github/">Github<span class="tag-count">2</span></a><a class="tag-link" href="/tags/Github-Gist/">Github Gist<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Github-Profile/">Github Profile<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Google人机验证/">Google人机验证<span class="tag-count">1</span></a><a class="tag-link" href="/tags/HBuilderX/">HBuilderX<span class="tag-count">1</span></a><a class="tag-link" href="/tags/HEXO/">HEXO<span class="tag-count">5</span></a><a class="tag-link" href="/tags/HTML/">HTML<span class="tag-count">1</span></a><a class="tag-link" href="/tags/HTML5播放器/">HTML5播放器<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Ionic/">Ionic<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Jasmine/">Jasmine<span class="tag-count">1</span></a><a class="tag-link" href="/tags/JavaScript/">JavaScript<span class="tag-count">24</span></a><a class="tag-link" href="/tags/Javascript/">Javascript<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Jenkins/">Jenkins<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Karma/">Karma<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Lexical-Scope（词法范围）/">Lexical Scope（词法范围）<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Loading/">Loading<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Mac/">Mac<span class="tag-count">2</span></a><a class="tag-link" href="/tags/Nginx/">Nginx<span class="tag-count">2</span></a><a class="tag-link" href="/tags/Plyr/">Plyr<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Pressure/">Pressure<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Pressurejs/">Pressurejs<span class="tag-count">1</span></a><a class="tag-link" href="/tags/RegEx/">RegEx<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Shadow-Dom/">Shadow Dom<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Touch/">Touch<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Virtual-Dom/">Virtual Dom<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Web测试/">Web测试<span class="tag-count">1</span></a><a class="tag-link" href="/tags/Xcode/">Xcode<span class="tag-count">1</span></a><a class="tag-link" href="/tags/ajax/">ajax<span class="tag-count">1</span></a><a class="tag-link" href="/tags/bing-图/">bing 图<span class="tag-count">1</span></a><a class="tag-link" href="/tags/caniuse-liteIsOutdated/">caniuse-liteIsOutdated<span class="tag-count">1</span></a><a class="tag-link" href="/tags/chrome/">chrome<span class="tag-count">1</span></a><a class="tag-link" href="/tags/debug/">debug<span class="tag-count">1</span></a><a class="tag-link" href="/tags/fetch/">fetch<span class="tag-count">1</span></a><a class="tag-link" href="/tags/fullpage-js/">fullpage.js<span class="tag-count">1</span></a><a class="tag-link" href="/tags/gooreplacer/">gooreplacer<span class="tag-count">1</span></a><a class="tag-link" href="/tags/hosts/">hosts<span class="tag-count">1</span></a><a class="tag-link" href="/tags/hotUpdate/">hotUpdate<span class="tag-count">1</span></a><a class="tag-link" href="/tags/iOS/">iOS<span class="tag-count">2</span></a><a class="tag-link" href="/tags/javascript/">javascript<span class="tag-count">1</span></a><a class="tag-link" href="/tags/jsDelivr/">jsDelivr<span class="tag-count">1</span></a><a class="tag-link" href="/tags/launchctl/">launchctl<span class="tag-count">1</span></a><a class="tag-link" href="/tags/my-cnf/">my.cnf<span class="tag-count">1</span></a><a class="tag-link" href="/tags/mysql/">mysql<span class="tag-count">1</span></a><a class="tag-link" href="/tags/node-modules/">node_modules<span class="tag-count">1</span></a><a class="tag-link" href="/tags/npm/">npm<span class="tag-count">2</span></a><a class="tag-link" href="/tags/pointer-events/">pointer-events<span class="tag-count">1</span></a><a class="tag-link" href="/tags/protocol-buffer/">protocol buffer<span class="tag-count">1</span></a><a class="tag-link" href="/tags/python-error/">python error<span class="tag-count">1</span></a><a class="tag-link" href="/tags/reCAPTCHA/">reCAPTCHA<span class="tag-count">1</span></a><a class="tag-link" href="/tags/readme/">readme<span class="tag-count">1</span></a><a class="tag-link" href="/tags/rootless/">rootless<span class="tag-count">1</span></a><a class="tag-link" href="/tags/shields-io/">shields.io<span class="tag-count">1</span></a><a class="tag-link" href="/tags/simpleicons/">simpleicons<span class="tag-count">1</span></a><a class="tag-link" href="/tags/uniapp-cli/">uniapp-cli<span class="tag-count">1</span></a><a class="tag-link" href="/tags/visitor-badge/">visitor-badge<span class="tag-count">1</span></a><a class="tag-link" href="/tags/wakatime/">wakatime<span class="tag-count">1</span></a><a class="tag-link" href="/tags/window-location/">window.location<span class="tag-count">1</span></a><a class="tag-link" href="/tags/依赖包/">依赖包<span class="tag-count">1</span></a><a class="tag-link" href="/tags/修改定位/">修改定位<span class="tag-count">1</span></a><a class="tag-link" href="/tags/免费CDN/">免费CDN<span class="tag-count">1</span></a><a class="tag-link" href="/tags/分布式引导/">分布式引导<span class="tag-count">1</span></a><a class="tag-link" href="/tags/前端引导页/">前端引导页<span class="tag-count">1</span></a><a class="tag-link" href="/tags/区块链/">区块链<span class="tag-count">2</span></a><a class="tag-link" href="/tags/原生/">原生<span class="tag-count">1</span></a><a class="tag-link" href="/tags/反向代理/">反向代理<span class="tag-count">1</span></a><a class="tag-link" href="/tags/图床/">图床<span class="tag-count">1</span></a><a class="tag-link" href="/tags/定时任务/">定时任务<span class="tag-count">1</span></a><a class="tag-link" href="/tags/工具/">工具<span class="tag-count">1</span></a><a class="tag-link" href="/tags/手机定位/">手机定位<span class="tag-count">1</span></a><a class="tag-link" href="/tags/播放器/">播放器<span class="tag-count">1</span></a><a class="tag-link" href="/tags/文字转语音/">文字转语音<span class="tag-count">1</span></a><a class="tag-link" href="/tags/更新node版本/">更新node版本<span class="tag-count">1</span></a><a class="tag-link" href="/tags/正则/">正则<span class="tag-count">1</span></a><a class="tag-link" href="/tags/正则表达式/">正则表达式<span class="tag-count">1</span></a><a class="tag-link" href="/tags/演示文稿微框架/">演示文稿微框架<span class="tag-count">1</span></a><a class="tag-link" href="/tags/热更新/">热更新<span class="tag-count">1</span></a><a class="tag-link" href="/tags/码云/">码云<span class="tag-count">1</span></a><a class="tag-link" href="/tags/统计/">统计<span class="tag-count">1</span></a><a class="tag-link" href="/tags/脚手架/">脚手架<span class="tag-count">1</span></a><a class="tag-link" href="/tags/自动化打包/">自动化打包<span class="tag-count">1</span></a><a class="tag-link" href="/tags/虚拟定位/">虚拟定位<span class="tag-count">1</span></a><a class="tag-link" href="/tags/访问量/">访问量<span class="tag-count">1</span></a><a class="tag-link" href="/tags/语法提示库/">语法提示库<span class="tag-count">1</span></a><a class="tag-link" href="/tags/跨域/">跨域<span class="tag-count">1</span></a><a class="tag-link" href="/tags/运算符/">运算符<span class="tag-count">1</span></a><a class="tag-link" href="/tags/🇨🇳/">🇨🇳<span class="tag-count">1</span></a><a class="tag-link" href="/tags/🇬🇧/">🇬🇧<span class="tag-count">1</span></a>
+                       
+                          <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+                        
                     </div>
                 </section>
                 
@@ -419,49 +462,62 @@
                 <ul class="list-inline">
 
                     
-                        <li><a href="https://blog.csdn.net/weichanglu123">CSDN Blog | weichanglu</a></li>
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
                     
-                        <li><a href="xxx">阿里云栖社区 </a></li>
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
                     
-                        <li><a href="http://gisersqdai.top/">gisersqdai</a></li>
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
                     
-                        <li><a href="http://www.vienta.me">vienta&#39;sCell </a></li>
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
                     
-                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention">luoxianming&#39;sBlog</a></li>
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
                     
-                        <li><a href="http://zhoulingyu.com">zhoulingyu</a></li>
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
                     
-                        <li><a href="https://blog.cnbluebox.com/blog/archives/">刘坤的技术博客</a></li>
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
                     
-                        <li><a href="http://southpeak.github.io/categories/objectivec/">南峰子的技术博客</a></li>
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
                     
-                        <li><a href="https://race604.com/gatt-profile-intro/">蓝牙 GATT协议</a></li>
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
                     
-                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/">iOS界面流畅(离屏渲染)</a></li>
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
                     
-                        <li><a href="http://fontawesome.dashgame.com/">fontawesome</a></li>
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
                     
-                        <li><a href="https://www.hi-linux.com/">运维之美</a></li>
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
                     
-                        <li><a href="http://huangxuan.me/">Hux Blog</a></li>
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
                     
-                        <li><a href="https://www.wispx.cn/">熊二哈</a></li>
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
                     
-                        <li><a href="https://nicebing.com/all">undefined</a></li>
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
                     
-                        <li><a href="">undefined</a></li>
+                        <li><a href="" target="_blank">undefined</a></li>
                     
                 </ul>
                 
             </div>
-
         </div>
     </div>
 </article>
 
 
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
 
+    if (typeof LivereTower === 'function') { return; }
 
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
 
 
 
@@ -480,9 +536,10 @@
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
         anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })
@@ -499,6 +556,32 @@
     }
 </style>
 
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
+<script>
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
 
 
     <!-- Footer -->
