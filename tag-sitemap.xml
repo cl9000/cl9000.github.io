@@ -170,13 +170,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/Chrome/</loc>
-        <lastmod>2021-04-30T02:43:30.653Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/Chrome-Extension/</loc>
         <lastmod>2021-04-30T02:43:30.653Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -457,13 +450,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
-        <lastmod>2021-04-30T02:47:25.287Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/</loc>
         <lastmod>2021-04-30T02:49:56.670Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -660,13 +646,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/JavaScript/</loc>
-        <lastmod>2021-04-30T02:52:05.837Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/</loc>
         <lastmod>2021-04-30T02:52:05.837Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -690,6 +669,34 @@
     <url>
         <loc>https://cl9000.github.io/tags/Docker%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2Nginx/</loc>
         <lastmod>2021-04-30T02:52:06.809Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Web%E6%B5%8B%E8%AF%95/</loc>
+        <lastmod>2021-04-30T06:10:48.790Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Chrome/</loc>
+        <lastmod>2021-05-03T12:43:12.199Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6/</loc>
+        <lastmod>2021-05-05T15:00:53.726Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/JavaScript/</loc>
+        <lastmod>2021-05-08T03:09:53.656Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

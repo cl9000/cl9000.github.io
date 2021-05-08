@@ -56,13 +56,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/Chrome/</loc>
-        <lastmod>2021-04-30T02:43:30.653Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/categories/Github/</loc>
         <lastmod>2021-04-30T02:43:38.043Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -140,15 +133,29 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/JavaScript/</loc>
-        <lastmod>2021-04-30T02:52:05.837Z</lastmod>
+        <loc>https://cl9000.github.io/categories/Docker/</loc>
+        <lastmod>2021-04-30T02:52:06.809Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/Docker/</loc>
-        <lastmod>2021-04-30T02:52:06.809Z</lastmod>
+        <loc>https://cl9000.github.io/categories/Web%E6%B5%8B%E8%AF%95/</loc>
+        <lastmod>2021-04-30T06:10:48.790Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/Chrome/</loc>
+        <lastmod>2021-05-03T12:43:12.199Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/JavaScript/</loc>
+        <lastmod>2021-05-08T03:09:53.656Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
