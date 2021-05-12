@@ -240,6 +240,16 @@
                         
                     
                         
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                     
                         
                     
@@ -247,16 +257,6 @@
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
-                        
-                    
-                        
-                    
-                        
-                        <li>
-                            <a href="/timeline/">Timeline</a>
-                        </li>
-                        
-                    
                         
                     
                     
@@ -301,259 +301,9 @@
 
     <!-- Main Content -->
     
-<style type="text/css">
-    /* 名言 */
-    .tool-bgimg {
-        background-image: url('https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg');
-        background-attachment: fixed;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        border-radius: 5px;
-        position: relative;
-        overflow: hidden;
-        margin-top: 1rem;
-    }
-
-    .bg-dark-6:hover {
-        transition: all .3s;
-        transform: scale(1.01);
-        box-shadow: 0 0 20px 0 rgba(10, 10, 10, .45);
-    }
-
-    .bg-dark-6:before {
-        position: absolute;
-        background: rgba(2, 2, 2, 0.3);
-        content: " ";
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-
-    .text-6 {
-        font-style: normal;
-        font-size: 1.8rem;
-        font-family: "Roboto Condensed", sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        text-align: left;
-        color: white;
-        display: block;
-        padding: 16px 30px 8px 30px;
-    }
-
-    .text-6-1 {
-        position: relative;
-        padding: 8px 30px;
-        font-size: 1.6rem;
-        text-transform: none;
-    }
-
-    .text-7 {
-        position: relative;
-        font-size: 16px;
-        font-family: "Roboto Condensed", sans-serif;
-        letter-spacing: 2px;
-        text-align: right;
-        padding-right: 60px;
-        padding-bottom: 30px;
-        color: white;
-    }
-
-    /* 字体放大 🔎 */
-    .saying-scale:hover {
-        transform: scale(1.02) rotate(0deg);
-        color: #f1a128;
-        font-weight: 600;
-    }
-
-    /* 动画线 🧶 */
-    .saying-line {
-        position: relative;
-        /* padding-bottom: 7px; */
-    }
-
-    .saying-line:before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        visibility: hidden;
-        width: 100%;
-        height: 1px;
-        background-color: #fff;
-        content: "";
-        transition-delay: 0s;
-        transition-timing-function: ease-in-out;
-        transition-duration: .5s;
-        transform: scaleX(0);
-    }
-
-    .saying-line:hover:before {
-        visibility: visible;
-        transform: scaleX(1);
-    }
-
-
-    /* 视频 */
-    .module {
-        overflow: hidden;
-        border-radius: 5px;
-        margin: 20px 0;
-        display: block;
-        position: relative;
-        padding: 50px 0;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: cover;
-    }
-
-    .bg-dark-60 {
-        color: #fff;
-    }
-
-    .bg-dark-60:before {
-        position: absolute;
-        background: rgba(34, 34, 34, 0.8);
-        content: " ";
-        height: 100%;
-        width: 100%;
-        left: 0;
-        top: 0;
-    }
-
-    .video-box {
-        text-align: center;
-        padding: 40px 0;
-    }
-
-    .video-box-icon>a>i {
-        line-height: 1.8;
-        font-size: 40px;
-        color: #fff;
-    }
-
-    .video-title {
-        letter-spacing: 4px;
-        font-size: 30px;
-        margin: 10px 0 0;
-    }
-
-    .font-alt {
-        font-family: "Roboto Condensed", sans-serif;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    .video-subtitle {
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-    .video-bg {
-        background-image: url('/video/20190324.gif');
-    }
-
-
-    /* 图片缩放 */
-    .post-cover {
-        position: relative;
-        width: 100%;
-        margin-bottom: 14px;
-        overflow: hidden;
-        border-radius: 5px;
-        box-shadow: 0 0 20px 0 rgba(222, 222, 222, .32);
-        transition: all .3s;
-        transform: scale(1);
-        z-index: 1;
-    }
-
-    .post-cover:hover {
-        box-shadow: 0 0 30px 0 rgba(179, 179, 179, .45);
-        transform: scale(1.02);
-    }
-
-    .post-cover:hover img {
-        transform: scale(1.6);
-    }
-
-    .post-cover img {
-        width: 100%;
-        border-radius: 5px;
-        vertical-align: middle;
-        transition: all .5s;
-        transform: scale(1);
-    }
-
-    /* 飞机动画 */
-    /* 横向移动 转向 向上（页面上移、图片下移） */
-    .plan-1 {
-        /* text-align: center;  */
-        color: #ffffff;
-        position: relative;
-        padding-top: 30px;
-        padding-left: 30px;
-    }
-
-    .plan-anm:hover {
-        animation-name: plan;
-        animation-duration: 3s, .75s;
-        animation-delay: 0s, 1s;
-        animation-timing-function: ease-in, linear;
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-        /* animation-play-state: running;  */
-    }
-
-    @keyframes plan {
-        from {
-            transform: translateX(0) scaleX(1.5)
-        }
-
-        to {
-            transform: translateX(70rem) scaleX(1.5) rotate(-90deg) translateY(90px)
-        }
-    }
-
-
-    /* 视频框动画 */
-
-</style>
-
 
 <!-- Main Content -->
 <div class="container">
-
-    <!-- 名言 -->
-    <section class="tool-bgimg bg-dark-6">
-        <div class="plan-1"><i class="fa fa-space-shuttle fa-2x plan-anm" aria-hidden="true"></i></div>
-        <div class="text-6 saying-line saying-scale">沉思四十年人生与沉思一万年人生没有两样。因为你会看到更多的东西吗？</div>
-        <div class="text-6 text-6-1">Meditating on forty years of life is no different from meditating on ten thousand years of life. Because will you see more?</div>
-        <div class="text-7">—— 马尔库·奥勒留</div>
-    </section>
-
-    <!-- 公益视频 -->
-    <section class="module bg-dark-60 video-bg" data-background="/video/20190324.gif">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="video-box">
-                    <div class="video-box-icon">
-                        <a class="video-pop-up" href="/video/20190324.mp4">
-                            <i class="fa fa-video-camera fa-3x white" aria-hidden="false"></i>
-                        </a>
-                    </div>
-                    <div class="video-title font-alt">公益视频</div>
-                    <div class="video-subtitle font-alt">你知道中国人有多拼吗？</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 文章头部图 尺寸做了调整，删除下面max即可 -->
-    <section style="border-radius: 5px;float: right;">
-        <div class="post-cover" style="max-width: 240px;">
-            <img src="https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg">
-        </div>
-    </section>
 
 
     <div class="row">
@@ -726,6 +476,568 @@
 
     </div>
     <!-- </div> -->
+
+    <div>    
+    <!-- 名言 背景 + 文本 -->
+    <section class="tool-bgimg bg-dark-6">
+        <div class="plan-1"><i class="fa fa-space-shuttle fa-2x plan-anm" aria-hidden="true"></i></div>
+        <div class="text-6 saying-line saying-scale">沉思四十年人生与沉思一万年人生没有两样。因为你会看到更多的东西吗？</div>
+        <div class="text-6 text-6-1">Meditating on forty years of life is no different from meditating on ten thousand years of life. Because will you see more?</div>
+        <div class="text-7">—— 马尔库·奥勒留</div>
+    </section>
+    <!-- 公益视频 封面gif + 地址-->
+    <section class="module bg-dark-60 video-bg" data-background="/video/20190324.gif">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="video-box">
+                    <div class="video-box-icon">
+                        <a class="video-pop-up" href="/video/20190324.mp4">
+                            <i class="fa fa-video-camera fa-3x white" aria-hidden="false"></i>
+                        </a>
+                    </div>
+                    <div class="video-title font-alt">公益视频</div>
+                    <div class="video-subtitle font-alt">你知道中国人有多拼吗？</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 文章头部图 尺寸做了调整，删除下面max即可 -->
+    <section style="border-radius: 5px;float: right;">
+        <div class="post-cover" style="max-width: 240px;">
+            <img src="https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg">
+        </div>
+    </section>
+</div>
+<!-- ### ######################################################################################### -->
+<!-- ### CSS START ############################################################################### -->
+<!-- ### ######################################################################################### -->
+<style type="text/css">
+    /* ### 名言 START ########################################## */
+    .tool-bgimg {
+        background-image: url('https://tvax1.sinaimg.cn/large/007Tv3Vmly1g90c8tivaoj31hc0u047g.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+    .bg-dark-6:hover {
+        transition: all .3s;
+        transform: scale(1.01);
+        box-shadow: 0 0 20px 0 rgba(10, 10, 10, .45);
+    }
+    .bg-dark-6:before {
+        position: absolute;
+        background: rgba(2, 2, 2, 0.3);
+        content: " ";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .text-6 {
+        font-style: normal;
+        font-size: 1.8rem;
+        font-family: "Roboto Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: left;
+        color: white;
+        display: block;
+        padding: 16px 30px 8px 30px;
+    }
+    .text-6-1 {
+        position: relative;
+        padding: 8px 30px;
+        font-size: 1.6rem;
+        text-transform: none;
+    }
+    .text-7 {
+        position: relative;
+        font-size: 16px;
+        font-family: "Roboto Condensed", sans-serif;
+        letter-spacing: 2px;
+        text-align: right;
+        padding-right: 60px;
+        padding-bottom: 30px;
+        color: white;
+    }
+    /* 字体放大 🔎 */
+    .saying-scale:hover {
+        transform: scale(1.02) rotate(0deg);
+        color: #f1a128;
+        font-weight: 600;
+    }
+    /* 动画线 🧶 */
+    .saying-line {
+        position: relative;
+        /* padding-bottom: 7px; */
+    }
+    .saying-line:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        content: "";
+        transition-delay: 0s;
+        transition-timing-function: ease-in-out;
+        transition-duration: .5s;
+        transform: scaleX(0);
+    }
+    .saying-line:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+    /* ### 名言 END ########################################## */
+
+    /* ### 视频 START ##########################################*/
+    .module {
+        overflow: hidden;
+        border-radius: 5px;
+        margin: 20px 0;
+        display: block;
+        position: relative;
+        padding: 50px 0;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+    .bg-dark-60 {
+        color: #fff;
+    }
+    .bg-dark-60:before {
+        position: absolute;
+        background: rgba(34, 34, 34, 0.8);
+        content: " ";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+    }
+    .video-box {
+        text-align: center;
+        padding: 40px 0;
+    }
+    .video-box-icon>a>i {
+        line-height: 1.8;
+        font-size: 40px;
+        color: #fff;
+    }
+    .video-title {
+        letter-spacing: 4px;
+        font-size: 30px;
+        margin: 10px 0 0;
+    }
+    .font-alt {
+        font-family: "Roboto Condensed", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .video-subtitle {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    .video-bg {
+        background-image: url('/video/20190324.gif');
+    }
+    /* ### 视频 END ########################################## */
+    /* ### 图片缩放 START ########################################## */
+    .post-cover {
+        position: relative;
+        width: 100%;
+        margin-bottom: 14px;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 20px 0 rgba(222, 222, 222, .32);
+        transition: all .3s;
+        transform: scale(1);
+        z-index: 1;
+    }
+    .post-cover:hover {
+        box-shadow: 0 0 30px 0 rgba(179, 179, 179, .45);
+        transform: scale(1.02);
+    }
+    .post-cover:hover img {
+        transform: scale(1.6);
+    }
+    .post-cover img {
+        width: 100%;
+        border-radius: 5px;
+        vertical-align: middle;
+        transition: all .5s;
+        transform: scale(1);
+    }
+    /* ### 图片缩放 END ########################################## */
+    /* ### 飞机动画 START ########################################## */
+    /* 横向移动 转向 向上（页面上移、图片下移） */
+    .plan-1 {
+        /* text-align: center;  */
+        color: #ffffff;
+        position: relative;
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+    .plan-anm:hover {
+        animation-name: plan;
+        animation-duration: 3s, .75s;
+        animation-delay: 0s, 1s;
+        animation-timing-function: ease-in, linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        /* animation-play-state: running;  */
+    }
+    @keyframes plan {
+        from {
+            transform: translateX(0) scaleX(1.5)
+        }
+        to {
+            transform: translateX(70rem) scaleX(1.5) rotate(-90deg) translateY(90px)
+        }
+    }
+    /* ### 飞机动画 END ########################################## */
+    </style>
+<!-- ### ######################################################################################### -->
+<!-- ### CSS END ############################################################################### -->
+<!-- ### ######################################################################################### -->
+<!-- ############################################################################### -->
+<!-- <style>
+.side-nav{top:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:100%;left:0}.side-nav .label,.side-nav a{font-size:.875rem}a{transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}a:hover{text-decoration:none}.bg-dark{background-color:#3f51b5!important}.re-nav{display:none} .navbar-nav{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.navbar-dark .navbar-nav .nav-item>a{color:rgba(255,255,255,.5)}.navbar-dark .navbar-nav .nav-item>a:focus,.navbar-dark .navbar-nav .nav-item>a:hover,.side-nav a{color:rgba(255,255,255,.75)}.main-header .navbar-nav .nav-item>a{display:block;padding:.5rem 1rem}.main-content .content-wrapper{position:relative;padding:3.75rem 0 0}.main-content::before{display:none;content:'mobile'}.container-fluid{position:relative}@media only screen and (min-width:768px){.main-content .content-wrapper{margin-left:12.5rem}.main-content::before{content:'tablet'}}@media only screen and (min-width:1170px){.main-content::before{content:'desktop'}}.side-nav{position:absolute;z-index:1;padding-top:3.75rem;background-color:#263238;visibility:hidden;opacity:0;max-height:100vh;overflow:hidden;-webkit-transition:opacity .2s 0s,visibility 0s .2s;-moz-transition:opacity .2s 0s,visibility 0s .2s;transition:opacity .2s 0s,visibility 0s .2s}.has-children ul,.side-nav a,.side-nav>ul>li{position:relative}.side-nav.nav-is-visible{opacity:1;visibility:visible;overflow:visible;-webkit-overflow-scrolling:touch;-webkit-transition:opacity .2s 0s,visibility 0s 0s;-moz-transition:opacity .2s 0s,visibility 0s 0s;transition:opacity .2s 0s,visibility 0s 0s;max-height:none;box-shadow:0 2px 10px rgba(0,0,0,.2)}.side-nav .nav-item>a{display:block;padding:.5rem 1rem}.side-nav .label{text-transform:uppercase;font-weight:700;color:#646a6f;letter-spacing:.1em;padding:.5rem 1rem}.side-nav>ul{padding:.5rem 0}.has-children ul{width:100%;display:none;background-color:#1c1f22;padding-left:0;list-style:none}.has-children.selected>ul,.nav-trigger{display:block}.has-children>a::after{position:absolute;content:'';height:16px;width:16px;right:5%;top:50%;bottom:auto;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);-ms-transform:translateY(-50%);-o-transform:translateY(-50%);transform:translateY(-50%);background:url(../img/arrow.svg)}.has-children.selected>a::after{-webkit-transform:translateY(-50%) rotate(180deg);-moz-transform:translateY(-50%) rotate(180deg);-ms-transform:translateY(-50%) rotate(180deg);-o-transform:translateY(-50%) rotate(180deg);transform:translateY(-50%) rotate(180deg)}.nav-trigger{float:right;position:relative;width:50px;height:36px;margin-right:0;overflow:hidden;white-space:nowrap;color:transparent}.nav-trigger span,.nav-trigger span::after,.nav-trigger span::before{position:absolute;display:inline-block;height:4px;width:30px;background:#fff}.nav-trigger span{position:absolute;top:50%;right:10px;margin-top:-2px;-webkit-transition:background .2s;-moz-transition:background .2s;transition:background .2s}.nav-trigger span::after,.nav-trigger span::before{content:'';right:0;-webkit-transform:translateZ(0);-moz-transform:translateZ(0);-ms-transform:translateZ(0);-o-transform:translateZ(0);transform:translateZ(0);-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform-origin:0 50%;-moz-transform-origin:0 50%;-ms-transform-origin:0 50%;-o-transform-origin:0 50%;transform-origin:0 50%;-webkit-transition:-webkit-transform .2s;-moz-transition:-moz-transform .2s;transition:transform .2s}.nav-trigger span::before{top:-8px}.nav-trigger span::after{top:8px}.nav-trigger.nav-is-visible span{background:transparent}.nav-trigger.nav-is-visible span::after,.nav-trigger.nav-is-visible span::before{background:#fff}.nav-trigger.nav-is-visible span::before{-webkit-transform:translateX(4px) translateY(-3px) rotate(45deg);-moz-transform:translateX(4px) translateY(-3px) rotate(45deg);-ms-transform:translateX(4px) translateY(-3px) rotate(45deg);-o-transform:translateX(4px) translateY(-3px) rotate(45deg);transform:translateX(4px) translateY(-3px) rotate(45deg)}.nav-trigger.nav-is-visible span::after{-webkit-transform:translateX(4px) translateY(2px) rotate(-45deg);-moz-transform:translateX(4px) translateY(2px) rotate(-45deg);-ms-transform:translateX(4px) translateY(2px) rotate(-45deg);-o-transform:translateX(4px) translateY(2px) rotate(-45deg);transform:translateX(4px) translateY(2px) rotate(-45deg)}.search{position:relative}.navbar .search{display:block}.search.is-hidden{opacity:0}.search-input-btn{background-color:transparent;position:absolute;border:0;top:0;left:0;z-index:1;padding:.625rem;color:rgba(255,255,255,.75);font-size:1rem}.search-input-btn:hover{color:#fff}.search .form-control{padding:.625rem .75rem .625rem 2.5rem;border:0;background-color:#283593;color:#fff}.form-control:focus{box-shadow:none}.form-control.form-dark::-webkit-input-placeholder{color:rgba(255,255,255,.75)}.form-control.form-dark::-moz-placeholder{color:rgba(255,255,255,.75)}.form-control.form-dark:-ms-input-placeholder{color:rgba(255,255,255,.75)}.form-control.form-dark::-ms-input-placeholder{color:rgba(255,255,255,.75)}.form-control.form-dark::placeholder{color:rgba(255,255,255,.75)}@media(max-width:767.98px){.navbar .search{display:none}.search .form-control{margin:1rem;background-color:#fff;color:#6c757d}.search-input-btn{top:1rem;left:1rem;color:#6c757d}.search-input-btn:hover{color:#343a40}.form-control.form-dark::-webkit-input-placeholder{color:rgba(0,0,0,.5)}.form-control.form-dark::-moz-placeholder{color:rgba(0,0,0,.5)}.form-control.form-dark:-ms-input-placeholder{color:rgba(0,0,0,.5)}.form-control.form-dark::-ms-input-placeholder{color:rgba(0,0,0,.5)}.form-control.form-dark::placeholder{color:rgba(0,0,0,.5)}}.card .card-body a,.card .card-text,.footer p{margin-bottom:.5rem}@media(min-width:576px){.search .form-control{display:block!important;width:100%!important}}@media(min-width:768px){.side-nav .active,.side-nav>ul>li:not(.action-btn):hover>a{background-color:#37474f;color:#fff}.search.is-hidden,.side-nav{opacity:1}.main-header{position:fixed}.re-nav{display:block}.side-nav.nav-is-visible{box-shadow:none}.side-nav{width:12.5rem;position:relative;float:left;top:auto;min-height:100vh;padding-top:3.75rem;visibility:visible;overflow:visible;max-height:none}.side-nav .active{box-shadow:inset 3px 0 0 #e91e63}.side-nav.is-fixed{position:fixed}.nav-trigger{display:none}.search{display:inline-block;width:40%;height:100%}.has-children>ul{width:100%;z-index:1;position:absolute;top:0;left:100%;padding:0;box-shadow:0 2px 10px rgba(0,0,0,.3)}.has-children ul a{padding-left:18px}.has-children.active>ul{position:relative;display:block;left:0;box-shadow:none}.no-touch .side-nav .has-children:hover>ul,.side-nav .has-children.hover>ul{display:block;opacity:1;visibility:visible}.has-children>a::after{display:none}}.btn-secondary:focus,.btn-secondary:not(:disabled):not(.disabled):active:focus{box-shadow:0 0 0 .2rem rgba(233,30,99,.5)}.btn-lg{padding:.625rem 3rem}.btn-secondary{background-color:#e91e63;border-color:#e91e63;color:#fff}.btn-secondary:hover{background-color:rgba(233,30,99,.75);border-color:rgba(233,30,99,.75)}.btn-secondary:not(:disabled):not(.disabled):active{background-color:#e91e63;border-color:#e91e63}.card{margin-top:1rem;border:0;background-color:rgba(255,255,255,.6);box-shadow:0 2px 5px rgba(0,0,0,.1)}#content .card:focus,.card:hover{background-color:#fff}.card .card-header{font-weight:700;border-bottom:0;background-color:transparent;padding:.75rem 1rem;color:#6c757d}.card .card-title{font-size:1rem}.card .card-text{font-size:.875rem;color:#6c757d}.card .card-body{padding:0 .9375rem .9375rem}.card .card-body a{position:relative;display:inline-block;padding:.5rem 0;color:#343a40;font-size:1rem;font-weight:500}.card .card-body a::after{content:'';position:absolute;left:0;right:0;bottom:0;background:#3f51b5;height:4px;-ms-transform:rotateY(90deg);-webkit-transform:rotateY(90deg);transform:rotateY(90deg);-ms-transform-origin:left;-webkit-transform-origin:left;transform-origin:left;-webkit-transition:all .3s ease;transition:all .3s ease}.card .card-body a:hover{color:#3f51b5}.footer,.footer a{color:#9e9e9e}.card .card-body a:hover::after{-ms-transform:rotateY(0);-webkit-transform:rotateY(0);transform:rotateY(0)}.jumbotron{background:url(assets/img/codelines.svg) center 10%;background-size:cover;position:relative}.close{font-size:3rem;float:none;position:absolute;top:2rem;right:2rem}@media(min-width:576px){.jumbotron{padding:2rem}}.footer{margin-top:2rem;padding:.5rem 0;font-size:.875rem}@media(max-width:575.98px){.footer{padding:.5rem 1rem}}#community i.fi:before,.community i.fi:before{content:"\e900";color:#f44336}#tutorial i.fi:before,.tutorial i.fi:before{content:"\e902";color:#e91e63}#ui-framework i.fi:before,.ui-framework i.fi:before{content:"\e906";color:#9c27b0}#frontend-framework i.fi:before,.frontend-framework i.fi:before{content:"\e907";color:#673ab7}#icon i.fi:before,.icon i.fi:before{content:"\e905";color:#3f51b5}#css-tool i.fi:before,.css-tool i.fi:before{content:"\e908";color:#2196f3}#javascript-tool i.fi:before,.javascript-tool i.fi:before{content:"\e903";color:#03a9f4}#frontend-tool i.fi:before,.frontend-tool i.fi:before{content:"\e90a";color:#00bcd4}#color i.fi:before,.color i.fi:before{content:"\e904";color:#009688}#test i.fi:before,.test i.fi:before{content:"\e909";color:#4caf50}#other i.fi:before,.other i.fi:before{content:"\e901";color:#8bc34a}#ued-team i.fi:before,.ued-team i.fi:before{content:"\e90c";color:#cddc39}.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}@-webkit-keyframes pulse{from,to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}50%{-webkit-transform:scale3d(1.2,1.2,1.2);transform:scale3d(1.2,1.2,1.2)}}@keyframes pulse{from,to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}50%{-webkit-transform:scale3d(1.2,1.2,1.2);transform:scale3d(1.2,1.2,1.2)}}.pulse{-webkit-animation-name:pulse;animation-name:pulse}.highlight{padding:0;background-color:#ff9632}
+</style>
+<main class="main-content">
+
+<nav class="side-nav is-fixed" id="scrollspy" style="bottom: 0px;">
+<ul class="nav flex-column">
+<li class="label">推荐</li>
+<li id="menu-item-8" class="nav-item community menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="#community" class="nav-link"><i class="fi"></i> 社区</a></li>
+<li id="menu-item-9" class="nav-item tutorial menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="#tutorial" class="nav-link"><i class="fi"></i> 教程</a></li>
+</ul>
+<ul class="nav flex-column">
+<li class="label">必备</li>
+<li id="menu-item-10" class="nav-item ui-framework menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="#ui-framework" class="nav-link active"><i class="fi"></i> UI 框架</a></li>
+<li id="menu-item-11" class="nav-item frontend-framework menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="#frontend-framework" class="nav-link"><i class="fi"></i> 前端框架</a></li>
+<li id="menu-item-12" class="nav-item icon menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="#icon" class="nav-link"><i class="fi"></i> 字体/图标</a></li>
+</ul>
+<ul class="nav flex-column">
+<li class="label">工具</li>
+<li id="menu-item-13" class="nav-item css-tool menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="#css-tool" class="nav-link"><i class="fi"></i> CSS 工具</a></li>
+<li id="menu-item-14" class="nav-item javascript-tool menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="#javascript-tool" class="nav-link"><i class="fi"></i> JavaScript 工具</a></li>
+<li id="menu-item-15" class="nav-item frontend-tool menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="#frontend-tool" class="nav-link"><i class="fi"></i> 前端工具</a></li>
+<li id="menu-item-16" class="nav-item color menu-item menu-item-type-custom menu-item-object-custom menu-item-16"><a href="#color" class="nav-link"><i class="fi"></i> 配色/灵感</a></li>
+<li id="menu-item-17" class="nav-item test menu-item menu-item-type-custom menu-item-object-custom menu-item-17"><a href="#test" class="nav-link"><i class="fi"></i> 兼容、性能测试</a></li>
+</ul>
+<ul class="nav flex-column">
+<li class="label">特色</li>
+<li id="menu-item-18" class="nav-item other menu-item menu-item-type-custom menu-item-object-custom menu-item-18"><a href="#other" class="nav-link"><i class="fi"></i> 其他</a></li>
+<li id="menu-item-19" class="nav-item ued-team menu-item menu-item-type-custom menu-item-object-custom menu-item-19"><a href="#ued-team" class="nav-link"><i class="fi"></i> UED 团队</a></li>
+</ul>
+</nav> 
+<div id="content" class="content-wrapper">
+<div class="container-fluid container-no-gutters">
+<div class="jumbotron mt-3 text-center alert fade show" role="alert">
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<img height="160" src="http://hao.f2ex.cn/wp-content/themes/featurednav/assets/img/lighthouse.png">
+<p class="lead">不知道看什么？试试手气！</p>
+<p>
+<a id="randomLink" class="btn btn-secondary btn-lg" href="javascript:;" role="button" title="试试手气">Hello, world!</a>
+</p>
+</div> 
+<div class="card" id="community">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> 社区
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.csdn.net/" rel="noopener nofollow" title="较为全面的IT社区和服务平台，提供各个技术的知识结构图谱。" target="_blank">CSDN</a><p class="card-text" style="">较为全面的IT社区和服务平台，提供各个技术的知识结构图谱。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://github.com/" rel="noopener nofollow" title="全球最大的开源项目基地。进阶路上必不可少的学习，分享社区。" target="_blank">GitHub</a><p class="card-text" style="">全球最大的开源项目基地。进阶路上必不可少的学习，分享社区。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.infoq.com/cn" rel="noopener nofollow" title="促进软件开发领域知识与创新的传播。" target="_blank">InfoQ</a><p class="card-text" style="">促进软件开发领域知识与创新的传播。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://medium.com/topic/technology" rel="noopener nofollow" title="高质量的媒体平台。" target="_blank">Medium</a><p class="card-text" style="">高质量的媒体平台。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://segmentfault.com/" rel="noopener nofollow" title="中国区纯粹、高质量的技术交流平台。" target="_blank">SegmentFault</a><p class="card-text" style="">中国区纯粹、高质量的技术交流平台。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://stackoverflow.com/" rel="noopener nofollow" title="全球最大的技术问答类在线社区，在上面可以找到几乎所有问题的答案。" target="_blank">Stack Overflow</a><p class="card-text" style="">全球最大的技术问答类在线社区，在上面可以找到几乎所有问题的答案。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.v2ex.com/?tab=tech" rel="noopener nofollow" title="一个汇集各类奇妙好玩的话题和流行动向的网站。" target="_blank">V2EX</a><p class="card-text" style="">一个汇集各类奇妙好玩的话题和流行动向的网站。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.cnblogs.com/" rel="noopener nofollow" title="技术类博客平台，有很多干货。" target="_blank">博客园</a><p class="card-text" style="">技术类博客平台，有很多干货。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.oschina.net/" rel="noopener nofollow" title="为开发者提供发现、使用、交流开源技术的平台。" target="_blank">开源中国</a><p class="card-text" style="">为开发者提供发现、使用、交流开源技术的平台。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://juejin.im/explore/all" rel="noopener nofollow" title="帮助开发者成长的社区，给开发者用的 Hacker News。" target="_blank">掘金</a><p class="card-text" style="">帮助开发者成长的社区，给开发者用的 Hacker News。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="tutorial">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> 教程
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://awesomelists.top/" rel="noopener nofollow" title="让你更快获取各类优秀资源。" target="_blank">Awesome search</a><p class="card-text" style="">让你更快获取各类优秀资源。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://tympanus.net/codrops/" rel="noopener nofollow" title="附带演示的 Javascript 和 CSS 效果教程。" target="_blank">codrops</a><p class="card-text" style="">附带演示的 Javascript 和 CSS 效果教程。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.freecodecamp.org/" rel="noopener nofollow" title="边做边学，通过挑战闯关的模式在实践中练习掌握知识。" target="_blank">freeCodeCamp</a><p class="card-text" style="">边做边学，通过挑战闯关的模式在实践中练习掌握知识。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://developer.mozilla.org/zh-CN/" rel="noopener nofollow" title="提供开放的Web技术，包括HTML、CSS和API等学习资源。" target="_blank">MDN</a><p class="card-text" style="">提供开放的Web技术，包括HTML、CSS和API等学习资源。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://tutorialzine.com/" rel="noopener nofollow" title="拥有高质量的教程和文章库。" target="_blank">Tutorialzine</a><p class="card-text" style="">拥有高质量的教程和文章库。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.chinaw3c.org/" rel="noopener nofollow" title="万维网联盟（World Wide Web Consortium, W3C）中国总部" target="_blank">W3C中国</a><p class="card-text" style="">万维网联盟（World Wide Web Consortium, W3C）中国总部</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.w3school.com.cn/" rel="noopener nofollow" title="从基础的HTML到CSS，乃至进阶的XML、SQL、JS、PHP 和ASP.NET中文教程。" target="_blank">W3school</a><p class="card-text" style="">从基础的HTML到CSS，乃至进阶的XML、SQL、JS、PHP 和ASP.NET中文教程。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://wiki.jikexueyuan.com/" rel="noopener nofollow" title="涵盖 30+ 个技术领域，如 Android、iOS、HTML5、Apple Watch 等图文教程。" target="_blank">极客学院</a><p class="card-text" style="">涵盖 30+ 个技术领域，如 Android、iOS、HTML5、Apple Watch 等图文教程。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://study.163.com/curricula/cs.htm" rel="noopener nofollow" title="顶尖中文大学计算机专业课程体系，自由选择喜欢的课程免费进行学习。" target="_blank">网易云课堂</a><p class="card-text" style="">顶尖中文大学计算机专业课程体系，自由选择喜欢的课程免费进行学习。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.runoob.com/" rel="noopener nofollow" title="提供HTML、CSS、Javascript、PHP、MySQL等各种编程语言的基础知识。" target="_blank">菜鸟教程</a><p class="card-text" style="">提供HTML、CSS、Javascript、PHP、MySQL等各种编程语言的基础知识。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="ui-framework">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> UI 框架
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://almsaeedstudio.com/" rel="noopener nofollow" title="基于 Bootstrap 3.x 的免费后台 UI 框架。提供一系列可重复使用和常用的组件。" target="_blank">AdminLTE</a><p class="card-text" style="">基于 Bootstrap 3.x 的免费后台 UI 框架。提供一系列可重复使用和常用的组件。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://amazeui.org/" rel="noopener nofollow" title="开源 HTML5 跨屏前端框架，分为 Web 版与 Touch 版，轻量级，高性能。" target="_blank">Amaze UI</a><p class="card-text" style="">开源 HTML5 跨屏前端框架，分为 Web 版与 Touch 版，轻量级，高性能。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://ant.design/index-cn" rel="noopener nofollow" title="致力于提升『用户』和『设计者』使用体验的中台设计语言。" target="_blank">ANT DESIGN</a><p class="card-text" style="">致力于提升『用户』和『设计者』使用体验的中台设计语言。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.auicss.com/" rel="noopener nofollow" title="采用容器+布局结构+控件的嵌套形式，方便开发者快速布局样式。" target="_blank">AUI</a><p class="card-text" style="">采用容器+布局结构+控件的嵌套形式，方便开发者快速布局样式。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://getbootstrap.com/" rel="noopener nofollow" title="简洁、直观、强悍的前端开发框架，也是目前最受欢迎的UI框架。" target="_blank">Bootstrap</a><p class="card-text" style="">简洁、直观、强悍的前端开发框架，也是目前最受欢迎的UI框架。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://designmodo.github.io/Flat-UI/" rel="noopener nofollow" title="基于Bootstrap的平面UI风格框架，非常漂亮。" target="_blank">Flat UI</a><p class="card-text" style="">基于Bootstrap的平面UI风格框架，非常漂亮。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://foundation.zurb.com/" rel="noopener nofollow" title="易用、强大而且灵活的 HTML，CSS 和 JavaScript 框架。" target="_blank">Foundation</a><p class="card-text" style="">易用、强大而且灵活的 HTML，CSS 和 JavaScript 框架。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://framework7.io/" rel="noopener nofollow" title="全功能HTML框架，内置多种 iOS 和 Android 原生皮肤及效果。" target="_blank">Framework7</a><p class="card-text" style="">全功能HTML框架，内置多种 iOS 和 Android 原生皮肤及效果。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://frozenui.github.io/" rel="noopener nofollow" title="简单易用，轻量快捷的移动端 UI 框架。基于手Q样式规范，选取最常用的组件。" target="_blank">Frozen UI</a><p class="card-text" style="">简单易用，轻量快捷的移动端 UI 框架。基于手Q样式规范，选取最常用的组件。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://html5boilerplate.com/" rel="noopener nofollow" title="专业的前端模版，用以开发快速、健壮、适应性强的 app 或网站。" target="_blank">HTML5 Boilerplate</a><p class="card-text" style="">专业的前端模版，用以开发快速、健壮、适应性强的 app 或网站。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://jqweui.com/" rel="noopener nofollow" title="专为微信公众账号开发而设计的 UI 库，包含全部 WeUI 官方的 CSS 组件。" target="_blank">jQuery WeUI</a><p class="card-text" style="">专为微信公众账号开发而设计的 UI 库，包含全部 WeUI 官方的 CSS 组件。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://markojs.com/" rel="noopener nofollow" title="来自 ebay 的一个友好和超快速的 UI 库。" target="_blank">marko</a><p class="card-text" style="">来自 ebay 的一个友好和超快速的 UI 库。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.material-ui.com/" rel="noopener nofollow" title="一套实现了 Google Material Design 的第三方 React 组件。" target="_blank">Material-UI</a><p class="card-text" style="">一套实现了 Google Material Design 的第三方 React 组件。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://mdcui.com/" rel="noopener nofollow" title="基于 Material Design ，高度模块化和可定制UI组件。" target="_blank">MDC-Web</a><p class="card-text" style="">基于 Material Design ，高度模块化和可定制UI组件。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://milligram.io/" rel="noopener nofollow" title="用于更好的性能和更高的生产力，重置属性更少。Gzip压缩后只有2kb。" target="_blank">Milligram</a><p class="card-text" style="">用于更好的性能和更高的生产力，重置属性更少。Gzip压缩后只有2kb。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://mincss.com/" rel="noopener nofollow" title="世界上最小的（995字节）CSS框架。逆天的适用于IE5.5及所有主流浏览器。" target="_blank">min</a><p class="card-text" style="">世界上最小的（995字节）CSS框架。逆天的适用于IE5.5及所有主流浏览器。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://mint-ui.github.io/#!/zh-cn" rel="noopener nofollow" title="基于 Vue.js ，由饿了么维护，包含丰富的 CSS 和 JS 组件。" target="_blank">Mint UI</a><p class="card-text" style="">基于 Vue.js ，由饿了么维护，包含丰富的 CSS 和 JS 组件。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://dev.dcloud.net.cn/mui/" rel="noopener nofollow" title="以iOS平台UI为基础，补充部分Android平台特有的UI控件，不依赖任何第三方JS库。" target="_blank">MUI</a><p class="card-text" style="">以iOS平台UI为基础，补充部分Android平台特有的UI控件，不依赖任何第三方JS库。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.pavilion.io/" rel="noopener nofollow" title="轻量级CSS框架，多功能的网格系统和常见的UI元素。其余的由你决定。" target="_blank">Pavilion</a><p class="card-text" style="">轻量级CSS框架，多功能的网格系统和常见的UI元素。其余的由你决定。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://picnicss.com/" rel="noopener nofollow" title="轻量级和简单的CSS框架，高度语义化的HTML5，尽可能少的改变HTML。" target="_blank">Picnic CSS</a><p class="card-text" style="">轻量级和简单的CSS框架，高度语义化的HTML5，尽可能少的改变HTML。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://purecss.io/" rel="noopener nofollow" title="轻量级、响应式 css 模块，小的没有节操，gzip 压缩后只有4.4KB。" target="_blank">Pure.css</a><p class="card-text" style="">轻量级、响应式 css 模块，小的没有节操，gzip 压缩后只有4.4KB。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://semantic-ui.com/" rel="noopener nofollow" title="完全语义化的前端界面开发框架。官方提供中文文档。" target="_blank">Semantic UI</a><p class="card-text" style="">完全语义化的前端界面开发框架。官方提供中文文档。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://getuikit.com/" rel="noopener nofollow" title="一款轻量级、模块化的前端框架，界面偏向于简约。" target="_blank">uikit</a><p class="card-text" style="">一款轻量级、模块化的前端框架，界面偏向于简约。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://weui.io/" rel="noopener nofollow" title="同微信原生视觉体验一致的基础样式库，由微信官方设计团队量身设计。" target="_blank">WeUI</a><p class="card-text" style="">同微信原生视觉体验一致的基础样式库，由微信官方设计团队量身设计。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="frontend-framework">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> 前端框架
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://angular.io/" rel="noopener nofollow" title="一套框架，多种平台-移动端 &amp; 桌面端。" target="_blank">Angular</a><p class="card-text" style="">一套框架，多种平台-移动端 &amp; 桌面端。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://ionicframework.com/" rel="noopener nofollow" title="领先的 HTML5 移动开发框架和 SDK ，利用 web 技术构建难以置信的移动应用。" target="_blank">Ionic</a><p class="card-text" style="">领先的 HTML5 移动开发框架和 SDK ，利用 web 技术构建难以置信的移动应用。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://jquery.com/" rel="noopener nofollow" title="快速，小巧，功能丰富的JavaScript库。" target="_blank">jQuery</a><p class="card-text" style="">快速，小巧，功能丰富的JavaScript库。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://nerv.aotu.io/" rel="noopener nofollow" title="一款由京东凹凸实验室打造的类 React 前端框架。体积轻量，性能高效，兼容 IE8。" target="_blank">Nerv</a><p class="card-text" style="">一款由京东凹凸实验室打造的类 React 前端框架。体积轻量，性能高效，兼容 IE8。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://reactjs.org/" rel="noopener nofollow" title="用于构建用户界面的JavaScript库。" target="_blank">React</a><p class="card-text" style="">用于构建用户界面的JavaScript库。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://facebook.github.io/react-native/" rel="noopener nofollow" title="使用JavaScript和React构建原生移动应用程序。" target="_blank">React Native</a><p class="card-text" style="">使用JavaScript和React构建原生移动应用程序。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://cn.vuejs.org/" rel="noopener nofollow" title="渐进式JavaScript框架。超快虚拟 DOM 。" target="_blank">Vue.js</a><p class="card-text" style="">渐进式JavaScript框架。超快虚拟 DOM 。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://weex.apache.org/cn/guide/" rel="noopener nofollow" title="使用同一套代码来构建 Android、iOS 和 Web 高性能原生应用。来自阿里巴巴。" target="_blank">Weex</a><p class="card-text" style="">使用同一套代码来构建 Android、iOS 和 Web 高性能原生应用。来自阿里巴巴。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://tencent.github.io/wepy/" rel="noopener nofollow" title="微信小程序组件化开发框架，来自腾讯。" target="_blank">wepy</a><p class="card-text" style="">微信小程序组件化开发框架，来自腾讯。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://zeptojs.com/" rel="noopener nofollow" title="一款适用于现代浏览器的简约JavaScript库，与jQuery兼容API。" target="_blank">zeptojs</a><p class="card-text" style="">一款适用于现代浏览器的简约JavaScript库，与jQuery兼容API。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="icon">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> 字体/图标
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://edgewebfonts.adobe.com/" rel="noopener nofollow" title="500+免费Web Fonts。" target="_blank">Adobe Edge Web Fonts</a><p class="card-text" style="">500+免费Web Fonts。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://github.com/danklammer/bytesize-icons" rel="noopener nofollow" title="SVG图标库，可使用 stroke 灵活调整图标的线条宽度。" target="_blank">Bytesize</a><p class="card-text" style="">SVG图标库，可使用 stroke 灵活调整图标的线条宽度。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://demo.amitjakhu.com/dripicons/" rel="noopener nofollow" title="包含PSD, AI, EPS, PDF, SVG, Sketch, Webfont。" target="_blank">Dripicons</a><p class="card-text" style="">包含PSD, AI, EPS, PDF, SVG, Sketch, Webfont。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.easyicon.net/language.zh-cn/" rel="noopener nofollow" title="提供超过五十万个PNG、ICO、ICNS格式图标搜索、图标下载服务。" target="_blank">easyicon</a><p class="card-text" style="">提供超过五十万个PNG、ICO、ICNS格式图标搜索、图标下载服务。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://feathericons.com/" rel="noopener nofollow" title="简单漂亮的SVG图标合集，强调简单性，一致性和可读性。提供SVG Sprite。" target="_blank">Feather</a><p class="card-text" style="">简单漂亮的SVG图标合集，强调简单性，一致性和可读性。提供SVG Sprite。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://findicons.com/" rel="noopener nofollow" title="超过30+万个免费图标，以PNG、ICO、ICNS格式为主。" target="_blank">FindIcons</a><p class="card-text" style="">超过30+万个免费图标，以PNG、ICO、ICNS格式为主。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://fontawesome.com/" rel="noopener nofollow" title="包含webfont和SVG的流行图标库，内置简单的颜色样式和动画。" target="_blank">Font Awesome</a><p class="card-text" style="">包含webfont和SVG的流行图标库，内置简单的颜色样式和动画。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://fontello.com/" rel="noopener nofollow" title="可在线灵活定制你自己的icon font字体图标字库。" target="_blank">Fontello</a><p class="card-text" style="">可在线灵活定制你自己的icon font字体图标字库。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.fonts.com/" rel="noopener nofollow" title="提供高质量的桌面和网页字体。" target="_blank">Fonts.com</a><p class="card-text" style="">提供高质量的桌面和网页字体。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://glyph.smarticons.co/" rel="noopener nofollow" title="语义和多功能的SVG图标集。可使用IMG标签和SVG icon组件载入，可自定义 sprite。" target="_blank">Glyph</a><p class="card-text" style="">语义和多功能的SVG图标集。可使用IMG标签和SVG icon组件载入，可自定义 sprite。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://fonts.google.com" rel="noopener nofollow" title="谷歌开源字体库。" target="_blank">Google Fonts</a><p class="card-text" style="">谷歌开源字体库。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://material.io/icons/" rel="noopener nofollow" title="900多种材料设计图标，提供各种尺寸和密度的SVG、PNG以及webfont。" target="_blank">Google Material icons</a><p class="card-text" style="">900多种材料设计图标，提供各种尺寸和密度的SVG、PNG以及webfont。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://icomoon.io/app/#/select" rel="noopener nofollow" title="5500 +免费图标，可导出SVG。也可导入你自己的SVG进行编辑。" target="_blank">IcoMoon</a><p class="card-text" style="">5500 +免费图标，可导出SVG。也可导入你自己的SVG进行编辑。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.iconfinder.com/" rel="noopener nofollow" title="强大的图标搜索引擎，2200000+图标涵盖SVG, PNG, CSH 和 AI 格式。" target="_blank">iconfinder</a><p class="card-text" style="">强大的图标搜索引擎，2200000+图标涵盖SVG, PNG, CSH 和 AI 格式。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.iconfont.cn/" rel="noopener nofollow" title="阿里矢量图标库。提供eps、SVG、PNG格式图标下载、在线存储、格式转换等功能。" target="_blank">Iconfont</a><p class="card-text" style="">阿里矢量图标库。提供eps、SVG、PNG格式图标下载、在线存储、格式转换等功能。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://useiconic.com/open/" rel="noopener nofollow" title="包含SVG、webfont、PNG、WebP，多种CSS风格和尺寸。" target="_blank">Iconic</a><p class="card-text" style="">包含SVG、webfont、PNG、WebP，多种CSS风格和尺寸。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://icons8.cn/" rel="noopener nofollow" title="68,800 个免费的扁平化图标，在 20 秒内生成任何格式、大小和颜色。" target="_blank">Icons8</a><p class="card-text" style="">68,800 个免费的扁平化图标，在 20 秒内生成任何格式、大小和颜色。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://ikons.piotrkwiatkowski.co.uk/" rel="noopener nofollow" title="包含SVG，AI，ESP，PSD，CSH和PNG格式的300个自定义图标。" target="_blank">Ikons</a><p class="card-text" style="">包含SVG，AI，ESP，PSD，CSH和PNG格式的300个自定义图标。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://octicons.github.com/" rel="noopener nofollow" title="由GitHub构建的一组SVG图标。" target="_blank">Octicons</a><p class="card-text" style="">由GitHub构建的一组SVG图标。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://typekit.com/" rel="noopener nofollow" title="每天带来数千种美丽的字体。可在web或桌面应用中使用。" target="_blank">Typekit</a><p class="card-text" style="">每天带来数千种美丽的字体。可在web或桌面应用中使用。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="css-tool">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> CSS 工具
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://atomiks.github.io/30-seconds-of-css/" rel="noopener nofollow" title="你可以在30秒或更短的时间内理解有用的CSS代码片段。" target="_blank">30秒CSS</a><p class="card-text" style="">你可以在30秒或更短的时间内理解有用的CSS代码片段。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://github.com/postcss/autoprefixer" rel="noopener nofollow" title="PostCSS插件，最流行的 CSS 处理工具之一。" target="_blank">Autoprefixer</a><p class="card-text" style="">PostCSS插件，最流行的 CSS 处理工具之一。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.colorzilla.com/gradient-editor/" rel="noopener nofollow" title="CSS3 渐变生成工具。" target="_blank">ColorZilla</a><p class="card-text" style="">CSS3 渐变生成工具。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://github.com/AllThingsSmitty/css-protips" rel="noopener nofollow" title="一系列可帮助你掌握CSS技能的提示。" target="_blank">CSS Protips</a><p class="card-text" style="">一系列可帮助你掌握CSS技能的提示。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.css3maker.com/" rel="noopener nofollow" title="在线生成 CSS3 属性。" target="_blank">CSS3 Maker</a><p class="card-text" style="">在线生成 CSS3 属性。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://cssnano.co/" rel="noopener nofollow" title="优化压缩CSS格式，适用于生产环境，由PostCSS提供支持。" target="_blank">cssnano</a><p class="card-text" style="">优化压缩CSS格式，适用于生产环境，由PostCSS提供支持。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://webkul.github.io/csspin/" rel="noopener nofollow" title="模块化的CSS Spinners和Loaders，可定制单个HTML元素代码。" target="_blank">CSSPIN</a><p class="card-text" style="">模块化的CSS Spinners和Loaders，可定制单个HTML元素代码。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://cssreference.io/" rel="noopener nofollow" title="免费的CSS视觉指南，通过图解和动画示例对CSS属性进行解释。" target="_blank">CSSreference</a><p class="card-text" style="">免费的CSS视觉指南，通过图解和动画示例对CSS属性进行解释。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://github.com/csstree/csstree" rel="noopener nofollow" title="对CSS语法有效性进行快速详尽解析。" target="_blank">CSSTree</a><p class="card-text" style="">对CSS语法有效性进行快速详尽解析。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://tool.css-js.com/" rel="noopener nofollow" title="基于YUI compressor内核压缩。" target="_blank">CSS美化压缩</a><p class="card-text" style="">基于YUI compressor内核压缩。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://easings.net/zh-cn" rel="noopener nofollow" title="通过动画指南，你可以直观的了解或使用缓动函数。" target="_blank">Easing Functions Cheat Sheet</a><p class="card-text" style="">通过动画指南，你可以直观的了解或使用缓动函数。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.emmet.io/" rel="noopener nofollow" title="利用Emmet，你能够输入可动态解析的CSS类表达式，并根据缩写生成输出结果。" target="_blank">Emmet</a><p class="card-text" style="">利用Emmet，你能够输入可动态解析的CSS类表达式，并根据缩写生成输出结果。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://ecomfe.github.io/est/" rel="noopener nofollow" title="一个基于 Less 的样式工具库，帮助你更轻松地书写 Less 代码。" target="_blank">est</a><p class="card-text" style="">一个基于 Less 的样式工具库，帮助你更轻松地书写 Less 代码。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://github.com/StefanKovac/flex-layout-attribute" rel="noopener nofollow" title="基于 CSS flexbox 规范的 HTML 布局助手。" target="_blank">Flex Layout Attribute</a><p class="card-text" style="">基于 CSS flexbox 规范的 HTML 布局助手。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://grid.guide/" rel="noopener nofollow" title="这个小巧的应用能让你通过自定义间距和列数建立你自己的栅格方案。" target="_blank">Grid.Guide</a><p class="card-text" style="">这个小巧的应用能让你通过自定义间距和列数建立你自己的栅格方案。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://lesscss.org/" rel="noopener nofollow" title="CSS 预处理语言，增加了变量、Mixin、函数等特性。基于JavaScript运行。">LESS</a><p class="card-text" style="">CSS 预处理语言，增加了变量、Mixin、函数等特性。基于JavaScript运行。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://jgthms.com/minireset.css/" rel="noopener nofollow" title="一个轻量级的 CSS reset。" target="_blank">minireset.css</a><p class="card-text" style="">一个轻量级的 CSS reset。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://necolas.github.io/normalize.css/" rel="noopener nofollow" title="使浏览器可以更加一致地呈现所有元素，并符合现代标准。可替代CSS reset。" target="_blank">Normalize.css</a><p class="card-text" style="">使浏览器可以更加一致地呈现所有元素，并符合现代标准。可替代CSS reset。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://postcss.org/" rel="noopener nofollow" title="一个允许使用 JS 插件转换样式的工具。附带很多优秀功能。" target="_blank">PostCSS</a><p class="card-text" style="">一个允许使用 JS 插件转换样式的工具。附带很多优秀功能。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://github.com/purifycss/purifycss" rel="noopener nofollow" title="删除未使用的CSS。也适用于单页面应用。" target="_blank">purifycss</a><p class="card-text" style="">删除未使用的CSS。也适用于单页面应用。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://sass-lang.com/" rel="noopener nofollow" title="CSS 预处理语言，增加了变量、Mixin、函数等特性。在服务器端处理。" target="_blank">SASS</a><p class="card-text" style="">CSS 预处理语言，增加了变量、Mixin、函数等特性。在服务器端处理。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.spritecow.com/" rel="noopener nofollow" title="在线CSS Sprites定位工具（仅支持png透明背景）。" target="_blank">Sprite Cow</a><p class="card-text" style="">在线CSS Sprites定位工具（仅支持png透明背景）。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://stylus-lang.com/" rel="noopener nofollow" title="基于node.js，富有表现力的、动态的、健壮的CSS。" target="_blank">stylus</a><p class="card-text" style="">基于node.js，富有表现力的、动态的、健壮的CSS。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="javascript-tool">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> JavaScript 工具
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.google.cn/chrome/" rel="noopener nofollow" title="内置在Google Chrome中Web开发和调试工具。" target="_blank">Chrome Dev Tools</a><p class="card-text" style="">内置在Google Chrome中Web开发和调试工具。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://eslint.org/" rel="noopener nofollow" title="一个插件化的JavaScript代码检测工具。" target="_blank">ESLint</a><p class="card-text" style="">一个插件化的JavaScript代码检测工具。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.mozilla.org/zh-CN/firefox/new/" rel="noopener nofollow" title="火狐提供的在 PC 和移动设备上检查，编辑，调试工具。" target="_blank">Firefox Developer Tools</a><p class="card-text" style="">火狐提供的在 PC 和移动设备上检查，编辑，调试工具。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://flow.org/" rel="noopener nofollow" title="JavaScript静态类型检查器，帮助你安全地进行重构。" target="_blank">flow</a><p class="card-text" style="">JavaScript静态类型检查器，帮助你安全地进行重构。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://jshint.com/" rel="noopener nofollow" title="可以检测JavaScript代码中的错误和潜在问题。" target="_blank">JSHint</a><p class="card-text" style="">可以检测JavaScript代码中的错误和潜在问题。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.css-js.com/" rel="noopener nofollow" title="多种模式提供JS压缩、解压、格式化、混淆加密、解密。" target="_blank">JS压缩，格式化</a><p class="card-text" style="">多种模式提供JS压缩、解压、格式化、混淆加密、解密。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://lisperator.net/uglifyjs/transform" rel="noopener nofollow" title="用于 JavaScript 的压缩、解压、美化、混淆等。" target="_blank">UglifyJS</a><p class="card-text" style="">用于 JavaScript 的压缩、解压、美化、混淆等。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="frontend-tool">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> 前端工具
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://bower.io/" rel="noopener nofollow" title="用于管理前端依赖的包管理器，提供了大量可供使用的依赖包。" target="_blank">Bower</a><p class="card-text" style="">用于管理前端依赖的包管理器，提供了大量可供使用的依赖包。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://browserify.org/" rel="noopener nofollow" title="让你使用类似于 node 的 require() 方式来组织浏览器端的 Javascript 代码。" target="_blank">Browserify</a><p class="card-text" style="">让你使用类似于 node 的 require() 方式来组织浏览器端的 Javascript 代码。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://brunch.io/" rel="noopener nofollow" title="简单且速度很快，自动生成Source Map，方便开发者Debug。" target="_blank">Brunch</a><p class="card-text" style="">简单且速度很快，自动生成Source Map，方便开发者Debug。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://git-scm.com/downloads" rel="noopener nofollow" title="先进的分布式版本控制系统。用于敏捷高效地处理任何或小或大的项目。" target="_blank">Git</a><p class="card-text" style="">先进的分布式版本控制系统。用于敏捷高效地处理任何或小或大的项目。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://gruntjs.com/" rel="noopener nofollow" title="帮你自动化执行压缩，编译，单元测试等重复性任务。" target="_blank">Grunt</a><p class="card-text" style="">帮你自动化执行压缩，编译，单元测试等重复性任务。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://gulpjs.com/" rel="noopener nofollow" title="用于在开发工作流程中自动执行重复或耗时的任务。" target="_blank">Gulp</a><p class="card-text" style="">用于在开发工作流程中自动执行重复或耗时的任务。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.npmjs.com/" rel="noopener nofollow" title="NPM包管理器可用于前后端，有超过475,000个模块。" target="_blank">NPM</a><p class="card-text" style="">NPM包管理器可用于前后端，有超过475,000个模块。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://webpack.github.io/" rel="noopener nofollow" title="Webpack用于编译JavaScript模块，编译后的文件用于在浏览器中使用。" target="_blank">webpack</a><p class="card-text" style="">Webpack用于编译JavaScript模块，编译后的文件用于在浏览器中使用。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://yarnpkg.com/zh-Hans/" rel="noopener nofollow" title="Yarn 会缓存它下载的每个包。并且会在每个安装包被执行前校验其完整性。" target="_blank">Yarn</a><p class="card-text" style="">Yarn 会缓存它下载的每个包。并且会在每个安装包被执行前校验其完整性。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://yeoman.io/" rel="noopener nofollow" title="一个强健的工具，库，及工作流程的组合。整合了Grunt、Gulp，NPM、Bower。" target="_blank">Yeoman</a><p class="card-text" style="">一个强健的工具，库，及工作流程的组合。整合了Grunt、Gulp，NPM、Bower。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="color">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> 配色/灵感
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.behance.net/" rel="noopener nofollow" title="展示和发现创意作品。内含大量优秀原创设计作品。" target="_blank">Behance</a><p class="card-text" style="">展示和发现创意作品。内含大量优秀原创设计作品。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.brandcolors.net/" rel="noopener nofollow" title="世界著名品牌的颜色代码合集。" target="_blank">BrandColors</a><p class="card-text" style="">世界著名品牌的颜色代码合集。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.colorhunter.com/" rel="noopener nofollow" title="上传图片即可自动创建配色方案。" target="_blank">color hunter</a><p class="card-text" style="">上传图片即可自动创建配色方案。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://color.adobe.com/zh/create/color-wheel/" rel="noopener nofollow" title="提供大量免费配色主题。可输出CMYK、RGB、LAB、HSB、HEX。" target="_blank">Color wheel</a><p class="card-text" style="">提供大量免费配色主题。可输出CMYK、RGB、LAB、HSB、HEX。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://dribbble.com/" rel="noopener nofollow" title="在线查看设计师已经完成的作品或者正在创作的作品。" target="_blank">dribbble</a><p class="card-text" style="">在线查看设计师已经完成的作品或者正在创作的作品。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://freehtml5.co/" rel="noopener nofollow" title="大量免费和高级 HTML5 模板。" target="_blank">freehtml5.co</a><p class="card-text" style="">大量免费和高级 HTML5 模板。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://mdcui.com/material-design/style/color.html#color-color-palette" rel="noopener nofollow" title="Google 提供的 Material Design 配色方案。" target="_blank">Material Design color</a><p class="card-text" style="">Google 提供的 Material Design 配色方案。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.materialui.co/" rel="noopener nofollow" title="一套可帮助你快速设计或开发网站和应用程序的颜色工具包。" target="_blank">Material UI</a><p class="card-text" style="">一套可帮助你快速设计或开发网站和应用程序的颜色工具包。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://mikeschultz.xyz/materialette/" rel="noopener nofollow" title="基于Material Design的调色板应用。可安装在桌面端使用。" target="_blank">Materialette</a><p class="card-text" style="">基于Material Design的调色板应用。可安装在桌面端使用。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.mobile-patterns.com/" rel="noopener nofollow" title="一个集合iOS界面截图给设计者灵感的酷站。" target="_blank">Mobile Patterns</a><p class="card-text" style="">一个集合iOS界面截图给设计者灵感的酷站。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://palettab.com/" rel="noopener nofollow" title="随机展示字体和颜色。提供chrome和firefox浏览器插件。" target="_blank">Palettab</a><p class="card-text" style="">随机展示字体和颜色。提供chrome和firefox浏览器插件。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://themeforest.net/" rel="noopener nofollow" title="业内最大的网站模板和CMS主题商城之一，灵感不需要付费:P" target="_blank">ThemeForest</a><p class="card-text" style="">业内最大的网站模板和CMS主题商城之一，灵感不需要付费:P</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.ui.cn/" rel="noopener nofollow" title="专业的界面设计师交流、学习/展示平台。" target="_blank">UI中国</a><p class="card-text" style="">专业的界面设计师交流、学习/展示平台。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.uisdc.com/" rel="noopener nofollow" title="涵盖WebUI，GUI，ICON，PSD，笔刷，模板，字体等资源。" target="_blank">优设-UISDC</a><p class="card-text" style="">涵盖WebUI，GUI，ICON，PSD，笔刷，模板，字体等资源。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.zcool.com.cn/" rel="noopener nofollow" title="中国人气设计师互动平台。" target="_blank">站酷(ZCOOL)</a><p class="card-text" style="">中国人气设计师互动平台。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://idesign.qq.com/#!index/feed" rel="noopener nofollow" title="云集高质量设计网站的内容以及大量设计素材，为设计灵感保驾护航。" target="_blank">腾讯设计导航</a><p class="card-text" style="">云集高质量设计网站的内容以及大量设计素材，为设计灵感保驾护航。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://huaban.com/" rel="noopener nofollow" title="设计作品采集站，收集灵感的地方。" target="_blank">花瓣</a><p class="card-text" style="">设计作品采集站，收集灵感的地方。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="test">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> 兼容、性能测试
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://turbo.net/browsers" rel="noopener nofollow" title="在线运行任何浏览器，包括Chrome，Firefox，IE 8，IE 9，IE 10和IE 11等。" target="_blank">Browser Sandbox</a><p class="card-text" style="">在线运行任何浏览器，包括Chrome，Firefox，IE 8，IE 9，IE 10和IE 11等。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://browserdiet.com/zh/" rel="noopener nofollow" title="权威的前端性能指南。" target="_blank">Browserdiet</a><p class="card-text" style="">权威的前端性能指南。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://browsershots.org/" rel="noopener nofollow" title="你可以提交一个网址，然后在各个浏览器中显示其兼容性。" target="_blank">browsershots</a><p class="card-text" style="">你可以提交一个网址，然后在各个浏览器中显示其兼容性。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.browserstack.com/" rel="noopener nofollow" title="在所有真实的移动和桌面浏览器中，对Web进行实时测试" target="_blank">BrowserStack</a><p class="card-text" style="">在所有真实的移动和桌面浏览器中，对Web进行实时测试</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://caniuse.com/" rel="noopener nofollow" title="提供最新的浏览器支持数据，显示某些CSS属性在各个平台的兼容性。" target="_blank">Can I use</a><p class="card-text" style="">提供最新的浏览器支持数据，显示某些CSS属性在各个平台的兼容性。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://developers.google.com/speed/pagespeed/insights/?hl=zh-CN" rel="noopener nofollow" title="分析网页内容，然后提供关于如何提升网页加载速度的建议。" target="_blank">PageSpeed Insights</a><p class="card-text" style="">分析网页内容，然后提供关于如何提升网页加载速度的建议。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="other">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> 其他
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://cdn.baomitu.com/" rel="noopener nofollow" title="由奇舞团支持并维护的开源项目免费 CDN 服务，囊括上千个前端资源库和 Google 字体库。" target="_blank">360 前端静态资源库</a><p class="card-text" style="">由奇舞团支持并维护的开源项目免费 CDN 服务，囊括上千个前端资源库和 Google<span class="js-shave-char">…</span><span class="js-shave" style="display:none;"> 字体库。</span></p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.awesomes.cn/" rel="noopener nofollow" title="前端框架排行及推荐。" target="_blank">Awesomes</a><p class="card-text" style="">前端框架排行及推荐。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://cdnjs.com/" rel="noopener nofollow" title="非常全面的公共库CDN，加速你的网站。" target="_blank">cdnjs</a><p class="card-text" style="">非常全面的公共库CDN，加速你的网站。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://codepen.io/" rel="noopener nofollow" title="面向开发人员的社交开发环境。可在线编辑测试HTML、CSS、JavaScript。" target="_blank">CodePen</a><p class="card-text" style="">面向开发人员的社交开发环境。可在线编辑测试HTML、CSS、JavaScript。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://css-tricks.com/" rel="noopener nofollow" title="主要分享CSS样式的技巧、经验和教程等。" target="_blank">css-tricks</a><p class="card-text" style="">主要分享CSS样式的技巧、经验和教程等。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://umaar.com/dev-tips/" rel="noopener nofollow" title="以gif的形式，展示Chrome DevTools开发技巧。" target="_blank">dev tips</a><p class="card-text" style="">以gif的形式，展示Chrome DevTools开发技巧。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://crockford.com/javascript/index.html" rel="noopener nofollow" title="JSLint 作者，《语言精粹》作者。" target="_blank">Douglas Crockford</a><p class="card-text" style="">JSLint 作者，《语言精粹》作者。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.jstips.co/zh_CN/" rel="noopener nofollow" title="每天分享一个JavaScript小技巧！ 由全球开发者共同维护。" target="_blank">Js Tips</a><p class="card-text" style="">每天分享一个JavaScript小技巧！ 由全球开发者共同维护。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://jsfiddle.net/" rel="noopener nofollow" title="Web开发人员的练习场,可在线编辑和测试 HTML、CSS、JavaScript代码片段。" target="_blank">JSFiddle</a><p class="card-text" style="">Web开发人员的练习场,可在线编辑和测试 HTML、CSS、JavaScript代码片段。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://www.quirksmode.org/js/contents.html" rel="noopener nofollow" title="主要关于JavaScript的一些干货。" target="_blank">quirksmode</a><p class="card-text" style="">主要关于JavaScript的一些干货。</p></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.unheap.com/" rel="noopener nofollow" title="轻松快速的找到各种最新的 jQuery 插件。" target="_blank">Unheap</a><p class="card-text" style="">轻松快速的找到各种最新的 jQuery 插件。</p></div>
+</div>
+</div>
+</div>
+
+<div class="card" id="ued-team">
+<div class="card-header">
+<i class="fi" aria-hidden="true"></i> UED 团队
+</div>
+<div class="card-body">
+<div class="row">
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://75team.com/" rel="noopener nofollow" target="_blank">360奇舞团</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://tgideas.qq.com/" rel="noopener nofollow" target="_blank">TGIdeas</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://aotu.io/" rel="noopener nofollow" target="_blank">凹凸实验室</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://ued.sina.com/" rel="noopener nofollow" target="_blank">新浪UED</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://taobaofed.org/" rel="noopener nofollow" target="_blank">淘宝FED</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://fex.baidu.com/" rel="noopener nofollow" target="_blank">百度FEX</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://uxc.baidu.com/" rel="noopener nofollow" target="_blank">百度UXC</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://uedc.163.com/" rel="noopener nofollow" target="_blank">网易UEDC</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://gux.163.com/" rel="noopener nofollow" target="_blank">网易游戏GUX</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.alloyteam.com/" rel="noopener nofollow" target="_blank">腾讯AlloyTeam</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://cdc.tencent.com/" rel="noopener nofollow" target="_blank">腾讯CDC</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="https://isux.tencent.com/" rel="noopener nofollow" target="_blank">腾讯isux</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://qqfe.org/" rel="noopener nofollow" target="_blank">腾讯网FERD</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.aliued.cn/" rel="noopener nofollow" target="_blank">阿里U一点</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://mux.alimama.com/" rel="noopener nofollow" target="_blank">阿里妈妈MUX</a></div>
+<div class="col-6 col-md-4 col-lg-3 col-xl-2-10"><a href="http://www.aliued.com/" rel="noopener nofollow" target="_blank">阿里巴巴国际UED</a></div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+
+</main> -->
 </div>
 
 <style>
