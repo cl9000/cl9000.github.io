@@ -2,13 +2,6 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://cl9000.github.io/tags/CSS/</loc>
-        <lastmod>2020-11-10T10:09:15.588Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/Loading/</loc>
         <lastmod>2020-11-10T10:09:15.588Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -94,13 +87,6 @@
 
     <url>
         <loc>https://cl9000.github.io/tags/DOM/</loc>
-        <lastmod>2021-04-30T02:40:20.498Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/tags/HTML/</loc>
         <lastmod>2021-04-30T02:40:20.498Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -660,13 +646,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/tags/Nginx/</loc>
-        <lastmod>2021-04-30T02:52:06.809Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/tags/Docker%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2Nginx/</loc>
         <lastmod>2021-04-30T02:52:06.809Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -702,8 +681,57 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/tags/HTML/</loc>
+        <lastmod>2021-05-15T14:49:34.040Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/AngularJS/</loc>
+        <lastmod>2021-05-19T01:46:27.825Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Nginx/</loc>
+        <lastmod>2021-05-20T01:30:53.016Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/tags/JavaScript/</loc>
-        <lastmod>2021-05-12T09:25:59.671Z</lastmod>
+        <lastmod>2021-05-20T03:03:47.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/canvas/</loc>
+        <lastmod>2021-05-20T03:03:47.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/CSS/</loc>
+        <lastmod>2021-05-20T07:42:24.029Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Tools/</loc>
+        <lastmod>2021-05-20T07:42:24.029Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/tags/Rem/</loc>
+        <lastmod>2021-05-20T07:42:24.029Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
