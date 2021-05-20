@@ -51,7 +51,7 @@
   line-height: 30px;
   background: #21252b;
   font-size: 16px;
-  position: absolute;
+  position: fixed;
   margin-top: -30px;
   left: 1.49rem;
   width: 95.6%;
@@ -86,6 +86,7 @@
   margin: 0;
   width: auto;
   border: none;
+  margin-bottom: 1em;
 }
 .post-container .highlight td {
   border: none !important;
