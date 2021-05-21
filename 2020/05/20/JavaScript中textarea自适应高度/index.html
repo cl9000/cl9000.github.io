@@ -67,11 +67,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          JavaScript 中常见小问题注意事项 - 魏长露的博客 | Wei, C.-L. Blog
+          JavaScript 中 textarea 自适应高度 - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
-    <link rel="canonical" href="https://cl9000.github.io/2021/03/12/JavaScript中常见小问题注意事项/">
+    <link rel="canonical" href="https://cl9000.github.io/2020/05/20/JavaScript中textarea自适应高度/">
 
     <!-- Bootstrap Core CSS -->
     <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
@@ -186,11 +186,11 @@
                                 title="JavaScript">JavaScript</a>
                             
                         </div>
-                        <h1>JavaScript 中常见小问题注意事项</h1>
+                        <h1>JavaScript 中 textarea 自适应高度</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by cl9000 on
-                            March 12, 2021
+                            May 20, 2020
                         </span>
                     </div>
                     
@@ -252,19 +252,19 @@
                         
                     
                         
-                    
-                        
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
                         
                     
                         
+                    
+                        
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
-                        
-                    
                         
                     
                     
@@ -317,13 +317,59 @@
             <!-- Post Container -->
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <h3><span id="换行问题">换行问题</span></h3>
-<p>在显示内容的元素标签添加如下样式，（使用<code>v-html</code>绑定数据，同时支持 <code>\n 和 &lt;br/&gt;</code>）</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"white-space: pre-line;"</span> <span class="attr">v-html</span>=<span class="string">"htmlTxt"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这样<code>\n（&lt;br/&gt;）</code>就能被识别，自动换行。(最低兼容到IE8)。<a href="https://caniuse.com/" target="_blank" rel="noopener">caniuse 兼容性查看</a></p>
+                <p>创造性就是发明、实验、成长、冒险、犯规、犯错和享受乐趣。 ——&lt;玛丽·卢·库克&gt;</p>
 <blockquote>
-<p>**注意：**若经过JSON处理，后台传入的 \n 会被解析为字符串\ 和 n， 需要在处理一下 <code>str.replace(/\\n/g, '\n')</code></p>
+<p>原文链接：<a href="https://bdadam.com/blog/automatically-adapting-the-height-textarea.html" target="_blank" rel="noopener">https://bdadam.com/blog/automatically-adapting-the-height-textarea.html</a></p>
 </blockquote>
+<h2><span id="简介">简介</span></h2>
+<p><code>textareas</code>有一个大问题：默认情况下，<code>textareas</code>具有固定的高度。您可以设置<code>rows</code>属性以告知应显示多少行，也可以设置其<code>style.height</code>属性。但不幸的是，没有自动高度属性。</p>
+<h2><span id="实现思路">实现思路</span></h2>
+<p>每次更改文本后，我们都必须测量内容的高度。幸运的是有一种方法可以做到这一点。<code>element.scrollHeight</code>不管可见的滚动条如何，都能为我们提供内容的高度。为了减小大小，我们每次将高度设置回零，以便<code>scrollHeight</code>报告所需的最小值而不是更多。例如，当用户删除一行时。</p>
+<p>我们还必须计算边框和轮廓的大小，以便我们不给任何机会截断内容或显示滚动条。</p>
+<p>然后，将<code>style.height</code>属性设置为计算出的高度。</p>
+<p>为了每次都执行此操作，我们使用<code>oninput</code>事件，每次文本内容更改时都会触发该事件。相反<code>onchange</code>，仅当用户单击时才触发。</p>
+<h2><span id="实现代码">实现代码</span></h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">data-adaptheight</span> <span class="attr">rows</span>=<span class="string">"3"</span> <span class="attr">cols</span>=<span class="string">"40"</span> <span class="attr">placeholder</span>=<span class="string">"您的输入"</span> <span class="attr">style</span>=<span class="string">"padding: 16px; line-height: 1.5;"</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">(<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">adjustHeight</span><span class="params">(textareaElement, minHeight)</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// compute the height difference which is caused by border and outline</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> outerHeight = <span class="built_in">parseInt</span>(<span class="built_in">window</span>.getComputedStyle(el).height, <span class="number">10</span>);</span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> diff = outerHeight - el.clientHeight;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">// set the height to 0 in case of it has to be shrinked</span></span></span><br><span class="line">        el.style.height = 0;</span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">// set the correct height</span></span></span><br><span class="line"><span class="actionscript">        <span class="comment">// el.scrollHeight is the full height of the content, not just the visible part</span></span></span><br><span class="line"><span class="javascript">        el.style.height = <span class="built_in">Math</span>.max(minHeight, el.scrollHeight + diff) + <span class="string">'px'</span>;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="comment">// we use the "data-adaptheight" attribute as a marker</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> textAreas = [].slice.call(<span class="built_in">document</span>.querySelectorAll(<span class="string">'textarea[data-adaptheight]'</span>));</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="comment">// iterate through all the textareas on the page</span></span></span><br><span class="line"><span class="actionscript">    textAreas.forEach(<span class="function"><span class="keyword">function</span><span class="params">(el)</span> </span>&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">// we need box-sizing: border-box, if the textarea has padding</span></span></span><br><span class="line"><span class="actionscript">        el.style.boxSizing = el.style.mozBoxSizing = <span class="string">'border-box'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">// we don't need any scrollbars, do we? :)</span></span></span><br><span class="line"><span class="actionscript">        el.style.overflowY = <span class="string">'hidden'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">// the minimum height initiated through the "rows" attribute</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">var</span> minHeight = el.scrollHeight;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">        el.addEventListener(<span class="string">'input'</span>, <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line">            adjustHeight(el, minHeight);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">// we have to readjust when window size changes (e.g. orientation change)</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">window</span>.addEventListener(<span class="string">'resize'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line">            adjustHeight(el, minHeight);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line"><span class="actionscript">        <span class="comment">// we adjust height to the initial content</span></span></span><br><span class="line">        adjustHeight(el, minHeight);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;());</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2><span id="实现演示">实现演示</span></h2>
+<div>
+<textarea data-adaptheight rows="3" cols="40" placeholder="您的输入" style="padding: 16px; line-height: 1.5;"></textarea>
+<script>
+    (function() {
+    function adjustHeight(textareaElement, minHeight) {
+        var diff = parseInt(window.getComputedStyle(el).height, 10) - el.clientHeight;
+        el.style.height = 0;
+        el.style.height = Math.max(minHeight, el.scrollHeight + diff) + 'px';
+    }
+    var textAreas = document.querySelectorAll('textarea[data-adaptheight]');
+    for (var i = 0, l = textAreas.length; i < l; i++) {
+        var el = textAreas[i];
+        el.style.boxSizing = el.style.mozBoxSizing = 'border-box';
+        el.style.overflowY = 'hidden';
+        var minHeight = el.scrollHeight;
+        el.addEventListener('input', function() { adjustHeight(el, minHeight); });
+        window.addEventListener('resize', function() { adjustHeight(el, minHeight); });
+        adjustHeight(el, minHeight);
+    }
+}());
+</script>
+</div>
+<h2><span id="总结">总结</span></h2>
+<p>每次按键都会导致重画。因为我们将文本区域的高度设置为0，然后设置为计算值。<br>
+但是，这应该可以忽略不计，因为大多数用户每秒最多只能键入几个字符。因此，它不会引起任何明显的性能缺陷。</p>
+<h2><span id="用处">用处</span></h2>
+<p>在许多情况下，这可能是有用的。在其他人中：</p>
+<ul>
+<li>文字编辑器</li>
+<li>代码编辑器</li>
+<li>评论框</li>
+<li>…</li>
+</ul>
+<h2><span id="参考">参考</span></h2>
+<ul>
+<li><a href="https://bdadam.com/blog/automatically-adapting-the-height-textarea.html" target="_blank" rel="noopener">https://bdadam.com/blog/automatically-adapting-the-height-textarea.html</a></li>
+</ul>
+<p><strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
 
 
                 <hr>
@@ -331,17 +377,17 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2021/05/20/JavaScript中textarea自适应高度/" data-toggle="tooltip" data-placement="top" title="JavaScript 中textarea自适应高度"> Previous
+                            <a href="/2020/05/27/虚拟DOMVS影子DOM/" data-toggle="tooltip" data-placement="top" title="虚拟DOM（Virtual Dom） VS 影子DOM（Shadow Dom）"> Previous
                             <br>
-                            <span>JavaScript 中textarea自适应高度</span>
+                            <span>虚拟DOM（Virtual Dom） VS 影子DOM（Shadow Dom）</span>
                             </a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2021/01/28/JavaScript可选链【-】JavaScript中的运算符/" data-toggle="tooltip" data-placement="top" title="链判断运算符【?.】JavaScript中的运算符">Next
+                            <a href="/2020/05/19/JavaScript中使用canvas元素平移和滚动背景图像/" data-toggle="tooltip" data-placement="top" title="JavaScript 中使用 canvas 元素平移和滚动背景图像">Next
                             <br>
-                            <span>链判断运算符【?.】JavaScript中的运算符</span>
+                            <span>JavaScript 中使用 canvas 元素平移和滚动背景图像</span>
                             </a>
                         </li>
                     
@@ -402,7 +448,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">换行问题</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">实现思路</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">实现代码</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">实现演示</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">总结</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">用处</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">参考</span></a></li></ol>
         
         </div>
       </aside>

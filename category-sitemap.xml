@@ -7,13 +7,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</loc>
-        <lastmod>2021-04-20T09:24:41.588Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/categories/iOS/</loc>
         <lastmod>2021-04-30T02:38:37.954Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -112,13 +105,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/Docker/</loc>
-        <lastmod>2021-04-30T02:52:06.809Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/categories/Web%E6%B5%8B%E8%AF%95/</loc>
         <lastmod>2021-04-30T06:10:48.790Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -161,8 +147,22 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/</loc>
+        <lastmod>2021-05-21T01:10:12.019Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/Docker/</loc>
+        <lastmod>2021-05-21T01:21:05.674Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/categories/JavaScript/</loc>
-        <lastmod>2021-05-20T09:37:19.844Z</lastmod>
+        <lastmod>2021-05-21T01:26:48.261Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

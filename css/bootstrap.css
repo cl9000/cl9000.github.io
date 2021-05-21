@@ -1507,10 +1507,7 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
-code,
-kbd,
-pre,
-samp {
+code,kbd,pre,samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 code {
@@ -1580,6 +1577,11 @@ pre code {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+}
+@media (min-width: 1600px) {
+  .container {
+    width: 1380px;
   }
 }
 .container-fluid {

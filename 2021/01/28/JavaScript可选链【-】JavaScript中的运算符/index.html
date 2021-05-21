@@ -185,10 +185,6 @@
                                 href="/tags/#JavaScript"
                                 title="JavaScript">JavaScript</a>
                             
-                            <a class="tag" style="color: #fff;background-color: #077bf3;"
-                                href="/tags/#运算符"
-                                title="运算符">运算符</a>
-                            
                         </div>
                         <h1>链判断运算符【?.】JavaScript中的运算符</h1>
                         <h2 class="subheading"></h2>
@@ -256,19 +252,19 @@
                         
                     
                         
-                    
-                        
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
                         
                     
                         
+                    
+                        
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
-                        
-                    
                         
                     
                     
@@ -327,7 +323,7 @@
 译者：cl9000<br>
 来源：<a href="https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/" target="_blank" rel="noopener">https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/</a></p>
 </blockquote>
-<p>可选的链?.运算符用于通过隐式空检查访问嵌套的对象属性。</p>
+<p>链判断运算符<code>?.</code> 用于通过隐式空检查访问嵌套的对象属性。</p>
 <h2><span id="概述">概述</span></h2>
 <p>如何使用无效<code>（null和undefined）</code>检查访问对象的嵌套属性？假设我们必须通过网络api的响应访问用户详细信息？</p>
 <p>您可以<code>? ... :</code>像这样使用嵌套的三元运算符：</p>
@@ -339,9 +335,9 @@
 <p>上面的代码的共同点是，链接有时可能真的很长，并且变得更加难以格式化和读取。这是可选的链接?.运算符提供帮助的地方，该运算符提供了隐式的无效检查，并使我们的代码更小，更好。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userName = response?.data?.user?.name;</span><br></pre></td></tr></table></figure>
 <h2><span id="句法">句法</span></h2>
-<p>可选的链<code>?.</code>运算符在<code>Javascript ES2020</code>中引入，其语法如下：-</p>
+<p>链判断运算符<code>?.</code> 在<code>Javascript ES2020</code>中引入，其语法如下：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj.val?.prop       returns obj.val.prop <span class="keyword">if</span> val exists, otherwise <span class="literal">undefined</span>.</span><br><span class="line">obj.func?.(args)    returns obj.func(args) <span class="keyword">if</span> func exists, otherwise <span class="literal">undefined</span>.</span><br><span class="line">obj.arr?.[index]    returns obj.array[index] <span class="keyword">if</span> array exists, otherwise <span class="literal">undefined</span>.</span><br></pre></td></tr></table></figure>
-<p>使用链判断运算符<code>?.</code>运算符</p>
+<p>使用链判断运算符<code>?.</code> 运算符</p>
 <p>让我们看看<code>?.</code>操作符与<code>user</code>对象的用法：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user = &#123;</span><br><span class="line">  name: <span class="string">"John"</span>,</span><br><span class="line">  age: <span class="number">21</span>,</span><br><span class="line">  homeaddress: &#123;</span><br><span class="line">    country: <span class="string">"USA"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  hobbies: [&#123;<span class="attr">name</span>: <span class="string">"Coding"</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">"Cooking"</span>&#125;],</span><br><span class="line">  getFirstName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2><span id="具有属性">具有属性</span></h2>
@@ -349,36 +345,39 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.homeaddress.country); </span><br><span class="line"><span class="comment">// prints "USA";</span></span><br></pre></td></tr></table></figure>
 <p>访问不存在的属性会引发错误：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.officeaddress.country); </span><br><span class="line"><span class="comment">// throws error "Uncaught TypeError: Cannot read property 'country' of undefined"</span></span><br></pre></td></tr></table></figure>
-<p>使用<code>?.</code>不存在的链判断运算符运算符访问属性将返回<code>undefined</code>：-</p>
+<p>使用链判断运算符<code>?.</code>不存在的链判断运算符运算符访问属性将返回<code>undefined</code>：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.officeaddress?.country); </span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
 <h2><span id="具有功能">具有功能</span></h2>
 <p>调用存在的函数返回值：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.getFirstName()); </span><br><span class="line"><span class="comment">// prints "John";</span></span><br></pre></td></tr></table></figure>
 <p>调用不存在的函数会引发错误：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.getLastName()); </span><br><span class="line"><span class="comment">// throws error "Uncaught TypeError: user.getLastName is not a function";</span></span><br></pre></td></tr></table></figure>
-<p>用<code>?.</code>不存在的<code>Optional chaining operator</code>调用一个函数将返回<code>undefined：-</code></p>
+<p>用链判断运算符<code>?.</code>不存在的<code>Optional chaining operator</code>调用一个函数将返回<code>undefined：-</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.getLastName?.()); </span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
 <h2><span id="与数组">与数组</span></h2>
 <p>访问数组的现有索引返回值：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.hobbies[<span class="number">0</span>].name); </span><br><span class="line"><span class="comment">// prints "Coding";</span></span><br></pre></td></tr></table></figure>
 <p>访问数组的不存在的索引会引发错误：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.hobbies[<span class="number">3</span>].name); </span><br><span class="line"><span class="comment">// throws error "Uncaught TypeError: Cannot read property 'name' of undefined"</span></span><br></pre></td></tr></table></figure>
-<p>使用可选的链运算符访问数组的不存在的索引<code>?.</code> 将返回undefined：-</p>
+<p>使用链判断运算符<code>?.</code>访问数组的不存在的索引，将返回undefined：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.hobbies[<span class="number">3</span>]?.name); </span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
 <p>访问不存在的数组会引发错误：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.dislikes[<span class="number">0</span>].name); </span><br><span class="line"><span class="comment">// throws error "Uncaught TypeError: Cannot read property '0' of undefined"</span></span><br></pre></td></tr></table></figure>
-<p>使用<code>?.</code>不存在的链判断运算符运算符访问数组将返回<code>undefined</code>：-</p>
+<p>使用链判断运算符<code>?.</code>不存在的访问数组将返回<code>undefined</code>：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(user.dislikes?.[<span class="number">0</span>]?.name); </span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
-<h2><span id="与nullish合并-操作符">与Nullish合并?? 操作符</span></h2>
-<p>现在，您知道如果对象不存在，则链判断运算符运算符<code>?.</code>将返回<code>undefined</code>。有时您想返回一个值，而不是<code>undefined</code>通过使用<code>Nullish Coalescing??</code>运算符和可选的<code>chaining?.</code>运算符来返回一个值。</p>
-<p>如果没有空值合并<code>??</code>运算符，则返回<code>undefined</code>：-</p>
+<h2><span id="与空值合并运算符">与空值合并运算符 ??</span></h2>
+<p>现在，您知道如果对象不存在，则链判断运算符<code>?.</code>将返回<code>undefined</code>。有时您想返回一个值，而不是<code>undefined</code>，通过使用空值合并运算符<code>??</code> 和链判断运算符<code>?.</code>来返回一个值。</p>
+<p>如果没有空值合并运算符<code>??</code>，则返回<code>undefined</code>：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> country = user.officeaddress?.country;</span><br><span class="line"><span class="built_in">console</span>.log(country);</span><br><span class="line"><span class="comment">// prints "undefined"</span></span><br></pre></td></tr></table></figure>
-<p>使用空值合并<code>??</code>运算符，返回默认值：-</p>
+<p>使用空值合并运算符<code>??</code>，返回默认值：-</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> country = user.officeaddress?.country ?? <span class="string">"USA"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(country);</span><br><span class="line"><span class="comment">// prints "USA"</span></span><br></pre></td></tr></table></figure>
-<p>原文链接：<br>
-<a href="https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/" target="_blank" rel="noopener">https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/</a></p>
-<p>参考其它：<br>
-<a href="https://seifi.org/javascript/optional-chaining-in-javascript.html" target="_blank" rel="noopener">https://seifi.org/javascript/optional-chaining-in-javascript.html</a></p>
+<h2><span id="参考">参考</span></h2>
+<ul>
+<li><a href="https://codingnconcepts.com/javascript/optional-chaining-operator-javascript/" target="_blank" rel="noopener">原文链接 https://seifi.org/javascript/optional-chaining-in-javascript.html</a></li>
+<li><a href="https://seifi.org/javascript/optional-chaining-in-javascript.html" target="_blank" rel="noopener">https://seifi.org/javascript/optional-chaining-in-javascript.html</a></li>
+</ul>
+<p><strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
 
 
                 <hr>
@@ -386,9 +385,9 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2021/03/12/JavaScript中常见小问题注意事项/" data-toggle="tooltip" data-placement="top" title="JavaScript 中常见小问题注意事项"> Previous
+                            <a href="/2021/03/12/JavaScript中常见问题注意事项/" data-toggle="tooltip" data-placement="top" title="JavaScript 中常见问题注意事项"> Previous
                             <br>
-                            <span>JavaScript 中常见小问题注意事项</span>
+                            <span>JavaScript 中常见问题注意事项</span>
                             </a>
                         </li>
                     
@@ -457,7 +456,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">句法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">具有属性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">具有功能</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">与数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">与Nullish合并?? 操作符</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">概述</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">句法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">具有属性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">具有功能</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">与数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">与空值合并运算符 ??</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">参考</span></a></li></ol>
         
         </div>
       </aside>
@@ -475,8 +474,6 @@
                     <div class="tags">
                        
                           <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
-                        
-                          <a class="tag" href="/tags/#运算符" title="运算符">运算符</a>
                         
                     </div>
                 </section>
