@@ -67,11 +67,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          JavaScript 中常见问题注意事项 - 魏长露的博客 | Wei, C.-L. Blog
+          JavaScript 防止在AngularJs中创建不必要的作用域 - 魏长露的博客 | Wei, C.-L. Blog
         
     </title>
 
-    <link rel="canonical" href="https://cl9000.github.io/2021/03/12/JavaScript中常见问题注意事项/">
+    <link rel="canonical" href="https://cl9000.github.io/2020/05/24/JavaScript防止在AngularJs中创建不必要的作用域/">
 
     <!-- Bootstrap Core CSS -->
     <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
@@ -186,11 +186,11 @@
                                 title="JavaScript">JavaScript</a>
                             
                         </div>
-                        <h1>JavaScript 中常见问题注意事项</h1>
+                        <h1>JavaScript 防止在AngularJs中创建不必要的作用域</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by cl9000 on
-                            March 12, 2021
+                            May 24, 2020
                         </span>
                     </div>
                     
@@ -237,16 +237,14 @@
                     
                         
                         <li>
-                            <a href="/about/">Me</a>
+                            <a href="/archive/">Archive</a>
                         </li>
                         
                     
                         
                         <li>
-                            <a href="/archive/">Archive</a>
+                            <a href="/about/">Me</a>
                         </li>
-                        
-                    
                         
                     
                         
@@ -257,6 +255,8 @@
                         <li>
                             <a href="/timeline/">Timeline</a>
                         </li>
+                        
+                    
                         
                     
                         
@@ -317,24 +317,40 @@
             <!-- Post Container -->
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <h3><span id="换行问题">换行问题</span></h3>
-<p>在显示内容的元素标签添加如下样式，（使用<code>v-html</code>绑定数据，同时支持 <code>\n 和 &lt;br/&gt;</code>）</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"white-space: pre-line;"</span> <span class="attr">v-html</span>=<span class="string">"htmlTxt"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>这样<code>\n（&lt;br/&gt;）</code>就能被识别，自动换行。(最低兼容到IE8)。<a href="https://caniuse.com/" target="_blank" rel="noopener">caniuse 兼容性查看</a></p>
+                <p>创造力是自律与童心的结合体。——&lt;罗伯特·格林&gt;</p>
 <blockquote>
-<p>**注意：**若经过JSON处理，后台传入的 \n 会被解析为字符串\ 和 n， 需要在处理一下 <code>str.replace(/\\n/g, '\n')</code></p>
+<p>原文链接：<a href="https://www.jstips.co/en/angular/preventing-unwanted-scopes-creation-in-angularjs/" target="_blank" rel="noopener">https://www.jstips.co/en/angular/preventing-unwanted-scopes-creation-in-angularjs/</a></p>
 </blockquote>
+<p><code>AngularJs</code> 最受赞赏的特性之一是理解和阻止 <code>ng-model</code> 数据范围是你经常遇到的主要挑战之一。在处理 <code>ng-model</code> 数据时，<code>ng-repeat</code> 或 <code>ng-if</code> 过程可以创建新的不需要的作用域。看看下面的例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div ng-app&gt;</span><br><span class="line">  &lt;input type=<span class="string">"text"</span> ng-model=<span class="string">"data"</span>&gt;</span><br><span class="line">   &lt;div ng-repeat=<span class="string">"i in [1]"</span>&gt;</span><br><span class="line">       &lt;input type=<span class="string">"text"</span> ng-model=<span class="string">"data"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line">        innerScope:</span><br><span class="line">   &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">   outerScope:</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+<p>在上面的例子中，<code>innerScope</code> 继承自 <code>outerScope</code> ，并在<code>outerScope</code>中传递值。如果你在 <code>innerScope</code> 中输入一个值，它将反映在 <code>outerScope</code> 中。但如果编辑<code>outerScope</code>, <code>innerScope</code>反映的值与 <code>outerScope</code> 不相同，因为 <code>innerScope</code> 创建了自己的字段，因此不再从 <code>outerScope</code> 继承。</p>
+<p>为了防止这种情况发生，我们可以使用 <code>“Controller As”</code> 方法，而不是使用 <code>scope</code> 作为所有数据和函数的容器。但一个更引人注目的解决方案是保持所有的对象，如下面的例子-</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div ng-app&gt;</span><br><span class="line">  &lt;input type=<span class="string">"text"</span> ng-model=<span class="string">"data.text"</span>&gt;</span><br><span class="line">   &lt;div ng-repeat=<span class="string">"i in [1]"</span>&gt;</span><br><span class="line">       &lt;input type=<span class="string">"text"</span> ng-model=<span class="string">"data.text"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line">        inner scope:</span><br><span class="line">   &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">   outer scope:</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+<p>现在 <code>innerScope</code> 不再创建新的字段，而在 <code>innerScope</code> 或 <code>outerScope</code> 中的编辑值将同时反映在<code>innerScope</code>和<code>outerScope中</code>。</p>
+<h2><span id="参考">参考</span></h2>
+<ul>
+<li><a href="https://www.jstips.co/en/angular/preventing-unwanted-scopes-creation-in-angularjs/" target="_blank" rel="noopener">https://www.jstips.co/en/angular/preventing-unwanted-scopes-creation-in-angularjs/</a></li>
+</ul>
+<p><strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
 
 
                 <hr>
                 <!-- Pager &rarr; 箭头 -->
                 <ul class="pager">
                     
+                        <li class="previous">
+                            <a href="/2020/05/27/虚拟DOMVS影子DOM/" data-toggle="tooltip" data-placement="top" title="虚拟DOM（Virtual Dom） VS 影子DOM（Shadow Dom）"> Previous
+                            <br>
+                            <span>虚拟DOM（Virtual Dom） VS 影子DOM（Shadow Dom）</span>
+                            </a>
+                        </li>
+                    
                     
                         <li class="next">
-                            <a href="/2021/01/28/JavaScript可选链【-】JavaScript中的运算符/" data-toggle="tooltip" data-placement="top" title="链判断运算符【?.】JavaScript中的运算符">Next
+                            <a href="/2020/05/21/JavaScript中上下文Target和currentTarget-Websocket超时/" data-toggle="tooltip" data-placement="top" title="JavaScript 中事件上下文中 Target 和 currentTarget 的区别">Next
                             <br>
-                            <span>链判断运算符【?.】JavaScript中的运算符</span>
+                            <span>JavaScript 中事件上下文中 Target 和 currentTarget 的区别</span>
                             </a>
                         </li>
                     
@@ -395,7 +411,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">换行问题</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">参考</span></a></li></ol>
         
         </div>
       </aside>

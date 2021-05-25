@@ -566,39 +566,32 @@ pre code {
 		line-height: 1.3;
 		margin-bottom: 10px
 	}
-
 	.post-preview>a>.post-subtitle {
 		font-size: 16px
 	}
-
 	.post-preview .post-meta {
 		font-size: 18px
 	}
 }
-
 .post-content-preview {
 	font-size: 13px;
 	font-style: italic;
 	color: #a3a3a3;
 	overflow: hidden;
 }
-
 .post-content-preview:hover {
 	color: #0085a1
 }
-
 @media only screen and (min-width:768px) {
 	.post-content-preview {
 		font-size: 14px
 	}
 }
-
 .section-heading {
 	font-size: 36px;
 	margin-top: 60px;
 	font-weight: 700
 }
-
 .caption {
 	text-align: center;
 	font-size: 14px;
@@ -609,31 +602,25 @@ pre code {
 	border-bottom-right-radius: 5px;
 	border-bottom-left-radius: 5px
 }
-
 footer {
 	font-size: 20px;
 	padding: 50px 0 65px
 }
-
 footer .list-inline {
 	margin: 0;
 	padding: 0
 }
-
 footer .copyright {
 	font-size: 14px;
 	text-align: center;
 	margin-bottom: 0
 }
-
 footer .copyright a {
 	color: #337ab7
 }
-
 footer .copyright a:hover,footer .copyright a:focus {
 	color: #0085a1
 }
-
 .floating-label-form-group {
 	font-size: 14px;
 	position: relative;
@@ -641,7 +628,6 @@ footer .copyright a:hover,footer .copyright a:focus {
 	padding-bottom: .5em;
 	border-bottom: 1px solid #eee
 }
-
 .floating-label-form-group input,.floating-label-form-group textarea {
 	z-index: 1;
 	position: relative;
@@ -654,7 +640,6 @@ footer .copyright a:hover,footer .copyright a:focus {
 	box-shadow: none!important;
 	resize: none
 }
-
 .floating-label-form-group label {
 	display: block;
 	z-index: 0;
@@ -663,32 +648,27 @@ footer .copyright a:hover,footer .copyright a:focus {
 	margin: 0;
 	font-size: .85em;
 	line-height: 1.764705882em;
-/*vertical-align:middle;vertical-align:baseline;*/
+	/*vertical-align:middle;vertical-align:baseline;*/
 	opacity: 0;
 	-webkit-transition: top .3s ease,opacity .3s ease;
 	-moz-transition: top .3s ease,opacity .3s ease;
 	-ms-transition: top .3s ease,opacity .3s ease;
 	transition: top .3s ease,opacity .3s ease
 }
-
 .floating-label-form-group::not(:first-child) {
 	padding-left: 14px;
 	border-left: 1px solid #eee
 }
-
 .floating-label-form-group-with-value label {
 	top: 0;
 	opacity: 1
 }
-
 .floating-label-form-group-with-focus label {
 	color: #0085a1
 }
-
 form .row:first-child .floating-label-form-group {
 	border-top: 1px solid #eee
 }
-
 .btn {
 	font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
 	line-height: 1.7;
@@ -699,23 +679,19 @@ form .row:first-child .floating-label-form-group {
 	border-radius: 0;
 	padding: 15px 25px
 }
-
 .btn-lg {
 	font-size: 16px;
 	padding: 25px 35px
 }
-
 .btn-default:hover,.btn-default:focus {
 	background-color: #0085a1;
 	border: 1px solid #0085a1;
 	color: #fff
 }
-
 .pager {
 	margin: 20px 0 0!important;
 	padding: 0!important
 }
-
 .pager li>a,.pager li>span {
 	font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","Microsoft JhengHei","Source Han Sans SC","Noto Sans CJK SC","Source Han Sans CN","Noto Sans SC","Source Han Sans TC","Noto Sans CJK TC","WenQuanYi Micro Hei",SimSun,sans-serif;
 	line-height: 1.7;
@@ -727,60 +703,49 @@ form .row:first-child .floating-label-form-group {
 	background-color: #fff;
 	border-radius: 0
 }
-
 @media only screen and (min-width:768px) {
 	.pager li>a,.pager li>span {
 		font-size: 14px;
 		padding: 15px 25px
 	}
 }
-
 .pager li>a {
 	color: #404040
 }
-
 .pager li>a:hover,.pager li>a:focus {
 	color: #fff;
 	background-color: #0085a1;
 	border: 1px solid #0085a1
 }
-
 .pager .disabled>a,.pager .disabled>a:hover,.pager .disabled>a:focus,.pager .disabled>span {
 	color: gray;
 	background-color: #404040;
 	cursor: not-allowed
 }
-
 ::-moz-selection {
 	color: #fff;
 	text-shadow: none;
 	background: #0085a1
 }
-
 ::selection {
 	color: #fff;
 	text-shadow: none;
 	background: #0085a1
 }
-
 img::selection {
 	color: #fff;
 	background: 0 0
 }
-
 img::-moz-selection {
 	color: #fff;
 	background: 0 0
 }
-
 body {
 	-webkit-tap-highlight-color: #0085a1
 }
-
 .tags {
 	margin-bottom: -5px
 }
-
 .tags a,.tags .tag {
 	display: inline-block;
 	border: 1px solid #bfbfbf;
@@ -793,20 +758,17 @@ body {
 	margin: 0 1px;
 	margin-bottom: 6px
 }
-
 .tags a:hover,.tags .tag:hover,.tags a:active,.tags .tag:active {
 	color: #0085a1;
 	border-color: #0085a1;
 	background-color: rgba(255,255,255,.4);
 	text-decoration: none
 }
-
 @media only screen and (min-width:768px) {
 	.tags a,.tags .tag {
 		margin-right: 5px
 	}
 }
-
 #tag-heading {
 	padding: 70px 0 60px
 }
