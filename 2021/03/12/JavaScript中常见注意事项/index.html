@@ -242,12 +242,6 @@
                         
                     
                         
-                        <li>
-                            <a href="/about/">Me</a>
-                        </li>
-                        
-                    
-                        
                     
                         
                     
@@ -265,6 +259,12 @@
                         </li>
                         
                     
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">Me</a>
+                        </li>
                         
                     
                     
@@ -317,7 +317,11 @@
             <!-- Post Container -->
             <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
 
-                <h2><span id="javascript展平多维数组">JavaScript展平多维数组</span></h2>
+                <h2><span id="windowheight获取到的高度不对">$(window).height()获取到的高度不对</span></h2>
+<p><code>$(window).height()</code> 或 <code>document.documentElement.clientHeight</code><br>
+只需要将 <code>html5</code> 的声明整成标准的带有 <code>&lt;!doctype&gt;</code> 或 <code>&lt;!DOCTYPE&gt;</code> 的声明的就可以了。</p>
+<p><a href="https://cl9000.gitee.io/web-code/18_%E9%A1%B5%E9%9D%A2%E9%98%85%E8%AF%BB%E8%BF%9B%E5%BA%A6%E6%9D%A1/" target="_blank" rel="noopener">示例Demo web-code 18</a></p>
+<h2><span id="javascript展平多维数组">JavaScript展平多维数组</span></h2>
 <p>将多维数组合并为单个数组的几种已知方法：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 给定此数组：</span></span><br><span class="line"><span class="keyword">var</span> myArray = [[<span class="number">1</span>, <span class="number">2</span>],[<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>], [<span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]];</span><br><span class="line"><span class="comment">// 想要这样的结果：[1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"><span class="comment">// 解决方案1：使用concat()和apply()</span></span><br><span class="line"><span class="keyword">var</span> myNewArray = [].concat.apply([], myArray); <span class="comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决方案2：使用 reduce()</span></span><br><span class="line"><span class="keyword">var</span> myNewArray = myArray.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, curr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> prev.concat(curr);</span><br><span class="line">&#125;); <span class="comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决方案3：循环遍历</span></span><br><span class="line"><span class="keyword">var</span> myNewArray3 = [];</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; myArray.length; ++i) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; myArray[i].length; ++j)</span><br><span class="line">    myNewArray3.push(myArray[i][j]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(myNewArray3); <span class="comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决方案4：在ES6中 使用 扩展运算符...</span></span><br><span class="line"><span class="keyword">var</span> myNewArray4 = [].concat(...myArray);</span><br><span class="line"><span class="built_in">console</span>.log(myNewArray4); <span class="comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 解决方案5：在ES10中 使用 flat() </span></span><br><span class="line"><span class="keyword">var</span> myNewArray5 = myArray.flat();</span><br><span class="line"><span class="built_in">console</span>.log(myNewArray5);</span><br><span class="line"><span class="comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span></span><br></pre></td></tr></table></figure>
 <p>对于无限嵌套的数组，请尝试使用 Lodash 的 <code>flattenDeep()</code>。<br>
@@ -343,6 +347,13 @@
                 <hr>
                 <!-- Pager &rarr; 箭头 -->
                 <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2021/05/28/Docker搭建JavaWeb运行环境-JDK7-Tomcat7/" data-toggle="tooltip" data-placement="top" title="Docker 搭建 JavaWeb 运行环境镜像(JDK7-Tomcat7)"> Previous
+                            <br>
+                            <span>Docker 搭建 JavaWeb 运行环境镜像(JDK7-Tomcat7)</span>
+                            </a>
+                        </li>
                     
                     
                         <li class="next">
@@ -409,7 +420,7 @@
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">JavaScript展平多维数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JavaScript代码段</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">页面卸载</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">换行问题</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">$(window).height()获取到的高度不对</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">JavaScript展平多维数组</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">JavaScript代码段</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">页面卸载</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">换行问题</span></a></li></ol>
         
         </div>
       </aside>

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 start -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+    <!-- 回到顶部样式 end -->
+
+
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5">
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword" content="weichanglu, Weichanglu, Changlu Wei, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Docker 搭建 JavaWeb 运行环境镜像(JDK7-Tomcat7) - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/2021/05/28/Docker搭建JavaWeb运行环境-JDK7-Tomcat7/">
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- change font-awesome CDN to qiniu -->
+    <!-- <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+    
+
+    /* 滚动条自定义 start */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color:transparent; */
+        /* -webkit-border-radius:2em; */
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(4, 125, 238);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    /* 滚动条自定义 end */
+
+    header.intro-header {
+        background-image: url('/img/article_header/article_bg.jpg');
+            /*post*/
+            
+    }
+
+    
+
+    /* tools heading */
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#Docker"
+                                title="Docker">Docker</a>
+                            
+                        </div>
+                        <h1>Docker 搭建 JavaWeb 运行环境镜像(JDK7-Tomcat7)</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            May 28, 2021
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="searchIcon">
+                        <a href="#searchModal">
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">Me</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <p>每天做一件自己害怕的事。——&lt;埃莉诺·罗斯福&gt;</p>
+<p>Docker 手动方式 搭建 JavaWeb 运行环境镜像(JDK7-Tomcat7)</p>
+<h2><span id="前提条件">前提条件</span></h2>
+<p>安装Docker。<br>
+下面示例以在 Mac 上的 Docker 演示，以 <strong>CentOS</strong> 为例</p>
+<h2><span id="手动构建-docker-镜像方式">手动构建 Docker 镜像方式</span></h2>
+<h3><span id="下载镜像">下载镜像</span></h3>
+<p>下载官方 CentOS 镜像 <a href="https://hub.docker.com/_/centos" target="_blank" rel="noopener">官方 CentOS 镜像 hub.docker</a>，<br>
+找到 <strong>Tag</strong>，安装指定版本，复制安装镜像命令，例如 <code>$ docker pull centos:7</code><br>
+执行完毕，使用以下命令查看本地所有的镜像：<br>
+<code>$ docker images</code><br>
+结果如下：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">centos              centos7             <span class="number">8652</span>b9f0cb4c        <span class="number">6</span> months ago        <span class="number">204</span>MB</span><br></pre></td></tr></table></figure>
+<p>如果输出以上，即代表下载成功，我们就可以使用该镜像了。下面我们启动容器</p>
+<h3><span id="软件下载地址">软件下载地址</span></h3>
+<p>（推荐官网，下面也是官网下载转存可直接使用）</p>
+<blockquote>
+<p>【apache-tomcat-7.0.109.tar.gz】链接: <a href="https://pan.baidu.com/s/1zbQFvCjdCj6af8E3PQEhFg" target="_blank" rel="noopener">https://pan.baidu.com/s/1zbQFvCjdCj6af8E3PQEhFg</a> 密码:uw1d<br>
+【jdk7u79linuxx64.tar.gz】链接:<a href="https://pan.baidu.com/s/1QjXLbtx-eWKYPylkd7aSbQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1QjXLbtx-eWKYPylkd7aSbQ</a> 密码:xp49</p>
+</blockquote>
+<p>并在本机创建 <code>~/Desktop/docker/software/</code> 目录，将下载JDK + Tomcat 压缩包文件放入目录，以便后面挂载</p>
+<h3><span id="启动容器">启动容器</span></h3>
+<p>容器是在镜像的基础上来运行的，容器启动了，我们就可以登录到容器中，安装自己所需的软件或应用程序。<br>
+使用以下命令即可启动容器：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -i -t -v ~/Desktop<span class="meta-keyword">/docker/</span>software/:<span class="meta-keyword">/mnt/</span>software/ <span class="number">8652</span>b9f0cb4c（纯净centos容器ID） <span class="meta-keyword">/bin/</span>bash</span><br><span class="line"></span><br><span class="line">命令分解</span><br><span class="line">docker run <span class="params">&lt;相关参数&gt;</span> <span class="params">&lt;镜像 ID&gt;</span> <span class="params">&lt;初始命令&gt;</span></span><br><span class="line">相关参数包括：</span><br><span class="line">-i：表示以“交互模式”运行容器</span><br><span class="line">-t：表示容器启动后会进入其命令行</span><br><span class="line">-v：表示需要将本地哪个目录挂载到容器中，格式：-v <span class="params">&lt;宿主机目录&gt;</span>:<span class="params">&lt;容器目录&gt;</span></span><br></pre></td></tr></table></figure>
+<p>假设我们的所有安装程序都放在了宿主机的<code>/docker/software/</code>目录下，现在需要将其挂载到容器的<code>/mnt/software/</code>目录下。</p>
+<p>需要说明的是，不一定要使用 <strong>镜像 ID</strong>，也可以使用 <strong>仓库名:标签名</strong>，例如：<code>centos:centos7</code>。</p>
+<p>初始命令表示一旦容器启动，需要运行的命令，此时使用 <code>/bin/bash</code>，表示什么也不做，只需进入命令行即可。<br>
+进入命令行查看：<code>$ ls -ll</code></p>
+<h3><span id="安装软件-jdk-tomcat">安装软件 JDK + Tomcat</span></h3>
+<p>为了搭建 <code>Java Web</code> 运行环境，我们需要安装 <code>JDK</code> 与 <code>Tomcat</code>。</p>
+<h4><span id="软件下载地址推荐官网下面也是官网下载转存可直接使用参考上面软件现在地址并存至本机指定目录">软件下载地址（推荐官网，下面也是官网下载转存可直接使用，参考上面软件现在地址，并存至本机指定目录）</span></h4>
+<p>下面的（<code>exit</code>命令前）过程均在 <strong>容器内部</strong> 进行。我们不妨选择 <code>/opt/</code> 目录作为安装目录，首先需要通过 <code>$ cd /opt/</code> 命令进入该目录。</p>
+<h4><span id="jdk">JDK</span></h4>
+<p>使用命令 解压 JDK 程序包 并重命名 JDK 目录：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxf /mnt/software/jdk7u79linuxx64.tar.gz -C . &amp;&amp; mv jdk1<span class="number">.7</span><span class="number">.0</span>_79/ jdk/</span><br></pre></td></tr></table></figure>
+<h4><span id="tomcat">Tomcat</span></h4>
+<p>使用命令 解压 Tomcat 程序包 并重命名 Tomcat 目录：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxf /mnt/software/apache-tomcat<span class="number">-7.0</span><span class="number">.109</span>.tar.gz -C . &amp;&amp; mv apache-tomcat<span class="number">-7.0</span><span class="number">.109</span>/ tomcat/</span><br></pre></td></tr></table></figure>
+<h4><span id="设置环境变量">设置环境变量</span></h4>
+<p>编辑 <code>.bashrc</code> 文件</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ~<span class="string">/.bashrc</span></span><br></pre></td></tr></table></figure>
+<p>然后，在文件末尾添加如下配置：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="builtin-name">export</span> <span class="attribute">JAVA_HOME</span>=/opt/jdk</span><br><span class="line"><span class="builtin-name">export</span> <span class="attribute">PATH</span>=<span class="variable">$PATH</span>:$JAVA_HOME</span><br></pre></td></tr></table></figure>
+<p>使用 <code>source</code> 命令，让环境变量立马生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
+<h4><span id="编写运行脚本">编写运行脚本</span></h4>
+<p>我们需要编写一个运行脚本，当启动容器时，运行该脚本，启动 Tomcat，具体过程如下：</p>
+<p>创建运行脚本命令： <strong>&lt;这里容易出错了！！！在 ~目录下执行&gt;</strong></p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /root/<span class="keyword">run</span>.<span class="bash">sh</span></span><br></pre></td></tr></table></figure>
+<p>脚本内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line">sh /opt/tomcat/bin/catalina.sh run</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意：</strong> 这里必须先加载环境变量，然后使用 Tomcat 的运行脚本来启动 Tomcat 服务。<br>
+为运行脚本添加执行权限：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -ll</span><br><span class="line">chmod u+x /root/run.sh</span><br><span class="line">ls -ll</span><br></pre></td></tr></table></figure>
+<h4><span id="退出容器-exit">退出容器 exit</span></h4>
+<p>当以上步骤全部完成后，可使用 <code>exit</code> 命令，退出容器。</p>
+<p>随后，可使用如下命令查看正在运行的容器：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker ps</span></span><br></pre></td></tr></table></figure>
+<p>此时，您应该看不到任何正在运行的程序，因为刚才已经使用 <code>exit</code> 命令退出的容器，此时容器处于停止状态，可使用如下命令查看所有容器：</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker ps -a</span></span><br></pre></td></tr></table></figure>
+<p>输出如下内容：</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                        PORTS               NAMES</span><br><span class="line"><span class="number">2</span>abcd201f871        <span class="number">8652</span>b9f0cb4c        <span class="string">"/bin/bash"</span>         <span class="number">9</span> minutes ago       Exited (<span class="number">127</span>) <span class="number">13</span> seconds ago                       adoring_ellis</span><br></pre></td></tr></table></figure>
+<p>记住以上 <code>CONTAINER ID（容器 ID）</code>，随后我们将通过该容器，创建一个可运行 Java Web 的镜像。</p>
+<h3><span id="创建-java-web-镜像">创建 Java Web 镜像</span></h3>
+<p>使用以下命令，根据某个<code>“容器 ID”</code>来创建一个新的“镜像”：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit <span class="number">8652</span>b9f0cb4c cl9000/javaweb:v1</span><br></pre></td></tr></table></figure>
+<p>该容器的 ID 是 <code>57c312bbaad1</code>，所创建的镜像名是 <code>cl9000/javaweb:v1</code>，随后可使用镜像来启动 Java Web 容器。</p>
+<h3><span id="启动-java-web-容器">启动 Java Web 容器</span></h3>
+<p>首先使用 <code>$ docker images</code>命令，查看当前所有的镜像：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">cl9000/javaweb      v1                  <span class="number">1</span>c8483e68cf9        <span class="number">9</span> seconds ago       <span class="number">525</span>MB</span><br><span class="line">centos              centos7             <span class="number">8652</span>b9f0cb4c        <span class="number">6</span> months ago        <span class="number">204</span>MB</span><br></pre></td></tr></table></figure>
+<p>可见，此时已经看到了最新创建的镜像 <code>cl9000/javaweb:v1</code>，其镜像 ID 是 <code>1c8483e68cf9</code>。<br>
+我们可以通过“镜像名”或“镜像 ID”来启动容器，与上次启动容器不同的是，我们现在不再进入容器的命令行，而是直接启动容器内部的 Tomcat 服务。此时，需要使用以下命令：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p <span class="number">58080</span>:<span class="number">8080</span> --name javaweb cl9000/javaweb:v1 /root/run.sh</span><br><span class="line">稍作解释：</span><br><span class="line"></span><br><span class="line">-d：表示以“守护模式”执行 /root/run.sh 脚本，此时 Tomcat 控制台不会出现在输出终端上。</span><br><span class="line">-p：表示宿主机与容器的端口映射，此时将容器内部的 <span class="number">8080</span> 端口映射为宿主机的 <span class="number">58080</span> 端口，这样就向外界暴露了 <span class="number">58080</span> 端口，可通过 Docker 网桥来访问容器内部的 <span class="number">8080</span> 端口了。</span><br><span class="line">--name：表示新容器名称，用一个有意义的名称命名即可。</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>关于 Docker 网桥的内容，需要补充说明一下。<br>
+实际上 Docker 在宿主机与容器之间，搭建了一座网络通信的桥梁，我们可通过宿主机 IP 地址与端口号来映射容器内部的 IP 地址与端口号</p>
+</blockquote>
+<p>当运行以上命令后，会立即输出一长串 <strong>容器 ID</strong>，我们可通过 <code>$ docker ps</code> 命令来查看当前正在运行的容器，输出如下：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES</span><br><span class="line"><span class="number">51</span>b562e7833b        cl9000/javaweb:v1   <span class="string">"/root/run.sh"</span>      <span class="number">13</span> seconds ago      Up <span class="number">12</span> seconds       <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">58080</span>-&gt;<span class="number">8080</span>/tcp   javaweb</span><br></pre></td></tr></table></figure>
+<h3><span id="验证">验证</span></h3>
+<p>在浏览器中，输入以下地址，即可访问 Tomcat 首页：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span><span class="comment">//localhost:58080/</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>注意：</strong> 这里使用的是<strong>宿主机的 IP</strong> 地址，与对外暴露的端口号 58080，它映射容器内部的端口号 8080。</p>
+</blockquote>
+<h2><span id="使用-dockerfile-构建镜像-方式">使用 Dockerfile 构建镜像 方式</span></h2>
+<p>我们在Mac本机桌面新建 <code>/docker/Docker/</code>目录，编写一个 <strong>Dockerfile</strong> 文件，随后使用 <code>$ docker build</code> 命令也可完成以上所有的手工构建操作。<br>
+将下载的 <code>jdk+tomcat</code>压缩包， 也复制至于 <code>Dockerfile</code> 同级目录</p>
+<h3><span id="dockerfile-文件脚本">Dockerfile 文件脚本</span></h3>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#################################################################################</span><br><span class="line"># 指定基础镜像，并且必须是第一条指令</span><br><span class="line">FROM centos:centos7</span><br><span class="line"></span><br><span class="line"># 指明该镜像的作者和其电子邮件</span><br><span class="line">MAINTAINER cl9000 <span class="string">"cl9000@126.com"</span></span><br><span class="line"></span><br><span class="line"># 在构建镜像时，指定镜像的工作目录，之后的命令都是基于此工作目录，如果不存在，则会创建目录</span><br><span class="line">#WORKDIR /opt/docker</span><br><span class="line"></span><br><span class="line"># 安装 wget</span><br><span class="line">#RUN yum install -y wget</span><br><span class="line"></span><br><span class="line"># 一个复制命令，把jdk安装文件复制到镜像中，语法：ADD &lt;src&gt;... &lt;dest&gt;,注意：jdk*.tar.gz使用的是相对路径</span><br><span class="line"># 安装 JDK</span><br><span class="line"># 第一种写法 jdk和Dockerfile同级目录就使用下路径，否者使用相对路径</span><br><span class="line">ADD jdk7u79linuxx64.tar.gz /opt/docker/</span><br><span class="line">RUN mv /opt/docker/jdk1<span class="number">.7</span><span class="number">.0</span>_79/ /opt/docker/jdk1<span class="number">.7</span>/</span><br><span class="line">#第二种写法</span><br><span class="line">#RUN tar xzf jdk7u79linuxx64.tar.gz -C /opt/docker/jdk1<span class="number">.7</span>/</span><br><span class="line"># &amp;&amp; rm -rf jdk7u79linuxx64.tar.gz</span><br><span class="line"></span><br><span class="line"># 安装 tomcat </span><br><span class="line">ADD apache-tomcat<span class="number">-7.0</span><span class="number">.109</span>.tar.gz /opt/docker/</span><br><span class="line">RUN mv /opt/docker/apache-tomcat<span class="number">-7.0</span><span class="number">.109</span>/ /opt/docker/tomcat7/</span><br><span class="line"></span><br><span class="line"># 配置环境变量</span><br><span class="line">ENV JAVA_HOME=/opt/docker/jdk1<span class="number">.7</span></span><br><span class="line">ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">ENV PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line"></span><br><span class="line"># 开启内部服务端口</span><br><span class="line">#EXPOSE <span class="number">8080</span></span><br><span class="line"></span><br><span class="line"># 启动tomcat服务器</span><br><span class="line">CMD [<span class="string">"./opt/docker/tomcat7/bin/catalina.sh"</span>,<span class="string">"run"</span>] </span><br><span class="line">#&amp;&amp; tail -f /opt/docker/tomcat7/logs/catalina.out</span><br><span class="line"></span><br><span class="line"># 容器启动时需要执行的命令</span><br><span class="line">#CMD [<span class="string">"java"</span>,<span class="string">"-version"</span>]</span><br><span class="line"></span><br><span class="line">#################################################################################</span><br></pre></td></tr></table></figure>
+<h3><span id="使用-dockerfile-构建-相关命令">使用 Dockerfile 构建 - 相关命令</span></h3>
+<h4><span id="构建">构建</span></h4>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">docker</span> <span class="keyword">build </span>-t cl9000/javaweb2:<span class="built_in">v1</span> .</span><br></pre></td></tr></table></figure>
+<p><code>.</code> 表示 <code>Dockerfile</code> 在当前文件夹下，也可使用绝对路径<code>（/path/Dockerfile）</code>来表示</p>
+<h4><span id="运行容器">运行容器</span></h4>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="builtin-name">run</span> -it  -p 58081:8080 <span class="attribute">--name</span>=javaweb-test cl9000/javaweb2:v1</span><br></pre></td></tr></table></figure>
+<h4><span id="浏览器验证">浏览器验证</span></h4>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span><span class="comment">//localhost:58081/   正常访问 Tomcat 即可</span></span><br></pre></td></tr></table></figure>
+<h2><span id="手动构建镜像-相关命令汇总">手动构建镜像 - 相关命令汇总</span></h2>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#################################################################################</span><br><span class="line">docker ps</span><br><span class="line">docker ps -a</span><br><span class="line">docker images</span><br><span class="line">docker run -i -t -v ~/Desktop/docker/software/:/mnt/software/ <span class="number">8652</span>b9f0cb4c（纯净centos容器ID） /bin/bash</span><br><span class="line">ls -ll</span><br><span class="line">cd opt/</span><br><span class="line">tar -zxf /mnt/software/jdk7u79linuxx64.tar.gz -C .</span><br><span class="line">mv jdk1<span class="number">.7</span><span class="number">.0</span>_79/ jdk/</span><br><span class="line">tar -zxf /mnt/software/apache-tomcat<span class="number">-7.0</span><span class="number">.109</span>.tar.gz -C .</span><br><span class="line">mv apache-tomcat<span class="number">-7.0</span><span class="number">.109</span>/ tomcat/</span><br><span class="line">vi ~/.bashrc</span><br><span class="line"> <span class="keyword">export</span> JAVA_HOME=/opt/jdk</span><br><span class="line"> <span class="keyword">export</span> PATH=$PATH:$JAVA_HOME</span><br><span class="line">source ~/.bashrc</span><br><span class="line">vi /root/run.sh  &lt;这里容易出错了！！！在 ~目录下执行&gt;</span><br><span class="line">  #!/bin/bash</span><br><span class="line">  source ~/.bashrc</span><br><span class="line">  sh /opt/tomcat/bin/catalina.sh run</span><br><span class="line">chmod u+x /root/run.sh</span><br><span class="line">exit</span><br><span class="line">docker ps</span><br><span class="line">docker ps -a</span><br><span class="line">docker commit <span class="number">8652</span>b9f0cb4c cl9000/javaweb:v1</span><br><span class="line">docker images</span><br><span class="line">docker run -d -p <span class="number">58080</span>:<span class="number">8080</span> --name javaweb cl9000/javaweb:v1 /root/run.sh</span><br><span class="line">docker ps</span><br><span class="line">#################################################################################</span><br></pre></td></tr></table></figure>
+<h2><span id="相关资源">相关资源</span></h2>
+<p>【apache-tomcat-7.0.109.tar.gz】链接: <a href="https://pan.baidu.com/s/1zbQFvCjdCj6af8E3PQEhFg" target="_blank" rel="noopener">https://pan.baidu.com/s/1zbQFvCjdCj6af8E3PQEhFg</a> 密码:uw1d<br>
+【jdk7u79linuxx64.tar.gz】链接:<a href="https://pan.baidu.com/s/1QjXLbtx-eWKYPylkd7aSbQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1QjXLbtx-eWKYPylkd7aSbQ</a> 密码:xp49</p>
+<h2><span id="相关命令行图">相关命令行图</span></h2>
+<h4><span id="手动构建图">手动构建图</span></h4>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/docker_jdk7_tomcat7_1.png" alt="docker_jdk7_tomcat7_1"><br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/docker_jdk7_tomcat7_2.png" alt="docker_jdk7_tomcat7_2"></p>
+<h4><span id="dockerfile构建图">Dockerfile构建图</span></h4>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/docker_Dockerfile_1.png" alt="docker_Dockerfile_1"></p>
+<h2><span id="参考">参考</span></h2>
+<ul>
+<li><a href="https://blog.csdn.net/weixin_48182198/article/details/106645330" target="_blank" rel="noopener">手动构建 https://blog.csdn.net/weixin_48182198/article/details/106645330</a></li>
+<li><a href="https://blog.csdn.net/yjk13703623757/article/details/68944549?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control" target="_blank" rel="noopener">Dockerfile构建 - https://blog.csdn.net/yjk13703623757/article/details/68944549?utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control</a></li>
+<li><a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener">Oracle - https://www.oracle.com/java/technologies/javase-downloads.html</a></li>
+<li><a href="https://hub.docker.com" target="_blank" rel="noopener">DockerHub - https://hub.docker.com</a></li>
+</ul>
+<h2><span id="docker资源">Docker资源</span></h2>
+<h4><span id="docker官方英文资源">Docker官方英文资源：</span></h4>
+<p>docker 官网：<a href="http://www.docker.com" target="_blank" rel="noopener">http://www.docker.com</a><br>
+Docker windows入门：<a href="https://docs.docker.com/windows/" target="_blank" rel="noopener">https://docs.docker.com/windows/</a><br>
+Docker Linux 入门：<a href="https://docs.docker.com/linux/" target="_blank" rel="noopener">https://docs.docker.com/linux/</a><br>
+Docker mac 入门：<a href="https://docs.docker.com/mac/" target="_blank" rel="noopener">https://docs.docker.com/mac/</a><br>
+Docker 用户指引：<a href="https://docs.docker.com/engine/userguide/" target="_blank" rel="noopener">https://docs.docker.com/engine/userguide/</a><br>
+Docker 官方博客：<a href="http://blog.docker.com/" target="_blank" rel="noopener">http://blog.docker.com/</a><br>
+Docker Hub: <a href="https://hub.docker.com/" target="_blank" rel="noopener">https://hub.docker.com/</a><br>
+Docker开源： <a href="https://www.docker.com/open-source" target="_blank" rel="noopener">https://www.docker.com/open-source</a></p>
+<h4><span id="docker中文资源">Docker中文资源：</span></h4>
+<p>Docker中文网站：<a href="http://www.docker.org.cn" target="_blank" rel="noopener">http://www.docker.org.cn</a><br>
+Docker入门教程: <a href="http://www.docker.org.cn/book/docker.html" target="_blank" rel="noopener">http://www.docker.org.cn/book/docker.html</a><br>
+Docker安装手册：<a href="http://www.docker.org.cn/book/install.html" target="_blank" rel="noopener">http://www.docker.org.cn/book/install.html</a><br>
+一小时Docker教程 ：<a href="https://blog.csphere.cn/archives/22" target="_blank" rel="noopener">https://blog.csphere.cn/archives/22</a><br>
+Docker纸质书：<a href="http://www.docker.org.cn/dockershuji.html" target="_blank" rel="noopener">http://www.docker.org.cn/dockershuji.html</a><br>
+DockerPPT：<a href="http://www.docker.org.cn/dockerppt.html" target="_blank" rel="noopener">http://www.docker.org.cn/dockerppt.html</a></p>
+<p><strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
+
+
+                <hr>
+                <!-- Pager &rarr; 箭头 -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2021/03/12/JavaScript中常见注意事项/" data-toggle="tooltip" data-placement="top" title="JavaScript 中常见注意事项">Next
+                            <br>
+                            <span>JavaScript 中常见注意事项</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                    <div class="reward">
+                        <div class="reward-button">赏 <span class="reward-code"> 
+                            <span class="alipay-code"> <img class="alipay-img" src="/img/myself/alipay-reward-image.jpeg"><b>支付宝打赏</b></span> 
+                            <span class="wechat-code"> <img class="wechat-img" src="/img/myself/wechat-reward-image.jpeg"><b>微信打赏</b> </span>
+                            </span></div>
+                        <p class="reward-notice">赞赏一下  坚持原创技术分享，您的支持将鼓励我继续创作！</p>
+                    </div>
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
+                
+
+                <!-- 来必力 start -->
+                
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">前提条件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">手动构建 Docker 镜像方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">下载镜像</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">软件下载地址</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">启动容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">安装软件 JDK + Tomcat</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.4.1.</span> <span class="toc-nav-text">软件下载地址（推荐官网，下面也是官网下载转存可直接使用，参考上面软件现在地址，并存至本机指定目录）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.4.2.</span> <span class="toc-nav-text">JDK</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.4.3.</span> <span class="toc-nav-text">Tomcat</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.4.4.</span> <span class="toc-nav-text">设置环境变量</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.4.5.</span> <span class="toc-nav-text">编写运行脚本</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.4.6.</span> <span class="toc-nav-text">退出容器 exit</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">创建 Java Web 镜像</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">启动 Java Web 容器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.7.</span> <span class="toc-nav-text">验证</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">使用 Dockerfile 构建镜像 方式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">Dockerfile 文件脚本</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">使用 Dockerfile 构建 - 相关命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.2.1.</span> <span class="toc-nav-text">构建</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.2.2.</span> <span class="toc-nav-text">运行容器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.2.3.</span> <span class="toc-nav-text">浏览器验证</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">手动构建镜像 - 相关命令汇总</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">相关资源</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">相关命令行图</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.0.1.</span> <span class="toc-nav-text">手动构建图</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.0.2.</span> <span class="toc-nav-text">Dockerfile构建图</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">参考</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">Docker资源</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.0.1.</span> <span class="toc-nav-text">Docker官方英文资源：</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.0.2.</span> <span class="toc-nav-text">Docker中文资源：</span></a></li></ol></li></ol></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Docker" title="Docker">Docker</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
+                    
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
+                    
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
+                    
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
+                    
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
+                    
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
+                    
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
+                    
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
+                    
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
+                    
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
+                    
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
+                    
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
+                        <li><a href="" target="_blank">undefined</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
+<script>
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer>
+    <!-- <article class="bg-back top-line"></article> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2021
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a> |
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart" style="color: red"></i>
+                    </span>
+                    <!-- | -->
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <!-- <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span> -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                </p>
+                
+                <!-- 不蒜子 end -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- other wenzi.js -->
+<script src="/libs/other/wenzi.js"></script>
+
+<!-- 动态tab标签 -->
+
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 2.0rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
+
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+</body>
+
+</html>
