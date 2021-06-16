@@ -42,7 +42,7 @@
   box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
   z-index: 2;
 }
-/* 头部 cl9000 */
+/* 头部 cl9000 暂时注释*/
 .highlight>.table-responsive:before {
   color: #fff;
 /*content: attr(data-rel);*/
@@ -51,10 +51,10 @@
   line-height: 30px;
   background: #21252b;
   font-size: 16px;
-  position: fixed;
+  position: absolute;
   margin-top: -30px;
-  left: 1.49rem;
-  width: 95.6%;
+  left: 1.9rem;
+  width: 95.9%;
   font-family: Ubuntu, sans-serif;
   font-weight: 700;
   padding: 0 120px;

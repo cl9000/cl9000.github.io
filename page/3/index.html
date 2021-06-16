@@ -259,7 +259,9 @@
                         
                     
                         
-                    
+                        <li>
+                            <a href="/about/">Me</a>
+                        </li>
                         
                     
                         
@@ -271,6 +273,8 @@
                         
                     
                         
+                    
+                        
                         <li>
                             <a href="/tools/">Tools</a>
                         </li>
@@ -278,10 +282,6 @@
                     
                         
                     
-                        
-                        <li>
-                            <a href="/about/">Me</a>
-                        </li>
                         
                     
                     
@@ -342,25 +342,28 @@
 
 <div class="post-preview">
 
-    <a href="/2020/05/26/JavaScript中的if嵌套改善/">
+    <a href="/2020/06/20/JavaScript中数组删除重复项/">
         <h2 class="post-title">
                                  
-            JavaScript 中的 if 嵌套改善
+            JavaScript 中数组删除重复项
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            To the one with a hammer, everything looks like a nail. （手中有锤，看什么都像钉）——&lt;芒格&gt;
-if
-我们如何在 javascript 中改进和制作更有效的嵌套 if 语句？
-12345678910111213if (color) &#123;  if (color === 'black') &#123;    printB......
+            不畏惧失败是创造力的一个基本要素。——&lt;艾尔文·兰德博士&gt;
+
+作者：Ashish Lahoti
+译者：cl9000
+来源：https://codingnconcepts.com/javascript/how-to-remove-array-duplicates-in-javascript/
+
+在本教程中，我们将学习如何从 JavaScript 中的数组中删除重复项并仅返回唯一值。......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 26, 2020
+            June 20, 2020
             
         </p>
     
@@ -371,212 +374,30 @@ if
 
 <div class="post-preview">
 
-    <a href="/2020/05/25/JavaScript中的包含方法/">
+    <a href="/2020/06/19/JavaScript中对数组进行排序/">
         <h2 class="post-title">
                                  
-            JavaScript 中的包含方法
+            JavaScript中对数组进行排序
         </h2>
         <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            设计是品牌无声的形象大使。——&lt;兰德·保罗&gt;
-indexOf()
-默认情况下，JavaScript没有包含方法。为了检查字符串中是否存在子字符串或数组中的项，您可以执行以下操作：
-1234567var someText = 'javascript rules';if (someText.indexOf('javascript') !== -1) &#123;&#125;// or......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 25, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/25/JavaScript中的数组平均值和中位数/">
-        <h2 class="post-title">
-                                 
-            JavaScript 中的数组平均值和中位数
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            达到完美境界并不是无以复加，而是无可去除。——&lt;安托万·德·圣·埃克苏佩里&gt;
-示例数组
-1let values = [2, 56, 3, 41, 0, 4, 100, 23];
-平均值
-要获得平均值，我们必须对数字求和，然后除以值的数量。步骤如下：
-
-获取数组长度
-总结价值
-得到平均值 （sum/length）
-
-1234let values = [2, 56, 3, 41, 0......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 25, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/24/JavaScript防止在AngularJs中创建不必要的作用域/">
-        <h2 class="post-title">
-                                 
-            JavaScript 防止在AngularJs中创建不必要的作用域
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            创造力是自律与童心的结合体。——&lt;罗伯特·格林&gt;
-
-原文链接：https://www.jstips.co/en/angular/preventing-unwanted-scopes-creation-in-angularjs/
-
-AngularJs 最受赞赏的特性之一是理解和阻止 ng-model 数据范围是你经常遇到的主要挑战之一。在处理 ng-model 数据时，ng-rep......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 24, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/21/JavaScript中上下文Target和currentTarget-Websocket超时/">
-        <h2 class="post-title">
-                                 
-            JavaScript 中事件上下文中 Target 和 currentTarget 的区别
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            在事情成功之前，一切总看似不可能。——&lt;纳尔逊·曼德拉&gt;
-Target 和 currentTarget 的区别
-target指触发事件的 DOM 元素。否则，currentTarget 引用事件侦听器正在侦听的 `DOM 元素。
-123&lt;ul class="todo-list"&gt;  &lt;li class="item"&gt;Walk your dog&lt;/li......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 21, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/21/JavaScript中的递归-迭代和尾部调用/">
-        <h2 class="post-title">
-                                 
-            JavaScript 中的递归，迭代和尾部调用
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            预测未来最好的方法就是去创造未来。——&lt;亚伯拉罕·林肯&gt;
-递归的定义
-给定数字的阶乘 n! = n * (n - 1) * ... * 1 是标准示例。
-123456function factorial(n) &#123;    if (n === 0) &#123;        return 1;    &#125;    return n * factorial(n - 1......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 21, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/21/谜-1个灯泡3个开关的谜题/">
-        <h2 class="post-title">
-                                 
-            1个灯泡3个开关 谜题
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            那些疯狂到认为自己能够改变世界的人，才能真正改变世界。——&lt;史蒂夫·乔布斯&gt;
-在面试中，有人多次询问了一个灯泡和三个开关难题，以评估候选人的分析能力。
-谜题
-封闭的房间（没有窗户）中只有一个门，里面有一个灯泡 💡。当门关闭时，您看不到灯泡是打开还是关闭。但是，您可以假设指示灯最初是熄灭的。房间外面有三个电灯开关。开关之一属于房间内的灯泡。您可以根据需要打开或关闭开关，但只可以打......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 21, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/21/谜-6的数学谜题/">
-        <h2 class="post-title">
-                                 
-            6的数学 谜题
-        </h2>
-        <h3 class="post-subtitle">
-            
+            Array.sort()
         </h3>
         <div class="post-content-preview">
             每天做一件自己害怕的事。——&lt;埃莉诺·罗斯福&gt;
 
 作者：Ashish Lahoti
 译者：cl9000
-来源：https://codingnconcepts.com/puzzle/the-6s-math-puzzle/
+来源：https://codingnconcepts.com/javascript/how-to-sort-array-in-javascript/
 
-这是一个纯粹的数学难题，评估你解决数学方程的能力。这是建立数字感的一个大问题。
-Puzzle 谜
-挑战在于使用常见的数学运算使每个下面的方程式成立。您不能引入任......
+在本教程中，我们将学习如何使用Array.sort()方法对JavaScript中的数组进行排序。
+1. 字符串数组排序
+让我......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 21, 2020
+            June 19, 2020
             
         </p>
     
@@ -587,60 +408,29 @@ Puzzle 谜
 
 <div class="post-preview">
 
-    <a href="/2020/05/20/JavaScript中textarea自适应高度/">
+    <a href="/2020/06/19/JavaScript中数组克隆/">
         <h2 class="post-title">
                                  
-            JavaScript 中 textarea 自适应高度
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            创造性就是发明、实验、成长、冒险、犯规、犯错和享受乐趣。 ——&lt;玛丽·卢·库克&gt;
-
-原文链接：https://bdadam.com/blog/automatically-adapting-the-height-textarea.html
-
-简介
-textareas有一个大问题：默认情况下，textareas具有固定的高度。您可以设置rows属性以告知应显示多少行，也可以设置其st......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 20, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/19/JavaScript中使用canvas元素平移和滚动背景图像/">
-        <h2 class="post-title">
-                                 
-            JavaScript 中使用 canvas 元素平移和滚动背景图像
+            JavaScript 中数组克隆
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
             万物皆有其美，但并非人人都能发现。——&lt;安迪.沃霍尔&gt;
-用纯JavaScript创建一个简单的2D游戏。作为第一步，展示如何使用canvas元素对背景图像进行动画处理（平移或滚动）。
-简单的2D游戏有两种常见方案：
 
-整个关卡都有巨大的背景图片。所有活动都具有相同的背景图像，但是视口的位置在变化
-随着播放器的前进，有一个小图像一直在滚动（通常从右向左滚动）
+作者：Ashish Lahoti
+译者：cl9000
+来源：https://codingnconcepts.com/javascript/how-to-clone-array-in-javascript/
 
-在背景图像内平移视口......
+在本教程中，我们将学习如何在 JavaScript 中克隆一个数组，并学习数组的 浅拷贝 和 深拷贝 之间的区别。
+......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 19, 2020
+            June 19, 2020
             
         </p>
     
@@ -651,61 +441,29 @@ textareas有一个大问题：默认情况下，textareas具有固定的高度�
 
 <div class="post-preview">
 
-    <a href="/2020/05/19/Nginx重定向/">
+    <a href="/2020/06/17/JavaScript中的console-API/">
         <h2 class="post-title">
                                  
-            Nginx 重定向
+            JavaScript 中的 Console-API
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
             达到完美境界并不是无以复加，而是无可去除。——&lt;安托万·德·圣·埃克苏佩里&gt;
-几乎每个网站都需要重定向。许多网站决定通过www和非www网站为他们的访问者提供服务，只是以防用户在浏览器中输入它。
-但对于搜索引擎优化来说，当你在两个不同的域名上使用同一个网站时，这就不好了。下面是如何用 Nginx 解决这个问题。
-用if语句重定向www到非www
-1234567891011serv......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 19, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/19/JavaScript来解释区块链/">
-        <h2 class="post-title">
-                                 
-            使用 JavaScript 解释区块链(Blockchain)
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            创造性就是发明、实验、成长、冒险、犯规、犯错和享受乐趣。 ——&lt;玛丽·卢·库克&gt;
 
 作者：Ashish Lahoti
 译者：cl9000
-来源：https://codingnconcepts.com/javascript/blockchain-explained-using-javascript/
+来源：https://codingnconcepts.com/javascript/console-api-walkthrough/
 
-在本文中，我们将学习如何使用 JavaScript 实现区块链。
-环境条件
-
-下......
+在本文中，我们将通过一些简单的例子演示 JavaScript 的 Console API 方法
+1. conso......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 19, 2020
+            June 17, 2020
             
         </p>
     
@@ -716,84 +474,28 @@ textareas有一个大问题：默认情况下，textareas具有固定的高度�
 
 <div class="post-preview">
 
-    <a href="/2020/05/18/AngularJS依赖注入的实现/">
+    <a href="/2020/06/07/JavaScript中的console-table()/">
         <h2 class="post-title">
                                  
-            AngularJS 依赖注入的实现
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            预测未来最好的方法就是去创造未来。——&lt;亚伯拉罕·林肯&gt;
-文章来源：https://bdadam.com/blog/demistifying-angularjs-dependency-injection.html
-很多人认为 AngularJS 是如何解析作为函数参数的依赖关系的，这是一种魔法。但这不是什么魔法。我来告诉你，他们是怎么做到的。这种技术可以在任何地方使用，而不仅仅是......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 18, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/18/JavaScript中的事件委托/">
-        <h2 class="post-title">
-                                 
-            JavaScript 中的事件委托
-        </h2>
-        <h3 class="post-subtitle">
-            
-        </h3>
-        <div class="post-content-preview">
-            万物皆有其美，但并非人人都能发现。——&lt;安迪.沃霍尔&gt;
-事件委托是一个功能强大的事件处理概念。如果您正在使用jQuery，您可能知道它是jQuery.on()。由于我不再使用jQuery，所以我必须自己编写一个类似的函数。如果您想知道代码是什么样子的？
-什么是事件委托
-对于事件委托，我们只设置一个事件处理函数，然后该函数分析事件的目标元素并执行预期的处理函数。
-这样我们就有了更好......
-        </div>
-    </a>
-    
-        <p class="post-meta">
-            Posted by cl9000 on
-            May 18, 2020
-            
-        </p>
-    
-
-</div>
-<!-- cl9000 添加样式解决首页列表缺失分割线 -->
-<hr style="height: 1px !important;">
-
-<div class="post-preview">
-
-    <a href="/2020/05/16/JavaScript中计算数组的最大值-最小值/">
-        <h2 class="post-title">
-                                 
-            JavaScript 中计算数组的最大值/最小值
+            JavaScript 中的 console.table（）
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
             不畏惧失败是创造力的一个基本要素。——&lt;艾尔文·兰德博士&gt;
-内置函数Math.max() 和 Math.min() 分别查找参数的最大值和最小值。
-12Math.max(1, 2, 3, 4); // 4Math.min(1, 2, 3, 4); // 1
-这些函数不能按原样使用数字数组。但是，有一些解决方法。
-12345Function.prototype.apply()允许您......
+
+作者：Ashish Lahoti
+译者：cl9000
+来源：https://codingnconcepts.com/javascript/console-table-javascript/
+
+在本教程中，我们将学习如何使用 console.table（） 高级日志记录方法在控制台中以表格格式显示数据。这对于在 Java......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 16, 2020
+            June 07, 2020
             
         </p>
     
@@ -804,30 +506,55 @@ textareas有一个大问题：默认情况下，textareas具有固定的高度�
 
 <div class="post-preview">
 
-    <a href="/2020/05/16/区块链解释/">
+    <a href="/2020/06/03/Javascript中向回调方法传递参数/">
         <h2 class="post-title">
                                  
-            区块链 解释 Blockchain Explained
+            Javascript 中向回调方法传递参数
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            人只有献身于社会，才能找出那短暂而有风险的生命的意义。 ——&lt;阿尔伯特·爱因斯坦&gt;
+回调函数
+通常下，你并不能给回调函数传递参数。 比如:
+12345function callback() &#123;  console.log('Hi human');&#125;document.getElementById('someelem').addEventListener('clic......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            June 03, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/06/02/Javascript中对数组洗牌/">
+        <h2 class="post-title">
+                                 
+            Javascript 中对数组洗牌、清空
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
             一个人的价值，应该看他贡献什么，而不应当看他取得什么。 ——&lt;阿尔伯特·爱因斯坦&gt;
-
-作者：Ashish Lahoti
-译者：cl9000
-来源：https://codingnconcepts.com/post/blockchain-explained/
-
-我们大多数人认为区块链是比特币背后的技术。虽然这是它最初的目的，但区块链有更多的功能……
-什么是区块链？
-区块链是数字的、分......
+对数组进行洗牌
+这段代码运用了 Fisher-Yates Shuffling算法 对数组进行洗牌。
+https://www.wikiwand.com/en/Fisher%E2%80%93Yates_shuffle
+123456789101112function shuffle(arr) &#123......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 16, 2020
+            June 02, 2020
             
         </p>
     
@@ -838,25 +565,26 @@ textareas有一个大问题：默认情况下，textareas具有固定的高度�
 
 <div class="post-preview">
 
-    <a href="/2020/05/15/JavaScript中在函数中使用解构/">
+    <a href="/2020/06/02/Javascript中过滤并排序字符串列表/">
         <h2 class="post-title">
                                  
-            JavaScript 中在函数参数中使用解构
+            Javascript 中过滤并排序字符串列表
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            设计是品牌无声的形象大使。——&lt;兰德·保罗&gt;
-在函数参数中使用 ES6 Destructuring Assignment
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
-123456var sayHello = function......
+            生活只有在平淡无味的人看来才是空虚而平淡无味的。 ——&lt;尼古拉·加夫里诺维奇·车尔尼雪夫斯基&gt;
+开始
+你可能有一个很多名字组成的列表，需要过滤掉重复的名字并按字母表将其排序。
+在我们的例子里准备用不同版本语言的 JavaScript 保留字的列表，但是你能发现，有很多重复的关键字而且它们并没有按字母表顺序排列。
+所以这是一个完美的字符串列表(数组)来测试我们的JavaScript......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 15, 2020
+            June 02, 2020
             
         </p>
     
@@ -867,25 +595,24 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
 
 <div class="post-preview">
 
-    <a href="/2020/05/14/JavaScript中配置属性/">
+    <a href="/2020/06/01/Javascript中避免修改和传递arguments给其他方法—影响优化/">
         <h2 class="post-title">
                                  
-            JavaScript 中配置属性
+            Javascript 中避免修改和传递 `arguments` 给其他方法 — 影响优化
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            达到完美境界并不是无以复加，而是无可去除。——&lt;安托万·德·圣·埃克苏佩里&gt;
-可以在 Javascript 中配置对象属性，例如将属性设置为伪私有或只读。这个特性从ECMAScript 5.1开始就可用了，因此所有最新的浏览器都支持它。
-要做到这一点，你需要像这样使用Object原型的defineProperty方法:
-12345678var a = &#123;&#125;;O......
+            人生的价值，并不是用时间，而是用深度去衡量的。 ——&lt;列夫·托尔斯泰&gt;
+背景
+在 JavaScript 的方法里，arguments 参数可以让你访问传递给该方法的所有参数。arguments是一个类数组对象；arguments 可是使用数组标记访问，而且它有 length参数，但是它没有 filter、map和 forEach 这样内建到数组内的方法。因此，如下代码是一个非常常......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 14, 2020
+            June 01, 2020
             
         </p>
     
@@ -896,24 +623,29 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
 
 <div class="post-preview">
 
-    <a href="/2020/05/14/JavaScript中使用JSON-Stringify/">
+    <a href="/2020/06/01/Javascript中仅用一行代码生成数列/">
         <h2 class="post-title">
                                  
-            JavaScript 中使用JSON.Stringify
+            Javascript 中仅用一行代码生成 `[0, 1, ..., N-1]` 数列
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
-            在事情成功之前，一切总看似不可能。——&lt;纳尔逊·曼德拉&gt;
-假设存在一个对象，其属性为“ prop1”，“ prop2”，“ prop3”。我们可以将其他参数传递给JSON.stringify，以选择性地将对象的属性写入字符串，例如：
-123456789101112var obj = &#123;    'prop1': 'value1',    'prop2': 'value2'......
+            人生不是一种享乐，而是一桩十分沉重的工作。 ——&lt;列夫·托尔斯泰&gt;
+使用下面一行代码，我们就可以生成0…(N-1)数列。
+开始
+方法1 (需要 ES5)
+1Array.apply(null, &#123;length: N&#125;).map(Function.call, Number);
+简要说明
+
+Array.apply(null, {length: N}) 返回一个由 u......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 14, 2020
+            June 01, 2020
             
         </p>
     
@@ -924,24 +656,288 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
 
 <div class="post-preview">
 
-    <a href="/2020/05/13/JavaScript中Object-is/">
+    <a href="/2020/05/31/Javascript中的高级特性/">
         <h2 class="post-title">
                                  
-            JavaScript 中Object.is()
+            Javascript 中的高级特性
         </h2>
         <h3 class="post-subtitle">
             
         </h3>
         <div class="post-content-preview">
             不畏惧失败是创造力的一个基本要素。——&lt;艾尔文·兰德博士&gt;
-我们都知道JavaScript是松散类型的，在某些情况下，与'=='进行质量比较时，它特别落后。与'=='进行比较会由于强制性或强制转换“转换2的其中之一”而产生了意外的结果。然后将操作数与对方的类型进行比较”。
-1230 == ' ' //truenull == undefined //true[1] == true ......
+在 Javascript 里配置对象属性是可以实现的，比如将一个参数设为伪私有或者只读。这个特性从 ECMAScript 5.1 开始就可以使用了，因此近来的浏览器都是支持的。 要实现这些功能，你需要使用 Object 的原型方法 defineProperty，像这样：
+12345678var a = &#123;&#1......
         </div>
     </a>
     
         <p class="post-meta">
             Posted by cl9000 on
-            May 13, 2020
+            May 31, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/31/Javascript中了解传值机制/">
+        <h2 class="post-title">
+                                 
+            Javascript 中了解传值机制
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            创新需要勇气。——&lt;亨利·马蒂斯&gt;
+理论上，JavaScript通过值传递。它既不是值传递也不是引用传递，具体取决于它的真实场景。要理解传值机制，看一下下面两个实例代码和解释。
+123456789101112// 实例 1var me = &#123;					// 1true'partOf' : 'A Team'&#125;; function myTeam(me) &#123......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 31, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/30/JavaScript中reduce-数组/">
+        <h2 class="post-title">
+                                 
+            JavaScript 中 reduce() 函数
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            好的设计能够促使观看者希望了解更多。——&lt;亚历山大·伊斯里&gt;
+Array.prototype.reduce()
+reduce() 方法对数组中每个元素执行一个由您提供的 reducer 函数（升序执行），将其结果汇总为单个返回值。
+12345678910const array1 = [1, 2, 3, 4];const reducer = (accumulator, curren......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 30, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/30/JavaScript中简单获取unix时间戳/">
+        <h2 class="post-title">
+                                 
+            JavaScript 中简单获取unix时间戳
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            不畏惧失败是创造力的一个基本要素。——&lt;艾尔文·兰德博士&gt;
+在 Javascript 里，你可以简单的取得 unix 时间戳
+取得 unix 时间戳
+我们经常需要使用 unix 时间戳计算。有很多方法可以取得 unix 时间戳。目前取得 unix 时间戳最简单最快的方法是：
+1234567const dateTime = Date.now();const timestamp = ......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 30, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/29/JavaScript中new的返回值/">
+        <h2 class="post-title">
+                                 
+            JavaScript 中new的返回值
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            达到完美境界并不是无以复加，而是无可去除。——&lt;安托万·德·圣·埃克苏佩里&gt;
+你将会遇到在 JavaScript 中使用 new 来分配新对象的一些情况。这将会扰乱你的思绪，除非你阅读了这篇文章并理解在内部发生了什么。
+JavaScript 中的 new 操作在合理的情况下然会一个新的对象实例。我们来看，我们有一个构造函数：
+123456789function Thing() &......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 29, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/29/JavaScript中的逗号操作符/">
+        <h2 class="post-title">
+                                 
+            JavaScript 中的逗号操作符
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            不畏惧失败是创造力的一个基本要素。——&lt;艾尔文·兰德博士&gt;
+除了分号之外，逗号允许你在同一个地方放多个语句。 例如：
+12345678910for(var i=0, j=0; i&lt;5; i++, j++, j++)&#123;  console.log("i:"+i+", j:"+j);&#125;输出：i:0, j:0i:1, j:2i:2, j:4i:3, j:6i:4......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 29, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/28/JavaScript中取得文件扩展名/">
+        <h2 class="post-title">
+                                 
+            JavaScript 中取得文件扩展名
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            人只有献身于社会，才能找出那短暂而有风险的生命的意义。 ——&lt;阿尔伯特·爱因斯坦&gt;
+获取文件扩展名
+问题 1: 怎样取得文件扩展名?
+12345678var file1 = "50.xsl";var file2 = "30.doc";getFileExtension(file1); //returs xslgetFileExtension(file2); //returs doc......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 28, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/27/JavaScript中的排序/">
+        <h2 class="post-title">
+                                 
+            JavaScript 中的带重音字符的字符串排序
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            在事情成功之前，一切总看似不可能。——&lt;纳尔逊·曼德拉&gt;
+基本
+Javascript 具有自带方法排序功能，可以对数组进行排序。https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+array.sort()会将每个数组项视为一个字符串，并按字母顺序对其......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 27, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/27/JavaScript中的严格模式和lazy/">
+        <h2 class="post-title">
+                                 
+            JavaScript 中的严格模式和lazy
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            预测未来最好的方法就是去创造未来。——&lt;亚伯拉罕·林肯&gt;
+严格模式的 JavaScript 使开发人员更容易编写“安全” JavaScript。
+默认情况下，JavaScript允许程序员非常粗心，例如，当我们第一次引入变量时，不需要我们用“ var”声明变量。尽管这对于没有经验的开发人员来说似乎是一种便利，但是当变量名拼写错误或意外引用超出其范围时，它也是许多错误的根源。
+程序......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 27, 2020
+            
+        </p>
+    
+
+</div>
+<!-- cl9000 添加样式解决首页列表缺失分割线 -->
+<hr style="height: 1px !important;">
+
+<div class="post-preview">
+
+    <a href="/2020/05/27/虚拟DOMVS影子DOM/">
+        <h2 class="post-title">
+                                 
+            虚拟DOM（Virtual Dom） VS 影子DOM（Shadow Dom）
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            一个人的价值，应该看他贡献什么，而不应当看他取得什么。 ——&lt;爱因斯坦&gt;
+
+作者：Ashish Lahoti
+译者：cl9000 
+原文：https://codingnconcepts.com/javascript/virtual-dom-vs-shadow-dom/#shadow-dom
+
+DOM
+DOM是文档对象模型的简写-这是一种通过对象表示结构化内容的方式。HTML，XH......
+        </div>
+    </a>
+    
+        <p class="post-meta">
+            Posted by cl9000 on
+            May 27, 2020
             
         </p>
     
@@ -1068,23 +1064,23 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
     <ul>
       
         <li>
-          <a href="/2021/05/28/Docker搭建JavaWeb运行环境-JDK7-Tomcat7/">Docker 搭建 JavaWeb 运行环境镜像(JDK7-Tomcat7)</a>
+          <a href="/2021/06/08/Javascript中获取列表中的最后一个元素/">Javascript 中获取列表中的最后一个元素</a>
         </li>
       
         <li>
-          <a href="/2021/03/12/JavaScript中常见注意事项/">JavaScript 中常见注意事项</a>
+          <a href="/2021/06/08/Javascript中更改元素的类-className和classList/">Javascript 中更改元素的类-className和classList</a>
         </li>
       
         <li>
-          <a href="/2021/01/28/JavaScript中的链判断运算符/">JavaScript 中的 链判断运算符【?.】</a>
+          <a href="/2021/06/07/Javascript中的JS库Brython-介绍指南/">Javascript 中的JS库Brython 介绍指南</a>
         </li>
       
         <li>
-          <a href="/2021/01/25/JavaScript中循环遍历数组/">JavaScript 中循环遍历数组</a>
+          <a href="/2021/06/07/Javascript中如何重定向到另一个网页/">Javascript 中如何重定向到另一个网页</a>
         </li>
       
         <li>
-          <a href="/2021/01/25/JavaScript中在数组中查找元素/">JavaScript 中在数组中查找元素</a>
+          <a href="/2021/06/03/Javascript中日期和时间代码片段/">Javascript 中 Date &amp; 日期常用代码片段</a>
         </li>
       
     </ul>
@@ -1138,7 +1134,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
 
     <h5>₣ CATEGORIES</h5>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Bing/">Bing</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CDN/">CDN</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome/">Chrome</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HBuilderX/">HBuilderX</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">77</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/RegEx正则/">RegEx正则</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web测试/">Web测试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Xcode/">Xcode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/区块链/">区块链</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试谜题/">面试谜题</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/🇨🇳🇨🇳🇨🇳🇨🇳🇨🇳/">🇨🇳🇨🇳🇨🇳🇨🇳🇨🇳</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AngularJS/">AngularJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Bing/">Bing</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CDN/">CDN</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Chrome/">Chrome</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Github/">Github</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HBuilderX/">HBuilderX</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">77</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">20</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Mac/">Mac</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Nginx/">Nginx</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/RegEx正则/">RegEx正则</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web测试/">Web测试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Xcode/">Xcode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/区块链/">区块链</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/">工具</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技巧/">技巧</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试谜题/">面试谜题</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/🇨🇳🇨🇳🇨🇳🇨🇳🇨🇳/">🇨🇳🇨🇳🇨🇳🇨🇳🇨🇳</a><span class="category-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -1147,7 +1143,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
 
     <h5>₰ ARCHIVES</h5>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/202/05/">May 0202</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a><span class="archive-list-count">43</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/202/05/">May 0202</a><span class="archive-list-count">1</span></li></ul>
     </div>
 
         <hr>
@@ -1160,14 +1156,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
     <div class="tags">
         
             
-            <a href="/tags/#AngularJS" title="AngularJS" rel="1">AngularJS</a>
-            
-        
-            
-            <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
-            
-        
-            
             <a href="/tags/#BING" title="BING" rel="1">BING</a>
             
         
@@ -1176,11 +1164,19 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
+            <a href="/tags/#AngularJS" title="AngularJS" rel="1">AngularJS</a>
+            
+        
+            
             <a href="/tags/#CSS" title="CSS" rel="5">CSS</a>
             
         
             
             <a href="/tags/#Loading" title="Loading" rel="1">Loading</a>
+            
+        
+            
+            <a href="/tags/#文字转语音" title="文字转语音" rel="1">文字转语音</a>
             
         
             
@@ -1200,7 +1196,19 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
+            <a href="/tags/#Linux" title="Linux" rel="1">Linux</a>
+            
+        
+            
             <a href="/tags/#Nginx" title="Nginx" rel="3">Nginx</a>
+            
+        
+            
+            <a href="/tags/#统计访问量" title="统计访问量" rel="1">统计访问量</a>
+            
+        
+            
+            <a href="/tags/#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
             
         
             
@@ -1212,43 +1220,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
-            <a href="/tags/#Github Profile" title="Github Profile" rel="1">Github Profile</a>
-            
-        
-            
-            <a href="/tags/#Github Gist" title="Github Gist" rel="1">Github Gist</a>
-            
-        
-            
-            <a href="/tags/#wakatime" title="wakatime" rel="1">wakatime</a>
-            
-        
-            
-            <a href="/tags/#shields.io" title="shields.io" rel="1">shields.io</a>
-            
-        
-            
-            <a href="/tags/#simpleicons" title="simpleicons" rel="1">simpleicons</a>
-            
-        
-            
-            <a href="/tags/#visitor-badge" title="visitor-badge" rel="1">visitor-badge</a>
-            
-        
-            
-            <a href="/tags/#readme" title="readme" rel="1">readme</a>
-            
-        
-            
             <a href="/tags/#HEXO" title="HEXO" rel="4">HEXO</a>
-            
-        
-            
-            <a href="/tags/#Chrome Extension" title="Chrome Extension" rel="1">Chrome Extension</a>
-            
-        
-            
-            <a href="/tags/#统计访问量" title="统计访问量" rel="1">统计访问量</a>
             
         
             
@@ -1288,6 +1260,34 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
+            <a href="/tags/#Github Profile" title="Github Profile" rel="1">Github Profile</a>
+            
+        
+            
+            <a href="/tags/#Github Gist" title="Github Gist" rel="1">Github Gist</a>
+            
+        
+            
+            <a href="/tags/#wakatime" title="wakatime" rel="1">wakatime</a>
+            
+        
+            
+            <a href="/tags/#shields.io" title="shields.io" rel="1">shields.io</a>
+            
+        
+            
+            <a href="/tags/#simpleicons" title="simpleicons" rel="1">simpleicons</a>
+            
+        
+            
+            <a href="/tags/#visitor-badge" title="visitor-badge" rel="1">visitor-badge</a>
+            
+        
+            
+            <a href="/tags/#readme" title="readme" rel="1">readme</a>
+            
+        
+            
             <a href="/tags/#HTML" title="HTML" rel="2">HTML</a>
             
         
@@ -1320,6 +1320,22 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
+            <a href="/tags/#debug" title="debug" rel="1">debug</a>
+            
+        
+            
+            <a href="/tags/#JavaSript" title="JavaSript" rel="1">JavaSript</a>
+            
+        
+            
+            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
+            
+        
+            
+            <a href="/tags/#ES6" title="ES6" rel="1">ES6</a>
+            
+        
+            
             <a href="/tags/#Driver.js" title="Driver.js" rel="1">Driver.js</a>
             
         
@@ -1333,22 +1349,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
         
             
             <a href="/tags/#分布式引导" title="分布式引导" rel="1">分布式引导</a>
-            
-        
-            
-            <a href="/tags/#fullpage.js" title="fullpage.js" rel="1">fullpage.js</a>
-            
-        
-            
-            <a href="/tags/#debug" title="debug" rel="1">debug</a>
-            
-        
-            
-            <a href="/tags/#JavaSript" title="JavaSript" rel="1">JavaSript</a>
-            
-        
-            
-            <a href="/tags/#ES6" title="ES6" rel="1">ES6</a>
             
         
             
@@ -1372,7 +1372,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
-            <a href="/tags/#Web测试" title="Web测试" rel="1">Web测试</a>
+            <a href="/tags/#Javascript" title="Javascript" rel="20">Javascript</a>
             
         
             
@@ -1384,15 +1384,19 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
-            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
+            <a href="/tags/#定时任务" title="定时任务" rel="1">定时任务</a>
             
         
             
-            <a href="/tags/#Tools" title="Tools" rel="2">Tools</a>
+            <a href="/tags/#launchctl" title="launchctl" rel="1">launchctl</a>
             
         
             
-            <a href="/tags/#Rem" title="Rem" rel="1">Rem</a>
+            <a href="/tags/#更新node版本" title="更新node版本" rel="1">更新node版本</a>
+            
+        
+            
+            <a href="/tags/#Web测试" title="Web测试" rel="1">Web测试</a>
             
         
             
@@ -1405,6 +1409,38 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
         
             
             <a href="/tags/#hosts" title="hosts" rel="1">hosts</a>
+            
+        
+            
+            <a href="/tags/#HTML5播放器" title="HTML5播放器" rel="1">HTML5播放器</a>
+            
+        
+            
+            <a href="/tags/#Plyr" title="Plyr" rel="1">Plyr</a>
+            
+        
+            
+            <a href="/tags/#Tools" title="Tools" rel="2">Tools</a>
+            
+        
+            
+            <a href="/tags/#Rem" title="Rem" rel="1">Rem</a>
+            
+        
+            
+            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
+            
+        
+            
+            <a href="/tags/#rootless" title="rootless" rel="1">rootless</a>
+            
+        
+            
+            <a href="/tags/#🇨🇳" title="🇨🇳" rel="1">🇨🇳</a>
+            
+        
+            
+            <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
             
         
             
@@ -1432,50 +1468,6 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
-            <a href="/tags/#Xcode" title="Xcode" rel="1">Xcode</a>
-            
-        
-            
-            <a href="/tags/#更新node版本" title="更新node版本" rel="1">更新node版本</a>
-            
-        
-            
-            <a href="/tags/#🇨🇳" title="🇨🇳" rel="1">🇨🇳</a>
-            
-        
-            
-            <a href="/tags/#🇬🇧" title="🇬🇧" rel="1">🇬🇧</a>
-            
-        
-            
-            <a href="/tags/#HTML5播放器" title="HTML5播放器" rel="1">HTML5播放器</a>
-            
-        
-            
-            <a href="/tags/#Plyr" title="Plyr" rel="1">Plyr</a>
-            
-        
-            
-            <a href="/tags/#定时任务" title="定时任务" rel="1">定时任务</a>
-            
-        
-            
-            <a href="/tags/#launchctl" title="launchctl" rel="1">launchctl</a>
-            
-        
-            
-            <a href="/tags/#iOS" title="iOS" rel="2">iOS</a>
-            
-        
-            
-            <a href="/tags/#Jenkins" title="Jenkins" rel="1">Jenkins</a>
-            
-        
-            
-            <a href="/tags/#自动化打包" title="自动化打包" rel="1">自动化打包</a>
-            
-        
-            
             <a href="/tags/#RegEx" title="RegEx" rel="1">RegEx</a>
             
         
@@ -1488,11 +1480,27 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
-            <a href="/tags/#mysql" title="mysql" rel="1">mysql</a>
+            <a href="/tags/#Ionic" title="Ionic" rel="1">Ionic</a>
             
         
             
-            <a href="/tags/#my.cnf" title="my.cnf" rel="1">my.cnf</a>
+            <a href="/tags/#热更新" title="热更新" rel="1">热更新</a>
+            
+        
+            
+            <a href="/tags/#hotUpdate" title="hotUpdate" rel="1">hotUpdate</a>
+            
+        
+            
+            <a href="/tags/#iOS" title="iOS" rel="2">iOS</a>
+            
+        
+            
+            <a href="/tags/#Jenkins" title="Jenkins" rel="1">Jenkins</a>
+            
+        
+            
+            <a href="/tags/#自动化打包" title="自动化打包" rel="1">自动化打包</a>
             
         
             
@@ -1512,11 +1520,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
-            <a href="/tags/#python error" title="python error" rel="1">python error</a>
+            <a href="/tags/#mysql" title="mysql" rel="1">mysql</a>
             
         
             
-            <a href="/tags/#ERROR:root:code" title="ERROR:root:code" rel="1">ERROR:root:code</a>
+            <a href="/tags/#my.cnf" title="my.cnf" rel="1">my.cnf</a>
             
         
             
@@ -1524,7 +1532,15 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
-            <a href="/tags/#protocol buffer" title="protocol buffer" rel="1">protocol buffer</a>
+            <a href="/tags/#jsDelivr" title="jsDelivr" rel="1">jsDelivr</a>
+            
+        
+            
+            <a href="/tags/#CDN" title="CDN" rel="1">CDN</a>
+            
+        
+            
+            <a href="/tags/#免费CDN" title="免费CDN" rel="1">免费CDN</a>
             
         
             
@@ -1540,6 +1556,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
+            <a href="/tags/#python error" title="python error" rel="1">python error</a>
+            
+        
+            
+            <a href="/tags/#ERROR:root:code" title="ERROR:root:code" rel="1">ERROR:root:code</a>
+            
+        
+            
             <a href="/tags/#reCAPTCHA" title="reCAPTCHA" rel="1">reCAPTCHA</a>
             
         
@@ -1552,31 +1576,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Dest
             
         
             
+            <a href="/tags/#protocol buffer" title="protocol buffer" rel="1">protocol buffer</a>
+            
+        
+            
             <a href="/tags/#面试谜题" title="面试谜题" rel="2">面试谜题</a>
-            
-        
-            
-            <a href="/tags/#Ionic" title="Ionic" rel="1">Ionic</a>
-            
-        
-            
-            <a href="/tags/#热更新" title="热更新" rel="1">热更新</a>
-            
-        
-            
-            <a href="/tags/#hotUpdate" title="hotUpdate" rel="1">hotUpdate</a>
-            
-        
-            
-            <a href="/tags/#jsDelivr" title="jsDelivr" rel="1">jsDelivr</a>
-            
-        
-            
-            <a href="/tags/#CDN" title="CDN" rel="1">CDN</a>
-            
-        
-            
-            <a href="/tags/#免费CDN" title="免费CDN" rel="1">免费CDN</a>
             
         
     </div>

@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 start -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+    <!-- 回到顶部样式 end -->
+
+
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5">
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword" content="weichanglu, Weichanglu, Changlu Wei, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          Javascript 中的JS库Brython 介绍指南 - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/2021/06/07/Javascript中的JS库Brython-介绍指南/">
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- change font-awesome CDN to qiniu -->
+    <!-- <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+    
+
+    /* 滚动条自定义 start */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color:transparent; */
+        /* -webkit-border-radius:2em; */
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(4, 125, 238);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    /* 滚动条自定义 end */
+
+    header.intro-header {
+        background-image: url('/img/article_header/article_bg.jpg');
+            /*post*/
+            
+    }
+
+    
+
+    /* tools heading */
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#Javascript"
+                                title="Javascript">Javascript</a>
+                            
+                        </div>
+                        <h1>Javascript 中的JS库Brython 介绍指南</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            June 07, 2021
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="searchIcon">
+                        <a href="#searchModal">
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">Me</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <p>创造力是自律与童心的结合体。——&lt;罗伯特·格林&gt;</p>
+<h2><span id="介绍">介绍</span></h2>
+<p>在开发 <code>Web</code> 应用程序时 - 我们通常使用多种技术和语言。后端可以很容易地用 <code>Java（Spring Boot</code>）、<code>Python（Django 或 Flask</code>）或 <code>JavaScript (Node.js)</code> 构建，但前端更常使用 <code>JavaScript（React、Angular 等）</code>构建。有时，我们甚至采用混合方法让服务器端呈现页面，并在 <code>React</code> 等前端框架中完成最后的修饰。</p>
+<p>多年来，鉴于其在 <code>Web</code> 上的流行——<code>JavaScript</code> 社区扩展了原始功能以启用 <code>JavaScript</code> 驱动的后端，包括前端。在 <code>JavaScript</code> 中编写 <code>Web</code> 应用程序的最常见方法是使用<code>MEAN</code>堆栈。一个 <code>MongoDB</code> 数据库，<code>Node.js</code> 和 <code>Express.js</code> 作为后端，<code>Angular</code>（或者最近的 <code>React</code>）作为前端。</p>
+<p>但是，如果您真的更喜欢使用 <code>Python</code> 开发您的应用程序呢？虽然严格专注于一种编程语言是不可取的 - 语言是工具，而专注于一种工具会让你不那么灵活 - 单语言应用程序仍有空间。</p>
+<p><strong>Brython 可能是解决方案！</strong> 它是一个 <code>JavaScript</code> 库，可让您在浏览器中运行 <code>Python</code> 代码。</p>
+<blockquote>
+<p>你可能已经猜到了，Brython 是 Browser Python 的缩写。</p>
+</blockquote>
+<p>顾名思义，<code>Brython</code> 的主要目标是取代 <code>JavaScript</code> 并推动 <code>Python</code> 作为 <code>Web</code> 浏览器的主要脚本语言，适用于您的应用程序：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;script src=<span class="string">"/brython.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body onload=<span class="string">"brython()"</span>&gt;</span><br><span class="line">        &lt;script type=<span class="string">"text/python"</span>&gt;</span><br><span class="line">            <span class="keyword">import</span> browser</span><br><span class="line">            browser.document &lt;= <span class="string">"Hello world!"</span></span><br><span class="line">         &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>在<code>&lt;script&gt;</code> 通常不支持的 <code>text/python</code> 类型可以解释的 <code>Python</code> ，我们已经写了代码。在这里，我们向 <code>browser.document</code> 打印了一条 <code>Hello World</code>消息，这类似于 <code>JavaScript</code> 的 <code>document</code>.</p>
+<p>在本 <code>Brython</code> 入门指南中- 我们将了解如何安装 <code>Brython</code>、如何初始化 <code>Brython</code> 项目、如何设置页面样式，并将其与一些替代方案进行比较。</p>
+<h2><span id="如何安装-brython">如何安装 Brython</span></h2>
+<h3><span id="利用内容分发网络">利用内容分发网络</span></h3>
+<p>实际上，安装 <code>Brython</code> 最方便的方法可能是根本不安装它。如果你不需要在本地安装它，只需要在静态网页上加载它来添加一些动态功能，你应该考虑简单地导入一个外部资源。<br>
+其思想是将 <code>brython.js</code> 库加载到 <code>HTML</code> 页面的 <code>&lt;head&gt;</code> 部分。这样，客户端将下载库的同时 <code>HTML</code> 页面加载到他们的 <code>PC</code> 上。</p>
+<p>为了实现这一行为，我们将从托管最新稳定版 <code>Brython</code> 在线的一些 <code>cdn</code> (内容分发网络)中加载我们的库。</p>
+<blockquote>
+<p>基本上，内容交付网络是一组托管一些数据(代码、视频内容、图像…)的分布式服务器。这些类型的网络非常可靠，几乎没有停机时间。这使它们成为托管代码库的理想选择。</p>
+</blockquote>
+<p>有几个cdn可供选择，但是，三个受欢迎的是:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- Option <span class="number">1</span> : jsDelivr CDN --&gt;</span><br><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/brython@3.9.1/brython.min.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="https:/</span><span class="regexp">/cdn.jsdelivr.net/</span>npm/brython@<span class="number">3.9</span><span class="number">.1</span>/brython_stdlib.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;!-- Option 2: CloudFlare CDN --&gt;</span></span><br><span class="line"><span class="string">&lt;script src="</span>https:<span class="comment">//cdnjs.cloudflare.com/ajax/libs/brython/3.9.1/brython.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line">&lt;script src=<span class="string">"https://cdnjs.cloudflare.com/ajax/libs/brython/3.9.1/brython_stdlib.min.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;!-- Option 3: GitHub as the CDN --&gt;</span></span><br><span class="line"><span class="regexp">&lt;!-- Choose this option if you want to use the latest developement version --&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="https:/</span><span class="regexp">/raw.githack.com/</span>brython-dev/brython/master/www/src/brython.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script src="</span>https:<span class="comment">//raw.githack.com/brython-dev/brython/master/www/src/brython_stdlib.js"&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h3><span id="通过-pip-安装-brython">通过 Pip 安装 Brython</span></h3>
+<p>如果你想要更灵活的 <code>Brython</code>，你可以本地安装:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ pip3 install brython</span><br><span class="line"></span><br><span class="line">验证 Brython 是否已经成功安装:</span><br><span class="line">$ pip show brython </span><br><span class="line"><span class="comment">// Name: brython</span></span><br><span class="line"><span class="comment">// Version: 3.9.2</span></span><br><span class="line"><span class="comment">// Summary: Brython is an implementation of Python 3 running in the browser</span></span><br><span class="line"><span class="comment">// Home-page: http://brython.info</span></span><br><span class="line"><span class="comment">// Author: Pierre Quentel</span></span><br><span class="line"><span class="comment">// Author-email: quentel.pierre@orange.fr</span></span><br><span class="line"><span class="comment">// License: BSD</span></span><br></pre></td></tr></table></figure>
+<h2><span id="如何初始化brython项目">如何初始化Brython项目</span></h2>
+<p>安装 <code>Brython</code> 之后，下一步显然是创建一个简单的项目来测试它的功能。要创建项目，请创建一个新文件夹并移动到它:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir brython-project</span><br><span class="line">$ cd brython-project</span><br></pre></td></tr></table></figure>
+<p>现在可以运行以下命令初始化 <code>Brython</code> 项目:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brython-cli --install</span><br></pre></td></tr></table></figure>
+<p>这将创建并初始化一个 <code>Brython</code> 项目，包括启动项目目录和文件层次结构:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">brython-project</span><br><span class="line">    | brython.js</span><br><span class="line">    | brython_stdlib.js</span><br><span class="line">    | demo.html</span><br><span class="line">    | index.html</span><br><span class="line">    | README.md</span><br><span class="line">    | unicode.txt</span><br></pre></td></tr></table></figure>
+<p>首先，让我们解释一下所有这些文件的用途:</p>
+<ul>
+<li><code>Brython .js</code> - <code>Brython</code>核心引擎，它包含了最常用的模块，如<code>browser, browser.html, javascript…</code>如果我们选择不在本地安装<code>Brython</code>，该文件将使用<code>&lt;script&gt;</code>标记包含在HTML页面中。</li>
+<li><code>brython_stdlib.js</code> - 包含 <code>Brython</code> 支持的 <code>Python</code>标准库中的所有包和模块。</li>
+<li><code>demo.html</code>  - 一个运行Brython的简单HTML页面，展示了一些有趣的用例和如何利用 <code>Brython</code> 修改静态HTML页面的示例。</li>
+<li><code>index.html</code> - 一个简单的 <code>Hello World</code> HTML页面。</li>
+</ul>
+<p>只使用一个简单的 <code>web</code> 浏览器就可以打开 <code>demo.html</code> ，但是这种方法有其局限性，因此建议首先启动本地主机服务器</p>
+<p>如果您还没有http安装该模块，您也可以通过pip以下方式安装它：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip3 install http</span><br></pre></td></tr></table></figure>
+<p>安装后，我们可以启动服务器：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 -m http.server</span><br></pre></td></tr></table></figure>
+<p>现在，您应该在 (默认) 上启动本地主机 <code>port 8000</code>，并且您应该能够 <code>demo.html</code> 通过导航到您选择的 Web 浏览器的地址栏中的<code>http://localhost:8000/demo.html(或http://0.0.0.0:8000/demo.html)</code>来访问该页面。</p>
+<p>如果端口 <code>8000</code> 当前被其他进程使用，则您必须定义另一个要使用的端口（例如 8080）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python3 -m http.server <span class="number">8080</span></span><br></pre></td></tr></table></figure>
+<p>要创建一个能够运行 <code>Python</code> 的新 HTML 页面，您只需要在文件部分导入<code>brython.js</code>和文件。然后，您可以继续在 HTML 文件本身中编写 <code>Python：brython_stdlib.jshead</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"brython.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="brython_stdlib.js.js"&gt;&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
+<h2><span id="brython-的工作原理">Brython 的工作原理</span></h2>
+<p><code>Brython</code> 通过将 <code>Python</code> 代码转换为 <code>JavaScript</code>，使我们能够在浏览器中编写和运行 <code>Python</code> 代码。这段代码将能够在所有支持 <code>JavaScript</code> 的现代浏览器中运行，因为 <code>Brython</code>有意避免使用新的、不受支持的语法生成 <code>JavaScript</code>。<br>
+<a href="https://scotch.io/tutorials/javascript-transpilers-what-they-are-why-we-need-them" target="_blank" rel="noopener">https://scotch.io/tutorials/javascript-transpilers-what-they-are-why-we-need-them</a></p>
+<blockquote>
+<p>您可以将转译视为编译的一个子集。<br>
+编译过程通常将用某种高级编程语言（例如C）编写的源代码转换成某种低级语言（例如机器代码）。<br>
+另一方面，<code>transpilation</code> 是将一种高级语言转换为另一种高级语言（例如 <code>Python 到 JavaScript</code>）的过程。</p>
+</blockquote>
+<p><code>Brython</code> 中的转译发生在加载 <code>HTML</code> 页面的同时。在这里，我们在 <code>HTML</code> 文档 <code>brython()</code> 的 <code>body</code> 标签中调用函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onload=<span class="string">"brython()"</span>&gt;</span><br></pre></td></tr></table></figure>
+<p><code>brython()</code> 函数执行编写在<code>&lt;script type=&quot;text/python&quot;&gt;</code>HTML 文档标签中的 <code>Python</code> 代码的转译。所有 <code>Python</code> 代码都必须用<code>&lt;script type=&quot;text/python&quot;&gt;</code>标记包围：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/python"</span>&gt;</span><br><span class="line">    &lt;!-- Python code --&gt;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>或者，我们可以通过使用以下命令将外部 <code>Python</code> 代码加载到 <code>HTML</code> 文档中：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/python"</span> src=<span class="string">"test.py"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>所有现代 Web 浏览器都支持 JavaScript 作为主要脚本语言，但不支持 Python。因此，所有 Python 代码都需要转换为 JavaScript，然后在加载 HTML 页面所需的时间内运行。</p>
+<p>首先，<code>brython()</code>函数通过检查所有类型为 的脚本来搜索 HTML 页面中的所有 <code>Python</code> 代码 <code>text/python</code>，然后将所有代码转换为 <code>JavaScript</code>：</p>
+<blockquote>
+<p><strong>这种转换的结果是 JavaScript 代码的简单字符串表示。该字符串必须在浏览器中作为 JavaScript 代码运行。</strong></p>
+</blockquote>
+<p><code>Brython</code> 使用 <code>JavaScripteval()</code>函数来运行所有翻译后的代码。或者，它可以利用 <code>JavaScript</code> 命令 <code>new Function(function_name, source)(module)</code> 在某些浏览器上运行代码。</p>
+<blockquote>
+<p><strong>这不是运行 JavaScript 的首选方式。使用eval()可能很危险，因为它可能会将应用程序暴露给潜在的恶意第三方代码。此外，eval()与替代品相比，速度相当慢。</strong></p>
+</blockquote>
+<p>如果 Python 代码通过 加载到 HTML 文档中<code>&lt;script type=&quot;text/python&quot; src=&quot;url&quot;&gt;</code>，Brython 将执行 Ajax 调用以获取加载文件的内容。该代码被转换为 JavaScript 并以与上述相同的方式执行。</p>
+<h2><span id="使用-brython-示例">使用 Brython - 示例</span></h2>
+<p>现在，让我们回顾一些简单的例子，以便您了解 Brython 的工作原理及其功能：</p>
+<h2><span id="heoll-word"><strong>Heoll Word</strong></span></h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;script src=<span class="string">"/brython.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body onload=<span class="string">"brython()"</span>&gt;</span><br><span class="line">        &lt;script type=<span class="string">"text/python"</span>&gt;</span><br><span class="line">            <span class="keyword">import</span> browser</span><br><span class="line">            browser.document &lt;= <span class="string">"Hello world!"</span></span><br><span class="line">        &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们将重点关注<script type="text/python"></script>标签之间的 Python 代码：</p>
+<ul>
+<li><code>import browser</code>  将 <code>browser</code> 包加载到脚本中。它是对所有 <code>Brython</code> 特定名称和模块进行分组的包，主要用于表示 <code>JavaScript</code> 中使用的 <code>DOM</code> 元素和事件。</li>
+<li><code>browser.document</code> 是表示当前显示的 <code>HTML</code> 文档的对象。</li>
+<li><code>browser.document &lt;= &quot;Hello world!&quot;</code> - 我们使用 <code>&lt;=</code> 符号而不是 <code>=</code> . 的 <code>document</code> “接收”包含字符串的新元素 <code>Hello world!</code>。另一种方法是使用以下语法：<code>browser.document.attach(&quot;Hello world!&quot;)</code>.</li>
+</ul>
+<p>在客户端，一旦呈现此代码 - 它会导致：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;script src=<span class="string">"/brython.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body onload=<span class="string">"brython()"</span>&gt;</span><br><span class="line">        Hello world!</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure>
+<h2><span id="添加元素和属性">添加元素和属性</span></h2>
+<p>让我们修改前面的示例并为其添加一些段落和文本格式。该browser接口为我们提供了html模块，该模块公开了 HTML 标记，我们可以使用这些标记从 Python 代码动态创建 HTML 结构。创建对象的语法是：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser.html.TAG(<span class="string">"content"</span>, [attributes])</span><br></pre></td></tr></table></figure>
+<p>哪些输出：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;TAG [attributes]&gt;content&lt;<span class="regexp">/TAG&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>browser.html.H2(&quot;Hello world!&quot;)Hello world</code> 用 <code>&lt;h2&gt;</code>标签包裹字符串。</li>
+<li><code>browser.html.A(&quot;link&quot;, href=&quot;stackabuse.com&quot;)</code> 创建一个 <code>&lt;a href=&quot;stackabuse.com&quot;&gt;</code> 标签。</li>
+</ul>
+<p>使用这种语法也可以嵌套，只需 <code>html.element</code> 在另一个元素中包含一个。让我们在页面中添加一些元素：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;script src=<span class="string">"/brython.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body onload=<span class="string">"brython()"</span>&gt;</span><br><span class="line">        &lt;script type=<span class="string">"text/python"</span>&gt;</span><br><span class="line">            <span class="keyword">import</span> browser</span><br><span class="line">            </span><br><span class="line">            title = browser.html.H2(<span class="string">"Hello world!"</span>)</span><br><span class="line"></span><br><span class="line">            bold = browser.html.B(<span class="string">"bold text"</span>)</span><br><span class="line">            url = browser.html.A(<span class="string">"link"</span>, href=<span class="string">"stackabuse.com"</span>)</span><br><span class="line">            paragraph = browser.html.P(<span class="string">"This is a paragraph. This is "</span> + bold + <span class="string">", and this is a "</span> + url)</span><br><span class="line"></span><br><span class="line">            browser.document &lt;= title</span><br><span class="line">            browser.document &lt;= paragraph         </span><br><span class="line">        &lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>或者， <code>url = browser.html.A(&quot;link&quot;, href=&quot;stackabuse.com&quot;)</code>您可以不使用任何参数创建一个对象，而不是创建一个带有参数的对象并构建它：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Creating an &lt;a&gt;&lt;/a&gt; tag</span><br><span class="line">url = browser.html.A()</span><br><span class="line"></span><br><span class="line"># Adding content between created tags</span><br><span class="line"># &lt;a&gt;Url Text&lt;/a&gt;</span><br><span class="line">url &lt;= <span class="string">"Url Text"</span></span><br><span class="line"># Adding href attribute</span><br><span class="line"># &lt;a href="cl9000.github.io"&gt;Url Text&lt;/a&gt;</span><br><span class="line">url.href = <span class="string">"cl9000.github.io"</span></span><br></pre></td></tr></table></figure>
+<p>当我们完成 Python 代码并在浏览器中打开页面时 - 生成的 HTML 页面应如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;script src=<span class="string">"/brython.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>head&gt;</span><br><span class="line">    &lt;body onload=<span class="string">"brython()"</span>&gt;</span><br><span class="line">        &lt;h2&gt;Hello world!&lt;<span class="regexp">/h2&gt;</span></span><br><span class="line"><span class="regexp">        &lt;p&gt;</span></span><br><span class="line"><span class="regexp">            This is a paragraph. This is &lt;b&gt;bold text&lt;/</span>b&gt;, and <span class="keyword">this</span> is a </span><br><span class="line">            &lt;a href=<span class="string">"stackabuse.com"</span>&gt;link&lt;<span class="regexp">/a&gt;.</span></span><br><span class="line"><span class="regexp">        &lt;/</span>p&gt;</span><br><span class="line">    &lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>html&gt;</span><br></pre></td></tr></table></figure>
+<p>我们有一个 <code>&lt;p&gt;</code> 元素，在其中我们使用了预先构造的 <code>&lt;b&gt;and&lt;a&gt;</code> 元素。</p>
+<h3><span id="使用-brython-创建表格">使用 Brython 创建表格</span></h3>
+<p>可以使用与我们迄今为止一直应用的逻辑大致相同的逻辑来创建表：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table = browser.html.TABLE()</span><br></pre></td></tr></table></figure>
+<p>现在，让我们用一些模拟数据创建几行并将它们添加到 <code>table</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># Creating the row</span><br><span class="line">row = browser.html.TR()</span><br><span class="line"># Adding header cells</span><br><span class="line">row &lt;= browser.html.TH(<span class="string">"Header1"</span>)</span><br><span class="line">row &lt;= browser.html.TH(<span class="string">"Header2"</span>)</span><br><span class="line"># Appending the row to the table</span><br><span class="line">table &lt;= row</span><br><span class="line"></span><br><span class="line"># Adding a first row</span><br><span class="line">row = browser.html.TR()</span><br><span class="line">row &lt;= browser.html.TD(<span class="string">"Data 1"</span>)</span><br><span class="line">row &lt;= browser.html.TD(<span class="string">"Data 2"</span>)</span><br><span class="line">table &lt;= row</span><br></pre></td></tr></table></figure>
+<p>最后，我们选择 <code>&lt;div id=&quot;table-zone&quot;&gt;</code>在 HTML 页面上创建的银行元素中显示表格：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tableZone = browser.document[<span class="string">"table-zone"</span>] </span><br><span class="line">tableZone &lt;= table</span><br></pre></td></tr></table></figure>
+<p>这会在我们的页面上生成一个 HTML 表格</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"table-zone"</span>&gt;</span><br><span class="line">    &lt;table&gt;</span><br><span class="line">        &lt;thead&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">              &lt;th&gt;Header <span class="number">1</span>&lt;<span class="regexp">/th&gt;</span></span><br><span class="line"><span class="regexp">              &lt;th&gt;Header 2&lt;/</span>th&gt;</span><br><span class="line">            &lt;<span class="regexp">/tr&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>thead&gt;</span><br><span class="line">        &lt;tbody&gt;</span><br><span class="line">            &lt;tr&gt;</span><br><span class="line">              &lt;td&gt;Data <span class="number">1</span>&lt;<span class="regexp">/td&gt;</span></span><br><span class="line"><span class="regexp">              &lt;td&gt;Data 2&lt;/</span>td&gt;</span><br><span class="line">            &lt;<span class="regexp">/tr&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>tbody&gt;</span><br><span class="line">    &lt;<span class="regexp">/table&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br></pre></td></tr></table></figure>
+<h3><span id="向现有元素添加样式">向现有元素添加样式</span></h3>
+<p>让我们为 <code>&lt;div id=&quot;table-zone&quot;&gt;</code> 和 <code>table</code> 元素添加一些样式：</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tableZone.style = &#123;</span><br><span class="line">            <span class="string">"background-color"</span>: <span class="string">"#dedfdd"</span>,</span><br><span class="line">            <span class="string">"width"</span>: <span class="string">"50%"</span>,</span><br><span class="line">            <span class="string">"min-height"</span>: <span class="string">"100px"</span>,</span><br><span class="line">            <span class="string">"margin"</span>: <span class="string">"auto"</span></span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line"><span class="keyword">table</span>.style <span class="comment">= &#123;</span></span><br><span class="line">            <span class="string">"border"</span>: <span class="string">"1px solid #333"</span>,</span><br><span class="line">            <span class="string">"margin"</span>: <span class="string">"auto"</span></span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+<p>这将导致修改后的 HTML 标签style添加属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"table-zone"</span> style=<span class="string">"background-color: rgb(222, 223, 221); width: 50%; min-height: 100px; margin: auto;"</span>&gt;</span><br><span class="line">    </span><br><span class="line">&lt;table style=<span class="string">"border: 1px solid rgb(51, 51, 51); margin: auto;"</span>&gt;</span><br></pre></td></tr></table></figure>
+<h3><span id="绑定操作和从元素读取内容">绑定操作和从元素读取内容</span></h3>
+<p>网页不仅用于显示数据 - 它们还用于捕获数据。表单是我们提示用户发送数据的最基本方式之一。让我们在 Brython 中使用 <code>FORM()</code> 函数以及其他 HTML 元素（例如 <code>INPUT()</code>和 <code>LABEL()</code>）创建一个表单：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># Create a &lt;div id="form-div"&gt; element as a container for a new form</span><br><span class="line">formDiv = browser.html.DIV(id=<span class="string">"form-div"</span>)</span><br><span class="line"># Create a &lt;form&gt; element </span><br><span class="line">form = browser.html.FORM()</span><br><span class="line"></span><br><span class="line"># Create the &lt;input type="text"&gt; field wit the label and add it to the form</span><br><span class="line">input = browser.html.INPUT()</span><br><span class="line">input.type = <span class="string">"text"</span></span><br><span class="line">input.id = <span class="string">"input-name"</span></span><br><span class="line"># Add label and to the form</span><br><span class="line">form &lt;= browser.html.LABEL(<span class="string">"Enter your name: "</span>) + input</span><br><span class="line"></span><br><span class="line"># Create the submit button and add it to the form</span><br><span class="line">button = browser.html.INPUT()</span><br><span class="line">button.type = <span class="string">"button"</span></span><br><span class="line">button.value = <span class="string">"Submit"</span></span><br><span class="line">button.id = <span class="string">"submit-button"</span></span><br><span class="line">form &lt;= button</span><br><span class="line"></span><br><span class="line"># Add form to the container &lt;div&gt; element</span><br><span class="line">formDiv &lt;= form</span><br><span class="line"># Add the &lt;h4 id="form-response"&gt; to show the value from the form</span><br><span class="line">formDiv &lt;= browser.html.H4(<span class="string">"Your name is: "</span>, id=<span class="string">"form-response"</span>)</span><br><span class="line"># Display the div element containing form on the page</span><br><span class="line">browser.document &lt;= formDiv</span><br></pre></td></tr></table></figure>
+<p>不做任何事情的表单不是很有用。我们也可以在 Brython 中使用自定义函数。让我们创建一个<code>click</code>在<code>submit</code>按钮上调用的 Python 函数。它会提醒用户按钮已被点击并更新 <code>&lt;h4 id=&quot;form-response&quot;&gt;</code>元素的值：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def onSubmit(ev):</span><br><span class="line">    # Get the value of the &lt;input id="input-name"&gt; field</span><br><span class="line">    name = browser.document[<span class="string">"input-name"</span>].value</span><br><span class="line">    # Append the stored value to the content in the &lt;h4 id="form-response"&gt; tag</span><br><span class="line">    browser.document[<span class="string">"form-response"</span>] &lt;= name</span><br><span class="line">    # Alert the user that the button has been clicked</span><br><span class="line">    browser.alert(<span class="string">"The Submit Button is Clicked"</span>)</span><br></pre></td></tr></table></figure>
+<p>最后，我们将<code>click</code>事件 <code>submit-button</code> 与创建的<code>onSubmit()</code>函数绑定，以便我们在按钮单击时获得所需的行为：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">browser.document[<span class="string">"submit-button"</span>].bind(<span class="string">"click"</span>, onSubmit)</span><br></pre></td></tr></table></figure>
+<h2><span id="结论">结论</span></h2>
+<p>如果您正在寻找 JavaScript 作为 Web 脚本语言的替代方案，并且不太关心性能，那么 Brython 可能是一个不错的解决方案。</p>
+<p>它平衡了执行速度和加载库所需的多余内存使用之间不可避免的权衡，使其成为在浏览器中运行 Python 的最佳解决方案之一。</p>
+<p>另一方面，Brython 没有庞大的社区，也没有被广泛接受或使用。学习资源非常有限，您将仅限于主要是官方文档，而没有许多现实世界的大型项目可以寻求指导。</p>
+<p>最终，主要问题是是否值得完全替换 JavaScript。与用 JavaScript 编写的完全相同的项目相比，即使是小型 Brython 项目的执行速度也可能慢 2 倍。与 Brython 不同，JavaScript 拥有庞大的开发者社区、海量资源和展示其全部潜力的真实项目。</p>
+<p>让我们不要忘记所有的 JavaScript 框架，它们是 JavaScript 流行的支柱。如果没有他们的帮助，JavaScript 将只是另一种脚本语言，它为我们提供了动态更改静态 HTML 页面内容的能力。例如，想象一下用纯 JavaScript 编写复杂的服务器端逻辑。即使那是可行的，这肯定不会是一个非常愉快的经历。</p>
+<p>不幸的是，Brython 没有为其开发框架，因此您只能使用纯 Python 代码，这对于除简单用例之外的任何其他内容都不合理。您可能无法使用 Brython 创建一些复杂的单页 Web 应用程序，而您可以使用 JavaScript 和 Angular。Brython 是一个很好的工具，对于那些只想使用 Python 进行服务器端和客户端编程的开发人员来说，但它可能离取代 JavaScript 还有很长的路要走</p>
+<h2><span id="参考">参考</span></h2>
+<ul>
+<li><a href="https://stackabuse.com/an-introductory-guide-to-brython" target="_blank" rel="noopener">https://stackabuse.com/an-introductory-guide-to-brython</a></li>
+</ul>
+<p><strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
+
+
+                <hr>
+                <!-- Pager &rarr; 箭头 -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2021/06/08/Javascript中更改元素的类-className和classList/" data-toggle="tooltip" data-placement="top" title="Javascript 中更改元素的类-className和classList"> Previous
+                            <br>
+                            <span>Javascript 中更改元素的类-className和classList</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2021/06/07/Javascript中如何重定向到另一个网页/" data-toggle="tooltip" data-placement="top" title="Javascript 中如何重定向到另一个网页">Next
+                            <br>
+                            <span>Javascript 中如何重定向到另一个网页</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                    <div class="reward">
+                        <div class="reward-button">赏 <span class="reward-code"> 
+                            <span class="alipay-code"> <img class="alipay-img" src="/img/myself/alipay-reward-image.jpeg"><b>支付宝打赏</b></span> 
+                            <span class="wechat-code"> <img class="wechat-img" src="/img/myself/wechat-reward-image.jpeg"><b>微信打赏</b> </span>
+                            </span></div>
+                        <p class="reward-notice">赞赏一下  坚持原创技术分享，您的支持将鼓励我继续创作！</p>
+                    </div>
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
+                
+
+                <!-- 来必力 start -->
+                
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">如何安装 Brython</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">利用内容分发网络</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">通过 Pip 安装 Brython</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">如何初始化Brython项目</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Brython 的工作原理</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">使用 Brython - 示例</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Heoll Word</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">添加元素和属性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.1.</span> <span class="toc-nav-text">使用 Brython 创建表格</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.2.</span> <span class="toc-nav-text">向现有元素添加样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.3.</span> <span class="toc-nav-text">绑定操作和从元素读取内容</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">参考</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Javascript" title="Javascript">Javascript</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
+                    
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
+                    
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
+                    
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
+                    
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
+                    
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
+                    
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
+                    
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
+                    
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
+                    
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
+                    
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
+                    
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
+                        <li><a href="" target="_blank">undefined</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
+<script>
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer>
+    <!-- <article class="bg-back top-line"></article> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2021
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a> |
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart" style="color: red"></i>
+                    </span>
+                    <!-- | -->
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <!-- <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span> -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                </p>
+                
+                <!-- 不蒜子 end -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- other wenzi.js -->
+<script src="/libs/other/wenzi.js"></script>
+
+<!-- 动态tab标签 -->
+
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 2.0rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
+
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+</body>
+
+</html>
