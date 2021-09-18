@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 start -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+    <!-- 回到顶部样式 end -->
+
+
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5">
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword" content="weichanglu, Weichanglu, Changlu Wei, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          JavaScript 使用node-notifier发送通知(Mac, Windows, Linux) - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/2020/12/31/JavaScript-使用node-notifier发送通知-Mac-Windows-Linux/">
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- change font-awesome CDN to qiniu -->
+    <!-- <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+    
+
+    /* 滚动条自定义 start */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color:transparent; */
+        /* -webkit-border-radius:2em; */
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(4, 125, 238);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    /* 滚动条自定义 end */
+
+    header.intro-header {
+        background-image: url('/img/article_header/article_bg.jpg');
+            /*post*/
+            
+    }
+
+    
+
+    /* tools heading */
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#JavaScript"
+                                title="JavaScript">JavaScript</a>
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#node"
+                                title="node">node</a>
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#notifier"
+                                title="notifier">notifier</a>
+                            
+                        </div>
+                        <h1>JavaScript 使用node-notifier发送通知(Mac, Windows, Linux)</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            December 31, 2020
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="searchIcon">
+                        <a href="#searchModal">
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">Me</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <p>人生的价值，并不是用时间，而是用深度去衡量的。 ——&lt;列夫·托尔斯泰&gt;</p>
+<h2><span id="介绍">介绍</span></h2>
+<p>通知是一种吸引用户使用应用的好方法，可以用来提供或征求反馈。在本教程中，我们将研究如何使用<code>Node.js</code> 和 <code>node-notifier</code> 发送通知。</p>
+<p>在Node JS中，<a href="https://www.npmjs.com/package/node-notifier" target="_blank" rel="noopener">Node-notifier</a>是一个用于发送跨平台本机通知的库。<br>
+Node-notifier <a href="https://www.npmjs.com/package/node-notifier" target="_blank" rel="noopener">https://www.npmjs.com/package/node-notifier</a></p>
+<h2><span id="使用node-notifier创建通知">使用node-notifier创建通知</span></h2>
+<p>首先，我们创建一个目录，并使用默认设置初始化一个 Node 项目:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir node-native-notifications &amp;&amp; cd node-native-notifications</span><br><span class="line">$ npm init -y</span><br><span class="line">$ npm install --save node-notifier</span><br><span class="line">$ touch index.js</span><br></pre></td></tr></table></figure>
+<p>接下来，在 <code>index.js</code> 文件中，我们导入 <code>node-notifier</code>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> notifier = <span class="built_in">require</span>(<span class="string">'node-notifier'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/// 有两种方法可以使用 `node-notifier` 创建和推送简单的通知。</span></span><br><span class="line"><span class="comment">// 将一个字符串传递给 `notify()` 函数:</span></span><br><span class="line">notifier.notify(<span class="string">'Message'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 或者，也可以传递一个对象，并设置属性，如标题和消息:</span></span><br><span class="line">notifier.notify(&#123;</span><br><span class="line">    title: <span class="string">'My notification'</span>,</span><br><span class="line">    message: <span class="string">'Hello, there!'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>我们运行这段代码，看看通知的作用，终端执行:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node index.js</span><br></pre></td></tr></table></figure>
+<p>通知在我们的桌面屏幕上显示，我们可以看到推送的两条消息<br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/node-native-notifications1.png" alt></p>
+<h2><span id="自定义通知">自定义通知</span></h2>
+<p>除了标题和消息选项之外，您还可以设置要出现的图标，使用声音来添加通知声音或使用 <code>wait</code> 来等待用户操作,<br>
+默认情况下，<code>sound</code> 和 <code>wait</code> 是 <code>false</code>。</p>
+<p>我们添加一个图标，它可以是任何图像文件，以及通知的声音。另外，我们也会等待用户执行一个动作:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line">notifier.notify(&#123;</span><br><span class="line">    title: <span class="string">'Salutations!'</span>,</span><br><span class="line">    message: <span class="string">'Hey there!'</span>,</span><br><span class="line">    icon: path.join(__dirname, <span class="string">'icon.jpg'</span>),</span><br><span class="line">    sound: <span class="literal">true</span>,</span><br><span class="line">    wait: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">err, response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>在上面的代码中，我们包含了 <code>path</code> 模块，以帮助我们获得文件的路径。我们还将一个回调函数传递给 <code>notify()</code>函数，并将响应或用户交互记录到控制台。</p>
+<p>运行上面的代码，您将得到一个带有您选择的作为通知图标的图像的通知。根据您计算机的操作系统和版本，可能还会伴随着新通知的声音显示。</p>
+<p>如果您单击按钮取消通知，则取消的字符串将被记录到控制台。如果没有与通知的交互，直到它消失，它显示超时。如果通知本身被单击，它将未定义地记录到控制台。</p>
+<h2><span id="为不同平台定制选项">为不同平台定制选项</span></h2>
+<p>如前一节所述，由于用户操作系统使用的报告系统不同，发送的通知的行为可能会有所不同。</p>
+<p><code>node-notification</code> 尝试使用具有最佳用户体验的系统，但它更喜欢本地解决方案。它为每个平台提供决策流中定义的回退。<br>
+<a href="https://github.com/mikaelbr/node-notifier/blob/HEAD/DECISION_FLOW.md" target="_blank" rel="noopener">https://github.com/mikaelbr/node-notifier/blob/HEAD/DECISION_FLOW.md</a></p>
+<p>但是，您可以为每个报告系统创建一个定制的报告程序，以控制您在应用程序中发送的通知的行为。有五个: <code>Notification Center, Windows Toaster, Windows Balloons, Growl, and notify-send.</code>。</p>
+<p>当使用 <code>Windows Toaster</code> 或通知发送通知时，<code>await</code>选项不适用，因为 <code>Windows Toaster</code> 总是等待，而通知发送不支持 <code>await</code> 选项。</p>
+<p><code>sound</code> 选项只能用于通知中心和 <code>Windows Toaster</code>通知。图标选项接受图像文件的绝对路径，并且不适用于 <code>Windows Balloons</code>。</p>
+<h2><span id="growl">Growl</span></h2>
+<p>当其他报告器失败或无法用于该操作系统时，该报告器可以作为备用报告器。它构建在开源的Growly包上，并使用Growl实用程序发送消息来发送本地通知。</p>
+<p>在你的代码中添加以下内容，为你的应用程序定制Growl报告:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs);</span></span><br><span class="line"><span class="string">const Growl = require('</span>node-notifier<span class="string">').Growl;</span></span><br><span class="line"><span class="string">// Or</span></span><br><span class="line"><span class="string">// const Growl = require('</span>node-notifier/notifiers/growl<span class="string">');</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">let growlNotifier = new Growl(&#123;</span></span><br><span class="line"><span class="string">  name: '</span>Node<span class="string">'</span></span><br><span class="line"><span class="string">  host: '</span>localhost<span class="string">',</span></span><br><span class="line"><span class="string">  port: 23053</span></span><br><span class="line"><span class="string">&#125;);</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">growlNotifier.notify(&#123;</span></span><br><span class="line"><span class="string">  title: '</span>Greetings<span class="string">',</span></span><br><span class="line"><span class="string">  message: '</span>Hello user!<span class="string">',</span></span><br><span class="line"><span class="string">  icon: fs.readFileSync(__dirname + '</span>/icon.jpg<span class="string">'),</span></span><br><span class="line"><span class="string">  wait: false,</span></span><br><span class="line"><span class="string">  </span></span><br><span class="line"><span class="string">  // Other growl options like sticky etc.</span></span><br><span class="line"><span class="string">  sticky: false,</span></span><br><span class="line"><span class="string">  label: undefined,</span></span><br><span class="line"><span class="string">  priority: undefined</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
+<p>在上面的代码中，我们创建了一个新的 <code>Growl</code> 实例，并设置了一些选项，比如它的名称、主机和将要运行它的端口。</p>
+<p>接下来，我们使用常用选项调用 <code>notify()</code>方法。<code>Growl</code>向我们介绍了更多的选项，这些选项在这里被记录下来。</p>
+<h2><span id="windows-toaster">Windows Toaster</span></h2>
+<p>这是一个专门为Windows操作系统的记者，它支持通知自<code>Windows 8</code>和更新。</p>
+<p>让我们使用 <code>Windows Toaster</code> 来推送一个通知:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> WindowsToaster = <span class="built_in">require</span>(<span class="string">'node-notifier'</span>).WindowsToaster;</span><br><span class="line"><span class="comment">// Or</span></span><br><span class="line"><span class="comment">// const WindowsToaster = require('node-notifier/notifiers/toaster');</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">let</span> windowsToasterNotifier = <span class="keyword">new</span> WindowsToaster(&#123;</span><br><span class="line">  withFallback: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">windowsToasterNotifier.notify(&#123;</span><br><span class="line">    title: <span class="string">"Windows Toaster Notification"</span>,</span><br><span class="line">    message: <span class="string">"This is a notification sent from the Windows Toaster Notifier"</span>,</span><br><span class="line">    icon:  path.join(__dirname, <span class="string">'icon.jpg'</span>),</span><br><span class="line">    sound: <span class="string">"SMS"</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">error, response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>这里，我们正在实例化一个<code>WindowsToaster</code>实例，将 <code>withFallback</code> 参数设置为 <code>true</code>。如果这个通知不工作，它将回落到<code>Growl</code>或<code>Windows Balloons</code>。</p>
+<p>然后我们用常用的选项调用 <code>.notify()</code> 方法。</p>
+<h2><span id="windows-balloon">Windows Balloon</span></h2>
+<p>这是一个专门针对Windows 8以下所有Windows操作系统版本的记者。它使用任务栏气球来显示通知。要特别为这个报告器定制选项，您可以这样编写代码:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> WindowsBalloon = <span class="built_in">require</span>(<span class="string">'node-notifier'</span>).WindowsBalloon;</span><br><span class="line"><span class="comment">// Or</span></span><br><span class="line"><span class="comment">// const WindowsBallon = require('node-notifier/notifiers/windowsballon');</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">var</span> windowsBalloonNotifier = <span class="keyword">new</span> WindowsBalloon(&#123;</span><br><span class="line">  withFallback: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">windowsBalloonNotifier.notify(&#123;</span><br><span class="line">    title: <span class="string">"Windows Balloon Notification"</span>,</span><br><span class="line">    message: <span class="string">"This notification was sent using Windows Balloons."</span>,</span><br><span class="line">    sound: <span class="literal">true</span>,</span><br><span class="line">    time: <span class="number">1000</span>,</span><br><span class="line">    wait: <span class="literal">false</span>,</span><br><span class="line">    type: <span class="string">'warn'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">error, response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>像往常一样，我们构造了一个通知器的实例，并将我们的选项传递给<code>notify()</code>函数。</p>
+<p>在这里，我们可以指定以毫秒为单位的时间，之后通知将消失。我们不会等待用户对通知执行操作，所以<code>wait</code>设置为<code>false</code>。</p>
+<p>同时，我们将通知<code>type</code>设置为<code>warn</code>，<code>sound</code>设置为<code>true</code>。这将以警告的形式通知用户。我们也可以使用<code>info</code>或<code>error</code>，这取决于你想表达什么。</p>
+<h2><span id="通知中心">通知中心</span></h2>
+<p>这个是为<code>macOS</code>系统发送通知。它需要 <code>macOS版本10.8</code>以上。对于早期版本，它将使用咆哮作为后备。如果没有安装<code>Growl</code>，回调函数会返回一个错误。</p>
+<p>要设置通知中心报告器，您可以编写如下代码:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> NotificationCenter = <span class="built_in">require</span>(<span class="string">'node-notifier'</span>).NotificationCenter;</span><br><span class="line"><span class="comment">// Or</span></span><br><span class="line"><span class="comment">// const NotificationCenter = require('node-notifier/notifiers/notificationcenter');</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">let</span> notificationCenterNotifier = <span class="keyword">new</span> NotificationCenter(&#123;</span><br><span class="line">  withFallback: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"> </span><br><span class="line">notificationCenterNotifier.notify(&#123;</span><br><span class="line">    title: <span class="string">"Notification Center Notifications"</span>,</span><br><span class="line">    subtitle: <span class="string">"For macOS &gt; 10.8"</span>,</span><br><span class="line">    message: <span class="string">"This is a notification sent using Notification Center"</span>,</span><br><span class="line">    sound: <span class="string">'Frog'</span>,</span><br><span class="line">    icon: path.join(__dirname, <span class="string">'icon.jpg'</span>),</span><br><span class="line">    contentImage: path.join(__dirname, <span class="string">'content_image.jpg'</span>),</span><br><span class="line">    open: <span class="literal">undefined</span>,</span><br><span class="line">    wait: <span class="literal">false</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="keyword">function</span> (<span class="params">error, response, metadata</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response, metadata);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p><code>sound</code>参数包含一系列数值，如<code>Basso, Blow, Bottle</code>等。如果设置为true，默认值是Bottle。或者，你可以设置你喜欢的特定声音。</p>
+<h2><span id="notify-send">Notify-send</span></h2>
+<p>用于在基于 <code>Linux</code>的系统上定制要发送的通知。可以如下图所示使用:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> NotifySend = <span class="built_in">require</span>(<span class="string">'node-notifier'</span>).NotifySend;</span><br><span class="line"><span class="comment">// Or</span></span><br><span class="line"><span class="comment">// const NotifySend = require('node-notifier/notifiers/notifysend');</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">let</span> notifySendNotifier = <span class="keyword">new</span> NotifySend();</span><br><span class="line"> </span><br><span class="line">notifySendNotifier.notify(&#123;</span><br><span class="line">  title: <span class="string">'Notify-send Notification'</span>,</span><br><span class="line">  message: <span class="string">'This notification was sent using the notify-send reporter'</span>,</span><br><span class="line">  icon: __dirname + <span class="string">'/icon.jpg'</span>,</span><br><span class="line">  wait: <span class="literal">true</span>,</span><br><span class="line">  timeout: <span class="number">5</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2><span id="结论">结论</span></h2>
+<p>通知为用户提供了一种与应用程序交互的方式，本地通知是那些显示在用户桌面而不是显示在浏览器中的通知。</p>
+<p>在本文中，我们介绍了如何使用node-notifier向用户发送通知。</p>
+<h2><span id="参考">参考</span></h2>
+<ul>
+<li><a href="https://stackabuse.com/sending-notifications-with-node-notifier-mac-windows-linux/" target="_blank" rel="noopener">https://stackabuse.com/sending-notifications-with-node-notifier-mac-windows-linux/</a></li>
+<li><a href="https://www.npmjs.com/package/node-notifier" target="_blank" rel="noopener">node-notifier https://www.npmjs.com/package/node-notifier</a></li>
+<li><a href="https://www.npmjs.com/package/node-mac-notifier" target="_blank" rel="noopener">node-mac-notifier https://www.npmjs.com/package/node-mac-notifier</a></li>
+</ul>
+<p><strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
+
+
+                <hr>
+                <!-- Pager &rarr; 箭头 -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/12/31/JavaScript-从对象中删除属性/" data-toggle="tooltip" data-placement="top" title="JavaScript 从对象中删除属性"> Previous
+                            <br>
+                            <span>JavaScript 从对象中删除属性</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/12/30/Javascript中检查字符串的第一个字母是否为大写/" data-toggle="tooltip" data-placement="top" title="Javascript 中检查字符串的第一个字母是否为大写">Next
+                            <br>
+                            <span>Javascript 中检查字符串的第一个字母是否为大写</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                    <div class="reward">
+                        <div class="reward-button">赏 <span class="reward-code"> 
+                            <span class="alipay-code"> <img class="alipay-img" src="/img/myself/alipay-reward-image.jpeg"><b>支付宝打赏</b></span> 
+                            <span class="wechat-code"> <img class="wechat-img" src="/img/myself/wechat-reward-image.jpeg"><b>微信打赏</b> </span>
+                            </span></div>
+                        <p class="reward-notice">赞赏一下  坚持原创技术分享，您的支持将鼓励我继续创作！</p>
+                    </div>
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
+                
+
+                <!-- 来必力 start -->
+                
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">使用node-notifier创建通知</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">自定义通知</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">为不同平台定制选项</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Growl</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">Windows Toaster</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">Windows Balloon</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">通知中心</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">Notify-send</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">11.</span> <span class="toc-nav-text">参考</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+                        
+                          <a class="tag" href="/tags/#node" title="node">node</a>
+                        
+                          <a class="tag" href="/tags/#notifier" title="notifier">notifier</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
+                    
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
+                    
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
+                    
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
+                    
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
+                    
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
+                    
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
+                    
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
+                    
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
+                    
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
+                    
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
+                    
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
+                        <li><a href="" target="_blank">undefined</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
+<script>
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer>
+    <!-- <article class="bg-back top-line"></article> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2021
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a> |
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart" style="color: red"></i>
+                    </span>
+                    <!-- | -->
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <!-- <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span> -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                </p>
+                
+                <!-- 不蒜子 end -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- other wenzi.js -->
+<script src="/libs/other/wenzi.js"></script>
+
+<!-- 动态tab标签 -->
+
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 2.0rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
+
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+</body>
+
+</html>

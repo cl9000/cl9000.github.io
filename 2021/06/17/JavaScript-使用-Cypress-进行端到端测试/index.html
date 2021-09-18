@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 回到顶部样式 start -->
+    <style>
+        .go-top {
+            background-color: #ff4820;
+            position: fixed !important;
+            right: 20px;
+            bottom: 45px;
+            color: #fff;
+            display: block;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            visibility: hidden;
+            -ms-filter: "alpha(opacity=0)";
+            filter: alpha(opacity=0);
+            opacity: 0;
+            z-index: 9999;
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -o-border-radius: 2px;
+            border-radius: 2px;
+            -webkit-transition: all .5s;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            transition: all .5s
+        }
+        .go-top:hover {
+            background-color: rgb(39, 148, 250);
+            color: #fff;
+        }
+        .go-top.show {
+            -ms-filter: alpha(opacity=100);
+            filter: alpha(opacity=100);
+            opacity: 1;
+            visibility: visible;
+            bottom: 45px
+        }
+    </style>
+    <!-- 回到顶部样式 end -->
+
+
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN">
+    <meta name="author" content="cl9000">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- weichanglu Baidu https://ziyuan.baidu.com/site/siteverify#/ -->
+    <meta name="baidu-site-verification" content="cTguDliTv5">
+    <!-- weichanglu Google http://www.google.com/webmasters/tools/ -->
+    <meta name="google-site-verification" content="VtUrjZb3cZLcCv5vTtbXVZCWePEBLM7Jhw7uTYuveao">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, minimum-scale=0.5, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="个人博客">
+    <meta name="keyword" content="weichanglu, Weichanglu, Changlu Wei, 魏长露, 魏长露的博客, 魏长露的博客 | Wei, C.-L. Blog, Wei, C.-L., Wei, C.-L. Blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          JavaScript 使用 Cypress 进行端到端测试 - 魏长露的博客 | Wei, C.-L. Blog
+        
+    </title>
+
+    <link rel="canonical" href="https://cl9000.github.io/2021/06/17/JavaScript-使用-Cypress-进行端到端测试/">
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/cl-blog.min.css"> -->
+    <link rel="stylesheet" href="/css/cl-blog.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- change font-awesome CDN to qiniu -->
+    <!-- <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<link rel="alternate" href="/feed.xml" title="Weichanglu" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="">
+    <!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    /* 2020年4月4日 清明节 - 哀悼日 全国哀悼3分钟 - 180秒 深切哀悼在抗击新冠肺炎斗争中牺牲的英雄和逝世的同胞，愿逝者安息，愿生者奋发，愿祖国昌盛。*/
+    
+
+    /* 滚动条自定义 start */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        /* background-color:transparent; */
+        /* -webkit-border-radius:2em; */
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(4, 125, 238);
+        background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%, transparent 75%, transparent);
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+    }
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    /* 滚动条自定义 end */
+
+    header.intro-header {
+        background-image: url('/img/article_header/article_bg.jpg');
+            /*post*/
+            
+    }
+
+    
+
+    /* tools heading */
+    .tools-site-heading {
+        padding: 80px 0 !important;
+    }
+
+    
+</style>
+<header class="intro-header">
+    <!-- <div class="bg-scale" style="margin: 10px;position: absolute;top: 410px;right: 5px;width: 40px;color: white;">放大</div> -->
+    <!-- Signature -->
+    <div id="signature">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#JavaScript"
+                                title="JavaScript">JavaScript</a>
+                            
+                            <a class="tag" style="color: #fff;background-color: #077bf3;"
+                                href="/tags/#测试"
+                                title="测试">测试</a>
+                            
+                        </div>
+                        <h1>JavaScript 使用 Cypress 进行端到端测试</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by cl9000 on
+                            June 17, 2021
+                        </span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Weichanglu</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="searchIcon">
+                        <a href="#searchModal">
+                            <i class="fa fa-search" title="搜索"></i>
+                            &nbsp;&nbsp;
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/about/">Me</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/archive/">Archive</a>
+                        </li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                        <li>
+                            <a href="/timeline/">Timeline</a>
+                        </li>
+                        
+                    
+                        
+                        <li>
+                            <a href="/tools/">Tools</a>
+                        </li>
+                        
+                    
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+    <!-- Main Content -->
+    
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="col-lg-9 col-lg-offset-2 col-md-10 col-md-offset-1 post-container">
+
+                <p>预测未来最好的方法就是去创造未来。——&lt;亚伯拉罕·林肯&gt;</p>
+<h2><span id="介绍">介绍</span></h2>
+<p>端到端自动化测试是任何基于 Web 的应用程序开发生命周期的重要组成部分。</p>
+<p>在本文中，我们将看看使用 <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress https://www.cypress.io/</a> 的端到端测试。</p>
+<blockquote>
+<p><strong>“端到端”测试是指模拟用户体验和用户与服务交互的过程，并测试该过程中是否存在任何错误。</strong></p>
+</blockquote>
+<h2><span id="使用-cypress-优缺点">使用 Cypress 优缺点</span></h2>
+<h3><span id="优点">优点</span></h3>
+<p>使用 Cypress 的最大优点很容易被 Cypress 的开发人员称为“时间旅行”。</p>
+<p>它允许您在其命令日志和应用程序预览中查看测试中发生的所有事情，从而简化了调试过程。每一步都会显示应用程序在执行时的状态，让您可以在出现问题时精确定位问题。</p>
+<p>我们将他们的认知感知的很大一部分建立在我们的视线上，而“时间旅行”使我们能够直观地（人为地）寻找错误，同时仍然给我们带来自动化的好处。</p>
+<p>这也是一种非常自然的错误搜索方法，因为这是一个专注于端到端测试的框架，这意味着除了测试功能之外，我们实际上可以看到最终用户会看到什么。</p>
+<p>您可能想要使用 Cypress 的其他一些原因是：</p>
+<ul>
+<li>它不是基于 <code>Selenium</code>，所以它不存在相同的问题并提供了一个新的视角。<code>Cypress</code> 是从头开始构建的。</li>
+<li>高度关注端到端测试。</li>
+<li>如果您可在浏览器中运行它，则可以使用 <code>Cypress</code> 对其进行测试。</li>
+<li>您只需要学习 <code>JavaScript</code>。</li>
+<li>设置超级简单，速度快如闪电。</li>
+<li>它是在考虑到测试驱动开发的情况下创建的。</li>
+<li>大量官方文档。</li>
+<li>您可以看到从浏览器发出的每个网络请求，并可以访问所有数据。</li>
+<li>您可以存根任何网络请求，同时还可以创建任何网络请求（这意味着您也可以使用 <code>Cypress</code> 进行 <code>API</code> 测试）。</li>
+<li>积极和透明的<a href="https://github.com/cypress-io" target="_blank" rel="noopener">开发人员 https://github.com/cypress-io</a>。</li>
+<li><code>Cypress</code> 建立在 <a href="https://mochajs.org/" target="_blank" rel="noopener">Mocha</a> 和 <a href="https://www.chaijs.com/" target="_blank" rel="noopener">Chai</a> 之上，它们都是现代流行的 <code>BDD</code> 和 <code>TDD</code> 库，因此实际上借用了一些语法。如果您以前使用过这些，您会注意到 <code>Cypress</code> 钩子是直接从 <code>Mocha</code> 来的。</li>
+</ul>
+<h3><span id="不足">不足</span></h3>
+<ul>
+<li>由于它不使用 Selenium 并且基于 JavaScript，因此您需要具备 <code>JavaScript</code> 知识。<code>Selenium</code> 支持 <code>JavaScript、Java、Python、Ruby 和 C#</code>。</li>
+<li>由于它非常专注于端到端测试，因此它不会成为您可以应用于所有其他类型测试（API 测试除外）的解决方案。</li>
+<li>它不（也可能永远不会）支持所有浏览器（您可以在此处找到支持的浏览器列表）这可能是一个问题，因为某些类型的客户端可能会请求 IE、Opera 或 Safari 支持。</li>
+<li>没有移动测试。</li>
+<li>已知在使用直接 URL 导航时不稳定。</li>
+<li>不能使用多个标签。</li>
+<li>无法导航到不同的域 URL - 如果您的解决方案中有多个应用程序，或者您需要在第三方 UI 上测试某些内容，这可能是一个巨大的问题。您需要为其他应用程序保留一个单独的项目，或者完全依赖网络请求来获取数据。</li>
+<li>相对较新，所以它没有像一些旧的测试工具那样多的社区材料。</li>
+<li>对于您在应用程序中可能经常执行的某些操作，例如文件上传、悬停和滚动，某些路线图功能似乎已退居次要位置。您将不得不寻找解决方法。</li>
+<li>如果您想要直接的数据库通信或直接浏览器工作之外的几乎任何事情，则需要进行大量工作。不过，他们正计划为其他语言发布后端适配器。本指南将在发布时及时更新。</li>
+</ul>
+<h2><span id="使用-cypress">使用 Cypress</span></h2>
+<p><a href="https://github.com/cypress-io/cypress-example-kitchensink" target="_blank" rel="noopener">Cypress 官网参考例子 https://github.com/cypress-io/cypress-example-kitchensink</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 安装 Cypress </span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install cypress --save-dev</span></span><br></pre></td></tr></table></figure>
+<p>使用演示应用程序，执行如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## clone this repo to a local directory</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/&lt;your-username&gt;/cypress-example-kitchensink.git</span><br><span class="line"></span><br><span class="line"><span class="comment">## cd into the cloned repo</span></span><br><span class="line"><span class="built_in">cd</span> cypress-example-kitchensink</span><br><span class="line"></span><br><span class="line"><span class="comment">## install the node_modules</span></span><br><span class="line">npm install</span><br><span class="line"></span><br><span class="line"><span class="comment">## start the local webserver</span></span><br><span class="line">npm start</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## launch the cypress test runner</span></span><br><span class="line">npm run cy:open</span><br></pre></td></tr></table></figure>
+<p>启动后如下：<br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/cypress1.png" alt><br>
+单击其中任何一个（例如 <code>todo.spec.js</code>）将启动：<br>
+<img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/cypress2.png" alt></p>
+<h2><span id="cypress-api-和-样式">Cypress API 和 样式</span></h2>
+<ul>
+<li><a href="https://docs.cypress.io/guides/overview/why-cypress/" target="_blank" rel="noopener">Cypress guides</a></li>
+<li><a href="https://docs.cypress.io/api/table-of-contents" target="_blank" rel="noopener">Cypress API</a></li>
+</ul>
+<p><code>Cypress</code> 建立在 <code>Mocha</code> 和 <code>Chai</code> 之上，并借用了它们的一些语法和特性。<br>
+也就是说，最显着的借用元素是describe(), context(),it() specify()方法。它们本质上是用于用标签注释测试组的实际测试方法的包装器。</p>
+<p>值得注意的是，<code>specify()</code> <code>it()</code> 是同义词，就像 <code>describe()</code> <code>context()</code>。根据听起来更自然的内容，您可以使用这些的任意组合。</p>
+<p><code>describe()</code>用于为一组测试提供上下文，同时 <code>it()</code> 描述单个测试。通常，您会将它们嵌套在类似于以下的结构中：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="string">"Element X Testing"</span>, () =&gt; &#123;</span><br><span class="line">    it(<span class="string">"Does Y"</span>, () =&gt; &#123;</span><br><span class="line">        <span class="comment">// Test...</span></span><br><span class="line">    &#125;);</span><br><span class="line">    it(<span class="string">"Does Z"</span>, () =&gt; &#123;</span><br><span class="line">        <span class="comment">// Test...</span></span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>在每个测试中，我们将依靠 <code>Cypress</code> 实例（<code>cy</code>）来运行各种方法，如<code>visit()，get()，fixture()</code>，等，以及链的方法对这些结果。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">describe(<span class="string">"Testing CRUD Form"</span>, () =&gt; &#123;</span><br><span class="line">    it(<span class="string">"Visits the addition page"</span>, () =&gt; &#123;</span><br><span class="line">        cy.visit(<span class="string">'/addProduct'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    it(<span class="string">"Gets the input field and inputs text"</span>, () =&gt; &#123;</span><br><span class="line">        cy.get(<span class="string">'.input-element'</span>)</span><br><span class="line">          .type(<span class="string">'Product 1'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    it(<span class="string">"Clicks the 'Add Product' button"</span>, () =&gt; &#123;</span><br><span class="line">        cy.contains(<span class="string">'Add Product'</span>)</span><br><span class="line">          .click();</span><br><span class="line">    &#125;);</span><br><span class="line">    it(<span class="string">"Checks if X was added correctly"</span>, () =&gt; &#123;</span><br><span class="line">        cy.get(<span class="string">'product-title'</span>)</span><br><span class="line">          .should(<span class="string">'have.value'</span>, <span class="string">'Product 1'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    it(<span class="string">"Runs a CLI Command"</span>, () =&gt; &#123;</span><br><span class="line">        cy.exec(<span class="string">'npm run other-service'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    it(<span class="string">"Sends POST HTTP request"</span>, () =&gt; &#123;</span><br><span class="line">        cy.request(<span class="string">'POST'</span>, <span class="string">'/host/other-service/updateCustomers'</span>, &#123; <span class="attr">mail</span>: <span class="string">'Product 1 is out!'</span> &#125;)</span><br><span class="line">          .its(<span class="string">'body'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>最后，当您准备好运行测试时，您可以运行：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cypress run --browser chrome</span><br></pre></td></tr></table></figure>
+<h2><span id="将-cypress-添加到项目中">将 Cypress 添加到项目中</span></h2>
+<p>配置文件，<code>cypress.json</code> 将在项目根目录中自动生成，默认情况下只包含项目 ID 的占位符：<br>
+配置 ( cypress.json) 文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"projectId"</span>: <span class="string">"4b7344"</span>,</span><br><span class="line"><span class="string">"baseUrl"</span>: <span class="string">"http://localhost:8080"</span></span><br></pre></td></tr></table></figure>
+<p>现在，让我们在 <code>/integration</code> 调用下创建一个新目录 <code>my_tests</code> 和一个名为 <code>tests.spec.js</code> . 您会注意到，在 <code>Cypress</code> 中，您已经会提示您选择运行这个新文件，因为它会响应性地扫描 <code>/integration</code> 目录以查找新测试。</p>
+<p>继续在我们的tests.spec.js文件中定义几个测试：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// &lt;reference types="cypress" /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* In general, it is a good practice to store </span></span><br><span class="line"><span class="comment"> all your selectors in variables, since they </span></span><br><span class="line"><span class="comment"> might change in the future */</span></span><br><span class="line"><span class="keyword">var</span> email;</span><br><span class="line"><span class="keyword">var</span> emailSelector = <span class="string">'.action-email'</span>;</span><br><span class="line"></span><br><span class="line">describe(<span class="string">'Email Input'</span>, () =&gt; &#123;</span><br><span class="line">    <span class="comment">/* beforeEach() which will run before every </span></span><br><span class="line"><span class="comment">    it() test in the file. This is great </span></span><br><span class="line"><span class="comment">    if you want to perform some common actions </span></span><br><span class="line"><span class="comment">    before each test */</span></span><br><span class="line">    beforeEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">/* Since we defined `baseUrl` in cypress.json,</span></span><br><span class="line"><span class="comment">        using `/` as the value in `cy.visit()` will navigate to it.</span></span><br><span class="line"><span class="comment">        Adding `commads/actions` will add the value to the `baseUrl`. */</span></span><br><span class="line">        cy.visit(<span class="string">'/commands/actions'</span>);</span><br><span class="line">        <span class="comment">/* We are reading the example fixture file and assigning its</span></span><br><span class="line"><span class="comment">        value to a global variable so it is accessible in every test */</span></span><br><span class="line">        cy.fixture(<span class="string">'example'</span>).then(<span class="function">(<span class="params">json</span>)=&gt;</span>&#123;</span><br><span class="line">            email = json.email;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    it(<span class="string">'Clicks on Actions, and writes the email from the fixture'</span>, () =&gt; &#123;</span><br><span class="line">        cy.get(emailSelector)</span><br><span class="line">            .type(email)</span><br><span class="line">            .should(<span class="string">'have.value'</span>, email);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2><span id="模拟-xhr-请求响应">模拟 XHR 请求响应</span></h2>
+<p>另一个需要注意的非常有用的功能是，您可以完全跳过上一节中创建评论的过程。您可以通过使用 stub 这个网络请求来创建您自己的模拟响应cy.intercept()。这在后端尚未开发时很有用，因此您可以在完成之前模拟响应，或者您只想测试应用程序的这一部分。</p>
+<p>我们这里也有夹具文件的另一个用途。让我们创建一个mock_comment.json包含评论模拟数据的调用，并添加以下 JSON 内容：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;  </span><br><span class="line">  <span class="string">"postId"</span>: <span class="number">1</span>,  </span><br><span class="line">  <span class="string">"id"</span>: <span class="number">1</span>,  </span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"My Name"</span>,  </span><br><span class="line">  <span class="string">"email"</span>: <span class="string">"MyEmail@gardner.biz"</span>,  </span><br><span class="line">  <span class="string">"body"</span>: <span class="string">"My Comment Body"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在，让我们intercepting_requests.spec.js在/my_tests目录下创建另一个文件。在这里，我们将拦截相同的端点，但将我们的夹具作为响应注入，完全跳过实际请求：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// &lt;reference types="cypress" /&gt;</span></span><br><span class="line">describe(<span class="string">'Intercepting XHR'</span>, () =&gt; &#123;</span><br><span class="line">  beforeEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;       </span><br><span class="line">    <span class="comment">// By adding an object `&#123;fixture: 'mock_comment.json'&#125;` in the `intercept()` call,</span></span><br><span class="line">    <span class="comment">// we are telling cypress to use the JSON file as the response.      </span></span><br><span class="line">    <span class="comment">// It can also be aliased using `.as()`.  </span></span><br><span class="line">    cy.intercept(<span class="string">'GET'</span>, <span class="string">'**/comments/*'</span>,</span><br><span class="line">                 &#123;<span class="attr">fixture</span>: <span class="string">'mock_comment.json'</span>&#125;).as(<span class="string">'getComment'</span>);       </span><br><span class="line">    cy.navigateToAliasingPage();    </span><br><span class="line">  &#125;);        </span><br><span class="line">  it(<span class="string">'Clicks a button and expects a comment'</span>, () =&gt; &#123;        </span><br><span class="line">    cy.get(<span class="string">'.network-btn'</span>).click()        </span><br><span class="line">    <span class="comment">// There is no need to validate the response now since we mocked it,</span></span><br><span class="line">    <span class="comment">// but there is a need to validate the UI        </span></span><br><span class="line">    cy.fixture(<span class="string">'mock_comment'</span>).then(<span class="function">(<span class="params">json</span>)=&gt;</span>&#123;           </span><br><span class="line">      <span class="comment">// We are accessing the comment directly from `mock_comment.json`</span></span><br><span class="line">      <span class="comment">// and checking that the UI is displaying it in its fullest         </span></span><br><span class="line">      cy.get(<span class="string">'.network-comment'</span>).should(<span class="string">'have.text'</span>, json.body);        </span><br><span class="line">    &#125;);    </span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>我们运行这个测试：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cypress run --record --spec <span class="string">"cypress/integration/my_tests/intercepting_requests.spec.js"</span></span><br></pre></td></tr></table></figure>
+<p>更多内容参考官网文档。</p>
+<h2><span id="结论">结论</span></h2>
+<p><code>Cypress</code> 是一个很棒的新兴测试工具。它是超级轻量级​​且易于设置的，并且对于 TDD 来说非常棒，它构建在 <code>Mocha</code> 和 <code>Chai</code> 之上。它允许您完全模拟您的后端，这也非常适合在与后端集成之前进行测试，或者在您的后端尚不存在的情况下。在某些情况下，它还可以帮助塑造后端，因为它将准确勾勒出前端的期望。</p>
+<p>但是，如果您正在寻找一种可以覆盖的范围非常灵活的工具，并且您需要一个大型的、个性化的和定制的框架，那么您可能希望坚持使用 <code>Selenium</code>。</p>
+<h2><span id="参考">参考</span></h2>
+<ul>
+<li><a href="https://stackabuse.com/end-to-end-testing-in-javascrpt-with-cypress/" target="_blank" rel="noopener">https://stackabuse.com/end-to-end-testing-in-javascrpt-with-cypress/</a></li>
+<li><a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress https://www.cypress.io/</a></li>
+<li><a href="https://github.com/cypress-io/cypress-example-kitchensink" target="_blank" rel="noopener">https://github.com/cypress-io/cypress-example-kitchensink</a></li>
+</ul>
+<p><strong>关注【公众号】，了解更多。</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/cl9000/wel-imgs/blogImgs/a_weicl.jpg" alt></p>
+
+
+                <hr>
+                <!-- Pager &rarr; 箭头 -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2021/06/29/JavaScript-Node检查文件或目录是否为空/" data-toggle="tooltip" data-placement="top" title="JavaScript Node 检查文件或目录是否为空"> Previous
+                            <br>
+                            <span>JavaScript Node 检查文件或目录是否为空</span>
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2021/06/08/Javascript中获取列表中的最后一个元素/" data-toggle="tooltip" data-placement="top" title="Javascript 中获取列表中的最后一个元素">Next
+                            <br>
+                            <span>Javascript 中获取列表中的最后一个元素</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                
+                    <div class="reward">
+                        <div class="reward-button">赏 <span class="reward-code"> 
+                            <span class="alipay-code"> <img class="alipay-img" src="/img/myself/alipay-reward-image.jpeg"><b>支付宝打赏</b></span> 
+                            <span class="wechat-code"> <img class="wechat-img" src="/img/myself/wechat-reward-image.jpeg"><b>微信打赏</b> </span>
+                            </span></div>
+                        <p class="reward-notice">赞赏一下  坚持原创技术分享，您的支持将鼓励我继续创作！</p>
+                    </div>
+                
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                <!--分享-->
+                <br>                       
+                
+                <!-- require APlayer -->
+                
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
+                <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+                <div class="aplayer"
+                    data-id="867753789"
+                    data-server="netease"
+                    data-type="playlist"
+                    data-fixed="true" >
+                </div>
+                
+
+                <!-- 来必力 start -->
+                
+                    <!-- 来必力 评论框 start -->
+                    <div class="comment">
+                        <div id="lv-container" data-id="city" data-uid="MTAyMC80ODI4MC8yNDc3NA=="></div>
+                    </div>
+                    <!-- 来必力 评论框 end -->
+                
+                <!-- 来必力 end -->
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">使用 Cypress 优缺点</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">优点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">不足</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">使用 Cypress</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">Cypress API 和 样式</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">将 Cypress 添加到项目中</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">模拟 XHR 请求响应</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">结论</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">参考</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#JavaScript" title="JavaScript">JavaScript</a>
+                        
+                          <a class="tag" href="/tags/#测试" title="测试">测试</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://blog.csdn.net/weichanglu123" target="_blank">CSDN Blog | weichanglu</a></li>
+                    
+                        <li><a href="xxx" target="_blank">阿里云栖社区 </a></li>
+                    
+                        <li><a href="http://gisersqdai.top/" target="_blank">gisersqdai</a></li>
+                    
+                        <li><a href="http://www.vienta.me" target="_blank">vienta&#39;sCell </a></li>
+                    
+                        <li><a href="http://luoxianming.cn/2016/11/15/yueyutools3prevention" target="_blank">luoxianming&#39;sBlog</a></li>
+                    
+                        <li><a href="http://zhoulingyu.com" target="_blank">zhoulingyu</a></li>
+                    
+                        <li><a href="https://blog.cnbluebox.com/blog/archives/" target="_blank">刘坤的技术博客</a></li>
+                    
+                        <li><a href="http://southpeak.github.io/categories/objectivec/" target="_blank">南峰子的技术博客</a></li>
+                    
+                        <li><a href="https://race604.com/gatt-profile-intro/" target="_blank">蓝牙 GATT协议</a></li>
+                    
+                        <li><a href="http://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/" target="_blank">iOS界面流畅(离屏渲染)</a></li>
+                    
+                        <li><a href="http://fontawesome.dashgame.com/" target="_blank">fontawesome</a></li>
+                    
+                        <li><a href="https://www.hi-linux.com/" target="_blank">运维之美</a></li>
+                    
+                        <li><a href="http://huangxuan.me/" target="_blank">Hux Blog</a></li>
+                    
+                        <li><a href="https://www.wispx.cn/" target="_blank">熊二哈</a></li>
+                    
+                        <li><a href="https://nicebing.com/all" target="_blank">undefined</a></li>
+                    
+                        <li><a href="" target="_blank">undefined</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- 来必力City版公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+(function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+})(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+<!-- 来必力City版 公共JS代码 end -->
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '∰'
+//        icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+<!-- chrome Firefox 中文锚点定位失效-->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- smooth scroll behavior polyfill  -->
+<!-- <script type="text/javascript" src="/js/smoothscroll.js"></script> -->
+<script src="https://cdn.bootcss.com/smoothscroll/1.4.10/SmoothScroll.js"></script>
+<script>
+        $('#toc').on('click','a', function(a){
+            var isChrome = window.navigator.userAgent.indexOf("Chrome") !== -1;
+            console.log(window.navigator.userAgent,isChrome)
+                if(isChrome) {
+                    console.log('456233 = ' + a.currentTarget.outerHTML);
+                    console.log($(a.currentTarget).attr("href"));
+                    //跳转到指定锚点
+                    document.getElementById(a.target.innerText.toLowerCase()).scrollIntoView(true);
+                    // document.getElementById($(a.currentTarget).attr("href").replace("#","")).scrollIntoView({behavior: 'smooth' });
+                }
+        })  
+</script>
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = {FID: _fid}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+
+
+<style>
+    .bg-back.top-line:before {
+        content: "";
+        animation: stripe1 2s infinite linear;
+        display: block;
+        /* position: absolute; */
+        bottom: -200px;
+        /* border-bottom: 80px solid #f2f2ee; */
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 120px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(-9deg) translate3d(0, 0, 0);
+        -ms-transform: rotate(-9deg) translate3d(0, 0, 0);
+        transform: rotate(-9deg) translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        z-index: 1;
+    }
+
+    @keyframes stripe1 {
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: 30px;
+        }
+    }
+
+    .bg-back.btm-line:after {
+        content: "";
+        animation: stripe2 2s infinite linear;
+        display: block;
+        position: absolute;
+        bottom: -200px;
+        border-top: 180px solid #f2f2ee;
+        background-image: linear-gradient(45deg,
+                #fff 25%,
+                #f2f2ee 25%,
+                #f2f2ee 50%,
+                #fff 50%,
+                #fff 75%,
+                #f2f2ee 75%,
+                #f2f2ee);
+        background-size: 30px 30px;
+        /* width: 120%; */
+        height: 200px;
+        margin: 0 -10%;
+        -webkit-transform: rotate(7deg);
+        -ms-transform: rotate(7deg);
+        transform: rotate(7deg);
+        z-index: 1;
+    }
+
+    @keyframes stripe2 {
+        0% {
+            background-position-x: 0;
+        }
+
+        100% {
+            background-position-x: -30px;
+        }
+    }
+</style>
+
+<footer>
+    <!-- <article class="bg-back top-line"></article> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/welcpro">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="http://weibo.com/u/5966995114">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/cl9000">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.jianshu.com/u/f167b0dcbdbe">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-stack-1x fa-inverse fa-spin">简</i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="/feed.xml">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+
+                    
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; cl9000 2021
+                    <br>
+                    Theme by <a href="http://huangxuan.me/">Hux</a> |
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart" style="color: red"></i>
+                    </span>
+                    <!-- | -->
+                    <!-- <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="110px" height="22px"
+                        src="https://ghbtns.com/github-btn.html?user=HuxPro&repo=huxpro.github.io&type=star&count=true" >
+                    </iframe> -->
+                </p>
+
+                <!-- 不蒜子 start -->
+                
+                <!-- 不蒜子统计 -->
+                <p class="copyright text-muted" style="margin-top: 5px;">
+                    <span id="busuanzi_container_site_pv">
+                        本站总访问量
+                        <span id="busuanzi_value_site_pv"></span>次
+                    </span>
+                    <!-- <span class="post-meta-divider">|</span>
+                    <span id="busuanzi_container_site_uv" style='display:none'>
+                        本站访客数
+                        <span id="busuanzi_value_site_uv"></span>人
+                    </span> -->
+                    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+                </p>
+                
+                <!-- 不蒜子 end -->
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+<!-- other clicklove.js -->
+<script src="/libs/other/clicklove.js"></script>
+
+<!-- other wenzi.js -->
+<script src="/libs/other/wenzi.js"></script>
+
+<!-- 动态tab标签 -->
+
+<script type="text/javascript">
+    var OriginTitile = document.title, st;
+    document.addEventListener("visibilitychange", function () {
+        document.hidden ?
+            (document.title = "~🙈~ Wei, C.-L. Blog", clearTimeout(st)) :
+            (document.title = "魏长露的博客 | Wei, C.-L. Blog", 
+            st = setTimeout(function () {
+                document.title = OriginTitile
+            }, 3e3))
+    })
+</script>
+
+
+
+
+<!-- 搜索 start -->
+<script src="/libs/search/search.js"></script>
+<link rel="stylesheet" href="/libs/search/search.min.css">
+<div id="searchModal" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 1; top: 10%; transform: scaleX(1) scaleY(1);">
+    <div class="modal-content2">
+        <div class="search-header" style="font-size: 2.0rem;">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+<div class="modal-overlay" style="z-index: 1002; opacity: 0.5;"></div>
+<script type="text/javascript">
+    $(function () {
+        setTimeout(function() { // 后台功能，延迟加载，提高性能
+            searchFunc("/" + "feed.xml", 'searchInput', 'searchResult');
+        }, 3000);
+    });
+    $("#searchIcon").click(function () {
+        if (!$("#searchModal").hasClass("open")) {
+            $("#searchModal").addClass("open").css("display","block");
+            $(".modal").css("display","block");
+            $(".modal-overlay").css("display","block");
+        } else {
+            $("#searchModal").removeClass("open").css("display","none");
+            $(".modal").css("display","none");
+            $(".modal-overlay").css("display","none");
+        }
+    });
+    $(".modal-overlay").click(function () {
+        $("#searchModal").removeClass("open").css("display","none");
+        $(".modal").css("display","none");
+        $(".modal-overlay").css("display","none");
+    });
+</script>
+<!-- 搜索 end -->
+
+
+<!-- Snackbar与Toast类似 -->
+<!-- <script src="/js/snackbar.js "></script> -->
+<!--  -->
+<!-- <script src="/js/sw-registration.js "></script> -->
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+        var d = document, t = 'script',
+            o = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        o.src = u;
+        if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+        s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/9.1.0/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/9.1.0/styles/github.min.css" rel="stylesheet">
+-->
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async("https://cl9000.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                // size: {start: 1, end: 1, unit: 'em'},
+                // color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--  -->
+<script src='/js/archive.js '></script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function () {
+        var $nav = document.querySelector("nav");
+        if ($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+<!-- Baidu统计 https://tongji.baidu.com/web/10000135169/overview/index?siteId=14338825-->
+
+<script>
+    var _baId = '2997fa63b6770debc9d754b9a29bae5f';
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?" + _baId;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- weichanglu_weather https://cj.weather.com.cn/ -->
+<script type="text/javascript">
+    var _fid = "aqGL3DR6qj";
+    WIDGET = { FID: _fid }
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+
+    <!-- go Top -->
+    <!-- <a id="rocket" href="#top" class=""></a> -->
+    <a id="rocket2" class="go-top" href="#top"><i class="fa fa-angle-up"></i></a>
+    <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <!-- 索引 -->
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    <!-- Image to hack wechat -->
+    <img src="https://cl9000.github.io/img/icon_wechat.png" width="0" height="0" />
+    <!-- Migrate from head to bottom, no longer block render and still work -->
+
+
+</body>
+
+</html>
