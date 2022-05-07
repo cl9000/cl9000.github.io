@@ -63,13 +63,6 @@
     </url>
 
     <url>
-        <loc>https://cl9000.github.io/categories/%E6%8A%80%E5%B7%A7/</loc>
-        <lastmod>2021-04-30T02:46:45.389Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://cl9000.github.io/categories/Mac/</loc>
         <lastmod>2021-04-30T02:50:11.310Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -184,6 +177,13 @@
     <url>
         <loc>https://cl9000.github.io/categories/Javascript/</loc>
         <lastmod>2021-06-21T12:56:31.410Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/categories/%E6%8A%80%E5%B7%A7/</loc>
+        <lastmod>2022-05-07T02:16:19.683Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

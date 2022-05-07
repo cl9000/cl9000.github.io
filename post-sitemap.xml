@@ -7,8 +7,24 @@
     </url>
 
     <url>
+        <loc>https://cl9000.github.io/2020/10/19/iOS-%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%AE%9A%E4%BD%8D/</loc>
+        <lastmod>2022-05-07T02:16:19.683Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://cl9000.github.io/2021/09/23/%E6%9E%84%E5%BB%BA%E5%89%8D%E7%AB%AF%E8%84%9A%E6%89%8B%E6%9E%B6-cli%E7%9F%A5%E8%AF%86/</loc>
+        <lastmod>2021-09-24T04:04:50.718Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://cl9000.github.io/2021/08/18/github%E5%B0%86%E4%BD%BF%E7%94%A8token%E4%BB%A3%E6%9B%BF%E5%AF%86%E7%A0%81/</loc>
-        <lastmod>2021-09-18T06:25:37.037Z</lastmod>
+        <lastmod>2021-09-18T06:28:09.752Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -969,14 +985,6 @@
     <url>
         <loc>https://cl9000.github.io/2020/04/12/JavaScript-%E4%BD%BFtap%E6%9D%A5%E5%BF%AB%E9%80%9Fdebug/</loc>
         <lastmod>2021-04-30T02:47:08.865Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://cl9000.github.io/2020/10/19/iOS-%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%AE%9A%E4%BD%8D/</loc>
-        <lastmod>2021-04-30T02:46:45.389Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
